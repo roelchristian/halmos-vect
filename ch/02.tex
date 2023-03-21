@@ -1,0 +1,231 @@
+\chapter{Transformations}
+
+\section{Linear transformations}
+
+We come now to the obiects that really make vector spaces interesting.
+
+\begin{definition}
+    A \emph{linear transformation (or operator)} \(A\) on a vector space " is a correspondence that assigns to every vector \(x\) in \(\frak{V}\) a vector \(Ax\) in \(\frak{U}\), in such a way that
+    \begin{equation*}
+        A(\alpha x + \beta y) = \alpha Ax + \beta Ay
+    \end{equation*}
+identically in the vectors \(x\) and \(y\) and the scalars \(\alpha\) and \(\beta\).
+\end{definition}
+
+We make again the remark that we made in connection with the definition of
+linear functionals, namely, that for a linear transformation \(A\), as we defined
+it, \(A0 = 0\). For this reason such transformations are sometimes called
+\emph{homogeneous} linear transformations.
+
+Before discussing any properties of linear transformations we give sev-
+eral examples. We shall not bother to prove that the transformations we
+mention are indeed linear; in all cases the verification of the equation that defines linearity is a simple exercise.
+
+(5) For every \(x\) in \(\Polynom\), \(x(t) = \sumx_{j=0}^{n-1} \xi_j t^j\), write \(Sx = \sumx_{j=0}^{n-1}\frac{\xi_j}{j+1}t^{j+1}\). (Once more we are disguising by algebraic notation a well-known analytic
+concept. Just as in (4) \((Dx)(t)\) stood for \( \frac{dx}{dt}\), os here (St) 1() si the same as
+)
+
+\section{Transformations as vectors}
+
+We proceed now to derive certain elementary properties of, and relations among,
+linear transformations on a vector space. More particularly, we shall indicate
+several ways of making new transformations out of old ones; we shall generally
+be satisfied with giving the definition of the new transformations and we
+shall omit the proof of linearity.
+
+If \(A\) and \(B\) are linear transformations, we define their sum, \(S = A +
+B\), by the equation \(Sx = Ax + Bx\) (for every \(x\)). We observe that the
+commutativity and associativity of addition in \(\frak{V}\) imply immediately
+that the addition of linear transformations is commutative and associative. Much
+more than this is true. If we consider the sum of any linear transformation
+\(A\) and the linear transformation \(0\) (defined in the preceding section), we
+see that \(A + 0 = A\). If, for each \(A\), we denote by \(-A\) the
+transformation defined by \(-(A)x = - (Ax)\), we see that \(A + (-A) = 0\), and
+that the transformation \(-A\), so defined, is the only linear transformation
+\(B\) with the property that \(A+ B= 0\). To sum up: the properties of a vector
+space, described in the axioms (A) of \S\,2, appear again in the set of all
+linear transformationson the space; the set of all linear transformations is an
+abelian group with respectto the operation of addition.
+
+We continue in the same spirit. By now it will not surprise anybody if the
+axioms (B) and (C) of vector spaces are also satisfied by the set of all linear
+transformations. They are. For any \(A\), and any scalar \(\alpha\), we define
+the product \(\alpha A\) by the equation \((\alpha A) x = \alpha (Ax)\). Axioms
+(B) and (C) are immediately verified; we sum up as follows.
+
+\begin{theorem}
+    The set of all linear transformations on a vector space is itself a vector
+    space.
+\end{theorem}
+
+We shall usually ignore this theorem; the reason is that we can say
+much more about linear transformations, and the mere fact that they form a
+vector space is used only very rarely. The ``much more'' that we can say is that
+there exists for linear transformations a more or less decent definition of
+multiplication, which we discuss in the next section.
+
+\section{Products}
+
+The product \(P\) of two linear transformations \(A\) and \(B\), \(P = AB\), is
+defined by the equation \(P x = A(Bx)\).
+
+The notion of multiplication is fundamental for all that follows. Before giving
+any examples to illustrate the meaning of transformation products, let us
+observe the implications of the symbolism, \(P = AB\). To say that P is a
+transformation means, of course, that given a vector *, P does some- thing to
+it. What it does isfound out by operating on r with B, that is, finding Bx, and
+then operating on the result with A. In other words, if we look on the symbol
+for a transformation as a recipe for performing a certain act, then the symbol
+for the product of two transformations is to be read from right to left. The
+order to transformby A B means to trans- form first by B and then by A. This may
+seem like an undue amount of fuss to raise about a small point; however, as we
+shall soon see, transforma- tion multiplication is, in general, not commutative,
+and the order in which we transform makes a lot of difference. The most
+notorious example of non-commutativity is found on the space P. We consider the
+differentiation and multiplication transforma- tions Dand I, defined yb (Dx) 9()
+= at and (Ir) (9) = t(9); we have dx (DIx) 1() = It (her (9) ) = =1() + I TI and
+dr
+
+\section{Polynomials}
+
+\section{Inverses}
+
+\section{Matrices}
+
+Let us now pick up the loose threads; having introduced the new concept of
+linear transformation, we must now find out what it has to do with the old
+concepts of bases, linear functionals, etc.
+
+One of the most important tools in the study of linear transformations on
+finite-dimensional vector spaces is the concept of a matrix. Since this concept
+usually has no decent analogue in infinite-dimensional spaces, and since it is
+possible in most considerations to do without it, we shall try not to use it in
+proving theorems. It is, however, important to know what a matrix is: we enter
+now into the detailed discussion.
+
+\begin{definition}
+    Let \(\frak{V}\) be an \(n\)-dimensional vectorspace, let \(\frak{X} =
+    \{x_1, \cdots , x_n\}\)  be any basis of \(\frak{V}\), and let \(A\) be a
+    linear transformation on \(\frak{V}\). Since every vector is a linear
+    combination of the \(x_i\), we have in particular
+    \begin{equation*}
+        Ax_j = \sumx_i \alpha_{ij} x_i
+    \end{equation*}
+    for \(j = 1,\cdots, n\). The set \(\alpha_{ij}\) of \(n\) scalars, indexed with the double subscript \(i\), \(j\), is the matrix of \(A\) in the coordinate system \(\mathcal{X}\); we shall generally denote it by \([A]\), or, if it becomes necessary to indicate the particular basis \(\mathcal{X}\) under consideration, by \([A; \mathcal{X}]\). A matrix
+    \(\alpha_{ij}\) is usually written in the form of a square array:
+    \begin{equation*}
+        [A] = \begin{bmatrix}
+            \alpha_{11} & \alpha_{12} & \cdots & \alpha_{1n} \\
+            \alpha_{21} & \alpha_{22} & \cdots & \alpha_{2n} \\
+            \vdots & \vdots &  & \vdots \\
+            \alpha_{n1} & \alpha_{n2} & \cdots & \alpha_{nn}
+        \end{bmatrix};
+    \end{equation*}
+    the scalars \((\alpha_{i1}, \cdots, \alpha_{in})\) form a \emph{row}, and \( (\alpha_{1j}, \cdots, \alpha_{nj})\) a \emph{column} of \([A]\).
+\end{definition}
+
+This definition does not define ``matrix''; it defines ``the matrix associated
+under certain conditions with a linear transformation.'' It is often useful to
+consider a matrix as something existing in its own right as a square array of
+scalars; in general, however, a matrix in this book will be tied up with a
+linear transformation and a basis.
+
+\section{Matrices of transformations}
+
+\section{Invariance}
+
+A possible relation between subspaces \(\frak{M}\) of a vector space and linear
+transformations \(A\) on that space is invariance. We say that \(\frak{M}\) is
+invariant under \(A\) if \(x\) in \(\frak{M}\) implies that \(Ax\) is in
+\(\frak{M}\). (Observe that the implication relation is required in one
+direction only; we do not assume that every \(y\)in \(\frak{M}\) can be written
+in the form \(y = Ax\) with \(x\) in \(\frak{M}\); we do not even assume that
+\(Ax\) in \(\frak{M}\) implies \(x\) in \(\frak{M}\). Presently we shall see
+examples in which the conditions we did not assume definitely fail to hold.) We
+know that a subspace of a vector space is itself a vector space; if we know that
+\(\frak{M}\) is invariant under \(A\), we may ignore the fact that \(A\) is
+defined outside \(\frak{M}\) and we may consider \(A\) as a linear
+transformation defined on the vector space \(\frak{M}\). Invariance is often
+considered for sets of linear transformations, as well as for a single one;
+\(\frak{M}\) is invariant under a set if it is invariant under each member of
+the set.
+
+What can be said about the matrix of a linear transformation \(A\) on an
+\(n\)-dimensional vector space \(\VecSp\) if we know that some or is invariant
+under \(A\)? In other words: is there a clever way of selecting a basis
+\(\frak{X} = \{x_1, \cdots, x_n\}\) in \(\VecSp\) so that \([A] = [A;
+\frak{X}]\) will have some particularly simple form? The answer is in \S\,12,
+Theorem 2; we may choose \(\frak{X}\) so that \(x_1, \cdots, x_m\) are in
+\(\frak{M}\) and \(x_{m+1}, \cdots, x_n\) are not. Let us express \(Ax_j\) in
+terms of \(x_1, \cdots, x_n\). For \(m + 1 \leq j \leq n\), there is not much we
+can say: \(Ax_j = \sumx_i \alpha_{ij} x_i\). For \(j \leq m\), however, \(x_j\)
+is in \(\frak{M}\) ,and therefore (since \(\frak{M}\) is invariant under \(A\))
+\(Ax_j\) is in \(\frak{M}\). Consequently, in this case \(Ax_j\) is a linear
+combination of \(x_1, \cdots, x_m\); the \(\alpha_{ij}\) with \(m + 1 \leq i
+\leq n\) are zero. Hence the matrix \([A]\) of \(A\), in this coordinate system,
+will have the form
+\begin{equation*}
+    [A] = \begin{pmatrix}
+        [A_1] & [B_0] \\
+        [0] & [A_2]
+    \end{pmatrix},
+\end{equation*}
+where \([A_1]\) is the (\(m\)-rowed) matrix of \(A\) considered as a linear
+transformation on the space \(\frak{M}\) (with respect to the coordinate system
+\(\{x_1, \cdots, x_m\}\)), \([A_2]\) and \([B_0]\) are some arrays of scalars
+(in size \((n - m)\) by \((n- m)\) and \(m\) by \((n - m)\) respectively), and
+\([0]\) denotes the rectangular (\((n - m)\) by \(m\)) array consisting of zeros
+only. (It is important to observe the unpleasant fact that \([B_0]\) need not be
+zero.)
+
+\section{Reducibility}
+
+A particularly important subcase of the notion of invariance is that of reducibility. If \(\frak{M}\) and \(\frak{N}\) are two subspaces such that both are invariant under A and such that U is their direct sum, then A is reduced (decomposed) by the pair (or, r ) . The difference between invariance and reducibility is that, in the former case, among the collection of all subspaces invariant under A we may not be able to pick out any two, other than 0 and U, with theproperty that Uis their direct sum. Or, saying it the other way, if or is invariant under A, there are, to be sure, many ways of finding an ?suchthatU=I A?,butitmayhappenthatnosuchIwillbein- variant under A.
+
+The process described above may also be turned around. Let 9 and
+or be any two vector spaces, and let A and B be any two linear transforma-
+tions (on I and I respectively). Let U be the direct sum i © I ; we may define on U a linear transformation C called the direct sum of A and
+B, by writing
+We shall omit the detailed discussion of direct sums of transformations; we shall merely mention the results. Their proofs are easy. If (?, 3) reduces C, and if we denote by A the linear transformation C considered
+on I alone, and by B the linear transformation C considered on ? alone, then C is the direct sum of A and B. By suitable choice of basis (namely, by choosing 21, ,. Im in M and Xm+1, ,."Xy in ?) we may put the matrix of the direct sum of A and B in the form displayed in the preceding
+section, with[Ai] = [4], [Bo]= [0], and [A2] = [B]. If pis any poly- nomial, and ifwe write A' = p(A), B' = p(B), then the direct sum C" of A' and B' will be p(C).
+
+
+\section{Projections}
+
+Especially important for our purposes is another connection between direct sums
+and linear transformations.
+
+\begin{definition}
+    If \(\VecSp\) is the direct sum of \(\frak{M}\) and \(\frak{N}\), so that every \(z\) in \(\VecSp\) may be written, uniquely, in the form \(z = x + y\), with \(x\) in \(\frak{M}\) and \(y\) in \(\frak{N}\), the \emph{projection} on \(\frak{M}\) along \(\frak{N}\) is the transformation \(E\) defined by \(Ez = x\).
+\end{definition}
+
+If direct sums are important, thenprojections are also, since, as we shall see,
+they are a very powerful algebraic tool in studying the geometric concept of
+direct sum. The reader will easily satisfy himself about the reason for the word
+``projection'' by drawing a pair of axes (linear manifolds) in the plane (their
+direct sum). To make the picture look general enough, do not draw perpendicular
+axes!
+
+We skipped over one point whose proof is easy enough to skip over, but whose
+existence should be recognized; it must be shown that \(E\) is a \emph{linear}
+transformation. We leave this verification to the reader, and go on to look for
+special properties of projections.
+
+\begin{theorem}
+    A linear transformation \(E\) is a projection on some subspace if and only if it is idempotent, that is, \(E^2 = E\).
+\end{theorem}
+
+\begin{proof}
+    If \(E\) is the projection on \(\frak{M}\) along \(\frak{N}\), and if \(z =
+    x + y\), with \(x\) in \(\frak{M}\) and \(y\) in \(\frak{N}\), the
+    decomposition of \(x\) is \(x + 0\), so that
+    \begin{equation*}
+        E^2 z = EEz = Ex = x = Ez.
+    \end{equation*}
+
+    Conversely, suppose that \(E^2 = E\). Let \(\frak{N}\) be the set of all vectors \(z\) in \(\VecSp\) for which \(Ez = 0\) let \(\frak{M}\)be the set of all vectors \(z\) for which \(Ez = z\). It is clear that both \(\frak{M}\)
+    and \(\frak{N}\) are subspaces; we shall prove that \(V = \frak{M} \oplus \frak{N}\). In view of the theorem of \S\,18, we need to prove that It and or are disjoint and that together they span U.
+    
+    Ifzisni M,thenEz=2;ifzisni It,thenEz=0;hencefizisinboth In and r , then z = 0. Foran arbitrary z we have
+\end{proof}

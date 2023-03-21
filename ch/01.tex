@@ -1,0 +1,476 @@
+\chapter{Spaces}
+
+\section{Fields}
+
+In what follows we shall have occasion to use various classes of numbers (such
+as the class of all real numbers or the class of all complex numbers). Because
+we should not, at this early stage, commit ourselves to any specific class,
+weshall adopt the dodge of referring to numbers as scalars. The reader will not
+lose anything essential if he consistently interprets scalars as real numbers or
+as complex numbers; in the examples that we shall study both classes will occur.
+To be specific (and also in order to operate at the proper level of generality)
+we proceed to list all the general facts about scalars that we shall need to
+assume.
+\begin{enumerate}[label=(\Alph*)]
+    \item To every pair, \(\alpha\) and \(\beta\), of scalars there corresponds
+        a scalar \(\alpha + \beta\), called the \emph{sum} of \(\alpha\) and
+        \(\beta\), in such a way that
+    \begin{enumerate}[label=(\arabic*)]
+        \item addition is commutative, \(\alpha + \beta = \beta + \alpha\),
+        \item addition is associative, \(\alpha + (\beta + \gamma) =
+            (\alpha + \beta) + \gamma\),
+        \item there exists a unique scalar \(0\) (called \emph{zero}) such that
+            \(\alpha + 0 = \alpha\) for every scalar \(\alpha\), and
+        \item to every scalar \(\alpha\) there corresponds a unique scalar \(-\alpha\)
+            such that \(\alpha + (-\alpha) = 0\).
+    \end{enumerate}
+    \smallskip
+    \item To every pair, \(\alpha\) and \(\beta\), of scalars there corresponds
+        a scalar,\(\alpha \beta\), called the \emph{product} of \(\alpha\) and
+        \(\beta\), in such a way that
+    \begin{enumerate}[label=(\arabic*)]
+        \item multiplication is commutative, \(\alpha \beta = \beta \alpha\),
+        \item multiplication is associative, \(\alpha (\beta \gamma) =
+            (\alpha \beta) \gamma\),
+        \item there exists a unique non-zero scalar \(1\) (called \emph{one}) such that
+            \(\alpha 1 = \alpha\) for every scalar \(\alpha\), and
+        \item to every non-zero scalar \(\alpha\) there corresponds a unique scalar
+            \(\alpha^{-1}\) \(\displaystyle\left(\text{or }\frac{1}{\alpha}\right)\) such that \(\alpha \alpha^{-1} = 1\).
+    \end{enumerate}
+    \smallskip
+    \item Multiplication is distributive over addition, \(\alpha (\beta + \gamma) =
+        \alpha \beta + \alpha \gamma\).
+\end{enumerate}
+
+If addition and multiplication are defined within some set of objects (scalars)
+so that the conditions (A), (B), and (C) are satisfied, then that set (together
+with the given operations) is called a \emph{field}. Thus, for example, the set
+\(\Rationals\) of all rational numbers (with the ordinary definitions of sum and
+product) is a field, and the same is true of the set \(\Reals\) of all real numbers and
+the set \(\Complex\) of all complex numbers.
+
+{\small
+\subsection*{Exercises}
+\begin{enumerate}
+    \item Almost all the laws of elementary arithmetic are consequences of the axioms defining a field. Prove, inparticular, that if F is a field, and fi a, B, and y belong to J, then thefollowing relations hold.
+    \item (a) Is the set of all positive integers a field? (In familiar systems, such as the integers, weshall almost always use the ordinary operations of addition and multi- plication. On the rare occasions when we depart from this convention, we shall give ample warning. As for "positive," by thatword we mean, hereand elsewhere in this book, "greater than or equal to zero." If 0 is to be excluded, we shallsay "strictly positive.")
+    (b) What about the set of all integers?
+    (c) Can the answers to these questions be changed by re-defining addition or multiplication (or both)?
+\end{enumerate}
+
+}
+
+
+\section{Vector spaces}
+
+
+We come now to the basic concept of this book. For the definition that follows we assume that we are given a particular field \(\Field\); the scalars to be used are to be elements of \(\Field\).
+
+\begin{definition}
+    A \emph{vector space} is a set \(  \VecSp\) of elements called \emph{vectors}, satisfying the following axioms.
+
+    \begin{enumerate}[label=(\Alph*)]
+        \item To every pair, \(x\) and \(y\), of vectors in \(  \VecSp\) there corresponds a vector \(x + y\), called the \emph{sum} of \(x\) and \(y\), in such a way that
+        \begin{enumerate}[label=(\arabic*)]
+            \item addition is commutative, \(x + y = y + x\),
+            \item addition is associative, \(x + (y + z) = (x + y) + z\),
+            \item there exists in \(  \VecSp\) a unique vector 0 (called the \emph{origin}) such that \(x + 0 = x\) for every vector \(x\), and
+            \item to every vector \(x\) in \(  \VecSp\) there corresponds a unique vector \(-x\) such that \(x + (-x) = 0\).
+        \end{enumerate}
+        \smallskip
+        \item To every pair, \(\alpha\) and \(x\), where \(\alpha\) is a scalar and \(x\) is a vector in \(  \VecSp\), there corresponds a vector \(\alpha x\) in \(  \VecSp\), called the \emph{product} of \(\alpha\) and \(x\), in such a way that
+        \begin{enumerate}[label=(\arabic*)]
+            \item multiplication by scalars is associative, \(\alpha(\beta x) = (\alpha \beta)x\), and
+            \item \(1x = x\) for every vector \(x\).
+        \end{enumerate}
+        \smallskip
+        \item (1) Multiplication by scalars is distributive with respect to vector addition, \(\alpha(x + y) = \alpha x + \alpha y\), and
+        
+        (2) multiplication by scalars is distributive with respect to scalar addition, \((\alpha + \beta)x = \alpha x + \beta x\).
+    \end{enumerate}
+\end{definition}
+
+These axioms are not claimed to be logically independent; they are merely a
+convenient characterization of the objects we wish to study. The relation
+between a vector space \(  \VecSp\) and the underlying field \(\Field\) is
+usually described by saying that \(  \VecSp\) is a vector space \emph{over}
+\(\Field\). If \(\Field\) is the field \(\Reals\) of real numbers, \(  \VecSp\)
+is called a \emph{real vector space}; similarly if \(\Field\) is \(\Rationals\)
+or if \(\Field\) is \(\Complex\), we speak of \emph{rational vector spaces} or
+\emph{complex vector spaces}.
+
+\section{Examples}
+
+Before discussing the implications of the axioms, we give some examples. We
+shall refer to these examples over and over again, and weshall use the notation
+established here throughout therest of our work.
+
+(1) Let \(\Complex^1 (= \Complex)\) be the set of all complex numbers; if we
+interpret \(x + y\) and \(\alpha x\) as ordinary complex numerical addition and
+multiplication, \(\Complex^1\) becomes a complex vector space.
+
+(2) Let \(\Polynom\) be the set of all polynomials, with complex coefficients,
+in a variable \(t\). To make \(\Polynom\) into a complex vector space, we
+interpret vector addition and scalar multiplication as the ordinary addition of
+two polynomials and the multiplication of a polynomial by a complex number; the
+origin in \(\Polynom\) is the polynomial identically zero.
+
+Example (1) is too simple and example (2) is too complicated to be typical of
+the main contents of this book. We give now another example of complex vector
+spaces which (as we shall see later) is general enough for all our purposes. 
+
+(3) Let \(\Complex^n\), \(n = 1, 2, \cdots,\) be the set of all \(n\)-tuples of
+complex numbers. If \(x = (\xi_1,\cdots, \xi_n)\) and \(y = (\eta_1, \cdots,
+\eta_n)\) are elements of \(\Complex^n\), we write, by definition,
+\begin{align*}
+    x + y &= (\xi_1 + \eta_1, \cdots, \xi_n + \eta_n),\\
+    \alpha x &= (\alpha \xi_1, \cdots, \alpha \xi_n),\\
+    0 &= (0, \cdots, 0),\\
+    -x &= (-\xi_1, \cdots, -\xi_n).
+\end{align*}
+It is easy to verify that al parts of our axioms (A), (B),and (C), \S\,2, are
+satisfied, so that \(\Complex^n\) is a complex vector space; it will be called
+\(n\)\emph{-dimensional complex coordinate space.}
+
+(4) For each positive integer \(n\), let \(\Polynom_n\) be the set of all polynomials (with complex coefficients, as in example (2)) of degree \(\leq n-1\), together with the polynomial identically zero. (In the usual discussion of degree, the degree ofthis polynomial is not defined, so that we cannot say that it has degree \(\leq n-1\).) With the same interpretation of the linear operations (addition and scalar multiplication) as in (2), \(\Polynom_n\) is a complex vector space.
+
+(5) A close relative of \(\Complex^n\) is the set \(\Reals^n\) of all \(n\)-tuples of real numbers. With the same formal definitions of addition and scalar multiplication as for \(\Complex^n\), except that now we consider only real scalars \(\alpha\), the space \(\Reals^n\) is a real vector space; it will be called \(n\)-\emph{dimensional real coordinate space.}
+
+(6) All the preceding examples can be generalized. Thus, for instance, an obvious generalization of (1) can be described by saying that every
+field may be regarded as a vector space over itself. A common generalization of (3) and (5) starts with an arbitrary field \(\Field\) and forms the set \(\Field^n\) of \(n\)-tuples of elements of \(\Field\); the formal definitions of the linear operations are the same as for the case \(\Field = \Complex\).
+
+(7) A field, by definition, has at least two elements; a vector space, however, may have only one. Since every vector space contains an origin, there is essentially (i.e., except for notation) only one vector space having only one vector. This most trivial vector space will be denoted by \(\frak{O}\).
+
+(8) If, in the set \(\Reals\) of all real numbers, addition is defined asusual and multiplication of a real number by a rational number is defined as usual, then \(\Reals\) becomes a rational vector space.
+
+(9) It, in the set \(\Complex\) of al complex numbers, addition is defined as usual and multiplication of a complex number by a real number is defined as usual, then \(\Complex\) becomes a real vector space. (Compare this example with (1); they are quite different.)
+
+\section{Comments}
+
+\section{Linear dependence}
+
+Now that we have described the spaces we shall work with, we must specify the
+relations among the elements of those spaces that will be of interest to us.
+
+We begin with a few words about the summation notation. If corresponding to each
+of a set of indices \(i\) there is given a vector \(x_i\), and if it is not
+necessary or not convenient to specify the set of indices exactly, we shall
+simply speak of a set \(\{x_i\}\) of vectors. (We admit the possibility that the
+same vector corresponds to two distinct indices. In all honesty, therefore, it
+should be stated that what is important is not which vectors appear in
+\(\{x_i\}\), but how they appear.) If the index-set under consideration is
+finite, we shall denote the sum of the corresponding vectors by \(\sumx_i x_i\)
+(or, when desirable, by a more explicit symbol such as \(\sumx_{i=1}^n x_i\). In
+order to avoid frequent and fussy case distinctions, it is a good idea to admit
+into the general theory sums such as \(\sumx_i x_i\) even when there are no
+indices \(i\) to be summed over, or, more precisely, even when the index-set
+under consideration is empty. (In that case, of course, there are no vectors to
+sum, or, more precisely, the set \(\{x_i\}\) is also empty.) The value of such
+an ``empty sum'' is defined, naturally enough, to be the vector 0.
+
+\begin{definition}
+    A finite set \(\{x_i\}\) of vectors is \emph{linearly dependent} if there
+    exists a corresponding set \(\{\alpha_i\}\) of scalars, not all zero, such
+    that
+    \begin{equation*}
+        \textstyle\sumx_i \alpha_i x_i = 0.
+    \end{equation*}
+    If, on the other hand, \(\sumx_i \alpha_i x_i = 0\) implies \(\alpha_i = 0\)
+    for each \(i\), the set \(\{x_i\}\) is \emph{linearly independent}.
+\end{definition}
+
+The wording of this definition is intended to cover the case of the empty set;
+the result in that case, though possibly paradoxical, dovetails very
+satisfactorily with the rest of the theory. The result is that the empty set of
+vectors is linearly independent. Indeed, if there are no indices \(i\), theni t
+is not possible to pick out some of them and to assign to theselected ones a
+non-zero scalar so as to make a certain sum vanish. The trouble is not in
+avoiding the assignment of zero; it is in finding an index to which something
+can be assigned. Note that this argument shows that the empty set is not
+linearly dependent; for the reader not acquainted with arguing by ``vacuous
+implication,'' the equivalence of the definition of linear independence with the
+straightforward negation of the definition of linear dependence needs a little
+additional intuitive justification. The easiest way to feel comfortable about
+the assertion ``\(\sumx_i \alpha_i x_i = 0\) implies that \(\alpha_i = 0\) for
+each \(i\),'' in case there are no indices \(i\), is to rephrase it this way:
+``if \(\sumx_i \alpha_i x_i = 0\), then there is no index \(i\) for which
+\(\alpha_i = 0\).'' This version is obviously true if there is no index \(i\) at
+all.
+
+Linear dependence and independence are properties of sets of vectors; it is
+customary, however, to apply the adjectives to vectors themselves, and thus we
+shall sometimes say ``a set of linearly independent vectors'' instead of ``a
+linearly independent set of vectors.'' It will be convenient also to speak of
+the linear dependence and independence of a not necessarily finite set
+\(\frak{X}\) of vectors. We shall say that \(\frak{X}\) is linearly
+independent if every finite subset of \(\frak{X}\) is such; otherwise
+\(\frak{X}\) is linearly dependent.
+
+To gain insight into the meaning of linear dependence, let us study the examples
+of vector spaces that we already have.
+
+(1) If \(x\) and \(y\) are any two vectors in \(\Complex^1\), then \(x\)
+and\(y\) form a linearly dependent set. If \(x =y = 0\), this is trivial; if
+not, then we have, for example, the relation \(yx + (-x)y = 0\) .Since it is
+clear that every set containing a linearly dependent subset is itself linearly
+dependent, this shows that in \(\Complex^1\) every set containing more than
+one element is a linearly dependent set.
+
+(2) More interesting is the situation in \(\frak{P}\). The vectors \(x\),
+\(y\), and \(z\), defined by
+\begin{align*}
+    x(t) &= 1-t,\\
+    y(t) &= t(1-t),\\
+    z(t) &= 1-t^2,
+\end{align*}
+are, for example, linearly dependent, since \(x + y - z = 0\). However, the
+infinite set of vectors \(x_0, x_1, x_2, \cdots,\) defined by
+\begin{equation*}
+    x_0(t) = 1, \quad x_1(t) = t, \quad x_2(t) = t^2, \quad \cdots,
+\end{equation*}
+is a linearly independent set, for if we had any relation of the form
+\begin{equation*}
+    \alpha_0 x_0 + \alpha_1 x_1 +  \cdots + \alpha_n x_n = 0,
+\end{equation*}
+then we would have a polynomial identity
+\begin{equation*}
+    \alpha_0 + \alpha_1 t +  \cdots + \alpha_n t^n = 0,
+\end{equation*}
+whence \(\alpha_0 = \alpha_1 = \cdots = \alpha_n = 0\).
+
+(3) As we mentioned before, the spaces \(\Complex^n\) are the prototype of what
+we want to study; let us examine, for example, the case \(n = 3\). To those
+familiar with higher-dimensional geometry, the notion of linear dependence in
+this space (or, more properly speaking, in its real analogue ) has a concrete
+geometric meaning, which we shall only mention. In geometrical language, two
+vectors are linearly dependent if and only if they are collinear with the
+origin, and three vectors are linearly dependent if and only if they are
+coplanar with the origin. (If one thinks of a vector not as a point in aspace
+but as an arrow pointing from the origin to some given point, the preceding
+sentence should be modified by crossing out the phrase ``with the origin'' both
+times that it occurs.) We shall presently introduce the notion of linear
+manifolds (or vector subspaces) in a vector space, and, in that connection, we
+shall occasionally use the language suggested by such geometrical
+considerations.
+
+\section{Linear combinations}
+
+We shall say, whenever \(x = \sumx_i \alpha_i x_i\), that \(x\) is a linear
+combination of \(\{x_i\}\); we shall use without any further explanation all the
+simple grammatical implications of this terminology. Thus we shall say, in case
+\(x\) is a linear combination of \(\{x_i\}\), that \(x\) is linearly dependent
+on \(\{x_i\}\); we shall leave to the reader the proof that if \(\{x_i\}\) is
+linearly independent, then a necessary and sufficient condition that \(x\) be a
+linear combination of \(\{x_i\}\) is that the enlarged set, obtained by
+adjoining \(x\) to \(\{x_i\}\), be linearly dependent. Note that, in accordance
+with the definition of an empty sum, the origin is a linear combination of the
+empty set of vectors; it is, moreover, the only vector with this property.
+
+The following theorem is the fundamental result concerning linear dependence.
+
+\begin{theorem}
+    The set of non-zero vectors \(x_1,\cdots,x_n\) is linearly dependent if and only if some \(x_k\), \(2\leq k\leq n\), is a linear combination of the preceding ones.
+\end{theorem}
+
+\begin{proof}
+    Let us suppose that the vectors \(x_1, \cdots, x_n\) are linearly dependent,
+    and let \(k\) be the first integer between \(2\) and \(n\) for which \(x_1,
+    \cdots, x_k\) are linearly dependent. (If worse comes to worst, our
+    assumption assures us that \(k = n\) will do.) then
+    \begin{equation*}
+        \alpha_1 x_1 + \cdots + \alpha_k x_k = 0
+    \end{equation*}
+    for a suitable set of \(\alpha\)'s (not all zero); moreover, whatever the
+    \(\alpha\)'s, we cannot have \(\alpha_k = 0\), for then we should have a
+    linear dependence relation among \(x_1, \cdots, x_{k-1}\), contrary to the
+    definition of \(k\). Hence
+    \begin{equation*}
+        x_k = \frac{-\alpha_1}{\alpha_k} x_1 + \cdots + \frac{-\alpha_{k-1}}{\alpha_k} x_{k-1},
+    \end{equation*}
+    and was to be proved. This proves the necessity of ourcondition; sufficiency
+    is clear since, as we remarked before, every set containing a linearly
+    dependent set is itself such.
+\end{proof}
+
+
+\section{Bases}
+
+\begin{definition}
+    A (linear) basis (or a \emph{coordinate system}) in a vector space
+    \(  \VecSp\) is a set \(\frak{X}\) of linearly independent vectors
+    such that every vector in \(  \VecSp\) is a linear combination of
+    elements of \(\frak{X}\). A vector space \(  \VecSp\) is \emph{finite-
+    dimensional} if it has a finite basis.
+\end{definition}
+
+Except for the occasional consideration of examples we shall restrict our attention, throughout this book, to finite-dimensional vector spaces.
+
+For examples of bases we turn again to the spaces \(\Polynom\) and
+\(\Complex^n\). In \(\Polynom\) the set \(\{x_n\}\), where \(x_n(t) = t^n\), \(n
+= 0, 1, 2, \cdots\), is a basis; every polynomial is, by definition, a linear
+combination of a finite number of \(x_n\). Moreover \(\Polynom\) has no finite
+basis, for, given any finite set of polynomials, we can find a polynomial of
+higher degree than any of them; this latter polynomial is obviously not a linear
+combination of the former ones.
+
+An example of a basis in \(\Complex^n\) is the set of vectors \(x_i\), \(i = 1,
+\cdots, n\), defined by the condition that the \(j\)-th coordinate of \(x_i\) is
+\(\delta_{ij}\). (Here we use for the first time the popular Kronecker
+\(\delta\); it is defined by \(\delta_{ij} = 1\) if \(i = j\) and \(\delta_{ij}
+= 0\) if \(i \neq j\).) Thus we assert that in \(\Complex^3\) the vectors \(x_1
+= (1,0,0)\), \(x_2 = (0,1,0)\), and \(x_3 = (0,0,1)\) form a basis. It is easy
+to see that they are linearly independent; the formula
+\begin{equation*}
+    x = (\xi_1, \xi_2, \xi_3) = \xi_1 x_1 + \xi_2 x_2 + \xi_3 x_3
+\end{equation*}
+proves that every \(x\) in \(\Complex^3\) is a linear combination of them.
+
+In a general finite-dimensional vector space \(  \VecSp\), with basis
+\(\{x_1,\cdots,x_n\}\), we know that every \(x\) can be written in the form
+\begin{equation*}
+    \textstyle x = \sumx_i \xi_i x_i;
+\end{equation*}
+we assert that the \(\xi\)'s are uniquely determined by \(x\). The proof of this
+assertion is an argument often used in the theory of linear dependence. If we
+had \(x = \sumx_i \eta_i x_i\), then we should have, by subtraction,
+\begin{equation*}
+    \textstyle \sumx_i (\xi_i - \eta_i) x_i = 0.
+\end{equation*}
+Since the \(x_i\) are linearly independent, this implies that \(\xi_i - \eta_i =
+0\) for \(i = 1, \cdots , n\); in other words, the \(\xi\)'s are the same as the
+\(\eta\)'s. (Observe that writing \(\{x_1,\cdots,x_n\}\) for a basis with \(n\)
+elements is not the proper thing to do in case \(n = 0\). We shall,
+nevertheless, frequently use this notation. Whenever that is done, it is, in
+principle, necessary to adjoin a separate discussion designed to cover the
+vector space \(\frak{O}\). In fact, however, everything about that space is so
+trivial that the details are not worth writing down, and we shall omit them.)
+
+\begin{theorem}
+    If \(~\VecSp\) is a finite-dimensional vector space, and if \(\{y_1, \cdots,
+    y_m\}\) is any set of linearly independent vectors in \(\VecSp\), then,
+    unless the \(y\)'s already form a basis, we can find vectors \(y_{m+1},
+    \cdots, y_{m+p}\) so that the totality of the \(y\)'s, that is, \(\{y_1,
+    \cdots, y_m, y_{m+1}, \cdots, y_{m+p}\}\), is a basis. In other words, every
+    linearly independent set can be extended to a basis.
+\end{theorem}
+
+\begin{proof}
+    Since V is finite-dimensional, it has a finite basis, say \(\{x_1, \cdots, x_n\}\). We consider the set \(\frak{S}\) of vectors
+    \begin{equation*}
+        y_1, \cdots, y_m, x_1, \cdots, x_n,
+    \end{equation*}
+    in this order,and we apply to this set the theorem of \S\,6 several times in
+    succession. In the first place, the set \(\frak{S}\) is linearly dependent,
+    since the \(y\)'s are (as are all vectors) linear combinations of the
+    \(x\)'s. Hence some vector of \(\frak{S}\) is a linear combination of the
+    preceding ones; let \(z\) be the first such vector. Then \(z\) is different
+    from any \(y_i\), \(i = 1, \cdots, m\) (since the \(y\)'s are linearly
+    independent), so that \(z\) is equal to some \(x\), say \(z = x_i\). We
+    consider the new set \(\frak{S}'\) of vectors
+    \begin{equation*}
+        y_1, \cdots, y_m, x_1, \cdots, x_{i-1}, x_{i+1}, \cdots, x_n.
+    \end{equation*}
+    We observe that every vector in \(\VecSp\) is a linear combination of
+    vectors in \(\frak{S}'\), since by means of \(y_1, \cdots, y_m, x_1, \cdots,
+    x_{i-1}\) we may express \(x_i\), and then by means of \(x_1, \cdots,
+    x_{i-1}, x_i, x_{i+1}, \cdots, x_n\) we may express any vector. (The \(x\)'s
+    form a basis.) If \(\frak{S}'\) is linearly independent, we are done. If it
+    is not, we apply the theorem of \S\,6 again and again the same way till we
+    reach a linearly independent set containing \(y_1, \cdots, y_m\), in terms
+    of which we may express every vector in \(\VecSp\). This last set is a basis
+    containing the \(y\)'s.
+\end{proof}
+
+
+\section{Dimension}
+
+\section{Isomorphism}
+
+As an application of the notion of linear basis, or coordinate system, we shall now fulfill an implicit earlier promise by showing that every finite-dimensional vector space over a field \(\Field\) is essentially the same as (in technical language, is isomorphic to) some \(\Field^n\).
+
+\begin{definition}
+    Two vector spaces \(\frak{U}\) and \(  \VecSp\) (over the same field)
+    are \emph{isomorphic} if there is a one-to-one correspondence between the
+    vectors \(x\) of \(\frak{U}\) and the vectors \(y\) of \(  \VecSp\),
+    say \(y = T(x)\), such that
+    \begin{equation*}
+        T(\alpha_1 x_1 + \alpha_2 x_2) = \alpha_1 T(x_1) + \alpha_2 T(x_2).
+    \end{equation*}
+    In other words, \(\frak{U}\) and \(  \VecSp\)  are isomorphic if there
+    is an isomorphism (such as \(T\)) between them, where an \emph{isomorphism}
+    is a one-to-one correspondence that preserves all linear relations.
+\end{definition}
+
+It is easy to see that isomorphic finite-dimensional vector spaces have the same dimension; to each basis in one space there corresponds a basis in the other space. Thus dimension is an isomorphism invariant;we shall now show that it is the only isomorphism invariant, in the sensethat every two vector spaces with the same finite dimension (over the seme field, of course) are isomorphic. Since the isomorphism of u and o n the one hand, and of  and W on the other hand, impliesthat U and W are isomorphic, it wil be sufficient to prove the following theorem.
+
+{\small
+\subsection*{Exercises}
+
+\begin{enumerate}
+    \item (a)What is the dimension of the set \(\Complex\) of all complex numbers considered as a real vector space? (See \S\,3, (9).)
+\end{enumerate}
+
+}
+
+\section{Subspaces}
+
+
+The objects of interest in geometry are not only the pointsof the space under consideration, but also its lines, planes, etc. We proceed to study the analogues, in general vector spaces, of these higher-dimensional elements.
+
+\begin{definition}
+    A non-empty subset \(\frak{M}\) of a vector space \(  \VecSp\) is a \emph{subspace} or a \emph{linear manifold} if along with every pair, \(x\) and \(y\), of vectors contained in \(\frak{M}\), every linear combination \(\alpha x + \beta y\) is also contained in \(\frak{M}\).
+\end{definition}
+
+A word of warning: along with each vector \(x\), a subspace also contains \(x-x\). Hence if we interpret subspaces as generalized lines and planes, we must be careful to consider only lines and planes that pass through the origin.
+
+A subspace \(\frak{M}\) in a vector space \(  \VecSp\) is itself a vector space; the reader
+can easily verify that, with the same definitions of addition and scalar
+multiplication as we had in W, the set satisfies the axioms (A), (B),and (C)
+of §2.
+Two special examples of subspaces are: (i) the set o consisting of the
+origin only, and (i) the whole space U. The following examples are less trivial.
+
+
+\section{Calculus of subspaces}
+
+\section{Dimension of a subspace}
+
+\section{Dual spaces}
+
+\begin{definition}
+    A \emph{linear functional} on a vector space \(\VecSp\) is a scalar-valued
+    function \(y\) defined for every vector \(x\), with the property that
+    (identically in the vectors \(x_1\) and \(x_2\) and the scalars \(\alpha_1\)
+    and \(\alpha_2\))
+    \begin{equation*}
+        y(\alpha_1 x_1 + \alpha_2 x_2) = \alpha_1 y(x_1) + \alpha_2 y(x_2).
+    \end{equation*}
+\end{definition}
+
+Let us look at some examples of linear functionals.
+
+(2) For any polynomial \(x\) in \(\Polynom\), write \(y(x) = x(0)\). More
+generally, let \(\alpha_1, \cdots, \alpha_n\) be any \(n\) scalars, let \(t_1,
+\cdots, t_n\) be any \(n\) real numbers, and write
+\begin{equation*}
+    y(x) = a_1 x(t_1) + \cdots + a_n x(t_n).
+\end{equation*}
+Another example, in a sense a limiting case of the one just given, is obtained
+as follows. Let \((a, b)\) be any finite interval on the real \(t\)-axis, and
+let \(\alpha\) be any complex-valued integrable function defined on \((a, b)\);
+define \(y\) by
+\begin{equation*}
+    y(x) = \int_a^b \alpha(t) x(t) \, dt.
+\end{equation*}
+
+
+\section{Brackets}
+
+\section{Dual bases}
+One more word before embarking on the proofs of the important theo- rems. The concept of dual space was defined without any reference to coordinate systems; a glance at the following proofs will show a super- abundance of coordinate systems. We wish to point out that this phenome-
+non is inevitable;we shal be establishing results concerning dimension, and dimension is the one concept (so far) whosevery definition is givenin terms of a basis.
+
+\section{Reflexivity}
+
+\section{Annihilators}
+

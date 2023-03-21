@@ -1,0 +1,214 @@
+\chapter{Orthogonality}
+
+\section{Inner products}
+
+Let us now get our feet back on the ground. We started in Chapter I by pointing
+out that we wish to generalize certain elementary properties of certain
+elementary spaces such as \(\Reals^2\). In our study so far we have done this,
+but we have entirely omitted from consideration one aspect of o?. We have
+studied the qualitative concept of linearity; what we have entirely ignored are
+the usual quantitative concepts of angle and length. In the present chapter we
+shall fill this gap; we shall superimpose on the vector spaces to be studied
+certain numerical functions, corresponding to the ordinary notions of angle and
+length, and we shall study the new structure (vector space plus given numerical
+function) so obtained. For the added depth of geometric insight we gain in this
+way, we must sacrifice some generality; throughout the rest of this book we
+shall have to assume that the underlying field of scalars is either the field
+\(\Reals\) of real numbers or the field \(\Complex\) of complex numbers.
+
+For a clue as to how to proceed, we first inspect \(\Reals^2\). If \(x = (\xi_1,
+\xi_2)\) and \(y= (\eta_1, \eta_2)\) are any two points in \(\Reals^2\), the
+usual formula for the distance between \(x\) and \(y\), or the length of the segment
+joining \(x\) and \(y\), is \(\sqrt{(\xi_1 - \eta_1)^2 + (\xi_2 - \eta_2)^2}\). It is convenient to introduce the notation
+\begin{equation*}
+    \|x\| = \sqrt{\xi_1^2 + \xi_2^2}
+\end{equation*}
+or the distance from \(x\) to the origin \(0 = (0, 0)\); in this notation the
+distance between \(x\) and \(y\) becomes \(\norm{x-y}\).
+
+So much, for the present, for lengths and distances; what about angles? It turns
+out that it is much more convenient to study, in the general case, not any of
+the usual measures of angles but rather their cosines. (Roughly speaking, the
+reason for this is that the angle, in the usual picture in the circle of radius
+one, is the length of a certain circular arc, whereas the cosine of the angle is
+the length of a line segment; the latter is much easier to relate to our
+preceding study of linear functions.) Suppose then that we let \(\alpha\) be the
+angle between the segment from \(0\) to \(x\) and the positive \(\xi_1\) axis,
+and let \(\beta\) be the angle between the segment from \(0\) to \(y\) and the
+same axis; the angle between the two vectors \(x\) and \(y\) is \(\alpha -
+\beta\), so that its cosine is
+\begin{equation*}
+    \cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta = \frac{\xi_1\eta_1 + \xi_2\eta_2}{\norm{x}\cdot\norm{y}}.
+\end{equation*}
+
+Consider the expression \(\xi_1\eta_1 + \xi_2\eta_2\); by means of it we can
+express both angle and length by very simple formulas. We have already seen that
+if we know the distance between \(0\) and \(x\) for all \(x\), then we can
+compute the distance between any \(x\) and \(y\); we assert now that if for
+every pair of vectors \(x\) and \(y\) we are given the value of \(\xi_1\eta_1 +
+\xi_2\eta_2\), then in terms of this value we may compute all distances and all
+angles. Indeed, if we take \(x = y\), then \(\xi_1\eta_1 + \xi_2\eta_2\)
+becomest \(\xi_1^2 + \xi_2^2 = \norm{x}^2\), and this takes care of lengths; the
+cosine formula above gives us the angle in terms of \(\xi_1\eta_1 +
+\xi_2\eta_2\) and the two lengths \(\norm{x}\) and \(\norm{y}\). To have a
+concise notation, let us write, for \(x = (\xi_1, \xi_2)\) and \(y = (\eta_1,
+\eta_2)\),
+\begin{equation*}
+    \xi_1\eta_1 + \xi_2\eta_2 = (x, y);
+\end{equation*}
+what we said above can be summarized as follows by the relations
+\begin{align*}
+    &\text{distance from } 0 \text{ to } x = \norm{x} = \sqrt{(x, x)}, \\
+    &\text{distance from } x \text{ to } y = \norm{x-y}, \\
+    &\text{cosine of angle between } x \text{ and } y = \frac{(x, y)}{\norm{x}\cdot\norm{y}}.
+\end{align*}
+The important properties of \((x,y)\), considered as a numerical function of the
+pair of vectors \(x\) and \(y\), are the following: it is symmetric in \(x\) and
+\(y\), it depends linearly on each of its two variables, and (unless \(x = 0\))
+the value of \((x, x)\) is always strictly positive. (The notational conflict
+between the use of parentheses in \((x, y)\) and in \((\xi_1, \xi_2)\) is only
+apparent. It could arise in two-dimensional spaces only, and even there
+confusion is easily avoided.)
+
+Observe for a moment the much more trivial picture in a \(\Reals^1\). For \(x =
+(\xi_1)\) and \(y= (\eta_1)\) we should have, in this case, \((x, y) =
+\xi_1\eta_1\) (and itis for this reason that \((x,y)\) is known as the
+\emph{inner product} or \emph{scalar product} of \(x\) and \(y\)). The angle
+between any two vectors is either \(0\) or \(\pi\), so that its cosine is either
+\(+1\) or \(-1\). This shows up the much greater sensitivity of the function
+given by \((x,y)\), which takes on all possible numerical values.
+
+\section{Complex inner products}
+
+What happens if we want to consider \(\Complex^2\) instead of \(\Reals^2\)? The
+generalization seems to lie right at hand; for \(x = (\xi_1, \xi_2)\) and \(y =
+(\eta_1, \eta_2)\) (where now the \(\xi\)'s and \(\eta\)'s may be complex
+numbers), we write \((x, y) = \xi_1\eta_1 + \xi_2\eta_2\), and we hope that the
+expressions \(\norm{x} = (x, x)\) and \(\norm{x -y}\) can be used as sensible
+measures of distance. Observe, however, the following strange phenomenon (where
+\(i = \sqrt{-1}\):
+\begin{equation*}
+    \norm{ix}^2 = (ix, ix) = i(x, ix) = i^2(x, x) = - \norm{x}^2.
+\end{equation*}
+This means that if \(\norm{x}\) is positive, that is, if \(x\) is at a positive
+distance from the origin, then \(ix\) is not; in fact the distance from \(0\) to
+\(ix\) is imaginary. This is very unpleasant; surely it is reasonable to demand
+that whatever it is that is going to play the role of \((x, y)\) in this case,
+it should havethe property that for \(x = y\) it never becomes negative. A
+formal remedy lies close at hand; we could try to write
+\begin{equation*}
+    (x,y) = \xi_1\bar{\eta}_1 + \xi_2\bar{\eta}_2
+\end{equation*}
+(where the bar denotes complex conjugation). In this definition the expression
+\((x, y)\) loses much of its former beauty; it is no longer quite symmetric in
+\(x\) and \(y\) and it is no longer quite linear in each of its variables. But,
+and this is what prompted us to give our new definition,
+\begin{equation*}
+    (x, x) = \xi_1\bar{\xi}_1 + \xi_2\bar{\xi}_2 = \abs{\xi_1}^2 + \abs{\xi_2}^2
+\end{equation*}
+is surely never negative. It is a priori dubious whether a useful and elegant
+theory can be built up on the basis of a function that fails to possess so many
+of the properties that recommended it to our attention in the first place; the
+apparent inelegance will be justified in what follows by its suc- cess.
+Acheerful portent is this. Consider the space \(\Complex^1\) (that is, theset of
+all complex numbers). It is impossible to draw a picture of any configuration in
+this space and then to be able to tell it apart from a configuration in
+\(\Reals^2\), but conceptually it is clearly a different space. The analogue of
+\((x,y)\) in this space, for \(x = (\xi_1)\) and \(y = (\eta_1)\), is given by
+\((x, y) = \xi_1\bar{\eta}_1\), and this expression does have a simple geometric
+interpretation. If we join \(x\) and \(y\) to the origin by straight line
+segments, \((x,y)\) wil not, to be sure, be the cosine of the angle between the
+two segments; it turns out that, for \(\norm{x} = \norm{y} = 1\), its real part
+is exactly that cosine.
+
+The complex conjugates that we were forced to introduce here will come back to
+plague us later; for the present we leave this heuristic introduction and turn
+to the formal work, after just one more comment on the notation. The
+similarityof thesymbols \((,)\) and \([,]\), the one used here for inner product
+and the other used earlier for linear functionals, is not accidental. We shall
+show later that it is, in fact, only the presence of the complex conjugation in
+\((,)\) that makes it necessary to use for it a symbol different from \([,]\).
+For the present, however, we cannot afford the luxury of confusing the two.
+
+\section{Inner product spaces}
+
+\begin{definition}
+    An \emph{inner product} in a (real or complex) vector space is a (respectively, real or complex) numerically valued function of the ordered pairs of vectors \(x\) and \(y\), such that
+    \begin{enumerate}
+        \item \((x, y) = \overline{(y, x)}\), 
+        \item \((\alpha_1 x_1 + \alpha_2 x_2, y) = \alpha_1(x_1, y) + \alpha_2(x_2, y)\),
+        \item \((x, x) \geq 0\); \quad \((x, x) = 0\) if and only if \(x = 0\).
+    \end{enumerate}
+    An \emph{inner product space} is a vector space with an inner product.
+\end{definition}
+
+
+We observe that in the case of a real vector space, the conjugation in (1) may
+be ignored. In any case, however, real or complex, (1) implies that \((x,x)\) is
+always real, so that the inequality in (3) makes sense. In an inner product
+space we shall use the notation
+\begin{equation*}
+    \sqrt{(x, x)} = \norm{x};
+\end{equation*}
+the number \(\norm{x}\) is called the \emph{norm} or \emph{length} of the vector
+\(x\). A real inner product space is sometimes called a \emph{Euclidean space};
+its complex analogue is called a \emph{unitary space}.
+
+As examples of \emph{unitary spaces} we may consider \(\Complex^n\) and
+\(\Polynom\); in the first case we write, for \(x = (\xi_1, \cdots, \xi_n\) and
+\(y = (\eta_1, \cdots, \eta_n)\),
+\begin{equation*}
+    (x, y) = \textstyle\sumx_{i=1}^n \xi_i\bar{\eta}_i,
+\end{equation*}
+and, in \(\Polynom\), we write
+\begin{equation*}
+    (x, y) = \displaystyle\int_{0}^1 x(t)\overline{y(t)}\, dt.
+\end{equation*}
+The modifications that convert these examples into Euclidean spaces (that is,
+real inner product spaces) are obvious.
+
+In a unitary space we have
+\begin{equation*}
+    (x, \alpha_1 y_1 + \alpha_2 y_2) = \bar{\alpha}_1(x, y_1) + \bar{\alpha}_2(x, y_2).
+\end{equation*}
+(To transform the left side of (2') into the right side, use (1), expand by (2), and use (1) again.) This fact, together with the definition of an inner
+product, explains the terminology sometimes used to describe properties
+
+\section{Orthogonality}
+
+\section{Completeness}
+
+\section{Schwarz's inequality}
+
+(4) In the space \(\Polynom\) the Schwarz inequality becomes
+\begin{equation*}
+    \abs{\int_{0}^{1} x(t)\overline{y(t)}\, dt} \leq \int_0^1 \abs{x(t)}^2\, dt\cdot\int_0^1 \abs{y(t)}^2\, dt.
+\end{equation*}
+
+It is useful to observe that the relations mentioned in (1)-(4) above are not
+only analogous to the general Schwarz inequality, but actually consequences or
+special cases of it.
+
+(5) We mention in passing that there is room between the two notions (general
+vector spaces and inner product spaces) for an intermediate concept of some
+interest. This concept is that of a \emph{normed} vector space, a vector space
+in which there is an acceptable definition of length, but nothing is said about
+angles. A norm in a (real or complex) vector space is a numerically valued
+function \(\norm{x}\) of the vectors \(x\), such that \(\norm{x} \geq 0\) unless
+\(x = 0\), \(\norm{\alpha x} = \abs{\alpha}\cdot\norm{x}\), and \(\norm{x + y}
+\leq \norm{x} + \norm{y}\).
+
+\section{Projection theorem}
+
+\section{Linear functionals}
+
+\section{Characterization of spectra}
+
+The following results support the analogy between numbers and transformations
+more than anything so far; they assert that the properties that caused us to
+define the special classes of transformations we h a v ebeen considering are
+reflected by their spectra.
+
+\begin{theorem}
+    If A is a self-adjoint transformation on an inner product space,then every proper value of A is real, if A is positive, or strictlypositive, then every proper value of A is positive, or strictly positive, respectively.
+\end{theorem}
