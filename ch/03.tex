@@ -5,10 +5,10 @@
 Let us now get our feet back on the ground. We started in Chapter I by pointing
 out that we wish to generalize certain elementary properties of certain
 elementary spaces such as \(\Reals^2\). In our study so far we have done this,
-but we have entirely omitted from consideration one aspect of o?. We have
-studied the qualitative concept of linearity; what we have entirely ignored are
-the usual quantitative concepts of angle and length. In the present chapter we
-shall fill this gap; we shall superimpose on the vector spaces to be studied
+but we have entirely omitted from consideration one aspect of \(\Reals^2\). We
+have studied the qualitative concept of linearity; what we have entirely ignored
+are the usual quantitative concepts of angle and length. In the present chapter
+we shall fill this gap; we shall superimpose on the vector spaces to be studied
 certain numerical functions, corresponding to the ordinary notions of angle and
 length, and we shall study the new structure (vector space plus given numerical
 function) so obtained. For the added depth of geometric insight we gain in this
@@ -18,8 +18,9 @@ shall have to assume that the underlying field of scalars is either the field
 
 For a clue as to how to proceed, we first inspect \(\Reals^2\). If \(x = (\xi_1,
 \xi_2)\) and \(y= (\eta_1, \eta_2)\) are any two points in \(\Reals^2\), the
-usual formula for the distance between \(x\) and \(y\), or the length of the segment
-joining \(x\) and \(y\), is \(\sqrt{(\xi_1 - \eta_1)^2 + (\xi_2 - \eta_2)^2}\). It is convenient to introduce the notation
+usual formula for the distance between \(x\) and \(y\), or the length of the
+segment joining \(x\) and \(y\), is \(\sqrt{(\xi_1 - \eta_1)^2 + (\xi_2 -
+\eta_2)^2}\). It is convenient to introduce the notation
 \begin{equation*}
     \|x\| = \sqrt{\xi_1^2 + \xi_2^2}
 \end{equation*}
@@ -38,7 +39,8 @@ and let \(\beta\) be the angle between the segment from \(0\) to \(y\) and the
 same axis; the angle between the two vectors \(x\) and \(y\) is \(\alpha -
 \beta\), so that its cosine is
 \begin{equation*}
-    \cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta = \frac{\xi_1\eta_1 + \xi_2\eta_2}{\norm{x}\cdot\norm{y}}.
+    \cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta
+    = \frac{\xi_1\eta_1 + \xi_2\eta_2}{\norm{x}\cdot\norm{y}}.
 \end{equation*}
 
 Consider the expression \(\xi_1\eta_1 + \xi_2\eta_2\); by means of it we can
@@ -62,7 +64,7 @@ what we said above can be summarized as follows by the relations
     &\text{distance from } x \text{ to } y = \norm{x-y}, \\
     &\text{cosine of angle between } x \text{ and } y = \frac{(x, y)}{\norm{x}\cdot\norm{y}}.
 \end{align*}
-The important properties of \((x,y)\), considered as a numerical function of the
+The important properties of \((x, y)\), considered as a numerical function of the
 pair of vectors \(x\) and \(y\), are the following: it is symmetric in \(x\) and
 \(y\), it depends linearly on each of its two variables, and (unless \(x = 0\))
 the value of \((x, x)\) is always strictly positive. (The notational conflict
@@ -72,11 +74,11 @@ confusion is easily avoided.)
 
 Observe for a moment the much more trivial picture in a \(\Reals^1\). For \(x =
 (\xi_1)\) and \(y= (\eta_1)\) we should have, in this case, \((x, y) =
-\xi_1\eta_1\) (and itis for this reason that \((x,y)\) is known as the
+\xi_1\eta_1\) (and itis for this reason that \((x, y)\) is known as the
 \emph{inner product} or \emph{scalar product} of \(x\) and \(y\)). The angle
 between any two vectors is either \(0\) or \(\pi\), so that its cosine is either
 \(+1\) or \(-1\). This shows up the much greater sensitivity of the function
-given by \((x,y)\), which takes on all possible numerical values.
+given by \((x, y)\), which takes on all possible numerical values.
 
 \section{Complex inner products}
 
@@ -97,7 +99,7 @@ that whatever it is that is going to play the role of \((x, y)\) in this case,
 it should havethe property that for \(x = y\) it never becomes negative. A
 formal remedy lies close at hand; we could try to write
 \begin{equation*}
-    (x,y) = \xi_1\bar{\eta}_1 + \xi_2\bar{\eta}_2
+    (x, y) = \xi_1\bar{\eta}_1 + \xi_2\bar{\eta}_2
 \end{equation*}
 (where the bar denotes complex conjugation). In this definition the expression
 \((x, y)\) loses much of its former beauty; it is no longer quite symmetric in
@@ -114,37 +116,39 @@ Acheerful portent is this. Consider the space \(\Complex^1\) (that is, theset of
 all complex numbers). It is impossible to draw a picture of any configuration in
 this space and then to be able to tell it apart from a configuration in
 \(\Reals^2\), but conceptually it is clearly a different space. The analogue of
-\((x,y)\) in this space, for \(x = (\xi_1)\) and \(y = (\eta_1)\), is given by
+\((x, y)\) in this space, for \(x = (\xi_1)\) and \(y = (\eta_1)\), is given by
 \((x, y) = \xi_1\bar{\eta}_1\), and this expression does have a simple geometric
 interpretation. If we join \(x\) and \(y\) to the origin by straight line
-segments, \((x,y)\) wil not, to be sure, be the cosine of the angle between the
+segments, \((x, y)\) wil not, to be sure, be the cosine of the angle between the
 two segments; it turns out that, for \(\norm{x} = \norm{y} = 1\), its real part
 is exactly that cosine.
 
 The complex conjugates that we were forced to introduce here will come back to
 plague us later; for the present we leave this heuristic introduction and turn
 to the formal work, after just one more comment on the notation. The
-similarityof thesymbols \((,)\) and \([,]\), the one used here for inner product
+similarityof thesymbols \((,)\) and \([, ]\), the one used here for inner product
 and the other used earlier for linear functionals, is not accidental. We shall
 show later that it is, in fact, only the presence of the complex conjugation in
-\((,)\) that makes it necessary to use for it a symbol different from \([,]\).
+\((,)\) that makes it necessary to use for it a symbol different from \([, ]\).
 For the present, however, we cannot afford the luxury of confusing the two.
 
 \section{Inner product spaces}
 
 \begin{definition}
-    An \emph{inner product} in a (real or complex) vector space is a (respectively, real or complex) numerically valued function of the ordered pairs of vectors \(x\) and \(y\), such that
-    \begin{enumerate}
-        \item \((x, y) = \overline{(y, x)}\), 
-        \item \((\alpha_1 x_1 + \alpha_2 x_2, y) = \alpha_1(x_1, y) + \alpha_2(x_2, y)\),
-        \item \((x, x) \geq 0\); \quad \((x, x) = 0\) if and only if \(x = 0\).
-    \end{enumerate}
+    An \emph{inner product} in a (real or complex) vector space is a
+    (respectively, real or complex) numerically valued function of the ordered
+    pairs of vectors \(x\) and \(y\), such that
+    \begin{align}
+        (x, y) &= \overline{(y, x)}, \\
+        (\alpha_1 x_1 + \alpha_2 x_2, y) &= \alpha_1(x_1, y) +
+        \alpha_2(x_2, y)\\
+        \innerprod{x}{x} \geq 0; \quad \innerprod{x}{x} &= 0 \text{ if and only if } x = 0.
+    \end{align}
     An \emph{inner product space} is a vector space with an inner product.
 \end{definition}
 
-
 We observe that in the case of a real vector space, the conjugation in (1) may
-be ignored. In any case, however, real or complex, (1) implies that \((x,x)\) is
+be ignored. In any case, however, real or complex, (1) implies that \((x, x)\) is
 always real, so that the inequality in (3) makes sense. In an inner product
 space we shall use the notation
 \begin{equation*}
@@ -155,52 +159,630 @@ the number \(\norm{x}\) is called the \emph{norm} or \emph{length} of the vector
 its complex analogue is called a \emph{unitary space}.
 
 As examples of \emph{unitary spaces} we may consider \(\Complex^n\) and
-\(\Polynom\); in the first case we write, for \(x = (\xi_1, \cdots, \xi_n\) and
-\(y = (\eta_1, \cdots, \eta_n)\),
+\(\Polynom\); in the first case we write, for \(x = (\xi_1, \, \cdot\, \cdot\, \cdot\,, \xi_n)\) and
+\(y = (\eta_1, \, \cdot\, \cdot\, \cdot\,, \eta_n)\),
 \begin{equation*}
-    (x, y) = \textstyle\sumx_{i=1}^n \xi_i\bar{\eta}_i,
+    (x, y) = \sumx_{i=1}^n \xi_i\bar{\eta}_i,
 \end{equation*}
 and, in \(\Polynom\), we write
 \begin{equation*}
-    (x, y) = \displaystyle\int_{0}^1 x(t)\overline{y(t)}\, dt.
+    (x, y) = \int_{0}^1 x(t)\overline{y(t)}\, dt.
 \end{equation*}
 The modifications that convert these examples into Euclidean spaces (that is,
 real inner product spaces) are obvious.
 
 In a unitary space we have
-\begin{equation*}
+\begin{equation}\tag{2*}
     (x, \alpha_1 y_1 + \alpha_2 y_2) = \bar{\alpha}_1(x, y_1) + \bar{\alpha}_2(x, y_2).
+\end{equation}
+(To transform the left side of (2') into the right side, use (1), expand by (2),
+and use (1) again.) This fact, together with the definition of an inner product,
+explains the terminology sometimes used to describe properties (1), (2), (3)
+(and their consequence (2')). According to that terminology \((x, y)\) is a
+\emph{Hermitian symmetric} (1), \emph{conjugate bilinear} ((2) and (2')), and
+\emph{positive definite} (3) form. In a Euclidean space the conjugation in (2')
+may be ignored along with the conjugation in (1); in that case \((x, y)\) is
+called a symmetric, bilinear, and positive definite form. We observe that in
+either case, the conditions on \((x, y)\) imply for \(\norm{x}\) the homogeneity
+property
+\begin{equation*}
+    \norm{\alpha x} = \abs{\alpha} \cdot \norm{x}.
 \end{equation*}
-(To transform the left side of (2') into the right side, use (1), expand by (2), and use (1) again.) This fact, together with the definition of an inner
-product, explains the terminology sometimes used to describe properties
+(Proof: \(\norm{\alpha x}^ 2 = (\alpha x, \alpha x) = \alpha \bar{\alpha} (x, x).\))
 
 \section{Orthogonality}
 
+The most important relation among the vectors of an inner product space is
+orthogonality. By definition, the vectors \(x\) and \(y\) are called
+\emph{orthogonal} if \(\innerprod{x}{y} = 0\). We observe that this relation is
+symmetric; since \(\innerprod{x}{y} =\bar{\innerprod{y}{x}}\), it follows that
+\(\innerprod{x}{y}\) and \(\innerprod{y}{x}\) vanish together. If we recall the
+motivation for the introduction of \(\innerprod{x}{y}\), the terminology
+explains itself; two vectors are orthogonal (or perpendicular) if the angle
+between them is \(90°\), that is, if the cosine of the angle between them is
+\(0\). Two subspaces are called orthogonal if every vector in each is orthogonal
+to every vector in the other.
+
+A set \(\frak{X}\) of vectors is \emph{orthonormal} if whenever both \(x\) and
+\(y\) are in \(\frak{X}\) it follows that \(\innerprod{x}{y} = 0\) or
+\(\innerprod{x}{y} = 1\) according as \(x \neq y\) or \(x = y\). (If
+\(\frak{X}\) is finite, say \(\frak{X} = \{x_1, \, \cdot\, \cdot\, \cdot\,,
+x_n\}\), we have \(\innerprod{x_i}{x_j} = \delta_{ij}\).) We call an orthonormal
+set \emph{complete} if it is not contained in any larger orthonormal set.
+
+To make our last definition in this connection, we observe first that an
+orthonormal set is linearly independent. 
+Indeed, if \(\{x_1, \, \cdot\, \cdot\, \cdot\,, x_k\}\) is any finite subset of an orthonormal set \(\frak{X}\), then \(\sumx_i \alpha_i x_i = 0\) implies that
+\begin{equation*}
+    0 = \innerprod{\sumx_i \alpha_i x_i}{x_j} = \sumx_i \alpha_i \innerprod{x_i}{x_j} = \sumx_i \alpha_i \delta_{ij} = \alpha_j;
+\end{equation*}
+in other words, a linear combination of the \(x\)'s can vanish only if all the
+coefficients vanish. From this we conclude that in a finite-dimensional inner
+product space the number of vectors in an orthonormal set is always finite, and,
+in fact, not greater than the linear dimension of the space. We define, in this
+case, the \emph{orthogonal dimension} of the space, as the largest number of
+vectors an orthonormal set can contain.
+
+Warning: for all we know at this stage, the concepts of orthogonality and
+orthonormal sets are vacuous. Trivial examples can be used to show that things
+are not so bad as all that; the vector \(0\), for instance, is always orthogonal
+to every vector, and, if the space contains a non-zero vector \(x\), then the set consisting of \(\displaystyle\frac{x}{\norm{x}}\) alone is an orthonormal
+set. We grant that these examples are not very inspiring. For the present,
+however, we re main content with them; soon we shall see that there are always
+``enough'' orthogonal vectors to operate with in comfort.
+
+Observe also that we have no right to assume that the number of elements in a
+complete orthonormal set is equal to the orthogonal dimension. The point is
+this: if we had an orthonormal set with that many elements, it would clearly
+be complete; it is conceivable, just the same, that some other set contains fewer
+elements, but is still complete because its nasty structure precludes the
+possibility of extending it. These difficulties are purely verbal and will
+evaporate the moment we start proving things; they occur only because from among
+the several possibilities for the definition of completeness we had to choose a
+definite one, and we must prove its equivalence with the others.
+
+We need some notation. If \(\frak{E}\) is any set of vectors in an inner product
+space \(\VecSp\), we denote by \(\frak{E}^{\perp}\) the set of all vectors in
+Wthat are orthogonal to every vector in \(\frak{E}\) It is clear that
+\(\frak{E}^{\perp}\) is a subspace of \(\VecSp\) (whether or not \(\frak{E}\) is
+one), and that is contained in \(\frak{E}^{\perp\perp} =
+(\frak{E}^{\perp})^{\perp}\). It folows that the subspace spanned by
+\(\frak{E}\) contained ni \(\frak{E}^{\perp\perp}\), In case is \(\frak{E}\) a
+subspace, we shall call \(\frak{E}^{\perp}\) the \emph{orthogonal complement} of
+\(\frak{E}\). We use the sign in order to be reminded of orthogonality (or
+perpendicularity). In informal discussions, \(\frak{E}^{\perp}\) might be
+pronounced as ``E perp.''
+
+{\small
+\subsection*{Exercises}
+\begin{enumerate}[wide]
+    \item Given four complex numbers \(\alpha\), \(\beta\), \(\gamma\), and \(\delta\), try to define an inner product in \(\Complex^2\) by writing
+    \begin{equation}
+        \innerprod{x}{y} = \alpha \xi_1 \bar{\eta}_1 + \beta \xi_2 \bar{\eta}_1 + \gamma \xi_1 \bar{\eta}_2 + \delta \xi_2 \bar{\eta}_2
+    \end{equation}
+    whenever \(x = (\xi_1, \xi_2)\) and \(y = (\eta_1, \eta_2)\). Under what conditions on \(\alpha\), \(\beta\), \(\gamma\), and \(\delta\) does this equation define an inner product?
+    \item Prove that if \(x\) and \(y\) are vectors in a unitary space, then
+    \begin{equation*}
+        4\innerprod{x}{y} = \norm{x + y}^2 - \norm{x - y}^2 + i\norm{x + iy}^2 - i\norm{x - iy}^2.
+    \end{equation*}
+    \item 
+\end{enumerate}
+}
+
 \section{Completeness}
+
+\begin{theorem}
+    If \(\frak{X} = \{x_1, \, \cdot\, \cdot\, \cdot\,, x_n\}\) is any finite orthonormal set in an inner product space, if \(x\) is any vector, and if \(\alpha_i = \innerprod{x}{x_i}\), then (Bessel's inequality)
+    \begin{equation*}
+        \sumx_i \abs{\alpha_i}^2 \leq \norm{x}^2.
+    \end{equation*}
+    The vector \(x' = x - \sumx_i \alpha_i x_i\) is orthogonal to each \(x_j\) and, consequently, to the subspace spanned by \(\frak{X}\).
+\end{theorem}
+
+\begin{proof}
+    For the first assertion:
+    \begin{align*}
+        0 &\leq \norm{x'}^2 = \innerprod{x'}{x'} = \innerprod{x - \sumx_i \alpha_i x_i}{x - \sumx_j \alpha_j x_j} \\
+        &= \innerprod{x}{x} - \sumx_i \alpha_i \innerprod{x_i}{x} - \sumx_j \bar{\alpha}_j \innerprod{x}{x_j} + \sumx_i \sumx_j \alpha_i \bar{\alpha}_j \innerprod{x_i}{x_j} \\
+        &= \norm{x}^2 - \sumx_i \abs{\alpha_i}^2 - \sumx_i \abs{\alpha_i}^2 + \sumx_i \abs{\alpha_i}^2 \\
+        &= \norm{x}^2 - \sumx_i \abs{\alpha_i}^2;
+    \end{align*}
+    for the second assertion:
+    \begin{equation*}
+        \innerprod{x'}{x_j} = \innerprod{x}{x_j} - \sumx_i \alpha_i \innerprod{x_i}{x_j} = \alpha_j - \alpha_j = 0.
+    \end{equation*}
+\end{proof}
+
+\begin{theorem}
+    If \(\frak{X}\) is a finite orthonormal set in an inner product space \(\VecSp\), thhe following six conditions are equivalent to each other.
+    \begin{enumerate}[wide, label=(\arabic*)]
+        \item The orthonormal set \(\frak{X}\) is complete.
+        \item If \(\innerprod{x}{x_i} = 0\) for \(i = 1, \, \cdot\, \cdot\, \cdot\,, n\), then \(x = 0\).
+    \end{enumerate}
+\end{theorem}
 
 \section{Schwarz's inequality}
 
-(4) In the space \(\Polynom\) the Schwarz inequality becomes
-\begin{equation*}
-    \abs{\int_{0}^{1} x(t)\overline{y(t)}\, dt} \leq \int_0^1 \abs{x(t)}^2\, dt\cdot\int_0^1 \abs{y(t)}^2\, dt.
-\end{equation*}
+\begin{thmx}
+    If \(x\) and \(y\) are vectors in an inner products pace, then (Schwarz's inequality)
+    \begin{equation*}
+        \abs{\innerprod{x}{y}} \leq \norm{x}\cdot\norm{y}.
+    \end{equation*}
+\end{thmx}
 
-It is useful to observe that the relations mentioned in (1)-(4) above are not
-only analogous to the general Schwarz inequality, but actually consequences or
-special cases of it.
+\begin{proof}
+    If \(y = 0\), both sides vanish. If \(y \neq 0\), then the set consisting of the vector \(\displaystyle \frac{y}{\norm{y}}\) is orthonormal, and, consequently, by Bessel's inequality
+    \begin{equation*}
+        \abs{\innerprod{x}{\frac{y}{\norm{y}}}} \leq \norm{x}^2.
+    \end{equation*}
+\end{proof}
 
-(5) We mention in passing that there is room between the two notions (general
-vector spaces and inner product spaces) for an intermediate concept of some
-interest. This concept is that of a \emph{normed} vector space, a vector space
-in which there is an acceptable definition of length, but nothing is said about
-angles. A norm in a (real or complex) vector space is a numerically valued
-function \(\norm{x}\) of the vectors \(x\), such that \(\norm{x} \geq 0\) unless
-\(x = 0\), \(\norm{\alpha x} = \abs{\alpha}\cdot\norm{x}\), and \(\norm{x + y}
-\leq \norm{x} + \norm{y}\).
+The Schwarz inequality has important arithmetic, geometric, and analytic consequences.
+
+\begin{enumerate}[wide, nosep, label=(\arabic*)]
+    \item In any inner product space we define the distance \(\delta(x, y)\) between two vectors \(x\) and \(y\) by
+    \begin{equation*}
+        \delta(x, y) = \norm{x - y} = \sqrt{(x - y, x - y)}.
+    \end{equation*}
+    In order to \(\delta\) to deserve to be called a distance, it should have the following properties:
+    \begin{enumerate}[wide, nosep, label=(\roman*)]
+        \item \(\delta(x, y) = \delta(y, x)\),
+        \item \(\delta(x, y) \geq 0\); \(\delta(x, y) = 0\) if and only if \(x = y\),
+        \item \(\delta(x, y) \leq \delta(x, z) + \delta(z, y)\).
+        
+        (In a vector space, it is also pleasant to be sure that the distance is invariant under translations:
+        
+        \item \(\delta(x, y) = \delta(x + z, y + z)\).)
+    \end{enumerate}
+
+    Properties (i), (ii), and (iv) are obviously possessed by the particular
+    \(\delta\) we defined; the only question is the validity of the ``triangle
+    inequality'' (iii). To prove (iii), we observe that
+    \begin{align*}
+        \norm{x + y}^2 &= \innerprod{x+y}{x+y} \norm{x}^2 + \innerprod{x}{y} + \innerprod{y}{x} + \norm{y}^2\\
+        &= \norm{x}^2 + \innerprod{x}{y} + \overline{\innerprod{x}{y}} + \norm{y}^2\\
+        &= \norm{x}^2 + 2\, \mathrm{Re}\innerprod{x}{y} + \norm{y}^2.\\
+        &\leq \norm{x}^2 + 2\, \abs{\innerprod{x}{y}} + \norm{y}^2.\\
+        &\leq \norm{x}^2 + 2\, \norm{x}\cdot\norm{y} + \norm{y}^2.\\
+        &= \left(\norm{x} + \norm{y}\right)^2;
+    \end{align*}
+    replacing \(x\) by \(x - z\) and \(y\) by \(z - y\) we obtain
+    \begin{equation*}
+        \norm{x - y} \leq \norm{x - z} + \norm{z - y},
+    \end{equation*}
+    and this is equivalent to (iii). (We use \(\mathrm{Re}\zeta\) to denote the
+    real part of the complex number \(\zeta\); if \(\zeta = \xi + i\eta\), with
+    real \(\xi\) and \(\eta\), then \(\mathrm{Re} \zeta = \xi\). The imaginary
+    part of \(\zeta\), that is, the real number \(\eta\), is denoted by
+    \(\mathrm{Im} \zeta\).)
+
+    \item In the Euclidean space \(\Reals^n\), the expression
+    \begin{equation*}
+        \frac{\innerprod{x}{y}}{\norm{x}\cdot\norm{y}}
+    \end{equation*}
+    gives the cosine of the angle between \(x\) and \(y\). The Schwarz
+    inequality in this case merely amounts to the statement that the cosine of a
+    real angle is \(\leq 1\).
+
+    \item In the unitary space \(\Complex^n\), the Schwarz inequality becomes
+    the so-called Cauchy inequality; it asserts that for any two sequences
+    \((\xi_1, \, \cdot\, \cdot\, \cdot\,, \xi_n)\) and \((\eta_1,
+    \, \cdot\, \cdot\, \cdot\,, \eta_n)\) of complex numbers, we have
+    \begin{equation*}
+        \abs{\sumx_{i = 1}^n \xi_i\overline{\eta_i}} \leq \sumx_{i = 1}^n \abs{\xi_i}^2\cdot\sumx_{i = 1}^n \abs{\eta_i}^2.
+    \end{equation*}
+
+    \item In the space \(\Polynom\) the Schwarz inequality becomes
+    \begin{equation*}
+        \abs{\int_{0}^{1} x(t)\overline{y(t)}\, dt} \leq \int_0^1 \abs{x(t)}^2\, dt\cdot\int_0^1 \abs{y(t)}^2\, dt.
+    \end{equation*}
+
+    It is useful to observe that the relations mentioned in (1)-(4) above are
+    not only analogous to the general Schwarz inequality, but actually
+    consequences or special cases of it.
+
+    \item We mention in passing that there is room between the two notions
+    (general vector spaces and inner product spaces) for an intermediate concept
+    of some interest. This concept is that of a \emph{normed} vector space, a
+    vector space in which there is an acceptable definition of length, but
+    nothing is said about angles. A norm in a (real or complex) vector space is
+    a numerically valued function \(\norm{x}\) of the vectors \(x\), such that
+    \(\norm{x} \geq 0\) unless \(x = 0\), \(\norm{\alpha x} =
+    \abs{\alpha}\cdot\norm{x}\), and \(\norm{x + y} \leq \norm{x} + \norm{y}\).
+    Ourdis- cussion sofar shows that an inner product space is a normed vector
+    space; the converse is not in general true. In other words, if all we are
+    given is a norm satisfying the three conditions just given, it may not be
+    possible to find an inner product for which \(\innerprod{x}{x}\) is
+    identically equal to \(\norm{x}^2\). In somewhat vague but perhaps
+    suggestive terms, we may say that the norm in an inner product space has an
+    essentially ``quadratic'' character that norms in general need not possess.
+\end{enumerate}
+
+\section{Complete orthonormal sets}
 
 \section{Projection theorem}
 
+Since a subspace of an inner product space may itself be considered as an inner
+product space, the theorem of the preceding section may be applied. The
+following result, called the \emph{projection theorem}, is the most important
+application.
+
+This kind of direct sum decomposition of an inner product space (via a subspace
+and its orthogonal complement) is of considerable geometric interest. We shall
+study the associated projections a little later; they turn out to be an
+interesting and important subclass of the class of all projections.
+
+
 \section{Linear functionals}
+
+We are now in a position to study linear functionals on inner product spaces. For a general \(n\)-dimensional vector space the dual space is also
+\(n\)-dimensional and is therefore isomorphic to the original space. There is, however, no obvious natural isomorphism that we can set up; we have to wait for the second dual space to get back where we came from. The main point of the theorem we shall prove now is that in inner product spaces there is a "natural" correspondence between U and U'; the only cloud on the horizon is that in general it is not quite an isomorphism.
+\begin{thmx}
+    To any linear functional \(y'\) on a finite-dimensional inner product space \(\VecSp\) there corresponds a unique vector \(y\) in \(\VecSp\) such that \(y'(x) = \innerprod{x}{y}\) for all \(x\).
+\end{thmx}
+\begin{proof}
+    If \(y' = 0\), we may choose \(y = 0\); let us from now on assume that
+    \(y'(x)\) is not identically zero. Let \(\Mfold\) be the subspace consisting
+    of all vectors \(x\) for which \(y'(x) = 0\), and let \(\frak{N} =
+    \Mfold^{\perp}\) be the orthogonal complement of \(\Mfold\). The subspace
+    \(\frak{N}\) contains a non-zero vector \(y_0\); multiplying by a suitable
+    constant, we may assume that \(\norm{y_0} = 1\). We write \(y =
+    \overline{y'(y_0)} \cdot y_0\). (The bar denotes complex conjugation, as
+    usual; in case \(\VecSp\) is a real inner product space and not a unitary
+    space, the bar may be omitted.) We do then have the desired relation
+    \begin{equation}
+        y'(x) = \innerprod{x}{y}
+    \end{equation}
+    at least for \(x = y_0\) and for all \(x\) in \(\Mfold\). For an arbitrary
+    \(x\) in \(\VecSp\), we write \(x_0 = x - \lambda y_0\), where
+    \begin{equation*}
+        \lambda = \frac{y'(x)}{y'(y_0)};
+    \end{equation*}
+    then \(y'(x_0) = 0\) and \(x = x_0 + \lambda y_0\) is a linear combination
+    of two vectors for each of which (1) is valid. From the linearity of both
+    sides of (1) it follows that (1) holds for \(x\), as was to be proved.
+\end{proof}
+
+
+\section{Parentheses versus brackets}
+
+It becomes necessary now to straighten out the relation between general vector
+spaces and inner product spaces. The theorem of the preceding section shows
+that, as long as we are careful about complex conjugation, \((x, y)\) can
+completely take the place of \([x, y]\). It might seem that it would have been
+desirable to develop the entire subject of general vector spaces in such a way
+that the concept of orthogonality in a unitary space becomes not merely an
+analogue but a special case of some previously studied general relation between
+vectors and functionals. One way, for example, of avoiding the unpleasantness of
+conjugation (or, rather, of shifting it to a less conspicuous position) would
+have been to define the dual space of a complex vector space as the set of
+conjugate linear functionals, that is, the set of numerically valued functions
+\(y\) for which
+\begin{equation*}
+    y(\alpha_1 x_1 + \alpha_2 x_2) = \bar{\alpha_1} y(x_1) + \bar{\alpha_2} y(x_2)
+\end{equation*}
+
+
+\section{Natural isomorphisms}
+
+\section{Self-adjoint transformations}
+
+Let us now study the algebraic structure of the class of all linear trans-
+formations on an inner product space \(\VecSp\). In many fundamental respects
+this class resembles the class of all complex numbers. In both systems, notions
+of addition, multiplication, \(0\), and \(1\) are defined and have similar
+properties, and in both systems there is an involutory anti-automorphism of the
+system onto itself (namely, \(A \to A^*\) and \(\zeta \to \bar{\zeta}\)). We
+shall use this analogy as a heuristic principle, and we shall attempt to carry
+over to linear transformations some well-known concepts from the complex domain.
+We shall be hindered in this work by two difficulties in the theory of linear
+transformations, of which, possibly surprisingly, the second is much more
+serious; they are the impossibility of unrestricted division and the
+non-commutativity of general linear transformations.
+
+The three most important subsets of the complex number plane are the
+set of real numbers, the set of positive real numbers, and the set of numbers of absolute value one. We shall now proceed systematically to use our heuristic analogy of transformations with complex numbers, and to try to discover the analogues among transformations of these well-known numerical concepts.
+
+When is a complex number real? Clearly a necessary and sufficient condition for
+the reality of \(\zeta\) is the validity of the equation \(\zeta =
+\bar{\zeta}\). We might accordingly (remembering that the analogue of the
+complex conjugate for linear transformations is the adjoint) define a linear
+transformation \(A\) to be real if \(A = A^*\). More commonly linear
+transformations \(A\) for which \(A = A^*\) are called \emph{self-adjoint}; in
+real inner product spaces the usual word is \emph{symmetric}, and, in complex
+inner product spaces, \emph{Hermitian}. We shall see that self-adjoint
+transformations do indeed play the same role as real numbers.
+
+It is quite easy to characterize the matrix of a self-adioint transforma- tion
+with respect to an orthonormal basis \(\frak{X} = \{x_1,
+\, \cdot\, \cdot\, \cdot\,, x_n\}\). If the matrix of \(A\) is \(\alpha_{ij}\),
+then we know that the matrix of \(A^*\) with respect to the dual basis of
+\(\frak{X}\) is \((\alpha_{ij}^*)\), where \((\alpha_{ij}^* =
+\overline{\alpha_{ji}})\) since an orthonormal basis is self-dual and since \(A
+= A^*\), we have
+\begin{equation*}
+    \alpha_{ij} = \overline{\alpha_{ji}}.
+\end{equation*}
+We leave it to the reader to verify the converse: if we define a linear
+transformation \(A\) by means of a matrix \(\alpha_{ij}\) and an arbitrary
+orthonormal coordinate system \(\frak{X} = \{x_1, \, \cdot\, \cdot\, \cdot\,,
+x_n\}\), via the usual equations
+\begin{align*} 
+    A\left(\sumx_j \xi_j \eta_j\right) &= \sumx_i \eta_i x_i, \\
+    \eta_i &= \sumx_j \alpha_{ij} \xi_j,
+\end{align*}
+and if the matrix \(\alpha_{ij}\) is such that \(\alpha_{ij} = \overline{\alpha_{ji}}\), then \(A\) is self-adjoint.
+
+The algebraic rules for the manipulation of self-adjoint transformations are
+easy to remember if we think of such transformations as the analogues of real
+numbers. Thus, if \(A\) and \(B\) are self-adjoint, so is \(A + B\); if \(A\) is
+self-adjoint and different from \(0\), and if \(\alpha\) is a non-zero scalar,
+then a necessary and sufficient condition that \(\alpha A\) be self-adjoint is
+that \(\alpha\) be real; and if \(A\) is invertible, then both or neither of
+\(A\) and \(A^{-1}\) are self-adjoint. The place where something always goes
+wrong is in multiplication; the product of two self-adjoint transformations need
+not be self-adjoint. The positive facts about products are given by the
+following two theorems.
+
+\begin{theorem}
+    If \(A\) and \(B\) are self-adjoint, then a necessary and sufficient condition that \(AB\) (or \(BA\)) be self-adjoint is that \(AB = BA\) (that is that \(A\) and \(B\) commute).
+\end{theorem}
+
+\begin{proof}
+    If \(AB = BA\),then \((AB)^* = B^*A^* = BA = AB\). If \((AB)^* = AB\), then \(AB = (AB)^* = B^*A^* = BA\).
+\end{proof}
+
+\begin{theorem}
+    If \(A\) is self-adjoint, then \(B^*AB\) is self-adjoint for all \(B\); if \(B\) is invertible and \(B^*AB\) is self-adjoint, then \(A\) is self-adjoint.
+\end{theorem}
+
+A complex number \(\zeta\) is purely imaginary if and only if \(\bar{\zeta} =
+-\zeta\). The corresponding concept for linear transformations is identified by
+the word \emph{skew}; if a linear transformation \(A\) on an inner product space
+is such that \(A^* = -A\), then \(A\) is called \emph{skew symmetric} or
+\emph{skew Hermitian} according as the space is real or complex. Here is some
+evidence for the thoroughgoing nature of our analogy between complex numbers and
+linear transformations: an arbitrary linear transformation \(A\) may be
+expressed, in one and only one way, in the form \(A = B + C\), where \(B\) is
+self-adjoint and \(C\) is skew. (The representation of \(A\) in this form is
+sometimes called the \emph{Cartesian decomposition} of \(A\).) Indeed, if we
+write
+\begin{align}
+    B &= \frac{A + A^*}{2},\\
+    C &= \frac{A - A^*}{2},
+\end{align}
+then we have \(\displaystyle B^* = \frac{A^* + A}{2}  = B\) and \(\displaystyle
+C^* = \frac{A^* - A}{2} = -C\), and, of couse, \(A = B + C\). From this proof of
+the existence of the Cartesian decomposition, its uniqueness is also clear; if
+we do have \(A = B + C\), then \(A^* = B- C\), and, consequently, \(A\), \(B\),
+and \(C\) are again connected by (1) and (2).
+
+In the complex case there is a simple way of getting skew Hermitian
+transformations from Hermitian ones, and vice versa: just multiply by \(i\)
+(\(=\sqrt{-1}\)). It follows that, in the complex case, every linear
+transformation \(A\) has a unique representation in the form \(A = B + iC\),
+where \(B\) and \(C\) are Hermitian. We shall refer to \(B\) and \(C\) as the
+real and imaginary parts of \(A\).
+
+\section{Polarization}
+
+Before continuing with the program of studying the analogies between complex numbers and linear transformations, we take time out to pick up some important auxiliary results about inner product spaces.
+
+\section{Positive transformations}
+
+When is a complex number \(\zeta\) positive (that is, \(\geq 0\))? Two equally
+natural necessary and sufficient conditions are that \(\zeta\) may be written in
+the form \(\zeta = \xi^2\) with some real \(\xi\), or that \(\zeta\) may be
+written in the form \(\zeta = \bar{\sigma}\sigma\) with some \(\sigma\) (in
+general complex). Remembering also the fact that (at least for unitary spaces)
+the Hermitian character of a transformation \(A\) can be described in terms of
+the inner products \(\innerprod{Ax}{x}\), we may consider any one of the three
+conditions below and attempt to use it as the definitionof posi- tiveness for
+transformations:
+
+\begin{definition}
+    A linear transformation \(A\) on an inner product space is positive, in
+    symbols \(A \geq 0\), if it is self-adjoint and if \(\innerprod{Ax}{x}\) for
+    all \(x\).
+\end{definition}
+
+More generally, we shall write \(A \geq B\) (or \(B \leq A\)) whenever \(A - B
+\geq 0\). Although, of course, it is quite possible that the differenceof two
+transformations that are not even self-adjoint turns out to be positive, we
+shall generally write inequalities for self-adjoint transformations only.
+Observe that for a complex inner product space a part of the definition of
+positiveness is superfluous; if \(\innerprod{Ax}{x} \geq 0\) for all \(x\),
+then, in particular, \(\innerprod{Ax}{x}\) is real for all \(x\), and, by
+Theorem 4 of the preceding section, \(A\) must be positive.
+
+Positive transformations are usually called \emph{non-negative semidefinite}. If
+A ₴ 0 and (A2, 2) = 0 implies that ×= 0, we shall say that A is strictly
+positive; the usual term is positive definite. Since the Schwarz inequality
+implies that we see that if A is a strictly positive transformation and if Ax =
+0, then 2 = 0, 80 that, on a finite-dimensional inner product space, a strictly
+posi- tive transformation is invertible. We shall see later that the converse is
+true; if A 2 0 and A is invertible, thenA is strictly positive. I t is some-
+times convenient to indicate the fact that a transformation A is strictly
+positive by writing A> 0; if A- B> 0, we may also write A> B(or B < A).
+
+It is possible to givea matricial characterization of positive transforma-tions;
+we shall postpone this discussion till later. In the meantime we shall have
+occasion to refer to positive matrices, meaning thereby Hermitian symmetric
+matrices \((\alpha_{ij})\) (that is, \((\alpha_{ij}) =
+(\overline{\alpha_{ji}})\)) with the property that for every sequence \(\xi_1,
+\ldots, xi_n\) of \(n\) scalars we have \(\sumx_i \sumx_j \alpha_{ij} \xi_i
+\overline{\xi_j}\). (In the real case the bars may be omitted; in the complex
+case Hermitian symmetry follows from the other condition.) These conditions are
+clearly equivalent to the condition that \((\alpha_{ij})\) be the matrix, with
+respect to some orthonormal coordinate system, of a positive transformation.
+
+The algebraic rules for combining positive transformations are similar to those
+for self-adjoint transformations as far as sums, scalar multiples, and inverses
+are concerned; even \S\,70, Theorem 2, remains valid if we replace
+``self-adjoint'' by ``positive'' throughout. It is also true that if \(A\) and
+\(B\) are positive, then a necessary and sufficient condition that \(AB\) (or
+\(BA\)) be positive is that \(AB = BA\) (that is, that \(A\) and \(B\) commute),
+but we shall have to postpone the proof of this statement for a while.
+
+{\small
+\subsection*{Exercises}
+\begin{enumerate}[wide]
+    \item If \(x\) and \(y\) are non-zero vectors (in a finite-dimensional inner
+    productspace), then anecessary and sufficient condition that there exist a
+    positive transformation \(A\) such that \(Ax = y\) is that
+    \(\innerprod{x}{y} > 0\).
+
+    \item If the matrices \(A = \begin{pmatrix}
+        1 & 0 \\ 0 & 0
+    \end{pmatrix}\) and \(B = \begin{pmatrix}
+        0 & 0 \\ 0 & 1
+    \end{pmatrix}\) are considered as linear transformations on \(\Complex^2\), and if \(C\) is a Hermitian matrix (linear transformation on \(\Complex^2\)) such that \(A \leq C\) and \(B \leq C\), then
+    \begin{equation*}
+        C = \begin{pmatrix}
+            1 + \epsilon & \theta \\ \theta & 1 + \delta
+        \end{pmatrix},
+    \end{equation*}
+    where \(\epsilon\) and \(\delta\) are positive real numbers and \(\abs{\bar{\theta}}^2 \leq \min \{ \epsilon(1 + \delta), \delta(1 + \epsilon) \}\).
+\end{enumerate}
+}
+
+\section{Isometries}
+
+We continue with our program of investigating the analogy between numbers and
+transformations. When does a complex number \(\zeta\) have absolute value one?
+Clearly a necessary and sufficient condition is that \(\bar{\zeta} = 1/\zeta\);
+guided by our heuristic principle, we are led to consider linear transformations
+\(U\) for which \(U^* = U^{-1}\), or, equivalently, for which \(UU^* = U^* U =
+1\). (We observe that on a finite-dimensional vector space either of the two
+conditions \(UU^* = 1\) and \(U^*U = 1\) implies the other; see §36, Theorems 1
+and 2.) Such transformations are called \emph{orthogonal} or \emph{unitary}
+according as the underlying inner product space is real or complex. We proceed
+to derive a couple of useful alternative characterizations of them.
+
+\begin{thmx}
+    The following three conditions on a linear transformation \(U\) on an inner product space are equivalent to each other.
+    \begin{align}
+        U^* U &= 1,\\
+        \innerprod{Ux}{Uy} &= \innerprod{x}{y}, \text{ for all } x \text{ and } y, \\
+        \norm{Ux} &= \norm{x}, \text{ for all } x.
+    \end{align}
+\end{thmx}
+\begin{proof}
+    If (1) holds, then
+    \begin{equation*}
+        \innerprod{Ux}{Uy} = \innerprod{U^* Ux}{y} = \innerprod{x}{y}
+    \end{equation*}
+    for all \(x\) and \(y\), and, in particular,
+    \begin{equation*}
+        \norm{Ux}^2 = \norm{x}^2
+    \end{equation*}
+    for all \(x\); this proves both the implications (1) \(\implies\) (2) and
+    (2) \(\implies\) (3). The proof can be completed by showing that (3) implies
+    (1). If (3) holds, that is, if \(\innerprod{U^*Ux}{x} = \innerprod{x}{x}\)
+    for all \(x\), then \S\,71, Theorem 2 is applicable to the (self-adjoint)
+    transformation \(U^*U-1\); the conclusion is that \(U^*U = 1\) (as desired).
+
+    Since (3) implies that 
+    \begin{equation}
+        \norm{Ux - Uy} = \norm{x - y}
+    \end{equation}
+    for all \(x\) and \(y\) (the converse implication (4) \(\implies\) (3) is
+    also true and trivial), we see that transformations of the type that the
+    theorem deals with are characterized by the fact that they preserve
+    distances. For this reason we shall call such a transformation an
+    \emph{isometry}. Since, as we have already remarked, an isometry on a
+    finite-dimensional space is necessarily orthogonal or unitary (according as
+    the space is real or complex), use of this terminology will enable us to
+    treat the real and the complex cases simultaneously. We observe that (on a
+    finite-dimensional space) an isometry is always invertible and that
+    \(U^{-1}\) (\(= U^*\)) is an isometry along with \(U\).
+\end{proof}
+
+In any algebraic system, and ni particular ni general vector spaces and inner
+product spaces, it is of interest to consider the automorphisms of the system,
+that is, to consider those one-to-one mappings of the system onto itself that
+preserve all the structural relations among its elements. We have already seen
+that the automorphisms of a general vector space are the invertible linear
+transformations. In an inner product space we require more of an automorphism,
+namely, that it also preserve inner products (and consequently lengths and
+distances. The preceding theorem shows that this requirement is equivalent to
+the condition that the transformation be an isometry. (We are assuming
+finite-dimensionality here; on infinite dimensional spaces the range of an
+isometry need not be the entire space. This unimportant sacrifice in generality
+is for the sake of terminological convenience; for infinite-dimensional spaces
+there is no commonly used word that describes orthogonal and unitary
+transformations simultaneously.) Thus the two questions ``What linear
+transformations are the analogues of complex numbers of absolute value one?''
+and ``What are the most general automorphisms of a finite-dimensional inner
+product space?'' have the same answer: isometries. In the next section we shall
+show that isometries also furnish the answer to a third important question.
+
+\section{Change of orthonormal basis}
+
+We have seen that the theory of the passage from one linear basis of a vector
+space to another is best studied by means of an associated linear transformation
+\(A\) (§§ 46, 47); the question arises as to what special properties \(A\) has
+when we pass from one \emph{orthonormal} basis of an inner product space to
+another. The answer is easy.
+
+\section{Perpendicular projections}
+
+We are now in a position to fulfill our earlier promiseto investigate the
+proiections associated with the particular direct sum decompositions \(\VecSp =
+\Mfold \oplus \Mfold^{\perp}\). We shall call such a projection a
+\emph{perpendicular projection}. Since \(\Mfold^{\perp}\) is uniquely determined
+by the subspace \(\Mfold\), we need not specify both the direct summands
+associated with a projection if we already know that it is perpendicular. We
+shall call the (perpendicular) projection \(E\) on \(\Mfold\) along
+\(\Mfold^{\perp}\) simply the projection on \(\Mfold\) and we shall write \(E =
+P_{\Mfold}\).
+
+\begin{theorem}
+    A linear transformation \(E\) is a perpendicular projection if and only if
+    \(E = E^2 = E^*\). Perpendicular projections are positive linear
+    transformations and have the property that \(\norm{Ex} \leq \norm{x}\) for
+    all \(x\).
+\end{theorem}
+
+For some of the generalizations of our theory it is useful to know that
+idempotence together with the last property mentioned in Theorem 1 is also
+characteristic of perpendicular projections.
+
+\begin{theorem}
+    If a linear transformation \(E\) is such that \(E = E^2\) and \(\norm{Ex}
+    \leq \norm{x}\) for all \(x\), then \(E = E^*\).
+\end{theorem}
+
+\section{Combinations of perpendicular projections}
+
+\section{Complexification}
+
+In the past few sections we have been treating real and complex vector spaces
+simultaneously. Sometimes this is not possible; the complex number system is
+richer than the real. There are theorems that are true for both real and complex
+spaces, but for which the proof is much easier in the complex case, and there
+are theorems that are true for complex spaces but not for real ones. (An example
+of the latter kind is the assertion that if the space is finite-dimensional,
+then every linear transformation has a proper value.) For these reasons, it is
+frequently handy to be able to ``complexify'' a real vector space, that is, to
+associate with it a complex vector space with essentially the same properties.
+The purpose of this section is to describe such a process of complexification.
+
+Suppose that \(\VecSp\) is a real vector space, and let \(\VecSp^+\) be the set
+of all ordered pairs \(\dpair{x}{y}\) with both \(x\) and \(y\) in \(\VecSp\).
+Define the sum of two elements of \(\VecSp^+\) by
+\begin{equation*}
+    \dpair{x_1}{y_1} + \dpair{x_2}{y_2} = \dpair{x_1 + x_2}{y_1 + y_2},
+\end{equation*}
+and define the product of an element of \(\VecSp\) by a complex number \(\alpha
++ i\beta\) (\(\alpha\) and \(\beta\) real, \(i = \sqrt{-1}\)) by
+\begin{equation*}
+    (\alpha + i\beta)\dpair{x}{y} = \dpair{\alpha x - \beta y}{\beta x + \alpha y}.
+\end{equation*}
+(To remember these formulas, pretend that \(\dpair{x}{y}\) means \(x + iy\).) A
+straightforward and only slightly laborious computation shows that the set
+\(\VecSp^+\) becomes a complex vector space with respect to these definitions of
+the linear operations.
 
 \section{Characterization of spectra}
 
@@ -210,5 +792,508 @@ define the special classes of transformations we h a v ebeen considering are
 reflected by their spectra.
 
 \begin{theorem}
-    If A is a self-adjoint transformation on an inner product space,then every proper value of A is real, if A is positive, or strictlypositive, then every proper value of A is positive, or strictly positive, respectively.
+    If A is a self-adjoint transformation on an inner product space, then every proper value of A is real, if A is positive, or strictlypositive, then every proper value of A is positive, or strictly positive, respectively.
 \end{theorem}
+
+\begin{proof}
+    We may ignore the fact that the first assertion is trivial in the real case; the same proof serves to establish both assertions in both the real and the complex case. Indeed, if \(Ax = \lambda x\), with \(x \neq 0\), then,
+    \begin{equation*}
+        \frac{\innerprod{Ax}{x}}{\norm{x}^2}
+        = \frac{\lambda\innerprod{x}{x}}{\norm{x}^2}
+        = \lambda;
+    \end{equation*}
+
+    it follows that if \(\innerprod{Ax}{x}\) is real (see §71, Theorem 4), then so is \(\lambda\), and if \(\innerprod{Ax}{x}\) is positive (or strictly positive) then so is \(\lambda\).
+\end{proof}
+
+\begin{theorem}
+    Every root of the characteristic equation of a self-adjoint transformation on a finite-dimensional inner product space is real.
+\end{theorem}
+
+\begin{theorem}
+    Every proper value of an isometry has absolute value one.
+\end{theorem}
+
+\begin{proof}
+    If \(U\) is an isometry, and if \(Ux = \lambda x\), with \(x \neq 0\), then \(\norm{x} = \norm{Ux} = \abs{\lambda} \cdot \norm{x}\).
+\end{proof}
+
+\begin{theorem}
+    If \(A\) is either self-adjoint or isometric, then proper vectors of \(A\) belonging to distinct proper values are orthogonal.
+\end{theorem}
+
+\begin{theorem}
+    If a subspace \(\Mfold\) is invariant under an isometry \(U\) on a finite-dimensional inner product space, then so is \(\Mfold^{\perp}\).
+\end{theorem}
+
+\begin{proof}
+    Considered on the finite-dimensional subspace , the transformation \(U\) is
+    still an isometry, and, consequently, it is invertible. It follows that
+    every \(x\) in \(\Mfold\) may be written in the form \(x = Uy\) with \(y\)
+    in \(\Mfold\); in other words, if \(x\) is in \(\Mfold\) and if \(y =
+    U^{-1}x\), then \(y\) is in \(\Mfold\). Hence \(\Mfold\) is invariant under
+    \(U^{-1} = U^*\). It follows from §45, Theorem 2, that \(\Mfold^{\perp}\) is
+    invariant under \((U^*)^* = U\).
+    
+    We observe that the same result for self-adjoint transformations (even in
+    not necessarily finite-dimensional spaces) is trivial, since  if \(\Mfold\)
+    is invariant under \(A\), then \(\Mfold^{\perp}\) is invariant under \(A^* =
+    A\).
+\end{proof}
+
+\begin{theorem}
+    If \(A\) is a self-adjoint transformation on a finite-dimensional inner product space, then the algebraic multiplicity of each proper value \(\lambda_0\) of \(A\) is equal to its geometric multiplicity, that is, to the dimension of the subspace \(\Mfold\) of all solutions of \(Ax = \lambda_0 x\).
+\end{theorem}
+
+\begin{proof}
+    It is clear that \(\Mfold\) is invariant under \(A\), and therefore so is
+    \(\Mfold^{\perp}\); let us denote by \(B\) and \(C\) the linear
+    transformation \(A\) considered only on \(\Mfold\) and \(\Mfold^{\perp}\)
+    respectively. We have 
+    \begin{equation*}
+        \det (A - \lambda) = \det (B - \lambda) \cdot \det (C - \lambda).
+    \end{equation*}
+    for all \(\lambda\). Since \(B\) is a self-adjoint transformation on a
+    finite-dimensional space, with only one proper value, namely, \(\lambda_0\),
+    it follows that do must occur as a proper value of \(B\) with algebraic
+    multiplicity equal to the dimension of \(\Mfold\). If that dimension is
+    \(m\), then \(\det (B - \lambda) = (\lambda_0 - \lambda)^m\). Since, on the
+    other hand, \(\lambda_0\) is not a proper value of \(C\) at all, and since,
+    consequently, \(\det (C - \lambda_0) \neq 0\), we see that \(\det (A -
+    \lambda)\) contains \((\lambda_0 - \lambda)\) as a factor exactly \(m\)
+    times, as was to be proved.
+\end{proof}
+
+What made this proof work was the invariance of \(\Mfold^{\perp}\) and the fact
+that every root of the characteristic equation of \(A\) is a proper value of
+\(A\). The latter assertion is true for every linear transformation on a unitary
+space; the following result is a consequence of these observations and of
+Theorem 5.
+
+\begin{theorem}
+    If \(U\) is a unitary transformation on a finite-dimensional unitary space, then the algebraic multiplicity of each proper value of \(U\) is equal to its geometric multiplicity.
+\end{theorem}
+
+\section{Spectral theorem}
+
+We are now ready to prove the main theorem of this book, the theorem of which
+many of the other results of this chapter are immediate corollaries. To some
+extent what we have been doing up to now was a matter of sport (useful, however,
+for generalizations); we wanted to show how much can conveniently be done with
+spectral theory before proving the spectral theorem. In the complex case,
+incidentally, the spectral theorem can be made to follow from the
+triangularization process wehave already described; because of the importance of
+the theorem we prefer to give below its (quite easy) direct proof. The reader
+may find it profitable to adapt the method of proof (not the result) of §56,
+Theorem 2, to prove as much as he can of the spectral theorem and its
+consequences.
+
+\begin{theorem}
+    To every self-adjoint linear transformation \(A\) on a finite-dimensional inner product space there correspond real numbers \(\alpha_1,\, \cdot\, \cdot\, \cdot\, \alpha_r\) and perpendicular projections \(E_1,\, \cdot\, \cdot\, \cdot\, E_r\) (where \(r\) is a strictly positive integer, not greater than the dimension of the space) so that
+    \begin{enumerate}[wide, nosep]
+       \item the \(\alpha_i\) are pairwise distinct,
+       \item the \(E_j\) are pairwise orthogonal and different from \(0\),
+       \item \(\sumx_j E_j = 1\),
+       \item \(\sumx_j \alpha_j E_j = A\).
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    Let \(\alpha_1, \ldots, \alpha_r\) be the distinct proper values of \(A\),
+    and let \(E_j\) be the perpendicular projection on the subspace consistingof
+    all solutions of \(Ax = \alpha_j x\) (\(j = 1, \ldots, r\)). Condition (1)
+    is then satisfied by definition; the fact that the \(\alpha\)'s are real
+    follows from §78, Theorem 1. Condition (2) follows from § 78, Theorem 4.
+    From the orthogonality of the \(E_j\) we infer that if \(E = \sumx_j E_j\)
+    then \(E\) is a perpendicular projection. The dimension of the range of
+    \(E\) is the sum of the dimensions of the ranges of the \(E_j\), and
+    consequently, by §78, Theorem 6, the dimension of the range of \(E\) is
+    equal to the dimension of the entire space; this implies (3).
+    (Alternatively, if \(E \neq 1\), then \(A\) considered on the range of \(1 -
+    E\) would be a self-adjoint transformation with no proper values.) To prove
+    (4), take any vector \(x\) and write \(x_j = E_j x\); it follows that \(Ax_j
+    = \alpha_j x_j\) and hence that
+    \begin{equation*}
+        Ax = A\left(\sumx_j E_j x\right) = \sumx_j Ax_j = \sumx_j \alpha_j x_j
+        = \sumx_j \alpha_j E_j x.
+    \end{equation*}
+    This completes the proof of the spectral theorem.
+\end{proof}
+
+The representation \(A = \sumx_j \alpha_j E_j\) (where the \(\alpha\)'s and the
+\(E\)'s satisfy the conditions (1)-(3) of Theorem 1) is called a \emph{spectral
+form} of \(A\); the main effect of the following result is to prove the
+uniqueness of the spectral form.
+
+\begin{theorem}
+    If \(\sumx_{j=1}^r \alpha_j E_j\) is the spectral form of a self-adjoint transformation \(A\) on a finite-dimensional inner product space, then the \(\alpha\)'s are all the distinct proper values of \(A\). If, moreover, \(1 \leq k \leq r\), then there exist polynomials \(p_k\), with real coeficients, such that \(p_k(\alpha_j) = 0\) whenever \(j \neq k\) and such that \(p_k(\alpha_k) = 1\); for every such polynomial \(p_k(A) = E_k\).
+\end{theorem}
+
+\begin{proof}
+    Since \(E_j \neq 0\), there exists a vector \(x\) in the range of \(E_j\).
+    Since \(E_j x = x\) and \(E_i x = 0\) whenever \(i \neq j\), it follows that
+    \begin{equation*}
+        Ax = \sumx_i \alpha_i E_i x = \alpha_j E_j x = \alpha_j x,
+    \end{equation*}
+    so that each \(\alpha_j\) is the proper value of \(A\). If, conversely,
+    \(\lambda\) is any proper value of \(A\), say \(Ax = \lambda x\), with \(x
+    \neq 0\), then write \(x_j = E_j x\) and we see that
+    \begin{equation*}
+        Ax = \lambda x = \lambda \sumx_j x_j
+    \end{equation*}
+    and
+    \begin{equation*}
+        Ax = A \sumx_j x_j = \sumx_j \alpha_j x_j,
+    \end{equation*}
+    so that \(\sumx_j (\lambda - \alpha_j)x_j = 0\). Since the \(x_j\) are
+    pairwise orthogonal, those among them that are not zero form a linearly
+    independent set. It follows that, for each \(j\), either \(x_j = 0\) or else
+    \(\lambda = \alpha_j\). Since \(x \neq 0\), we must have \(x_j \neq 0\) for
+    some \(j\), and consequently \(\lambda\) is indeed equal to one of the
+    \(\alpha\)'s.
+
+    Since \(E_i E_j = 0\) if \(i \neq j\), and \(E_j^2 = E_j\), it follows that
+    \begin{align*}
+        A^2 = \left(\sumx_i\alpha_i E_i\right)\left(\sumx_j \alpha_j E_j\right)
+        & = \sumx_i \sumx_j \alpha_i \alpha_j E_i E_j \\
+        & = \sumx_j \alpha_j^2 E_j.
+    \end{align*} 
+    Similarly
+    \begin{equation*}
+        A^n = \sumx_j \alpha_j^n E_j
+    \end{equation*}
+    for every positive integer \(n\) (in case \(n = 0\), use (3)), and hence
+    \begin{equation*}
+        p(A) = \sumx_j p(\alpha_j) E_j
+    \end{equation*}
+    for every polynomial \(p\). To conclude the proof of the theorem, all we
+    need to do is to exhibit a (real) polynomial \(p_k\) such that
+    \(p_j(\alpha_j) = 0\) whenever \(j \neq k\) and such that \(p_k(\alpha_k) = 1\). If we write
+    \begin{equation*}
+        p_k(t) = \prodx_{j \neq k} \frac{t - \alpha_j}{\alpha_k - \alpha_j},
+    \end{equation*}
+    then \(p_k\) is a polynomial with all the required properties
+\end{proof}
+
+
+\section{Normal transformations}
+
+The easiest (and at the same time the most useful) generalizations of the
+spectral theorem apply to complex inner product spaces (that is, unitary
+spaces). In order to avoid irrelevant complications, in this section we exclude
+the real case and concentrate attention on unitary spaces only.
+
+We have seen that every Hermitian transformation is diagonable, and that an
+arbitrary transformation A may be written in the form \(B + iC\), with \(B\) and
+\(C\) Hermitian; why isn't it true that simply by diagonalizing \(B\) and \(C\)
+separately we can diagonalize \(A\)? The answer is, of course, that
+diagonalization involves the choice of a suitable orthonormal basis, and there
+is no reason to expect that a basis that diagonalizes \(B\) will have the same
+effect on \(C\). It is of considerable importance to know the precise class of
+transformations for which the spectral theorem is valid, and fortunately this
+class is easy to describe.
+
+We shall call a linear transformation \(A\) normal if it commutes with its
+adjoint, \(A^*A = AA^*\). (This definition makes sense, and is used, in both
+real and complex inner product spaces; we shall, however, continue to use
+techniques that are inextricably tied up with the complex case.) We point out
+first that \(A\) is normal if and only if its real and imaginary parts commute.
+Suppose, indeed, that \(A\) is normal and that \(A = B + iC\) with \(B\) and
+\(C\) Hermitian; since \(\displaystyle B = \frac{1}{2} (A + A^*)\) and
+\(\displaystyle C = \frac{1}{2i} (A - A^*)\), it is clear that \(BC = CB\). If,
+conversely, \(BC = CB\), then the two relations \(A=B+iC\) and \(A^*=B- iC\)
+imply that \(A\) is normal. We observethat Hermitian and unitary transformations
+are normal.
+
+The class of transformations possessing a spectral form in the sense of §79 is
+precisely theclass of normal transformations. Half of this statement si easyto
+prove: if \(A = \sumx_j \alpha_j \alpha_j E_j\), then\(A^* = \sumx_j
+\bar{\alpha}_j E_j\), and it takes merely a simple computation to show that
+\(A^* A = AA^* = \sumx_j \abs{\alpha_j}^2 E_j\). To prove the converse, that is,
+to prove that normality implies the existence of a spectral form, we have two
+alternatives. We could derive this result from the spectral theorem for
+Hermitian transformations, using the real and imaginary parts, or we could prove
+that the essential lemmas of §78, on which the proof of the Hermitian case
+rests, are just as valid for an arbitrary normal transformation. Because its
+methods are of some interest, we adopt the second procedure. We observe that the
+machinery needed to prove the lemmas that follow was available to us in §78, so
+that we could have stated the spectral theorem for normal transformations
+immediately; the main reason we traveled the present course was to motivate the
+definition of normality.
+
+\begin{theorem}
+    If \(A\) is normal, then a necessary and suficient condition that \(x\) be a
+    proper vector of \(A\) is that it be a proper vector of \(A^*\); if \(Ax =
+    \lambda x\), then \(A^*x = \bar{\lambda}x\).
+\end{theorem}
+
+\begin{proof}
+    We observe that the normality of \(A\) implies that
+    \begin{align*}
+        \norm{Ax}^2 &= \innerprod{Ax}{Ax} = \innerprod{A^*Ax}{x} =
+        \innerprod{AA^* x}{x}\\
+        &= \innerprod{A^*x}{A^*x} = \norm{A^*x}^2.
+    \end{align*}
+    Since \(A - \lambda\) is normal along with \(A\), and since \((A -
+    \lambda)^* = A^* - \bar{\lambda}\), we obtain the relation
+    \begin{equation*}
+        \norm{Ax - \lambda x} = \norm{A^*x - \bar{\lambda}x}
+    \end{equation*}
+    from which the assertions of the theorem follow immediately.
+\end{proof}
+
+\begin{theorem}
+    If \(A\) is normal, then proper vectors belonging to distinct proper values
+    are orthogonal.
+\end{theorem}
+
+\begin{proof}
+    If \(Ax_1 = \lambda_1 x_1\) and \(Ax_2 = \lambda_2 x_2\), then
+    \begin{equation*}
+        \lambda_1 \innerprod{x_1}{x_2} = \innerprod{Ax_1}{x_2} = \innerprod{x_1}{A^* x_2} = \lambda_2 \innerprod{x_1}{x_2}.
+    \end{equation*}
+\end{proof}
+
+This theorem generalizes §78, Theorem 4; in the proof of the spectral theorem
+for Hermitian transformations we needed also §78, Theorems 5 and 6. The
+following result takes the place of the first of these.
+
+\begin{theorem}
+    If \(A\) is normal, \(\lambda\) is a proper value of \(A\), and \(\Mfold\) is the set of all solutions of \(Ax = \lambda x\), then both \(\Mfold\) and \(\Mfold^{\perp}\) are invariant under \(A\),
+\end{theorem}
+
+\begin{proof}
+    The fact that \(\Mfold\) is invariant under \(A\) we have seen before; this has nothing to do with normality. To prove that \(\Mfold^{\perp}\) is also invariant under \(A\), it is sufficient to prove that \(\Mfold\) is invariant under \(A^*\). This is easy; if \(x\) is in \(\Mfold\), then
+    \begin{equation*}
+        A(A^*x) = A*(Ax) = \lambda(A^*x),
+    \end{equation*}
+    so that \(A^*x\) is also in \(\Mfold\).
+\end{proof}
+
+his theorem is much weaker than its correspondent in §78. The important thing
+to observe, however, is that the proof of §78, Theorem 6, depended only on the
+correspondingly weakened version of Theorem 5; the only subspaces that need to
+be considered are the ones of the type mentioned in the preceding theorem.
+
+This concludes the spade work; the spectral theorem for normal operators follows
+just as before in the Hermitian case. If in the theorems of §79 we replace the
+word ``self-adjoint'' by ``normal,'' delete all references to reality, and insist
+that the underlying inner product space be complex, the remaining parts of the
+statements and allthe proofs remain unchanged.
+
+It is the theory of normal transformations that is of chief interest in the
+study of unitary spaces. One of the most useful facts about normal
+transformations is that spectral conditions of the type given in §78, Theorems 1
+and 3, there shown to be necessary for the self-adjoint, positive, and isometric
+character of a transformation, are in the normal case also sufficient.
+
+\section{Orthogonal transformations}
+
+Since a unitary transformation on a unitary space is normal, the results of the
+preceding section include the theory of unitary transformations as a
+specialcase. Since, however, an orthogonal transformation on a real inner
+product space need not have any proper values, the spectral theorem, as we know
+it so far, givesus no information about orthogonal transformations. It is not
+difficult to get at the facts; the theory of complexification was made to order
+for this purpose.
+
+Suppose that \(U\) is an orthogonal transformation on a finite-dimensional real
+inner product space \(\VecSp\); let \(U^+\) be the extension of \(U\) to the
+complexification \(\VecSp^+\). Since \(U^* U = 1\) (on \(\VecSp\)), it follows
+that \((U^+)^* U^+\) (on \(\VecSp^+\)), that is, that \(\VecSp^+\) is unitary.
+
+Let \(\lambda = \alpha + i\beta\) be a complex number (\(\alpha\) and \(\beta\)
+real),and let \(\Mfold\) be the subspace consisting of all solutions of \(U^+ z
+= \lambda z\) in \(\VecSp^+\). (If \(\lambda\) is not a proper value of
+\(U^+\),then \(\Mfold = \frak{O}\).) If \(z\) is in \(\Mfold\), write \(z = x +
+iy\), with \(x\) and \(y\) in \(\VecSp\). The equation
+\begin{equation*}
+    Ux + iUy = (\alpha + i\beta)(x + iy)
+\end{equation*}
+implies (cf. \S\,77) that
+\begin{equation*}
+    Ux = \alpha x - \beta y
+\end{equation*}
+and
+\begin{equation*}
+    Uy = \beta x + \alpha y.
+\end{equation*}
+If we multiply the second of the last pair of equations by \(i\) and then sub tract it from the first, we obtain
+\begin{equation*}
+    Ux - iUy = (\alpha - i\beta)(x - iy).
+\end{equation*}
+This means that \(U^+ \bar{z} = \bar{\lambda} \bar{z}\), where the suggestive
+and convenient symbol \(\bar{z}\) denotes, of course, the vector \(x - iy\).
+Since the argument (that is, the passage from \(U^+ z = \lambda z\) to \(U^+
+\bar{z} = \bar{\lambda} \bar{z}\)) is reversible, we have proved that the
+mapping \(z \to \bar{z}\) is a one-to-one correspondence between \(\Mfold\) and
+the subspace \(\overline{\Mfold}\) consisting of al solutions \(\bar{z}\) of
+\(U^+ \bar{z} = \bar{\lambda} \bar{z}\)). The result implies, among other
+things, that the complex proper values of \(U^+\) come in pairs; if \(\lambda\)
+is one of them, then so is \(\bar{\lambda}\). (This remark alone we could have
+obtained more quickly from the fact that the coefficients of the characteristic
+polynomial of \(U^+\) are real.)
+
+We have not yet made use of the unitary character of \(U^+\). One way we can
+make use of it is this. If Xis a complex (definitely not real) proper value of
+\(U^+\), then \(\lambda \neq \bar{\lambda}\) it follows that if \(U^+ z =
+\lambda z\), so that \(U^+ \bar{z} = \bar{\lambda} \bar{z}\), then \(z\) and
+\(\bar{z}\) are orthogonal. This means that
+\begin{equation*}
+    0 = \innerprod{x+iy}{x-iy} = \norm{x}^2 - \norm{y}^2 + i\left(\innerprod{x}{y} + \innerprod{y}{x}\right),
+\end{equation*}
+and hence that \(\norm{x}^2 = \norm{y}^2\) and \(\innerprod{x}{y} =
+-\innerprod{y}{x}\). Since a real inner product is symmetric (\(\innerprod{x}{y}
+= \innerprod{y}{x}\)) it follows that \(\innerprod{x}{y} = 0\). This, in
+turn, implies that \(\norm{z}^2 = \norm{x}^2 + \norm{y}^2\) and hence that
+\(\displaystyle \norm{x} = \norm{y} = \frac{1}{\sqrt{2}}\norm{z}\).
+
+If \(\lambda_1\) and \(\lambda_2\) are proper values of \(U^+\) with \(\lambda_1 \neq \lambda_2\) and \(\lambda_1 \neq \bar{\lambda}_2\), and if 2 = 21 + iyi and 2 = xy + iy, are corresponding proper vectors (X1, Iz, Y1, Y¿ in W), then 21 and 2 are orthogonal and (since 2, is a proper vector belonging to the proper value {g) 2 and 2 are also orthogonal.
+
+
+\begin{equation*}
+    \left[
+        \begin{array}{*{11}c}
+            1 & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & 1 & {} & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & 1 & {} & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & -1 & {} & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & -1 & {} & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & -1 & {} & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & -1 & {} & {} & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & \alpha_1 & -\beta_1 & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & \beta_1 & \alpha_1 & {} & {} \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & \alpha_2 & -\beta_2 \\
+            {} & {} & {} & {} & {} & {} & {} & {} & {} & \beta_2 & \alpha_2 
+        \end{array}
+    \right]
+\end{equation*}
+
+(All terms not explicitly indicated are equal to zero.) Ingeneral, there is a
+string of \(+1\)'s on the main diagonal, followed by a string of \(-1\)'s, and
+then there is a string of two-by-two boxes running down the diagonal, each box
+having the forma \(\begin{pmatrix} \alpha & -\beta \\ \beta & \alpha
+\end{pmatrix}\), with \(\alpha^2 + \beta^2 =1\). The fact that \(\alpha^2 +
+\beta^2 =1\) implies that we can find a real number \(\theta\) such that
+\(\alpha = \cos \theta\) and \(\beta = \sin \theta\); it is customary to use
+this trigonometric representation in writing the canonical form of the matrix of
+an orthogonal transformation.
+
+\section{Functions of transformations}
+
+One of the most useful concepts in the theory of normal transformations on unitary spaces is that of a function of a transformation. If \(A\) is a normal transformation with spectral form \(\sumx_j \alpha_j E_j\) (for this discussion we temporarily assume that the underlying vector space is a unitary space), and if \(f\) is an arbitrary complex-valued function defined at least at the points\(\alpha_j\), then we define a linear transformation \(f(A)\) by
+\begin{equation*}
+    f(A) = \sumx_j f(\alpha_j) E_j.
+\end{equation*}
+
+A particularly important function is the square root of positive transformations. We consider \(f(\zeta) = \sqrt{\zeta}\), defined for all real \(\zeta \geq 0\), as the positive square root of \(\zeta\), and for every positive \(A = \sumx_j \alpha_j E_j\), we write
+\begin{equation*}
+    \sqrt{A} = \sumx_j \sqrt{\alpha_j} E_j.
+\end{equation*}
+
+
+\section{Polar decomposition}
+
+Thereisanother useful consequence of the theory of squareroots, namely, the analogue of the polar representation \(\zeta = \rho e^{i\theta}\) of a complex number.
+
+\begin{theorem}
+    If \(A\) is an arbitrary linear transformationon a finite-dimensional inner product space, then there is a (uniquely determined) positive transformation \(P\), and there is an isometry \(U\), such that \(A = UP\). If \(A\) is invertible, then \(U\) also is uniquely determined by \(A\).
+\end{theorem}
+
+\begin{proof}
+    Although it is not logically necessary to do so, we shall first give the
+    proof in case \(A\) is invertible; the general proof is an obvious
+    modification of this special one, and the special proof gives greater
+    insight into the geometric structure of the transformation A.
+
+    Since the transformation \(A^*A\) is positive, we may find its (unique) positive
+    square root, \(P = \sqrt{A^*A}\). We write \(V = PA^{-1}\); since \(VA = P\), the theorem will be
+    proved if we can prove that \(V\) is an isometry, for then we may write \(U = V^{-1}\). Since
+    \begin{equation}
+        V^* = (A^{-1})^* P^* = (A^*)^{-1}P,
+    \end{equation}
+    we see that
+\end{proof}
+
+\section{Commutativity}
+
+The spectral theorem for self-adjoint and for normal operators and the
+functional calculus may also be used to solve certain problems concerning
+commutativity. This is a deep and extensive subject; more to illustrate some
+methods than for the actual results we discuss two theorems from it.
+
+\begin{theorem}
+    Two self-adjoint transformations \(A\) and \(B\) on a finite-dimensional
+    inner product space are commutativeif and only if there exists a
+    self-adjoint transformation \(C\) and there exist two real-valved functions
+    \(f\) and \(g\) of a real variable so that \(A = f(C)\) and \(B = g(C)\). If
+    such a \(C\) exists, then we may even choose \(C\) in the form \(C = h(A,
+    B)\), where \(h\) is a suitable real-valued function oftwo real variables.
+\end{theorem}
+
+\begin{proof}
+    The sufficiency of the condition is clear; we prove only the necessity.
+
+    Let \(A = \sumx_i \alpha_i E_i\); and \(B = \sumx_j \beta_j F_j\) be the spectral forms of \(A\) and \(B\); since \(A\) and \(B\) commute, it follows from §79, Theorem 3, that \(E_i\) and \(F_j\) commute. Let \(h\) be any function of two real variables such that the numbers \(h(\alpha_i, \beta_j) = \gamma_{ij}\) are all distinct, and write
+    \begin{equation*}
+        C = h(A, B) = \sumx_j \sumx_j h(\alpha_i, )
+    \end{equation*}
+    (It is clear that \(h\) may even be chosen as a polynomial, and the same is true of the functions \(f\) and \(g\) we are about to describe.) Let \(f\) and \(g\) be such that \(f(\gamma_{ij}) = \alpha_i\) and \(g(\gamma_{ij}) = \beta_j\), for all \(i\) and \(j\). It follows that \(f(C) = A\) and \(g(C) = B\), and everything is proved.
+\end{proof}
+
+\begin{theorem}
+    If \(A\) is a normal transformation on a finite-dimensional unitary space
+    and if \(B\) is an arbitrary transformation that commutes with \(A\), then
+    \(B\) commutes with \(A^*\).
+\end{theorem}
+
+\begin{proof}
+    Let \(A = \sumx_i \alpha_i E_i\) be the spectral form of \(A\); then \(A^* = \sumx_i \bar{\alpha}_i E_i\). Let \(f\) be such a function (polynomial) of a complex variable that \(f(\alpha_i) = \bar{\alpha}_i\) for all \(i\). Since \(A^* = f(A)\), the conclusion follows.
+\end{proof}
+
+\section{Self-adjoint transformations of rank one}
+
+We have already seen (§ 51, Theorem 2) that every linear transformation \(A\) of rank \(\rho\) is the sum of \(\rho\) linear transformations of rank one. It is easy to see (using the spectral theorem) that if \(A\) is self-adjoint, or positive, then the summands may also be taken self-adjoint, or positive, respectively. We know (§ 51, Theorem 1) what the matrix of transformation of rank one has to be; what more can we say if the transformation is self-adjoint or positive?
+
+\begin{theorem}
+    If \(A\) has rank one and is self-adjoint (or positive), then in every orthonormal coordinate system the matrix \((\alpha_{ij})\) of \(A\) is given by \(\alpha_{ij} = \kappa\beta_i\bar{\beta}_j\) with a real \(\kappa\) (or by \(\alpha_{ij} = \gamma_i\overline{\gamma}_j\)). If, conversely, \([A]\) has this form in some orthonormal coordinate system, then \(A\) has rank one and is self-adjoint (or positive).
+\end{theorem}
+
+\begin{proof}
+    We know that the matrix \((\alpha_{ij})\) of a transformation \(A\) of rank
+    one, in any orthonormal coordinate system \(\Basisx = \{x_1, \ldots, x_n\}\)
+    is given by \(\alpha_{ij} = \beta_i\gamma_j\). If \(A\) is self-adjoint, we
+    must also have \(\alpha_{ij} = \bar{\alpha}_{ji}\), whence \(\beta_i\gamma_j
+    = \overline{\beta_j \gamma_i}\). If \(\beta_i = 0\) and \(\gamma_i \neq 0\)
+    for some \(i\), then \(\bar{\beta}_j = \beta_i\gamma_j / \overline{\gamma}_i
+    = 0\) for all \(j\), whence \(A = 0\). Since we assumed that the rank of
+    \(A\) is one (and not zero), this is impossible. Similarly \(\beta_i \neq
+    0\) and \(\gamma_i = 0\)is impossible; that is, we can find an \(i\) for
+    which \(\beta_i\gamma_i \neq 0\). Using this \(i\), we have
+    \begin{equation*}
+        \bar{\beta}_j =  \frac{\beta_i}{\overline{\gamma_i}}\gamma_j =
+        \kappa \gamma_j
+    \end{equation*}
+    with some non-zero constant \(\kappa\), independent of \(j\). Since the
+    diagonal elements \(\alpha_{jj} = \innerprod{Ax_j}{x_j} = \beta_j \gamma_j\)
+    of a self-adjoint matrix are real, we can even conclude that \(\alpha_{jj} =
+    \kappa \beta_i \bar{\beta}_j\) with a real \(\kappa\).
+
+    If, moreover, \(A\) is positive, them we even know that \(\kappa\beta_j
+    \bar{\beta}_j = \alpha_{jj} = \innerprod{Ax_j}{x_j}\) is positive, and
+    therefore so is \(\kappa\). In this case we write \(\lambda =
+    \sqrt{\kappa}\); the relation \(\kappa \beta_i \bar{\beta}_j = (\lambda
+    \beta_i)(\lambda \bar{\beta}_j)\) shows that \(\alpha_{jj}\) is given by
+    \(\alpha_{ij} = \gamma_i\overline{\gamma}_j\).
+
+    It is easy to see that these necessary conditions are also sufficient. If \(\alpha_{ij} = \kappa\beta_i \bar{\beta}_j\) with a real \(\kappa\), then \(A\) is self-adjoint. If \(\alpha_{ij} = \gamma_i \overline{\gamma}_j\) and \(x = \sumx_i \xi_i x_i\), then
+    \begin{align*}
+        \innerprod{Ax}{x} &= \sumx_i \sumx_j \alpha_{ij} \bar{\xi}_i \xi_j
+        = \sumx_i \sumx_j \gamma_i \overline{\gamma}_j \bar{\xi}_i \xi_j\\
+        & = \left(\sumx_i \gamma_i \bar{\xi}_i\right) \overline{\left(\sumx_j \gamma_j \bar{\xi}_j\right)} = \abs{\sumx_i \gamma_i \bar{\xi}_i}^2 \geq 0,
+    \end{align*}
+    so that \(A\) is positive.
+\end{proof}
+
+As a consequence of Theorem 1 it is very easy to prove a remarkable
+theorem on positive matrices.

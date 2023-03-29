@@ -2,12 +2,474 @@
 
 \section{Convergence of vectors}
 
-Essentially the only way in which we exploited, so far, the existenceof an inner
-product in an inner product space was to introduce the notionof a normal
-transformation together with certain i m p o r t a n tspecial cases of it. A
-much more obvious circle of ideas is the study ofthe convergence problemst h a t
-arise in an inner product space.
+Essentially the only way in which we exploited, so far, the existence  sof an
+inner product in an inner product space was to introduce the notion of a normal
+transformation together with certain important special cases of it. A much more
+obvious circle of ideas is the study ofthe convergence problems that arise in an
+inner product space.
+
+Let us see what we might mean by the assertion that a sequence \((x_n)\) of
+vectors in \(\VecSp\) converges to a vector × in W. There are two possibilities
+that suggest themselves:
+\begin{align}
+    \tag{i} \norm{x_n - x} &\to 0 ~ \text{as} ~ n \to \infty;\\
+    \tag{ii} \innerprod{x_n - x}{y} \to 0 ~ \text{as} ~ n &\to \infty ~ \text{for each fixed } ~ y \in \VecSp.
+\end{align}
+If (i) is true, then we have, for every Y,
+\begin{equation*}
+    \abs{\innerprod{x_n - x}{y}} \leq \norm{x_n - x}\cdot \norm{y} \to 0
+\end{equation*}
+so that (ii) is true. In a finite-dimensional space the converse implication is
+valid: (i) \(\implies\) (i). To prove this, let \(\{z_1,
+\,\cdot\,\cdot\,\cdot\,, z_N\}\) be an orthonormal basis in \(\VecSp\). (Often
+in this chapter we shall write \(N\) for the dimension of finite-dimensional
+vector space, in order to reserve \(n\) for the dummy variable in limiting
+processes.) If we assume (i), then \(\innerprod{x_n - x}{z_i} \to 0\) for each
+\(i = 1, \,\cdot\,\cdot\,\cdot\,, N\). Since (§ 68, Theorem 2)
+\begin{equation*}
+    \norm{x_n - x}^2 = \sumx_i \abs{\innerprod{x_n - x}{z_i}}^2,
+\end{equation*}
+it follows that \(\norm{x_n - x} \to 0\), as was to be proved.
+
+Concerning the convergence of vectors (in either of the two equivalent senses)
+we shall use without proof the following facts. (All these facts are easy
+consequences of our definitions and of the propertiesof convergence in the usual
+domain of complex numbers; we assume that the reader has g modicum of
+familiarity with these notions.) The expression \(\alpha x + \beta y\) defines a
+continuous function of all its arguments simultaneously; that is, if
+\((\alpha_n)\) and \((\beta_n)\) are sequences of numbers and \((x_n)\) and
+\((y_n)\) are sequences of vectors, then \(\alpha_n \to \alpha\), \(\beta_n \to
+\beta\), \(x_n \to x\), and \(y_n \to y\) imply that \(\alpha_n x_n + \beta_n
+y_n \to \alpha x + \beta y\). If \(\{z_i\}\) is an orthonormal basis in
+\(\VecSp\), and if \(x_n =\sumx_i \alpha_{in}z_i\) and \(x = \sumx_i \alpha_i
+z_i\), then a necessary and sufficient condition that \(x_n \to x\) is that
+\(\alpha_{in} \to \alpha{i}\) (as \(n \to \infty\)) for each \(i = 1,
+\,\cdot\,\cdot\,\cdot\,, N\). (Thus the notion of convergence here defined
+coincides with the usual one in N-dimensional real or complex coordinate space.)
+Finally, we shall assume as known the fact that a finite-dimensional inner
+product space with the metric defined by the norm is complete; that is, if
+\((x_n)\) is a sequence of vectors for which \(\norm{x_n - x_m} \to 0\), as \(n,
+m \to \infty\), then there is a (unique) vector \(x\) such that \(x_n \to x\) as
+\(n \to \infty\).
+
 
 \section{Norm}
 The metric properties of vectors have certain important implications for the
 metric properties of linear transformations, which we now begin to study.
+
+\begin{definition}
+    A linear transformation \(A\) on an inner product space is bounded if there
+    exists a constant \(K\) such \(\norm{Ax} \leq K\norm{x}\) for every vector
+    \(x\) in \(\VecSp\). The greatest lower bound of all constants \(K\) with
+    this property is called the \emph{norm} (or \emph{bound}) of \(A\) and is
+    denoted by \(norm{A}\).
+\end{definition}
+
+Clearly if \(A\) is bounded, then A x S A x I for allx .For examples we may
+consider the cases where A is a (non-zero) perpendicularprojection or an
+isometry; 75, Theorem 1, and the theorem of §73, respectively, imply that in
+both cases \(\norm{A} = 1\). Considerations of the vectors defined by \(x_n(t) = t^n\)
+in \(\Polynom\) shows that the differentiation transformation is not bounded.
+
+Because in the sequel we shall have occasion to c n s i d e r quite a few upper
+and lower bounds similar to |I A Il, we introduce a convenient notation. If P is
+any possible property of real numbers t, we shall denote the set of al real
+numbers t possessing the property P by the symbol It: PI, and we shalldenote
+greatest lower bound and least upper bound by \(inf\) (for infimum) and \(sup\)
+(for supremum) respectively. In this notation we have, for example,
+\begin{equation*}
+    \norm{A} = \inf~\{K : \norm{Ax} \leq K\norm{x} \text{ for all } x\}.
+\end{equation*}
+The notion of boundedness is closely connected with the notion of continuity. If
+\(A\) is bounded and if \(\epsilon\) is any positive number, by writing
+\(\displaystyle\delta =\frac{\epsilon}{\norm{A}}\) we may make sure that
+\(\norm{x - y} < \delta\) implies that 
+\begin{equation*}
+    \norm{Ax - Ay} = \norm{A(x - y)} \leq \norm{A}\cdot\norm{x - y} < \epsilon;
+\end{equation*}
+in other words boundedness implies (uniform) continuity. (In this proof we tacitly assumed that \(\norm{A} \neq 0\); the other case is trivial.) In view of this fact the following result is a welcome one.
+
+\begin{thmx}
+    Every linear transformation on a finite-dimensional product space is bounded.
+\end{thmx}
+
+\begin{proof}
+    Suppose that \(A\) isa linear transformation on \(\VecSp\); let \(\{x_1,
+    \,\cdot\,\cdot\,\cdot\,, x_N\}\) be an orthonormal basis in \(\VecSp\) and
+    write
+    \begin{equation*}
+        K_0 = \max\{\norm{Ax_1}, \,\cdot\,\cdot\,\cdot\,, \norm{Ax_N}\}.
+    \end{equation*}
+    Since an arbitrary vector \(x\) may be written in the form \(x = \sumx_i
+    \innerprod{x}{x_i}x_i\), we obtain, applying the Schwarz inequality and
+    remembering that \(\norm{x_i} = 1\),
+    \begin{align*}
+        \norm{Ax} &= \norm{A\left(\sumx_i \innerprod{x}{x_i}x_i\right)}\\
+        &= \norm{\sumx_i \innerprod{x}{x_i}Ax_i} \leq \sumx_i \abs{\innerprod{x}{x_i}}\cdot \norm{Ax_i}\\
+        &\leq \sumx_i \norm{x} \cdot \norm{x_i} \cdot \norm{Ax_i} \leq K_0 \sumx_i \norm{x}\\
+        &= NK_0 \norm{x}. 
+    \end{align*}
+\end{proof}
+In other words, \(K = NK_0\) is a bound of \(A\), and the proof is complete.
+
+It is no accident that the dimension \(N\) of \(\VecSp\) enters into our
+evaluation; we have already seen that the theorem is not true in
+infinite-dimensional spaces.
+
+{\small
+\subsection*{Exercises}
+\begin{enumerate}[wide]
+    \item\begin{enumerate}[wide, nosep, label=(\alph*)]
+        \item Prove that the inner product is a continuous function (and
+        therefore so also is the norm); that is, if \(x_n \to x\) and \(y_n \to
+        y\), then \(\innerprod{x_n}{y_n} \to \innerprod{x}{y}\).
+        
+        \item Is every linear functional continuous? How about multilinear forms?
+    \end{enumerate}
+
+    \item A linear transformation \(A\) on an inner product space is said to be
+    bounded from below if there exists a (strictly) positive constant \(K\) such
+    that \(\norm{Ax} \geq K\norm{x}\) for every \(x\). Prove that (on a
+    finite-dimensional space) \(A\) is bounded from below if and only if it is
+    invertible.
+    
+    \item If a linear transformation on an inner product space (not necessarily
+    finite-dimensional) is continuous at one point, then it is bounded (and
+    consequently continuous over the whole space).
+    
+    \item For each positive integer \(n\) construct a projection \(E_n\) (not a
+    perpendicular projection) such that \(\norm{E_n} \geq n\).
+    
+    \item \begin{enumerate}[wide, nosep, label=(\alph*)]
+        \item If \(U\) is a partial isometry other than \(0\), then \(norm{U} = 1\).
+        
+        \item If \(U\) is an isometry, then \(\norm{UA} = \norm{AU} = \norm{A}\) for every linear transformation \(A\).
+    \end{enumerate}
+
+    \item If \(E\) and \(F\) are perpendicular projections, with ranges \(\Mfold\) and \(\frak{N}\) respectively, and if \(\norm{E - F} < 1\), then
+    \(\dim \Mfold = \dim \frak{N}\).
+
+    \item 
+\end{enumerate}
+
+}
+
+\section{Expressions for the norm}
+
+To facilitate working with the norm of a transformation, we consider the
+following four expressions:
+\begin{align*}
+    p &= \sup~\{\norm{Ax}/\norm{x} : x \neq 0\},\\
+    q &= \sup~\{\norm{Ax} : x = 1\},\\
+    r &= \sup~\{\innerprod{Ax}{y}/\norm{x} \cdot \norm{y} : x \neq 0, y \neq 0\},\\
+    s &= \sup~\{\innerprod{Ax}{y} : \norm{x} = \norm{y} = 1\}.
+\end{align*}
+
+In accordance with our definition of the brace notation, the expression
+\(\{\norm{Ax} : \norm{x} = 1\}\), for example, means the set of all real numbers
+of the form \(nomr{Ax}\), considered for all \(x\)'s for which \(norm{x} = 1\)
+
+Since \(\norm{Ax} \leq K \norm{x}\) is trivially true with any \(K\) if \(x =
+0\), the definition of supremum implies that \(p = \norm{A}\); we shall prove
+that, in fact, \(p = q = r = s = \norm{A}\). Since the supremum in the
+expression for \(q\) is extended over a subset of the corresponding set for
+\(p\) (that is, if  \(\norm{x} = 1\), then \(\norm{Ax}/\norm{x} = \norm{Ax}\)),
+we see that \(q \leq p\);a similar argument shows that \(s \leq r\).
+
+For any \(x \neq 0\) we consider \(\displaystyle y = \frac{x}{\norm{x}}\) (so
+that \(\norm{y} = 1\)); we have \(\norm{Ax}/{\norm{x}} = \norm{Ay}\). In other
+words, every number of the set whose supremum is \(p\) occurs also in the
+corresponding set for \(q\); it follows that \(p \leq q\), and consequently that
+\(p = q = \norm{A}\).
+
+\section{Bounds of a self-adjoint transformation}
+
+As usual we can say a little more about the special case of self-adjoint
+transformations than in the general case. We consider, for any self-adjoint
+transformation \(A\), the sets of real numbers
+\begin{equation*}
+    \Phi = \{\innerprod{Ax}{x} / \norm{x}^2 : x \neq 0\}
+\end{equation*}
+and
+\begin{equation*}
+    \Psi = \{\innerprod{Ax}{x} : \norm{x} = 1\}.
+\end{equation*}
+Ψ  It is clear that \(\Psi \subset \Phi\). If, for every \(x \neq 0\), we write
+\(y = {x}/{\norm{x}}\), then \(\norm{y} = 1\) and
+\({\innerprod{Ax}{x}}/{\norm{x}^2} = \innerprod{Ay}{y}\), so that every number
+in \(\Phi\) occurs also in \(\Psi\) and consequently \(\Phi = \Psi\). We write
+\begin{align*}
+    \alpha & = \inf~\Phi = \inf~\Psi,\\
+    \beta & = \sup~\Phi = \sup~\Psi.
+\end{align*}
+and we say that \(\alpha\) is the \emph{lower bound} and \(\beta\) is the
+\emph{upper bound} of the self-adjoint transformation \(A\). If we recall the
+definition of a positive transformation, we see that \(\alpha\) is the greatest
+real number for which \(A - \alpha \geq 0\) and \(\beta\) is the least real
+number for which \(\beta - A \geq 0\). Concerning these numbers we assert that
+\begin{equation*}
+    \gamma = \max \{\abs{\alpha}, \abs{\beta}\} = \norm{A}.
+\end{equation*}
+
+
+We call the reader's attention to the fact that the computation in the main body
+of this proof could have been avoided entirely. Since both \(\gamma - A\) and
+\(\gamma + A\) are positive, and since they commute, we may conclude immediately
+(§ 82) that their product \(\gamma^2 - A^2\) is positive. We presented the
+roundabout method in accordance with the principle that, with an eye to the
+generalizations of the theory, one should avoid using the spectral theorem
+whenever possible. Our proof of the fact that the positiveness and commutativity
+of \(A\) and \(B\) imply the positiveness of \(AB\) was based on the existence
+of square roots for positive transformations. This fact, to be sure, can be
+obtained by so-called ``elementary'' methods, that is, methods not using the
+spectral theorem, but even the simplest elementary proof involves complications
+that are purely technical and, for our pur- poses, not particularly useful.
+
+\section{Minimax principle}
+
+A very elegant and useful fact concerning self-adjoint transformations is the
+following \emph{minimax principle}.
+
+\begin{thmx}
+    Let \(A\) be a self-adjoint transformation on an \(n\)-dimensional inner
+    product space , and let \(\lambda_1, \,\cdot\,\cdot\,\cdot\,, \lambda_n\) be
+    the (not necessarily distinct) proper values of \(\), with the notation so
+    chosen that \(\lambda_1 \geq \lambda_2 \geq \,\cdot\,\cdot\,\cdot\, \geq
+    \lambda_n\). If, for each subspace \(\Mfold\) of \(\VecSp\),
+    \begin{equation*}
+        \mu(\Mfold) = \sup\, \{\innerprod{Ax}{x} : x \text{ in } \Mfold, \norm{x} = 1\},
+    \end{equation*}
+    and if, for \(k = 1, \,\cdot\,\cdot\,\cdot\,, n\),
+    \begin{equation*}
+        \mu_k = \inf\, \{\mu(\Mfold) : \dim \Mfold = n - k + 1\},
+    \end{equation*}
+    then \(\mu_k = \lambda_k\) for \(k = 1, \,\cdot\,\cdot\,\cdot\,, n\).
+\end{thmx}
+
+\begin{proof}
+    Let \(\{x_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\) be an orthonormal basis in
+    \(\VecSp\) for which \(Ax_i = \lambda_i x_i\), \(i = 1,
+    \,\cdot\,\cdot\,\cdot\,, n\) (\S\,79). Let \(\Mfold_k\) be the subspace
+    spanned by \(x_1, \,\cdot\,\cdot\,\cdot\,, x_k\) for \(k = 1,
+    \,\cdot\,\cdot\,\cdot\,, n\). Since the dimension of \(\Mfold_k\) is \(k\),
+    the subspace \(\Mfold_k\) cannot be disjoint from any \(n-k+1\)-dimensional
+    subspace of \(\Mfold\) in \(\VecSp\); if \(\Mfold\) is any such subspace, we
+    may find a vector \(x\) belonging to both \(\Mfold_k\) and \(\Mfold\) and
+    such that \(\norm{x} = 1\). For this \(x = \sumx_{i=1}^k \xi_i x_i\) we have
+    \begin{align*}
+        \innerprod{Ax}{x} &= \sumx_{i=1}^k \lambda_i \abs{\xi_i}^2 \geq \lambda_k \sumx_{i=1}^k \abs{\xi_i}^2\\
+        &= \lambda_k \abs{x}^2 = \lambda_k,
+    \end{align*}
+    so that \(\mu(\Mfold) \geq \lambda_k\).
+
+    If, on the otherhand, we consider the particular\( (n - k + 1)\)-dimensional
+    subspace \(\Mfold_0\) spanned by \(x_k, x_{k+1}, \ldots, x_n\), then, for
+    each \(x = sumx_{i=k}^n \xi_i x_i\) in this subspace, we have (assuming
+    \(\norm{x} = 1\))
+    \begin{align*}
+        \innerprod{Ax}{x} &= \sumx_{i=k}^n \lambda_i \abs{\xi_i}^2 \leq \lambda_k \sumx_{i=k}^n \abs{\xi_i}^2\\
+        &= \lambda_k \abs{x}^2 = \lambda_k,
+    \end{align*}
+    so that \(\mu(\Mfold_0) \leq \lambda_k\).
+
+    In other words, as \(\Mfold\) runs over all \((n - k + 1)\)-dimensional
+    subspaces, \(\mu(\Mfold)\) is always \(\geq \lambda_k\), and is at least
+    once \(\leq \lambda_k\); this shows that \(\mu_k = \lambda_k\), as was to be
+    proved.
+
+    In particular for \(k =1\) we see (using §89) that if \(A\) is self-adjoint,
+    then \(\norm{A}\) is equal to the maximum of the absolute values of the
+    proper values of \(A\).
+\end{proof}
+
+\section{Convergence of linear transformations}
+
+We return now to the consideration of convergence problems. There are three
+obvious senses in which we may try to define the convergence of a sequence
+\((A_n)\) of linear transformations to a fixed linear transformation~\(A\).
+\begin{align}
+    \tag{i} \norm{A_n - A} \to &0 \text{ as } n \to \infty,\\
+    \tag{ii} \norm{A_n x - A x} \to &0 \text{ as } n \to \infty \text{ for all fixed } x,\\
+    \tag{iii} \abs{\innerprod{A_n x}{y} - \innerprod{A x}{y}} \to &0 \text{ as } n \to \infty \text{ for all fixed } x \text{ and } y.
+\end{align}
+
+If (i) is true, then for every \(x\),
+\begin{equation*}
+    \norm{A_n x - A x} = \norm{(A_n - A) x} \leq \norm{A_n - A} \cdot \norm{x} \to 0
+\end{equation*}
+so that (i) \(\implies\) (ii). We have already seen (§\,86) that (ii)
+\(\implies\) (iii) and that in finite-dimensional spaces (i) \(\implies\) (ji).
+It is even true that in finite- dimensional spaces (ii) \(\implies\) (i), so
+that all three conditions are equivalent. To prove this, let \(\{x_1,
+\,\cdot\,\cdot\,\cdot\,, x_N\}\) be an orthonormalbasis in \(\VecSp\). If we
+suppose that (i) holds, then, for each \(e > 0\), we may find an \(n_0 =
+n_0(\epsilon)\) such that \(\norm{A_n x_i -A X_i} < \epsilon\) for \(n \geq
+n_0\) and for \(i = 1, \,\cdot\,\cdot\,\cdot\,, N\). It follows that for an
+arbitrary \(x = \sumx_i \innerprod{x}{x_i} x_i\) we have
+\begin{align*}
+    \norm{(A_n - A)x} &= \norm{\sumx_i  \innerprod{x}{x_i} (A_n - A ) x_i} \\
+    &\leq \sumx_i \norm{x} \cdot \norm{(A_n - A) x_i} \leq \epsilon N \norm{x}.
+\end{align*}
+and this implies (i).
+
+\section{Ergodic theorem}
+
+The routine work is out of the way; we go on to illustrate the general theory by considering some very special but quite important convergence problems.
+
+\begin{thmx}
+    If \(U\) is an isometry on a finite-dimensional inner product space, and if
+    \(\Mfold\) is the subspace of all solutions of \(Ux = x\), then the sequence
+    defined by
+    \begin{equation*}
+        V_n = \frac{1}{n} (1 + U + \,\cdot\,\cdot\,\cdot\, + U^{n-1})
+    \end{equation*}
+    converges as \(n \to \infty\) to the perpendicular projection \(E =
+    P_{\Mfold}\).
+\end{thmx}
+
+\begin{proof}
+    Let \(\frak{N}\) be the range of the linear transformation \(1 - U\). If \(x = y - Uy\) is in \(\frak{N}\), then
+    \begin{align*}
+        V_n x &= \frac{1}{n}(y - Uy + Uy - U^2y + \,\cdot\,\cdot\,\cdot\, + 
+        U^{n-1}y - U^n y)\\
+        &= \frac{1}{n} (y - U^n y),
+    \end{align*}
+    so that
+    \begin{align*}
+        \norm{V_n x} &= \frac{1}{n} \norm{y - U^n y} \leq \frac{1}{n}
+        \left(\norm{y} + \norm{U^n y}\right)\\
+        & = \frac{2}{n} \norm{y}.
+    \end{align*}
+    This implies that \(V_n x\) converges to zero when \(x\) is in \(\frak{N}\).
+
+    On the other hand, if \(x\) is in \(\Mfold\), that is, \(Ux = x\), then
+    \(V_n x = x\), so that in this case \(V_n x\) certainly converges to \(x\).
+
+    We shall complete the proof by showing that \(\frak{N}^{\perp} = \Mfold\).
+    (This will imply that every vector is a sum of two vectors for which
+    \((V_n)\) converges, so that \((V_n)\) converges everywhere. What we have
+    already proved about the limit of \((V_n)\) in \(\Mfold\) and in
+    \(\frak{N}\) shows that \((V_n x)\) always converges to the projection of
+    \(x\) in \(\Mfold\).) To show that \(\frak{N}^{\perp} = \Mfold\), we observe
+    that \(x\) is in the orthogonal complement of \(\frak{N}\) if and only if
+    \(\innerprod{x}{y - Uy} = 0\) for all \(y\). This in turn implies that
+    \begin{align*}
+        0 & = \innerprod{x}{y - Uy} = \innerprod{x}{y} - \innerprod{x}{Uy} = \innerprod{x}{y} - \innerprod{U^*x}{y} \\
+        & = \innerprod{x - U^*x}{y},
+    \end{align*}
+    that is, that \(x - U^* x = x - U^{-1}x\) is orthogonal to every vector
+    \(y\), so that \(x - U^{-1}x = 0\), \(x = U^{-1}x\), or \(Ux = x\). Reading
+    the last computation from right to left shows that this necessary condition
+    is also sufficient; we need only to recall the definition of \(\Mfold\) to
+    see that \(\Mfold = \frak{N}^{\perp}\).
+\end{proof}
+
+This very ingenious proof, which works with only very slight modifications in
+most of the important infinite dimensional cases, is due to F.~Riesz.
+
+\section{Power series}
+
+We consider next the so-called Neumann series \(\sumx_{n=0}^{\infty} A^n\), where \(A\) is a linear transformation with norm \(<1\) on a finite-dimensional vector space. If we write
+\begin{equation*}
+    S_p = \sumx_{n=0}^{p} A^n
+\end{equation*}
+then
+\begin{equation}
+    (1 - A) S_p = S_p - AS_p = 1 - A^{p+1}.
+\end{equation}
+To prove that \(S_p\) has a limit as \(p \to \infty\), we consider (for any two indices \(p\) and \(q\) with \(p > q\))
+\begin{equation*}
+    \norm{S_p - S_q} \leq \sumx_{n = q +1}^p \norm{A^n}
+    \leq \sumx_{n = q +1}^p \norm{A}^n.
+\end{equation*}
+Since \(norm{A} < 1\), the last written quantity approaches zero as \(p, q \to
+\infty\); it follows that \(S_p\) hasa limit \(S\) as \(p \to \infty\). To
+evaluate the limit we observe that \(1 - A\) is invertible. (Proof: \((1 - A)x =
+0\) implies that \(Ax = x\), and, if \(x \neq 0\), this implies that \(norm{Ax}
+= \norm{x} > \norm{A} \cdot \norm{x}\), a contradiction.) Hence we may write (1)
+in the form
+\begin{equation}
+    S_p = (1 - A^{p+1})(1 - A)^{-1} = (1 - A)^{-1} - (1 - A^{p+1});
+\end{equation}
+since \(A^{p+1} \to 0\) as \(p \to \infty\), it follows that \(S = (1 -
+A)^{-1}\).
+
+As another example of an infinite series of transformations we consider the
+exponential series. For an arbitrary linear transformation \(A\) (not necessarily
+with \(\norm{A} < 1\)) we write
+\begin{equation*}
+    S_p = \sumx_{n=0}^{p} \frac{1}{n!} A^n.
+\end{equation*}
+Since we have
+\begin{equation*}
+    \norm{S_p - S_q} \leq \sumx_{n = q +1}^p \frac{1}{n!} \norm{A}^n,
+\end{equation*}
+and since the right side of this inequality, being a part of the power series
+for \(\exp \norm{A} = e^{\norm{A}}\), converges to \(0\) as \(p, q \to
+\infty\),we see that there is a linear transformation \(S\) such that \(S_p \to
+S\). We write \(S = \exp A\); we shall merely mention some of the elementary
+properties of this function of \(A\).
+
+Consideration of the triangular forms of \(A\) and of \(S_p\) shows that the
+proper values of \(\exp A\), together with their algebraic multiplicities, are
+equal to the exponentials of the proper values of \(A\). (This argument, as well
+as some of the ones that follow, applies directly to the complex case only; the
+real case has to be deduced via complexification.) From the consideration of the
+triangular form it follows also that the determinant of \(\exp A\), that is,
+\(\prodx_{i=1}^N \exp \lambda_i\), where \(\lambda_1, \,\cdot\,\cdot\,\cdot\,,
+\lambda_N\) are the (not necessarily distinct) proper values of \(A\), is the
+same as \(\exp (\lambda_1 + \,\cdot\,\cdot\,\cdot\, + \lambda_N) = \exp\,(\trace
+A)\). Since \(\exp \zeta \neq 0\), this shows, incidentally, that \(\exp A\) is
+always invertible.
+
+Considered as a function of linear transformations the exponential retains many
+of the simple properties of the ordinary numerical exponential function. Let us,
+for example, take any two \emph{commutative} linear transformations \(A\) and
+\(B\). Since \(\exp\,(A+B) - \exp A \exp B\) is the limit (as \(p \to \infty\)) of
+the expression
+\begin{align*}
+    \sumx_{n=0}^p &\frac{1}{n!} (A+B)^n - \sumx_{m=0}^p \frac{1}{m!} A^m \cdot \sumx_{k=0}^p \frac{1}{k!} B^k\\
+    & = \sumx_{n=0}^p \sumx_{j=0}^n \begin{pmatrix} n \\j
+    \end{pmatrix} A^j B^{n-j} - \sumx_{m=0}^p \sumx_{k=0}^p \frac{1}{m!k!}A^m B^k,
+\end{align*}
+we will have proved the multiplication rule for exponentials when we have proved
+that this expresion converges to zero. Here \(\begin{pmatrix} n \\j
+\end{pmatrix}\) stands for the combinatorial coefficient
+\(\displaystyle\frac{n!}{j!(n-j)!}\). An easy verification yields hte fact that
+for \(k + m leq p\) the product \(A^m B^k\) occurs in both terms of the last
+written expression with coefficients that differ in sign only. The terms that do
+not cancel out are all in the subtrahend and are togetherequal to
+\begin{equation*}
+    \sumx_m \sumx_k \frac{1}{m!k!} A^m B^k,
+\end{equation*}
+the summation being extended over those values of \(m\) and \(k\) that are
+\(\leq p\) and for which \(m + k >  p\). Since \(m + k > p\) implies that at
+least one of the two integers \(m\) and \(k\) is greater than the integer part
+of \(\displaystyle\frac{p}{2}\) (in symbols \(\left[\frac{p}{2}\right]\)), the
+norm of the remainder is dominated by
+\begin{align*}
+   \sumx_{m=0}^{\infty} \sumx_{k=\left[\frac{p}{2}\right]}^{\infty} &\frac{1}{m!k!} \norm{A}^m \norm{B}^k + \sumx_{k=0}^{\infty} \sumx_{m=\left[\frac{p}{2}\right]}^{\infty} \frac{1}{m!k!} \norm{A}^m \norm{B}^k \\
+   & = \left(\sumx_{m=0}^{\infty} \frac{1}{m!} \norm{A}^m\right) \left(\sumx_{k=\left[\frac{p}{2}\right]}^{\infty} \frac{1}{k!} \norm{B}^k\right)\\ &\qquad + \left(\sumx_{k=0}^{\infty} \frac{1}{k!} \norm{B}^k\right) \left(\sumx_{m=\left[\frac{p}{2}\right]}^{\infty} \frac{1}{m!} \norm{A}^m\right)\\
+   & = (\exp \norm{A})\alpha_p + (\exp \norm{B})\beta_p,
+\end{align*}
+where \(\alpha_p \to 0\) and \(\beta_p \to 0\) as \(p \to \infty\).
+ 
+Similar methods serve to treat \(f(A)\), where \(f\) is any function
+representable by a power series,
+\begin{equation*}
+    f(\zeta) = \sumx_{n=0}^{\infty} \alpha_n \zeta^n,
+\end{equation*}
+and where \(\norm{A}\) is (strictly) smaller than the radius of convergence of
+the series. We leave it to the reader to verify that the functional calculus we
+are here hinting at is consistent with the functional calculus for normal
+transformations. Thus, for example, \(\exp A\) as defined above is the same
+linear transformation as is defined by our previous notion of \(\exp A\) in case
+\(A\) is normal.
+
+{\small
+\subsection*{Exercises}
+\begin{enumerate}[wide]
+    \item Give an alternative proof of the ergodic theorem, based on the spectra theorem for unitary transformations.
+    \item Prove that if \(\norm{1 - A} < 1\), then \(A\) is invertible, by considering the formal power series expansion of \((1 - (1 - A))^{-1}\).
+\end{enumerate}
+}

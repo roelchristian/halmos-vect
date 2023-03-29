@@ -2,7 +2,7 @@
 
 \section{Linear transformations}
 
-We come now to the obiects that really make vector spaces interesting.
+We come now to the objects that really make vector spaces interesting.
 
 \begin{definition}
     A \emph{linear transformation (or operator)} \(A\) on a vector space " is a correspondence that assigns to every vector \(x\) in \(\frak{V}\) a vector \(Ax\) in \(\frak{U}\), in such a way that
@@ -13,17 +13,62 @@ identically in the vectors \(x\) and \(y\) and the scalars \(\alpha\) and \(\bet
 \end{definition}
 
 We make again the remark that we made in connection with the definition of
-linear functionals, namely, that for a linear transformation \(A\), as we defined
-it, \(A0 = 0\). For this reason such transformations are sometimes called
-\emph{homogeneous} linear transformations.
+linear functionals, namely, that for a linear transformation \(A\), as we
+defined it, \(A0 = 0\). For this reason such transformations are sometimes
+called \emph{homogeneous} linear transformations.
 
-Before discussing any properties of linear transformations we give sev-
-eral examples. We shall not bother to prove that the transformations we
-mention are indeed linear; in all cases the verification of the equation that defines linearity is a simple exercise.
+Before discussing any properties of linear transformations we give sev- eral
+examples. We shall not bother to prove that the transformations we mention are
+indeed linear; in all cases the verification of the equation that defines
+linearity is a simple exercise.
 
-(5) For every \(x\) in \(\Polynom\), \(x(t) = \sumx_{j=0}^{n-1} \xi_j t^j\), write \(Sx = \sumx_{j=0}^{n-1}\frac{\xi_j}{j+1}t^{j+1}\). (Once more we are disguising by algebraic notation a well-known analytic
-concept. Just as in (4) \((Dx)(t)\) stood for \( \frac{dx}{dt}\), os here (St) 1() si the same as
-)
+\begin{enumerate}[wide, nosep, label=(\arabic*)]
+    \item Two special transformationsof considerable importance for the study
+    that follows, and for which we shallconsistently reserve the symbols \(0\)
+    and \(1\) respectively, are defined (for all \(x\)) by \(0x = 0\) and \(1x =
+    x\).
+
+    \item Let \(x_0\) be any fixed vector in \(\VecSp\), and let \(y_0\) be any
+    linear functional on \(\VecSp\); write \(Ax = y_0(x) \cdot x_0\). More
+    generally, let \(\{x_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\) be an arbitrary
+    finite set of vectors in \(\VecSp\), and let \(\{y_1,
+    \,\cdot\,\cdot\,\cdot\,, y_n\}\) be a corresponding set of linear
+    functionals on \(\VecSp\); write \(Ax = y_1(x) x_1 + \,\cdot\,\cdot\,\cdot\,
+    + y_n(x) x_n\). It is not difficult to prove that if, in particular,
+    \(\VecSp\) is \(n\)-dimensional, and the vectors \(x_1,
+    \,\cdot\,\cdot\,\cdot\,, x_n\) form a basis for \(\VecSp\), then every
+    linear transformation \(A\) hasq the form just described.
+
+    \item Let \(\pi\) be a permutation of the integers \(\{1, \dots, n\}\); if
+    \(x = (\xi_1, \dots, \xi_n)\) is a vector in \(\Complex^n\), write \(Ax =
+    (\xi_{\pi(1)}, \,\cdot\,\cdot\,\cdot\,, \xi_{\pi(n)})\). Similarly, let
+    \(\pi\) be a polynomial with complex coefficients; if \(x\) is a vector
+    (polynomial) in \(\Polynom\), write \(Ax = y\) for the polynomial defined by
+    \(y(t) = x(\pi(t))\).
+    
+    \item For any \(x\) in \(\Polynom_n\), \(x(t) = \sumx_{j=0}^{n-1} \xi_j
+    t^j\), write \(Dx = \sumx_{j=1}^{n-1} j \xi_j t^{j-1}\). (We use the letter
+    \(D\) here as a reminder that \(Dx\) is the derivative of the polynomial
+    \(x\). We remark that we might have defined \(D\) on \(\Polynom\) as well as
+    on \(\Polynom_n\); we shall make use of this fact later. Observe that for
+    polynomials the definition of differentiation can be given purely
+    algebraically, and does not need the usual theory of limiting processes.)
+
+    \item For every \(x\) in \(\Polynom\), \(x(t) = \sumx_{j=0}^{n-1} \xi_j
+    t^j\), write \(\displaystyle Sx =
+    \sumx_{j=0}^{n-1}{\frac{\xi_j}{j+1}t^{j+1}}\). (Once more we are disguising
+    by algebraic notation a well-known analytic concept. Just as in (4)
+    \((Dx)(t)\) stood for \(\displaystyle\frac{dx}{dt}\), so here \((Sx)(t)\) is
+    the same as \(\int_0^t x(s) \,ds\).)
+
+    \item Let \(m\) be a polynomial with complex coefficients in a variable
+    \(t\). (We may, although it is not particularly profitable to do so,
+    consider \(m\) as an element of \(\Polynom\).) For every \(x\) in
+    \(\Polynom\), we write \(Mx\) for the polynomial defined by \((Mx)(t) =
+    m(t)x(t)\). For later purposes we introduce a special symbol; in case \(m(t)
+    = t\), we shall write \(T\) for the transformation \(M\), so that \((Tx)(t)
+    = tx(t)\).
+\end{enumerate}
 
 \section{Transformations as vectors}
 
@@ -64,6 +109,80 @@ vector space is used only very rarely. The ``much more'' that we can say is that
 there exists for linear transformations a more or less decent definition of
 multiplication, which we discuss in the next section.
 
+{\small
+\subsection*{Exercises}
+\begin{enumerate}[label=(\arabic*), wide]
+    \item Prove that each of the correspondences described below is a linear transformation.
+    \begin{enumerate}[label=(\alph*), wide, nosep]
+        \item \(\VecSp\) is the set \(\Complex\) of complex numbers regarded as
+        a real vector space; \(Ax\) is the complex conjugate of \(x\).
+        \item \(\VecSp\) is \(\Polynom\); if \(x\) is a polynomial, then
+        \((Ax)(t) = x(t + 1) - x(t)\).
+        \item \(\VecSp\) is the \(k\)-fold tensor product of a vector space with
+        itself; \(A\) is such that \(A(x_1 \otimes \,\cdot\,\cdot\,\cdot\, \otimes x_k) =
+        x_{\pi(1)} \otimes \,\cdot\,\cdot\,\cdot\, \otimes x_{\pi(k)}\), where \(\pi\) is a
+        permutation of \(\{1, \,\cdot\,\cdot\,\cdot\,, k\}\).
+        \item \(\VecSp\) is the set of all \(k\)-linear forms on a vector space;
+        \((Aw)(x_1, \,\cdot\,\cdot\,\cdot\,, x_k) = w(x_{\pi(1)}, \,\cdot\,\cdot\,\cdot\,, x_{\pi(k)})\), where
+        \(\pi\) is a permutation of \(\{1, \,\cdot\,\cdot\,\cdot\,, k\}\).
+        \item \(\VecSp\) is the set of all \(k\)-linear forms on a vector space;
+        if \(w\) is in \(\VecSp\), then \(Aw = \sumx \pi w\), where the
+        summation is extended over all permutations \(pi\) in \(\frak{S}_k\).
+        (f) Same as (e) except that \(Aw = \sumx (\sign \pi) \pi w\).
+    \end{enumerate}
+    \item Prove that if \(\VecSp\) is a finite-dimensional vector space, then
+    the space of all linear transformations on \(\VecSp\) is finite-dimensional,
+    and find its dimension.
+    \item The concept of a ``linear transformation,'' as defined in the text, is
+    too special for some purposes. According to a more general definition, a
+    linear transformation from a vector space \(\frak{U}\) to a vector space
+    \(\VecSp\) over the same field is a correspondence \(A\) that assigns to
+    every vector \(x\) in \(\frak{U}\) a vector \(Ax\) in \(\VecSp\) so that
+    \begin{equation*}
+        A(\alpha x + \beta y) = \alpha Ax + \beta Ay.
+    \end{equation*}
+    Prove that each of the correspondences described below is a linear
+    transformation in this generalized sense.
+    \begin{enumerate}[label=(\alph*), wide, nosep]
+        \item \(\VecSp\) is the field of scalars of \(\frak{U}\); \(A\) is a
+        linear functional on \(\frak{U}\).
+        \item \(\frak{U}\) is the direct sum of \(\VecSp\) with some other
+        space; \(A\) maps each pair in \(\frak{U}\) onto its first coordinate.
+        \item \(\VecSp\) is the quotient of \(\frak{U}\) modulo a subspace;
+        \(A\) maps each vector in \(\frak{U}\) onto the coset it determines.
+        \item Let \(w\) be a bilinear functional on a direct sum \(\frak{U}
+        \oplus \VecSp_0\). Let \(\VecSp\) be the dual of \(\VecSp_0\), and
+        define \(A\) to be the correspondence that assigns to each \(x_0\) in
+        \(\frak{U}\) the linear functional on \(\VecSp_0\) obtained from \(w\)
+        by setting its first argument equal to \(x_0\).
+    \end{enumerate}
+    \item \begin{enumerate}[label=(\alph*), wide, nosep]
+        \item Suppose that \(\frak{U}\) and \(\VecSp\) are vector spaces over
+        the same field. If \(A\) and \(B\) are linear transformations from
+        \(\frak{U}\) to \(\VecSp\), if \(\alpha\) and \(\beta\) are scalars, and
+        if
+        \begin{equation*}
+            Cx = \alpha Ax + \beta Bx
+        \end{equation*}
+        for each \(x\) in \(\frak{U}\), then \(C\) is a linear transformation
+        from \(\frak{U}\) to \(\VecSp\).
+        \item If we write, by definition, \(C = \alpha A + \beta B\), then the
+        set of all linear transformations from \(\frak{U}\) to \(\VecSp\)
+        becomes a vector space with respect to this definition of the linear
+        operations.
+        \item Prove that if \(\frak{U}\) and \(\VecSp\) are finite-dimensional,
+        then so is the space of all linear transformationsfrom \(\frak{U}\) to
+        \(\VecSp\), and find its dimension.
+    \end{enumerate}
+    \item Suppose that \(\frak{M}\) is an \(m\)-dimensional subspace of an
+    \(n\)-dimensional vector space \(\VecSp\). Prove that the set of those
+    linear transformations \(A\) on \(\VecSp\) for which \(Ax = 0\) whenever
+    \(x\) is in \(\frak{M}\) is a subspace of the set of all linear
+    transformations on \(\VecSp\), and find the dimension of thatsubspace.
+\end{enumerate}
+
+}
+
 \section{Products}
 
 The product \(P\) of two linear transformations \(A\) and \(B\), \(P = AB\), is
@@ -71,24 +190,197 @@ defined by the equation \(P x = A(Bx)\).
 
 The notion of multiplication is fundamental for all that follows. Before giving
 any examples to illustrate the meaning of transformation products, let us
-observe the implications of the symbolism, \(P = AB\). To say that P is a
-transformation means, of course, that given a vector *, P does some- thing to
-it. What it does isfound out by operating on r with B, that is, finding Bx, and
-then operating on the result with A. In other words, if we look on the symbol
-for a transformation as a recipe for performing a certain act, then the symbol
-for the product of two transformations is to be read from right to left. The
-order to transformby A B means to trans- form first by B and then by A. This may
-seem like an undue amount of fuss to raise about a small point; however, as we
-shall soon see, transforma- tion multiplication is, in general, not commutative,
-and the order in which we transform makes a lot of difference. The most
-notorious example of non-commutativity is found on the space P. We consider the
-differentiation and multiplication transforma- tions Dand I, defined yb (Dx) 9()
-= at and (Ir) (9) = t(9); we have dx (DIx) 1() = It (her (9) ) = =1() + I TI and
-dr
+observe the implications of the symbolism, \(P = AB\). To say that \(P\) is a
+transformation means, of course, that given a vector \(x\), \(P\) does something
+to it. What it does isfound out by operating on \(x\) with \(B\), that is,
+finding \(Bx\), and then operating on the result with A. In other words, if we
+look on the symbol for a transformation as a recipe for performing a certain
+act, then the symbol for the product of two transformations is to be read from
+right to left. The order to transform by \(AB\) means to transform first by
+\(B\) and then by \(A\). This may seem like an undue amount of fuss to raise
+about a small point; however, as we shall soon see, transformation
+multiplication is, in general, not commutative, and the order in which we
+transform makes a lot of difference.
+
+The most notorious example of non-commutativity is found on the space
+\(\Polynom\). We consider the differentiation and multiplication transforma-
+tions \(D\) and \(T\), defined by \(\displaystyle(Dx)(t) = \frac{dx}{dt}\) and
+\((Tx)(t) = tx(t)\); we have
+\begin{equation*}
+    (DTx)(t) = \frac{d}{dt}(tx(t)) = x(t) + t\frac{dx}{dt}
+\end{equation*}
+and
+\begin{equation*}
+    (TDx)(t) = t \frac{dx}{dt}.
+\end{equation*}
+In other words, not only is it false that \(DT = TD\) (so that \(DT - TD = 0\)),
+but,in fact, \((DT- TD)x = x\) for every \(x\), so that \(DT - TD = 1\).
+
+On the basis of the examples in §32, the reader should be able to construct many
+examples of pairs of non-commutative transformations. Those who are used to
+thinking of linear transformations geometrically can, for example, readily
+convince themselves that the product of two rotations of \(\Reals^3\) (about the
+origin) depends in general on the order in which they are performed.
+
+Most of the formal algebraic properties of numerical multiplication (with the
+already mentioned notable exception of commutativity) are valid in the algebra
+of transformations.
+\begin{align}
+    A0 &= 0A = 0,\\
+    A1 &= 1A = A,\\
+    A (B + C) &= AB + AC,\\
+    (A + B)C &= AC + BC,\\
+    A(BC) &= (AB)C.
+\end{align}
+The proofs of all these identities are immediate consequences of the definitions
+of addition and multiplication; to illustrate the principle we prove (3), one of
+the distributive laws. The proof consists of the following computation:
+\begin{align*}
+    (A (B + C))x &= A((B + C)x) = A(Bx + Cx)\\
+    &= A(Bx) + A(Cx) = (AB)x + (AC)x\\
+    &= (AB + AC)x.
+\end{align*}
 
 \section{Polynomials}
 
+The associative law of multiplication enables us to write the product of three
+(or more) factors without any parentheses; in particular, we may consider the
+product of any finite number, say \(m\), of factors all equal to \(A\). This
+product depends only on \(A\) and on \(m\) (and not, as we just remarked, on any
+bracketing of the factors); we shall denote it by \(A^m\). The justification for
+this notation is that, although in general transformation multiplication is not
+commutative, for the powers of one transformation, we do have the usual laws of
+exponents, \(A^m A^n = A^{m+n}\) and \((A^m)^n = A^{mn}\). We observe that \(A^0
+= 1\); it is customary also to write, by definition, \(A^0 = 1\). With these
+definitions, the calculus of powers of a single transformation is almost exactly
+the same as in ordinary arithmetic. We may, in particular, define polynomials in
+a linear transformation. Thus if \(p\) is any polynomial with scalar
+coefficients in a variable \(t\), say \(p(t) = \alpha_0 + \alpha_1 t +
+\,\cdot\,\cdot\,\cdot\, + \alpha_n t^n\), we may form the linear transformation
+\begin{equation*}
+    p(A) = \alpha_0 1 + \alpha_1 A + \,\cdot\,\cdot\,\cdot\, + \alpha_n A^n.
+\end{equation*}
+The rules for the algebraic manipulation of such polynomials are easy. Thus,
+\(p(t) q(t) = r(t)\) implies \(p(A) q(A) = r(A)\) (so that, in particular, any
+\(p(A)\) and \(q(A)\) are commutative); if \(p(t) = \alpha\) (identically), we
+shall usually write \(p(A) = \alpha\) (instead of \(p(A) = \alpha \cdot 1\));
+this is in harmony with the use of the symbols \(0\) and \(1\) for linear
+transformations.
+
+If \(p\) is a polynomial in two variables, and if \(A\) and \(B\) are linear
+transformations, it is not usually possible to give any sensible interpretation
+to \(p(A,B)\). The trouble, of course, is that \(A\) and \(B\) may not commute,
+and even a simple monomial, such as \(s^2 t\), will cause confusion. If \(p(s,t)
+= s^2 t\), what should we mean by \(p(A,B)\)? Should it be \(A^2B\), or \(ABA\),
+or \(BA^2\)? It is important to recognize that there is a difficulty here;
+fortunately for us, it is not necessary to try to get around it. We shall work
+with polynomials in several variables only in connection with commutative
+transformations, and then everything is simple. We observe that if \(AB = BA\),
+then \(A^nB^m = B^mA^n\), and therefore \(p(A,B)\) has an unambiguous meaning
+for every polynomial \(p\). The formal properties of the correspondence between
+commutative transformations and polynomials are just as valid for several
+variables as for one; we omit the details.
+
+For an example of the possible behavior of the powers of a transformation, we
+look at the differentiation transformation \(D\) on \(\Polynom\) (or, just as
+well, on \(\Polynom_n\), for some \(n\)). It is easy to see that for every
+positive integer \(k\), and for every polynomial \(x\) in \(\Polynom\), we have
+\(\displaystyle(D^k x)(t) = \frac{d^k x}{dt^k}\). We observe that whatever else
+\(D\) does, it lowers the degree of the polynomial on which it acts by exactly
+one unit (assuming, of course, that the degree is \(\geq 1\)). Let \(x\) be a
+polynomial of degree \(n-1\), say; what is \(D^n x\)? Or put it another way:
+what is the product of the two (commutative) transformations \(D^k\) and
+\(D^{n-k}\) (where \(l\) is any integer between \(0\) and \(n\)), considered on
+the space \(\Polynom_n\)? We mention this example to bring out the disconcerting
+fact implied by the answer to the last question; the product of two
+transformations may vanish even though neither one of them is zero. A non-zero
+transformation whose product with some non-zero transformation is zero is called
+a \emph{divisor of zero}.
+
+{\small
+\subsection*{Exercises}
+\begin{enumerate}[wide]
+    \item Calculate the linear transformations \(D^n S^n\) and \(S^n D^n\), \(n
+    = 1,2,3,\,\cdot\,\cdot\,\cdot\,\); in other words, compute the effect of each such
+    transformation on an arbitrary element of \(\Polynom\). (Here \(D\) and
+    \(S\) denote the differentiation and integration transformations defined in
+    §32.)
+    \item If \(A\) and \(B\) are linear transformations such that \(AB - BA\)
+    commutes with \(A\), then \(A^kB - BA^k = kA^{k-1}(AB - BA)\) for every
+    positive integer \(k\).
+    \item Suppose that \(Ax(t) = x(t + 1)\) for every \(x\) in \(\Polynom_n\);
+    prove that if \(D\) is the differentiation operator, then
+    \begin{equation*}
+        1 + \frac{D}{1} + \frac{D^2}{2!} + \,\cdot\,\cdot\,\cdot\, + \frac{D^{n-1}}{(n-1)!} = A.
+    \end{equation*}
+    \item \begin{enumerate}[nosep, label=(\alph*), wide]
+        \item If \(A\) is a linear transformation on an \(n\)-dimensional vector
+        space, then there exists a non-zero polynomial \(p\) of degree \(\leq
+        n^2\) such that \(p(A) = 0\).
+        \item If \(Ax = y_0(x)x_0\) (see §32,(2)),find a non-zero polynomial
+        \(p\) such that \(p(A) = 0\). What is the smallest possible degree \(p\)
+        can have?
+    \end{enumerate}
+    \item The product of linear transformations between different vector spaces
+    is defined only if they ``match'' in the following sense. Suppose that U, U,
+    and W are vector spaces over the same field, and suppose that A and B are
+    linear traus- formations from U to U and from U to W, respectively. The
+    product C = B1 (the order is important) is defined to be the linear
+    transformation from U to W given by Cx = B(Ax). Interpret and prove as many
+    as possible among the equa- tions §34, (1)-(5) for this concept
+    ofmultiplication.
+    \item Let \(A\) be a linear transformation on a vector space \(\VecSp\), and
+    consider the correspondence that assigns to each linear transformation \(X\)
+    on \(\VecSp\) the linear transformation \(AX\). Prove that this
+    correspondence is a linear transformation (on the space of all linear
+    transformations). Can every linear transformation on that space be obtained
+    in this manner (by the choice of a suitable \(A\))?
+\end{enumerate}
+}
+
 \section{Inverses}
+
+In each of the two preceding sections we gave an example; these two examples
+bring out the two nasty properties that the multiplication of linear
+transformations has, namely, non-commutativity and the existence of divisors of
+zero. We turn now to the more pleasant properties that linear transformations
+sometimes have.
+
+It may happen that the linear transformation \(A\) has one or both of the following two very special properties.
+\begin{enumerate}[wide, nosep, label=(\roman*)]
+    \item If \(x_1 \neq x_2\), then \(Ax_1 \neq Ax_2\).
+    \item To every vector \(y\) there corresponds (at least) one vector \(x\) such that \(Ax = y\).
+\end{enumerate}
+
+If ever \(A\) has both these properties we shall say that \(A\) is invertible. If \(A\) is invertible, we define a linear transformation, called the inverse of \(A\) and denoted by \(A^{-1}\), as follows. If \(y\) is any vector, we may (by (ii)) find an \(x\) for which \(Ax = y\). This \(x\) is, moreover, uniquely determined, since \(x_1 \neq x_2\) implies (by (i)) that \(Y = Ax_1 \neq Ax_2\). We define \(A^{-1}(Y)\) to be \(x\). To prove that \(A^{-1}\) is linear, we evaluate \(A^{-1}(\alpha_1y_1 + \alpha_2y_2)\). If \(Ax_1 = y_1\) and \(Ax_2 = y_2\), then the linearity of \(A\) tells us that \(A(\alpha_1x_1 + \alpha_2x_2) = \alpha_1y_1 + \alpha_2y_2\), so that \(A^{-1}(\alpha_1y_1 + \alpha_2y_2) = a_1x_1 + \alpha_2x_2 = \alpha_1A^{-1}y_1 + \alpha_2A^{-1}y_2\).
+
+As a trivial example of an invertible transformation we mention the identity transformation \(1\); clearly \(1^{-1} = 1\). The transformation \(0\) is not invertible; it violates both the conditions (i) and (ii) about as strongly as they can be violated.
+
+It is immediate from the definition that for any invertible \(A\) we have
+\begin{equation*}
+    AA^{-1} = A^{-1}A = 1;
+\end{equation*}
+we shall now show that these equations serve to characterize \(A^{-1}\).
+
+\begin{theorem}
+    If \(A\), \(B\), and \(C\) are linear transformations such that
+    \begin{equation*}
+        AB = CA = 1,
+    \end{equation*}
+    then \(A\) is invertible and \(A^{-1} = B = C\).
+\end{theorem}
+
+\begin{proof}
+    If \(Ax_1 = Ax_2\), then \(CAx_1 = CAx_2\), so that (since \(CA = 1\)) \(x_1 = x_2\); in other words, the first condition of the definition of invertibility is satisfied. The second condition is also satisfied, for if \(y\) is any vector and \(x = By\), then \(y = ABy = Ax\). Multiplying \(AB = 1\) on the left, and \(CA = 1\) on the right, by \(A^{-1}\), we see that \(A^{-1} = B = C\).
+\end{proof}
+
+To show that neither \(AB = 1\) nor \(CA = 1\) is, by itself, sufficient to
+ensure the invertibility of \(A\), we call attention to the differentiation and
+integration transformations \(D\) and \(S\), definedin §\,32, (4) and (5).
+Although \(DS = 1\), neither \(D\) nor \(S\) is invertible; \(D\) violates (i),
+and \(S\) violates (ii).
+
+In finite-dimensional spaces the situation is much simpler.
 
 \section{Matrices}
 
@@ -105,23 +397,25 @@ now into the detailed discussion.
 
 \begin{definition}
     Let \(\frak{V}\) be an \(n\)-dimensional vectorspace, let \(\frak{X} =
-    \{x_1, \cdots , x_n\}\)  be any basis of \(\frak{V}\), and let \(A\) be a
+    \{x_1, \,\cdot\,\cdot\,\cdot\, , x_n\}\)  be any basis of \(\frak{V}\), and let \(A\) be a
     linear transformation on \(\frak{V}\). Since every vector is a linear
     combination of the \(x_i\), we have in particular
     \begin{equation*}
         Ax_j = \sumx_i \alpha_{ij} x_i
     \end{equation*}
-    for \(j = 1,\cdots, n\). The set \(\alpha_{ij}\) of \(n\) scalars, indexed with the double subscript \(i\), \(j\), is the matrix of \(A\) in the coordinate system \(\mathcal{X}\); we shall generally denote it by \([A]\), or, if it becomes necessary to indicate the particular basis \(\mathcal{X}\) under consideration, by \([A; \mathcal{X}]\). A matrix
+    for \(j = 1,\,\cdot\,\cdot\,\cdot\,, n\). The set \(\alpha_{ij}\) of \(n\) scalars, indexed with the double subscript \(i\), \(j\), is the matrix of \(A\) in the coordinate system \(\mathcal{X}\); we shall generally denote it by \([A]\), or, if it becomes necessary to indicate the particular basis \(\mathcal{X}\) under consideration, by \([A; \mathcal{X}]\). A matrix
     \(\alpha_{ij}\) is usually written in the form of a square array:
     \begin{equation*}
         [A] = \begin{bmatrix}
-            \alpha_{11} & \alpha_{12} & \cdots & \alpha_{1n} \\
-            \alpha_{21} & \alpha_{22} & \cdots & \alpha_{2n} \\
-            \vdots & \vdots &  & \vdots \\
-            \alpha_{n1} & \alpha_{n2} & \cdots & \alpha_{nn}
+            \alpha_{11} & \alpha_{12} & \,\cdot\,\cdot\,\cdot\, & \alpha_{1n} \\
+            \alpha_{21} & \alpha_{22} & \,\cdot\,\cdot\,\cdot\, & \alpha_{2n} \\
+            \cdot & \cdot & & \cdot \\
+            \cdot & \cdot & & \cdot \\
+            \cdot & \cdot & & \cdot \\
+            \alpha_{n1} & \alpha_{n2} & \,\cdot\,\cdot\,\cdot\, & \alpha_{nn}
         \end{bmatrix};
     \end{equation*}
-    the scalars \((\alpha_{i1}, \cdots, \alpha_{in})\) form a \emph{row}, and \( (\alpha_{1j}, \cdots, \alpha_{nj})\) a \emph{column} of \([A]\).
+    the scalars \((\alpha_{i1}, \,\cdot\,\cdot\,\cdot\,, \alpha_{in})\) form a \emph{row}, and \( (\alpha_{1j}, \,\cdot\,\cdot\,\cdot\,, \alpha_{nj})\) a \emph{column} of \([A]\).
 \end{definition}
 
 This definition does not define ``matrix''; it defines ``the matrix associated
@@ -130,7 +424,214 @@ consider a matrix as something existing in its own right as a square array of
 scalars; in general, however, a matrix in this book will be tied up with a
 linear transformation and a basis.
 
+We comment on notation. It is customary to use the same symbol, say, \(A\), for
+the matrix as for the transformation. The justification for this is to be found
+in the discussion below (of properties of matrices). We do not follow this
+custom here, because one of our principal aims, in connection with matrices, is
+to emphasize that they depend on a coordinate system (whereas the notion of
+linear transformation does not), and to study how the relation between matrices
+and linear transformations changes as we pass from one coordinate system to
+another.
+
+We call attention also to a peculiarity of the indexing of the elements
+\(\alpha_{ij}\) of a matrix \([A]\). A basis is a basis, and so far, although we
+usually indexed its elements with the first \(n\) positive integers, the order
+of the elements in it was entirely immaterial. It is customary, however, when
+speaking of matrices, to refer to, say, the first row or the first column. This
+language is justified only if we think of the elements of the basis \(\frak{X}\)
+as arranged in a definite order. Since in the majority of our considerations the
+order of the rows and the columns of a matrix is as irrelevant as the order of
+the elements of a basis, we did not include this aspect of matrices in our
+definition. It is important, however, to realize that the appearance of the
+square array associated with \([A]\) varies with the ordering of \(\frak{X}\).
+Everything we shall say about matrices can, accordingly, be interpreted from two
+different points of view; either in strict accordance with the letter of our
+definition, or else following a modified definition which makes correspond a
+matrix (with ordered rows and columns) not merely to a linear transformation and
+a basis, but also to an ordering of the basis.
+
+One more word to those in the know. It is a perversity not of the author, but of
+nature, that makes us write
+\begin{equation*}
+    Ax_j = {\textstyle \sumx_i} \alpha_{ij} x_i,
+\end{equation*}
+instead of the more usual equation
+\begin{equation*}
+    Ax_i = {\textstyle \sumx_j} \alpha_{ij} x_j.
+\end{equation*}
+The reason is that we want the formulas for matrix multiplication and for
+the application of matrices to numerical vectors (that is, vectors \((\xi_1, \,\cdot\,\cdot\,\cdot\,, \xi_n)\) in \(\Complex^n\)) to appear normal, and somewhere in the process of passing from vectors to their coordinates the indices turn around. To state our rule explicitly: write \(Ax_j\) as a linear combination of \(x_1, \,\cdot\,\cdot\,\cdot\,, x_n\), and write the coefficients so obtained as the \(j\)-th column of the matrix \([A]\). (The first index on \(\alpha_{ij}\) is always the row index; the second one, the column index.)
+
+For an example we consider the differentiation transformation \(D\) on
+the space \(\Polynom_n\), and the basis \(\{x_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\) defined by \(x_i(t) = t^{i-1}\), \(i = 1, \,\cdot\,\cdot\,\cdot\,, n\). What is matrix of \(D\) in this basis? We have
+{\small\begin{equation}
+    \begin{array}{ccccccccrcc}
+        Dx_1 &=& 0x_1 &+& 0x_2 &+ &\,\cdot\,\cdot\,\cdot&+& 0x_{n-1} &+& 0x_n, \\
+        Dx_2 &=& 1x_1 &+& 0x_2 &+ &\,\cdot\,\cdot\,\cdot&+& 0x_{n-1} &+& 0x_n, \\
+        Dx_3 &=& 0x_1 &+& 2x_2 &+ &\,\cdot\,\cdot\,\cdot&+& 0x_{n-1} &+& 0x_n, \\
+        \cdot &&&&&&  &&&& \cdot \\
+        \cdot &&&&&& \,\cdot\,\cdot\,\cdot\, &&&& \cdot \\
+        \cdot &&&&&& &&&& \cdot \\
+        Dx_n &=& 0x_1 &+& 0x_2 &+ &\,\cdot\,\cdot\,\cdot&+& (n-1)x_{n-1} &+& 0x_n.
+    \end{array}
+\end{equation}}
+so that
+\begin{equation}
+    [D] = \begin{bmatrix}
+        0 & 1 & 0 & \cdot\,\cdot\,\cdot & 0 & 0 \\
+        0 & 0 & 2 & \cdot\,\cdot\,\cdot & 0 & 0 \\
+        {} & \cdot & {} & {} & {} & \cdot \\
+        {} & \cdot & {} & {} & {} & \cdot \\
+        {} & \cdot & {} & {} & {} & \cdot \\
+        0 & 0 & 0 & \cdot\,\cdot\,\cdot & 0 & n-1 \\
+        0 & 0 & 0 & \cdot\,\cdot\,\cdot & 0 & 0
+    \end{bmatrix}.
+\end{equation}
+
+The unpleasant phenomenon of indices turning around is seenby comparing (1) and
+(2).
+
 \section{Matrices of transformations}
+
+There is now a certain amount of routine work to be done, most of which we shall
+leave to the imagination. The problem is this: in a fixed coordinate system
+\(\frak{X} = \{x_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\), knowing the matrices of
+\(A\) and \(B\), how can we find the matrices of \(\alpha A + \beta B\), of
+\(AB\), \(0\), \(1\), etc.?
+
+Write \([A] = (\alpha_{ij})\), \([B] = (\beta_{ij})\), \(C = \alpha A + \beta B\), \([C] = (\gamma_{ij}\)); we assert that
+\begin{equation*}
+    \gamma_{ij} = \alpha \alpha_{ij} + \beta \beta_{ij}.
+\end{equation*}
+also if \([0] = (o_{ij})\) and \([1] = (e_{ij})\), then
+\begin{equation*}
+    o_{ij} = 0
+\end{equation*}
+and
+\begin{equation*}
+    e_{ij} = \delta_{ij}\text{ (= the Kronecker delta)}.
+\end{equation*}
+A more complicated rule is the following: if C = AB, IC] = (Ya), them
+\begin{equation*}
+    \gamma_{ij} = {\textstyle \sumx_k} \alpha_{ik} \beta_{kj}.
+\end{equation*}
+To prove this we use the definition of the matrix associated with a trans- formation, and juggle, thus:
+\begin{align*}
+    Cx_j & = ABx_j = A\left({\textstyle \sumx_k} \beta_{kj} x_k\right) = {\textstyle \sumx_k} \beta_{kj} Ax_k \\
+    & = {\textstyle \sumx_k} \beta_{kj} \left({\textstyle \sumx_i} \alpha_{ik} x_i\right) = {\textstyle \sumx_i} \left({\textstyle \sumx_k} \alpha_{ik} \beta_{kj} \right) x_i.
+\end{align*}
+
+The relation between transformations and matrices is exactly the same as the
+relation between vectors and their coordinates, and the analogue of the
+isomorphism theorem of \S\,9 is true in the best possible sense. We shall make
+these statements precise.
+
+With the aid of a fixed basis \(\Basisx\), we have made correspond a matrix
+\([A]\) to every linear transformation \(A\); the correspondence is described by
+the relations \(Ax_j = \sumx_i \alpha_{ij} x_i\); We assert nowthat this
+correspondence is one-to-one (that is, that the matrices of two different
+transformations are different), and that every array \((\alpha_{ij})\) of \(n^2\) scalars is the
+matrixof some transformation. To prove this, we observe in the first place that
+knowledge of the matrix of \(A\) completely determines \(A\) (that is, that \(Ax\) is
+thereby uniquely defined for every \(x\)), as follows: if \(x = \sumx_j \xi_j x_j\), then \(Ax = \sumx_j \xi_j Ax_j = \sumx_j \xi_j \left( \sumx_i \alpha_{ij} x_o\right) = \sumx_i \left(\sumx_j \alpha_{ij} \xi_j\right) x_i\). (In other words, it \(y = Ax = \sumx_i \eta_i x_i\), then
+\begin{equation*}
+    \eta_i = \sumx_j \alpha_{ij} \xi_j.
+\end{equation*}
+Compare this with the comments in §37 on the perversity of indices.) In the
+second place, there is no law against reading the relation \(Ax_j = \sumx_i
+\alpha_{ij} x_i\) backwards. If, in other words, \((\alpha_{ij})\) is any array,
+we may use this relation to define a linear transformation \(A\); it is clear
+that the matrix of \(A\) will be exactly \((\alpha_{ij})\). (Once more, however,
+we emphasize the fundamental fact that this one-to-one correspondence between
+transformations and matrices was set up by means of a particular coordinate
+system, and that, as we pass from one coordinate system to another, thesame
+linear transformation may correspond to several matrices, and one matrix may be
+the correspondent of many linear transformations.) The following statement sums
+up the essential part of the preceding discussion.
+
+\begin{theorem}
+    Among the set of all matrices \((\alpha_{ij})\), \((\beta_{ij})\), etc.,
+    \(i, j = 1, \,\cdot\,\cdot\,\cdot\,, n\), (not considered in relation ot
+    linear transformations), we define sum, scalar multiplication, product,
+    \((o_{ij})\), and \((e_{ij})\), by
+    \begin{align*}
+        (\alpha_{ij}) + (\beta_{ij}) & = (\alpha_{ij} + \beta_{ij}), \\
+        \alpha (\alpha_{ij}) & = (\alpha \alpha_{ij}), \\
+        (\alpha_{ij}) (\beta_{ij}) & = \left(\sumx_k \alpha_{ik} \beta_{kj}\right),\\
+        (o_{ij}) & = 0, \\
+        (e_{ij}) & = \delta_{ij}.
+    \end{align*}
+    Then the correspondence (established by means of an arbitrary coordinate
+    system \(\Basisx = \{x_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\) of the
+    \(n\)-dimensional vector space \(\VecSp\)), between all linear
+    transformations \(A\) on \(\VecSp\) and all matrices \((\alpha_{ij})\),
+    described by \(Ax_j = \sumx_i \alpha_{ij} x_i\) , is an isomorphism; ni
+    other words, it is a one-to-one correspondence that preserves sum, scalar
+    multiplication, product, \(0\), and \(1\).
+\end{theorem}
+
+We have carefully avoided discussing the matrix of \(A^{-1}\). It is possible to
+give an expression for \([A^{-1}]\) in terms of the elements \(\alpha_{ij}\) of
+\([A]\), but the expression is not simple and, fortunately, not useful for us.
+
+{\small
+\subsection*{Exercises}
+
+\begin{enumerate}[wide]
+    \item Let \(A\) be the linear transformation on \(\Polynom_n\) defined by
+    \((Ax)(t) = x(t + 1)\),and let \(\{x_0, \,\cdot\,\cdot\,\cdot\,, x_n\}\) be the basis of
+    \(\Polynom_n\) defined by \(x_j(t) = t^j\), \(j = 0, \,\cdot\,\cdot\,\cdot\,, n-1\). Find the
+    matrix of \(A\) with respect to this basis.
+    
+    \item Find the matrix of the operation of conjugation on \(\Complex\),
+    considered as a real vector space, with respectto the basis \(\{1, i\}\)
+    (where \(i = \sqrt{-1}\)).
+    
+    \item (a) Let \(\pi\) be a permutation of the integers \(1, \,\cdot\,\cdot\,\cdot\,, n\); if
+    \(x = (\xi_1, \,\cdot\,\cdot\,\cdot\,, \xi_n)\) is a vector in \(\Complex^n\), write \(Ax =
+    (\xi_{\pi(1)}, \,\cdot\,\cdot\,\cdot\,, \xi_{\pi(n)})\). If \(x_i = (\delta_{i1}, \,\cdot\,\cdot\,\cdot\,,
+    \delta_{in})\), find the matrix of \(A\) with respect to \(\{x_1, \,\cdot\,\cdot\,\cdot\,,
+    x_n\}\).
+    
+    (b) Find all matrices that commute with the matrix of \(A\).
+
+    \item Consider the vector space consisting of all real two-by-two matrices and let \(A\) be the linear transformation on this space that sends each matrix \(X\) onto \(PX\), where \(P = \begin{pmatrix}
+        1 & 1 \\
+        1 & 1
+    \end{pmatrix}\). Find the matrix of \(A\) with respect to the basis consisting of \(\begin{pmatrix}
+        1 & 0 \\
+        0 & 0
+    \end{pmatrix}, \begin{pmatrix}
+        0 & 1 \\
+        0 & 0
+    \end{pmatrix}, \begin{pmatrix}
+        0 & 0 \\
+        1 & 0
+    \end{pmatrix}, \begin{pmatrix}
+        0 & 0 \\
+        0 & 1
+    \end{pmatrix}\).
+
+    \item Consider the vector space consisting of all linear transformationson a vector space \(\VecSp\), and let \(A\) be the (left) multiplication transformation that sends each transformation \(X\) on \(\VecSp\) onto \(PX\), where \(P\) is some prescribed transformation on \(\VecSp\). Under what conditions on \(P\) is \(A\) invertible?
+    
+    \item Prove that if \(I\), \(J\), and \(K\) are complex matrices
+    \begin{equation*}
+        \begin{pmatrix}
+            0 & 1 \\ -1 & 0
+        \end{pmatrix}, \begin{pmatrix}
+            0 & i \\ i & 0
+        \end{pmatrix}, \begin{pmatrix}
+            i & 0 \\ 0 & -i
+        \end{pmatrix},
+    \end{equation*}
+    respectively (where \(i = \sqrt{-1}\)), then \(I^2 = J^2 = K^2 = -1\), \(IJ = -JI = K\), \(JK = -KJ = I\), and \(KI = -IK = J\).
+
+    \item Let \(A\) be the linear transformation on \(\Complex^2\) defined by \(A(\xi_1, \xi_2) = (\xi_1 + \xi_2, \xi_2)\). Prove that if a linear transformation \(B\) commutes with \(A\), then there exists a polynomial \(p\) such that \(B = p(A)\).
+    
+
+\end{enumerate}
+
+}
 
 \section{Invariance}
 
@@ -153,15 +654,15 @@ the set.
 What can be said about the matrix of a linear transformation \(A\) on an
 \(n\)-dimensional vector space \(\VecSp\) if we know that some or is invariant
 under \(A\)? In other words: is there a clever way of selecting a basis
-\(\frak{X} = \{x_1, \cdots, x_n\}\) in \(\VecSp\) so that \([A] = [A;
+\(\frak{X} = \{x_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\) in \(\VecSp\) so that \([A] = [A;
 \frak{X}]\) will have some particularly simple form? The answer is in \S\,12,
-Theorem 2; we may choose \(\frak{X}\) so that \(x_1, \cdots, x_m\) are in
-\(\frak{M}\) and \(x_{m+1}, \cdots, x_n\) are not. Let us express \(Ax_j\) in
-terms of \(x_1, \cdots, x_n\). For \(m + 1 \leq j \leq n\), there is not much we
+Theorem 2; we may choose \(\frak{X}\) so that \(x_1, \,\cdot\,\cdot\,\cdot\,, x_m\) are in
+\(\frak{M}\) and \(x_{m+1}, \,\cdot\,\cdot\,\cdot\,, x_n\) are not. Let us express \(Ax_j\) in
+terms of \(x_1, \,\cdot\,\cdot\,\cdot\,, x_n\). For \(m + 1 \leq j \leq n\), there is not much we
 can say: \(Ax_j = \sumx_i \alpha_{ij} x_i\). For \(j \leq m\), however, \(x_j\)
 is in \(\frak{M}\) ,and therefore (since \(\frak{M}\) is invariant under \(A\))
 \(Ax_j\) is in \(\frak{M}\). Consequently, in this case \(Ax_j\) is a linear
-combination of \(x_1, \cdots, x_m\); the \(\alpha_{ij}\) with \(m + 1 \leq i
+combination of \(x_1, \,\cdot\,\cdot\,\cdot\,, x_m\); the \(\alpha_{ij}\) with \(m + 1 \leq i
 \leq n\) are zero. Hence the matrix \([A]\) of \(A\), in this coordinate system,
 will have the form
 \begin{equation*}
@@ -172,7 +673,7 @@ will have the form
 \end{equation*}
 where \([A_1]\) is the (\(m\)-rowed) matrix of \(A\) considered as a linear
 transformation on the space \(\frak{M}\) (with respect to the coordinate system
-\(\{x_1, \cdots, x_m\}\)), \([A_2]\) and \([B_0]\) are some arrays of scalars
+\(\{x_1, \,\cdot\,\cdot\,\cdot\,, x_m\}\)), \([A_2]\) and \([B_0]\) are some arrays of scalars
 (in size \((n - m)\) by \((n- m)\) and \(m\) by \((n - m)\) respectively), and
 \([0]\) denotes the rectangular (\((n - m)\) by \(m\)) array consisting of zeros
 only. (It is important to observe the unpleasant fact that \([B_0]\) need not be
@@ -180,16 +681,61 @@ zero.)
 
 \section{Reducibility}
 
-A particularly important subcase of the notion of invariance is that of reducibility. If \(\frak{M}\) and \(\frak{N}\) are two subspaces such that both are invariant under A and such that U is their direct sum, then A is reduced (decomposed) by the pair (or, r ) . The difference between invariance and reducibility is that, in the former case, among the collection of all subspaces invariant under A we may not be able to pick out any two, other than 0 and U, with theproperty that Uis their direct sum. Or, saying it the other way, if or is invariant under A, there are, to be sure, many ways of finding an ?suchthatU=I A?,butitmayhappenthatnosuchIwillbein- variant under A.
+A particularly important subcase of the notion of invariance is that of
+reducibility. If \(\frak{M}\) and \(\frak{N}\) are two subspaces such that both
+are invariant under \(A\) and such that \(\VecSp\) is their direct sum, then
+\(A\) is reduced (decomposed) by the pair \((\frak{M}, \frak{N})\) . The
+difference between invariance and reducibility is that, in the former case,
+among the collection of all subspaces invariant under \(A\) we may not be able
+to pick out any two, other than \(\frak{O}\) and \(\VecSp\), with the property
+that \(\VecSp\) is their direct sum. Or, saying it the other way, if
+\(\frak{M}\) is invariant under \(A\), there are, to be sure, many ways of
+finding an \(\frak{M}\) such that \(\VecSp = \frak{M} \oplus \frak{N}\), but it
+may happen that no such \(\frak{N}\) will be invariant under \(A\).
 
-The process described above may also be turned around. Let 9 and
-or be any two vector spaces, and let A and B be any two linear transforma-
-tions (on I and I respectively). Let U be the direct sum i © I ; we may define on U a linear transformation C called the direct sum of A and
-B, by writing
-We shall omit the detailed discussion of direct sums of transformations; we shall merely mention the results. Their proofs are easy. If (?, 3) reduces C, and if we denote by A the linear transformation C considered
-on I alone, and by B the linear transformation C considered on ? alone, then C is the direct sum of A and B. By suitable choice of basis (namely, by choosing 21, ,. Im in M and Xm+1, ,."Xy in ?) we may put the matrix of the direct sum of A and B in the form displayed in the preceding
-section, with[Ai] = [4], [Bo]= [0], and [A2] = [B]. If pis any poly- nomial, and ifwe write A' = p(A), B' = p(B), then the direct sum C" of A' and B' will be p(C).
+The process described above may also be turned around. Let \(\frak{M}\) and
+\(\frak{N}\) be any two vector spaces, and let \(A\) and \(B\) be any two linear
+transformations (on \(\frak{M}\) and \(\frak{N}\) respectively). Let \(\VecSp\)
+be the direct sum \(\frak{M} + \frak{N}\); we may define on \(\VecSp\) a linear
+transformation \(C\) called the direct sum of \(A\) and \(B\), by writing
+\begin{equation*}
+    Cz = C(x, y) = (Ax, By).
+\end{equation*}
+We shall omit the detailed discussion of direct sums of transformations; we
+shall merely mention the results. Their proofs are easy. If \((\frak{M},
+\frak{N})\) reduces \(C\), and if we denote by \(A\) the linear transformation C
+considered on I alone, and by B the linear transformation C considered on ?
+alone, then C is the direct sum of A and B. By suitable choice of basis (namely,
+by choosing 21, ,. Im in M and Xm+1, ,."Xy in ?) we may put the matrix of the
+direct sum of A and B in the form displayed in the preceding section, with[Ai] =
+[4], [Bo]= [0], and [A2] = [B]. If pis any poly- nomial, and ifwe write A' =
+p(A), B' = p(B), then the direct sum C" of A' and B' will be p(C).
 
+{\small
+\subsection*{Exercises}
+\begin{enumerate}[wide]
+    \item Suppose that the matrix of a linear transformation (on a
+    two-dimensional vector space) with respect to some coordinate system is
+    \(\begin{pmatrix} 0 & 0  \\
+        0 & 1 \end{pmatrix}\). How many subspaces are there invariant under the
+    transformation?
+
+    \item Give an example of a linear transformation \(A\) on a
+    finite-dimensional vector space \(\VecSp\) such that \(\frak{O}\) and
+    \(\VecSp\) are the only subspaces invariant under \(A\).
+    
+    \item Let \(D\) be the differentiation operator on \(\Polynom_n\). If \(m
+    \leq n\), then the subspace \(\Polynom_m\) is invariant under \(D\). Is
+    \(D\) on \(\Polynom_m\) invertible? Is there a complement of \(\Polynom_m\)
+    in \(\Polynom_n\) such that it together with \(\Polynom_m\) reduces \(D\)?
+    
+    \item Prove that the subspace spanned by two subspaces, each of which is
+    invariant under some linear transformation \(A\), is itself invariant under
+    \(A\).
+    
+\end{enumerate}
+
+}
 
 \section{Projections}
 
@@ -200,7 +746,7 @@ and linear transformations.
     If \(\VecSp\) is the direct sum of \(\frak{M}\) and \(\frak{N}\), so that every \(z\) in \(\VecSp\) may be written, uniquely, in the form \(z = x + y\), with \(x\) in \(\frak{M}\) and \(y\) in \(\frak{N}\), the \emph{projection} on \(\frak{M}\) along \(\frak{N}\) is the transformation \(E\) defined by \(Ez = x\).
 \end{definition}
 
-If direct sums are important, thenprojections are also, since, as we shall see,
+If direct sums are important, then projections are also, since, as we shall see,
 they are a very powerful algebraic tool in studying the geometric concept of
 direct sum. The reader will easily satisfy himself about the reason for the word
 ``projection'' by drawing a pair of axes (linear manifolds) in the plane (their
@@ -224,8 +770,1143 @@ special properties of projections.
         E^2 z = EEz = Ex = x = Ez.
     \end{equation*}
 
-    Conversely, suppose that \(E^2 = E\). Let \(\frak{N}\) be the set of all vectors \(z\) in \(\VecSp\) for which \(Ez = 0\) let \(\frak{M}\)be the set of all vectors \(z\) for which \(Ez = z\). It is clear that both \(\frak{M}\)
-    and \(\frak{N}\) are subspaces; we shall prove that \(V = \frak{M} \oplus \frak{N}\). In view of the theorem of \S\,18, we need to prove that It and or are disjoint and that together they span U.
-    
-    Ifzisni M,thenEz=2;ifzisni It,thenEz=0;hencefizisinboth In and r , then z = 0. Foran arbitrary z we have
+    Conversely, suppose that \(E^2 = E\). Let \(\frak{N}\) be the set of all
+    vectors \(z\) in \(\VecSp\) for which \(Ez = 0\) let \(\frak{M}\)be the set
+    of all vectors \(z\) for which \(Ez = z\). It is clear that both
+    \(\frak{M}\) and \(\frak{N}\) are subspaces; we shall prove that \(V =
+    \frak{M} \oplus \frak{N}\). In view of the theorem of \S\,18, we need to
+    prove that \(\frak{M}\) and \(\frak{N}\) are disjoint and that together they
+    span \(\VecSp\).
+
+    If \(z\) is in \(\frak{M}\), then \(Ez = z\); if \(z\) is \(\frak{N}\),then
+    \(Ez = 0\); hence if \(z\) is in both \(\frak{M}\) and \(\frak{N}\), then
+    \(z = 0\). For an arbitrary \(z\) we have
+    \begin{equation}
+        z = Ez + (1 - E)z.
+    \end{equation}
+    If we write \(Ez = x\) and \(1( - E)z = y\), then \(Ex = E^2z = Ez = x\),
+    and \(Ey = E(1- E)z= Ez - E^2z = 0\), so that \(x\) is in \(\frak{M}\) and
+    \(y\)is in \(\frak{N}\). This proves that \(\VecSp = \frak{M} \oplus
+    \frak{N}\), and that the projection on \(\frak{M}\) along \(\frak{N}\) is
+    precisely \(E\).
 \end{proof}
+
+As an immediate consequence of the above proof we obtain also the following result.
+
+\begin{theorem}
+    If \(E\) is a projection on \(\frak{M}\) along \(\frak{N}\), then \(\frak{M}\) and \(\frak{N}\) are, respectively, the set of all solutions of the equations \(Ez = z\) and \(Ez = 0\).
+\end{theorem}
+
+By means of these two theorems we can remove the apparent asymmetry, in the
+definition of projections, between the rolesplayed by \(\frak{M}\) and
+\(\frak{N}\). If to every \(z = x + y\) we make correspond not \(x\) but \(y\),
+we also get an idempotent linear transformation. This transformation (namely,
+\(1- E\)) is the projection on \(\frak{N}\) along \(\frak{M}\). We sum up the
+facts as follows.
+
+\begin{theorem}
+    A linear transformation \(E\) is a projection if and only if \(1 - E\) is a
+    projection; if \(E\) is a projection on \(\frak{M}\) along \(\frak{N}\),
+    then \(1 - E\) is a projection on \(\frak{N}\) along \(\frak{M}\).
+\end{theorem}
+
+\section{Combination of projections}
+
+Continuing in the spirit of Theorem 3 of the preceding section, we investigate
+conditions under which various algebraic combinations of projections are
+themselves projections.
+
+\begin{theorem}
+    We assume that \(E_1\) and \(E_2\) are projections on \(\frak{M}_1\) and
+    \(\frak{M}_2\), along \(\frak{N}_1\) and \(\frak{N}_2\), respectively, and
+    that the underlying field of scalars is such that \(1 + 1 \neq 0\). We make
+    three assertions.
+    \begin{enumerate}[label=(\roman*), wide, nosep]
+        \item \(E_1 + E_2\) is a projection if and only if \(E_1 E_2 = E_2 E_1 =
+        0\); if this condition is satisfied, then \(E = E_1 + E_2\) is the
+        projection on \(\frak{M}\) along \(\frak{N}\), where \(\frak{M} =
+        \frak{M}_1 \oplus \frak{M}_2\) and \(\frak{N} = \frak{N}_1 \ncap
+        \frak{N}_2\).
+        \item \(E_1 - E_2\) is a projection if and only if \(E_1 E_2 = E_2 E_1 =
+        E_2\); if this condition is satisfied, then \(E = E_1 - E_2\) is the
+        projection on \(\frak{M}\) along \(\frak{N}\), where \(\frak{M} =
+        \frak{M}_1 \ncap \frak{M}_2\) and \(\frak{N} = \frak{N}_1 \oplus
+        \frak{N}_2\).
+        \item If \(E_1 E_2 = E_2 E_1 = E\), then \(E\) is the projection on
+        \(\frak{M}\) along \(\frak{N}\), where \(\frak{M} = \frak{M}_1 \ncap
+        \frak{M}_2\) and \(\frak{N} = \frak{N}_1 + \frak{N}_2\).
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+    We recall the notation. If \(\frak{H}\) and \(\frak{K}\) are subspaces, then
+    \(\frak{H} + \frak{K}\) is the subspace spanned by \(\frak{H}\) and
+    \(\frak{K}\); writing \(\frak{H} \oplus \frak{K}\) implies that \(\frak{H}\)
+    and \(\frak{L}\) are disjoint, and then \(\frak{H} \oplus \frak{K} =
+    \frak{H} + \frak{K}\); and \(\frak{H} \ncap \frak{K}\) is the intersection
+    of \(\frak{H}\) and \(\frak{K}\).
+    \begin{enumerate}[label=(\roman*), wide, nosep]
+        \item If \(E_1 + E_2 = E\) is a projection, then \((E_1 + E_2)^2 = E^2 = E = E_1 + E_2\), so that the cross-product terms must disappear:
+        \begin{equation}
+            E_1 E_2 = E_2 E_1 = 0.
+        \end{equation}
+        If we multiply (1) on both left and right by \(E_1\), we obtain
+    \end{enumerate}
+\end{proof}
+
+\section{Projections and invariance}\label{sec-projections-and-invariance}
+
+We have already seen that the study of projections is equivalent to the study of
+direct sum decompositions. By means of projections we may also study the notions
+of invariance and reducibility.
+
+\section{Adjoints}
+
+Let us study next the relation between the notions of linear transformation and
+dual space. Let \(\VecSp\) be any vector space and let \(y\) be any element of
+\(\VecSp'\); for any linear transformation \(A\) on \(\VecSp\) we consider the
+expression \([Ax, y]\). For each fixed \(y\), the function \(y'\) defined by
+\(y'(x) = [Ax, y]\) is a linear functional on \(\VecSp\); using the square
+bracket notation for \(y'\) as well as for y, we have \([Ax, y] = [x, y']\). If
+now we allow \(y\) to vary over \(\VecSp'\), thenthis procedure makescorrespond
+to each \(y\) a \(y'\), depending, of course, on \(y\): we write \(y' = A'y\).
+The defining property of \(A'\) is
+\begin{equation}
+    [Ax, y] = [x, A'y].
+\end{equation}
+We assert that \(A'\) is a linear transformation on \(\Dual\). Indeed, if \(y = \alpha_1 y_1 + \alpha_2 y_2\) then
+\begin{align*}
+    [x, A'y] & = [Ax, y] = \alpha_1[Ax, y_1] + \alpha_2[Ax, y_2] \\
+    & = \alpha_1[x, A'y_1] + \alpha_2[x, A'y_2] = [x, \alpha_1 A'y_1 + \alpha_2 A'y_2].
+\end{align*}
+The linear transformation \(A'\) is called the adjoint (or dual) of \(A\); we
+dedicate this section and the next to studying properties of \(A'\). Let us
+first get the formal algebraic rules out of the way; they go as follows.
+\begin{align}
+    0' & = 0, \\
+    1' & = 1, \\
+    (A + B)' & = A' + B', \\
+    (\alpha A)' & = \alpha A', \\
+    (AB)' & = B'A', \\
+    (A^{-1})' & = (A')^{-1}.
+\end{align}
+Here (7) is to be interpreted in thefollowing sense: if \(A\) is invertible,
+then so is \(A'\), and the equation is valid. The proofs of all these relations
+are elementary; to indicate the procedure, we carry out the computations for (6)
+and (7). To prove (6), merely observe that
+\begin{equation*}
+    [ABx, y] = [Bx, A'y] = [x, B'A'y]
+\end{equation*}
+To prove (7), suppose that \(A\) is invertible, so that \(AA^{-1} = A^{-1}A = 1\). Applying (3) and (6) to these equations, we obtain
+\begin{equation*}
+    (A^{-1})'A' = A'(A^{-1})' = 1.
+\end{equation*}
+Theorem 1of §36 implies that \(A'\) is invertible and that (7) is valid.
+
+In finite-dimensional spaces another important relation holds:
+\begin{equation}
+    A'' = A.
+\end{equation}
+Thisrelation has to be read with a grain of salt. As it stands \(A''\) is a
+transformation not on \(\VecSp\) but on the dual space \(\Dual'\) of \(\Dual\).
+If, however, we identify \(\Dual'\) and \(\VecSp\) according to the natural
+isomorphism, then \(A''\) acts on \(\VecSp\) and (8) makes sense. In this
+interpretation the proof of (8) is trivial. Since \(\VecSp\) is reflexive, we
+obtain every linear functional on \(\Dual\) by considering \([x, y]\) as a
+function of \(y\), with \(x\) fixed in \(\VecSp\). Since \([x, A'y]\) defines a
+function (a linear functional) of \(y\), it may be written in the form \([x',
+y]\). The vector \(x'\) here is, by definition, \(A"x\). Hence we have, for
+every \(y\) in \(\Dual\) and for every \(x\) in \(\VecSp\),
+\begin{equation*}
+    [Ax, y] = [x, A'y] = [A''x, y];
+\end{equation*}
+the equality of the first and last terms of this chain proves (8).
+
+Under the hypothesisof (8) (that is, finite-dimensionality), the asymmetry in
+the interpretation of (7) may be removed; we assert that in this case the
+invertibility of \(A'\) implies that of \(A\) and, therefore, the validity of
+(7). Proof: apply the old interpretation of (7) to \(A'\) and \(A''\) in place
+of \(A\) and \(A'\).
+
+Our discussion is summed up, in the reflexive finite-dimensional case, by the
+assertion that the mapping \(A \to A'\) is one-to-one, and, in fact, an
+algebraic anti-isomorphism, from the set of all linear transformations on
+\(\VecSp\) onto the set of all linear transformations on \(\VecSp'\). (The
+prefix ``anti'' got attached because of the commutation rule (6).)
+
+\section{Adjoints of projections}
+
+There is one important case in which multiplication does not get turned around,
+that is, when \((AB)' = A'B'\); namely, the case when \(A\) and \(B\) commute.
+We have, in particular, \((A^n)' = (A')^n\), and, more generally, \((p(A))' =
+p(A')\) for every polynomial \(p\). It follows from this that if \(E\) is a
+projection, then so is \(E'\). The question arises: what direct sum
+decomposition is \(E'\) associated with?
+
+\begin{theorem}
+    If \(E\) is a projection on \(\frak{M}\) along \(\frak{N}\), then \(E'\) is
+    a projection on \(\frak{N}^0\) along \(\frak{M}^0\).
+\end{theorem}
+
+\section{Change of basis}
+
+Although what we have been doing with linear transformations so far may have
+been complicated, it was to a large extent automatic. Having introduced the new
+concept of linear transformation, we merely let some of the preceding concepts
+suggest ways in which they are connected with linear transformations. We now
+begin the proper study of linear transformations. As a first application of the
+theory we shall solve the problems arising from a change of basis. These
+problems can be formulated without mentioning linear transformations, but their
+solution is most effectively given in terms of linear transformations.
+
+\begin{question}
+    If \(x\) is in \(\VecSp\), \(x = \sumx_i \xi_i x_i = \sumx_i \eta_i y_i\),
+    what is the relation between its coordinates \((\xi_1,
+    \,\cdot\,\cdot\,\cdot\,, \xi_n)\) with respect to \(\frak{X}\) and its
+    coordinates \((\eta_1, \,\cdot\,\cdot\,\cdot\,, \eta_n)\) with respect to
+    \(\frak{Y}\)?
+\end{question}
+
+\begin{question}
+    If \((\xi_1, \,\cdot\,\cdot\,\cdot\,, \xi_n)\) is an ordered set of \(n\)
+    scalars, what is the relation between the vectors \(x = \sumx_i \xi_i x_i\)
+    and \(y = \sumx_i \eta_i y_i\) defined?
+\end{question}
+
+Both these questions are easily answered in the language of linear
+transformations. We consider, namely, the linear transformation \(A\) defined by
+\(Ax_i = y_i\), \(i = 1, \,\cdot\,\cdot\,\cdot\,, n\). More explicitly:
+
+\begin{equation*}
+    A\left(\sumx_i \xi_i x_i\right) = \sumx_i \eta_i y_i.
+\end{equation*}
+
+Let \((\alpha_{ij})\) be the matrix of \(A\) in the basis \(\frak{X}\), that is
+\(y_j = Ax_j = \sumx_i \alpha_{ij} x_i\). We observe that \(A\) os invertible,
+since \(\sumx_i \xi_i y_i = 0\) implies that \(\xi_1 = \xi_2 =
+\,\cdot\,\cdot\,\cdot\, = \xi_n = 0\).
+
+\smallskip
+
+\emph{Answer to Question I.} Since
+\begin{align*}
+    \sumx_j \eta_j y_j &= \sumx_j \eta_j Ax_j = \sumx_j \eta_j \sumx_i \alpha_{ij}x_i\\
+    &= \sumx_i \left(\sumx_j \alpha_{ij} \eta_j\right) x_i,
+\end{align*}
+we have
+\begin{equation}
+    \xi_i = \sumx_j \alpha_{ij} \eta_j.
+\end{equation}
+
+\smallskip
+
+\emph{Answer to Question II.}
+\begin{equation}
+    y = Ax.
+\end{equation}
+
+\smallskip
+
+Roughly speaking, the invertible linear transformation \(A\) (or, more properly,
+the matrix \((\alpha_{ij})\)) may be considered as a transformation of
+coordinates (as in (1)), or it may be considered (as we usually consider it, in
+(2)) as a transformation of vectors.
+
+In classical treatises on vector spaces it is customary to treat vectors as
+numerical \(n\)-tuples, rather than as abstract entities; this necessitates the
+introduction of some cumbersome terminology. We give here a brief glossary of
+some of the more baffling terms and notations that arise in connection with dual
+spaces and adjoint transformations.
+
+If \(\VecSp\) is an \(n\)-dimensional vector space, a vector\(x\) is given by
+its coordinates with respect to some preferred, absolute coordinate system;
+these coordinates form an ordered set of \(n\) scalars. It is customary to write
+this set of scalars in a column,
+\begin{equation*}
+    x = \begin{bmatrix}
+        \xi_1 \\
+        \cdot \\
+        \cdot \\
+        \cdot \\
+        \xi_n
+    \end{bmatrix}.
+\end{equation*}
+
+\section{Similarity}
+
+The following two questions are closely related to those of the preceding
+section.
+
+\begin{question}
+    If \(B\) is a linear transformation on \(\VecSp\), what is the relation between its matrix \((\beta_{ij})\) with respect to \(\frak{X}\) and its matrix \((\gamma_{ij})\) with respect to \(\frak{Y}\)?
+\end{question}
+
+\begin{question}
+    If \((\beta_{ij})\) is a matrix, what is the relation between the linear transformations \(B\) and \(C\) defined, respectively, by Bx; = 2 si Bist; and Cy; = LiPini?
+\end{question}
+
+Questions III and IV are explicit formulations of a problem we raised before: to
+one transformation there correspond (in different coordinate systems) many
+matrices (question III) and to one matrix there correspond many transformations
+(question IV).
+
+The situation is conveniently summed up in the following mnemonic
+diagram:
+
+\begin{equation*}
+    \begin{tikzcd}
+        x \arrow[rr, "B"] \arrow[dd, "A"'] &                                                         & u \arrow[dd, "A"] \\
+                                           &                                                         &                   \\
+        y \arrow[rr, "C"']                 & {} \arrow[phantom, loop, distance=2em, in=305, out=235] & v                
+        \end{tikzcd}
+\end{equation*}
+We may go from \(y\) to \(v\) by using the short cut \(C\), or by going around the block; in other words \(C = ABA^{-1}\). Remember that \({ABA^{-1}}\) is to beapplied to yfrom right to left: first A-', then B, then A.
+
+We have seen that the theory of changing bases is coextensive with the theory of
+invertible linear transformations. An invertible linear transformation is an
+\emph{automorphism}, where by an automorphism we mean an isomorphism of a vector
+space with itself. (See §9.) We observe that, conversely, every automorphism is
+an invertible linear transformation.
+
+We hope that the relation between linear transformations and matrices isby now
+sufficiently clear that the reader wil not object if ni the sequel, when we wish
+to give examples of linear transformations with various properties, we content
+ourselves with writing down a matrix. The interpretation always to be placed on
+this procedure is that we have in mind the concrete vector space en (or one of
+its generalized versions g") and the concrete basis = (21, ,.•. Xl defined by 2;
+= (Si, •••, Sin). With this understanding, a matrix (ai) defines, of course, a
+unique lineartrans- formation A, given bythe usual formula A(Li tx) = L i(E;
+at)Ii.
+
+
+\section{Quotient transformations}
+
+Suppose that A is a linear transformation on a vector space U and that or is a subspace of ° invariant under A. Under these circumstances there is a natural way of defining a linear transformation (to be denoted by A/I) on the space W/?; this "quotient transformation" is related to A just about the same wayas thequotient space is related to v. It wil be convenient (in this section) to denote W/o by the more compact symbol U ~a n d to use related symbols for the vectors and the linear
+transformations that occur. Thus, for instance, ifr is any vector in U, we shall denote the coset a +I by x~; objects such as r~ are the typical elements of U*
+
+To define the quotienttransformation A / (to be denoted, alternatively, by A-), write
+\begin{equation*}
+    A^{-}x^{-} = (Ax)^{-}
+\end{equation*}
+for every vector * in W. In other words, to find the transform by A / ? of the coset x + r , first find the transform by A of the vector x, and then form the coset of 9r determined by that transformed vector. This defini- tion must be supported by an unambiguity argument; we must be sure that if two vectors determine the same coset, then the same is true of their transforms by A. The key fact here is the invariance of or. Indeed,if *+I =y+M,thenr- yisinM,sothat(invariance)Ax-Ay isinI ,andthereforeAx+9 = Ay+I.
+
+What happens if or is not merely invariant under A, but, togetherwith a suitable subspace ?, reduces A? If this happens, then A is the direct sum, say A = B © C, of two linear transformations defined on the sub- spaces I and r of Y, respectively; the question is, what is the relation between A and C? Both these transformations can be considered as
+complementary to A; the transformation B describes whatA doeson 3 , and both A- and C describe in different ways what A does elsewhere.
+
+Let T be the correspondence that assigns to each vector ©in ? t h ecoset
+x* ( = * + 9 ) . We know already that T is an isomorphism between It and U/m (cf. 22, Theorem 1); weshall show now that theisomorphism carries the transformation C over to the transformation A°. If Cx = y
+(where, of course, ~ is in a), then AX~= (Ax) = (Cx)"= y ; it follows that TCx = Tv = A-Tx. This implies that TC = A T , as
+promised. Loosely speaking (see §47) we may say that A transforms - t h e same way as C transforms M. In other words, the linear transforma- tionsA- and C are abstractly identical (isomorphic). This fact is of great significance in the applications of the concept of quotient space.
+
+
+\section{Range and null-space}
+
+\begin{definition}
+    If \(A\) is a linear transformation on a vector space \(\VecSp\) and if
+    \(\frak{M}\) is a subspace of \(\VecSp\), the \emph{image} of \(\frak{M}\)
+    under \(A\), in symbols \(A\frak{M}\), is the set of all vectors of the form
+    \(Ax\) with \(x\) in \(\frak{M}\). The \emph{range} of \(A\) is the set
+    \(\range{A} = A\VecSp\); the \emph{null-space} of \(A\) is the set
+    \(\nullspace{A}\) of all vectors \(x\) for which \(Ax = 0\).
+\end{definition}
+
+It is immediately verified that \(A\frak{M}\) and \(\nullspace{A}\) are
+subspaces. If, as usual, we denote by \(\ZeroSpace\) the subspace containing the
+vector \(0\) only, it is easy to describe some familiar concepts in terms of the
+terminology just introduced; we list some of the results.
+
+\begin{enumerate}[label=(\roman*), wide, nosep]
+    \item The transformation \(A\) is invertible if and only if \(\range{A} =
+    \VecSp\) and \(\nullspace{A} = \ZeroSpace\).
+    \item In case \(\VecSp\) is finite-dimensional, \(A\) is invertible if and
+    only if \(\range{A} = \VecSp\) and \(\nullspace{A} = \ZeroSpace\).
+    \item The subspace \(\frak{M}\) is invariant under \(A\) if and only if
+    \(A\frak{M} \subset \frak{M}\).
+    \item A pair of complementary subspaces \(\frak{M}\) and \(\frak{N}\) reduce
+    \(A\) if and only if \(A\frak{M} \subset \frak{M}\) and \(A\frak{N}
+    \subset \frak{N}\).
+    \item If \(E\) is the projection on \(\frak{M}\) along \(\frak{N}\), then
+    \(\range{E} = \frak{M}\) and \(\nullspace{E} = \frak{N}\).
+\end{enumerate}
+
+All these statements are easy to prove; we indicate the proof of (v). From
+\S\,41, Theorem 2, we know that \(\frak{N}\) is the set of all solutions of the
+equation \(Ex = 0\); this coincides with our definition of \(\nullspace{E}\). We
+know also that \(\frak{M}\) is the set of all solutions of the equation \(Ex =
+x\). If \(x\) is in \(\frak{M}\), then \(x\) is also in \(\range{E}\), since
+\(x\) is the image under \(E\) of something (namely of x itself). Conversely, if
+a vector x is the image under E of something, say,x=Ey(sothatrisni
+(E)),thenEx=E'x=Ey=2,sothat x is in 9M.
+
+Warning: it is accidental that for
+projections  ? = U. In general it need not even be true that = Q(A) and ? = ?(A)
+are disjoint. It can happen, for example, that for a certain vector £ we have r
+0,. Ax * 0, and Ax = 0; for such a vector, Ax clearly belongs to both the range
+and the null-space of A.
+
+\section{Rank and nullity}
+
+
+We shall now restrict attention to the finite-dimensional case and draw certain
+easy conclusions from the theorem of the preceding section.
+
+\begin{definition}
+    The \emph{rank}, \(\rho(A)\), of a linear transformation \(A\) on a finite-dimensional vector space is the dimension of \(\frak{R}(A)\); the \emph{nullity}, \(\nu(A)\), is the dimension of \(\frak{N}(A)\).
+\end{definition}
+
+\begin{theorem}
+    If \(A\) is a linear transformation on an \(n\)-dimensional vector space, then \(\rho(A) = \rho(A')\) and \(\nu(A) = n - \rho(A)\).
+\end{theorem}
+
+
+\section{Transformations of rank one}
+
+We conclude our discussion of rank by a description of the matrices of linear
+transformations of rank \(\leq 1\).
+
+\begin{definition}
+    If a linear transformation \(A\) on a finite-dimensional vector space
+    \(\VecSp\) is such that \(\rho (A) \leq 1\) (that is, \(\rho(A) = 0\) or
+    \(\rho (A) =1\)), then the elements of the matrix \([A] = (\alpha_{ij})\) of
+    \(A\) have the form \(\alpha_{ij} = \beta_i \gamma_j\) in every coordinate
+    system; conversely if the matrix of \(A\) has this form in some one
+    coordinate system,  then \(\rho(A) \leq 1\).
+\end{definition}
+
+\begin{proof}
+    If \(\rho(A) = 0\), then \(A = 0\), and the statement is trivial. If
+    \(\rho(A) = 1\), that is, \(\range{A}\) is one-dimensional, then there
+    exists in \(\range(A)\) a non-zero vector \(x_0\) (a basis in \(\range{A}\))
+    such that every vector in \(\range{A}\) is a multiple of \(x_0\). Hence, for
+    every \(x\),
+    \begin{equation*}
+        Ax = y_0 x_0,
+    \end{equation*}
+    where the scalar coefficient \(y_0\) (\(= y_0(x)\)) depends, of course, on
+    \(x\). The linearity of \(A\) implies that \(y+0\) is a linear functional on
+    \(\VecSp\). Let \(\Basisx = \{x_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\) be a
+    basis in \(\VecSp\), and let \((\alpha_{ij})\) be the corresponding matrix
+    of \(A\), so that
+    \begin{equation*}
+        Ax_j = \sumx_i \alpha_{ij} x_i.
+    \end{equation*}
+    If \(\Basisx' = \{y_1, \,\cdot\,\cdot\,\cdot\,, y_m\}\) is the dual basis in
+    \(\VecSp'\), then (cf. 845, (2)) 
+    \begin{equation*}
+        \alpha_{ij} = [Ax_j, y_i].
+    \end{equation*}
+    In the present case
+    \begin{equation*}
+        \alpha_{ij} = [y_0(x_j), y_i] = y_0(x_j)[x_0, y_i] = [x_0, y_i][x_j, y_0];
+    \end{equation*}
+    in other words, we may take \(\beta_i = [x_0, y_i]\) and \(\gamma_j = [x_j, y_0]\).
+
+    Conversely, suppose that in a fixed coordinate system \(\Basisx = \{x_1,
+    \,\cdot\,\cdot\,\cdot\,, x_n\}\)  the matrix \((\alpha_{ij})\) of \(A\) is
+    such that \(\alpha_{ij} = \beta_i \gamma_j\). We may find a linear
+    functional \(y_0\) such that \(\gamma_j = [x_j, y_0]\), and we may define a
+    vector \(x_0\) by \(x_0 = \sumx_k \beta_k x_k\). The linear transformation
+    \(\tilde{A}\) defined by \(\tilde{A}x = y_0(x)x_0\) is clearly of rank one
+    (unless,of course, \(\alpha_{ij} = 0\) for all \(i\) and \(j\)), and its
+    matrix \((\tilde{alpha}_{ij}\) in the coordinate system \(\Basisx\) is given
+    by
+    \begin{equation*}
+        \tilde{\alpha}_{ij} = [\tilde{A}x_j, y_i]
+    \end{equation*}
+    (where \(\Basisx' = \{y_1, \,\cdot\,\cdot\,\cdot\,, y_n\}\) is the dual basis
+    of \(\Basisx\)). Hence
+    \begin{equation*}
+        \tilde{\alpha}_{ij} = [y_0(x_j)x_0, y_i] = [x_0, y_i][x_j, y_0] =
+        \beta_i \gamma_j,
+    \end{equation*}
+    and, since \(A\) and \(\tilde{A}\) have the same matrix in one coordinate
+    system, it follows that \(\tilde{A} = A\). This concludes the proof of the
+    theorem.
+\end{proof}
+
+The following theorem sometimes makes it possible to apply Theorem 1 to obtain
+results about an arbitrary linear transformation.
+
+\begin{theorem}
+    If \(A\) is a linear transformation of rank \(\rho\) on a finite-dimensional vector space \(\VecSp\), then \(A\) may be written as the sum of \(\rho\) transformations of rank one.
+\end{theorem}
+
+\begin{proof}
+    Since \(A\VecSp = \range{A}\) has dimension \(\rho\), we may find \(\rho\) vectors \(x_1, \ldots, x_{\rho}\) that form a basis for \(\range{A}\). It follows that, for every vector \(x\) in \(\VecSp\), we have
+    \begin{equation*}
+        Ax = \sumx_{i=1}^{\rho} \xi_i x_i,
+    \end{equation*}
+\end{proof}
+
+\section{Tensor products and transformations}
+
+Let us now tie up linear transformations with the theory of tensor products. Let " and " be finite-dimensional vector spaces (over the same field), and let A and B be any two linear transformations on U and U respectively. We define a linear transformation C on the space W of all bilinear forms on U © U by writing
+\begin{equation*}
+    (\bar{C}w)(x, y) = w(Ax, By).
+\end{equation*}
+
+An interesting (and complicated) side of the theory of tensor products of
+transformations is the theory of Kronecker products of matrices. Let X = 121, *
+' , In) and Y = (Vi, -••, Im) be bases in U and U, and let [A]= [A;X] = (ay) and
+[B] = [B; Y] = (pa) be the matrices of Aand B. What is the matrix of A  B in
+the coordinate system (X; Yp)? To answer the question, we must recall the
+discussion ni §37 concerning the arrangement of a basis in a linear order.
+Since, unfortunately, it is impossible to write down a matrix without being
+committed to an order of the rows and the columns, we shall be frank about it,
+and arrange the n timesmvectors2;Ypni
+theso-calledlexicographicalorder,asfollows:
+\begin{align*}
+    & x_1 \otimes y_1, x_2 \otimes y_2,\,\cdot\,\cdot\,\cdot\,, x_1 \otimes y_m, x_2 \otimes y_1, \cdot\,\cdot\,\cdot\,,\\
+    & x_2 \otimes y_m, \,\cdot\,\cdot\,\cdot\,, x_n \otimes y_1, \,\cdot\,\cdot\,\cdot\,, x_n \otimes y_m.
+\end{align*}
+We proceed also to carry out the following computation:
+\begin{align*}
+    (A \otimes B)(x_j \otimes y_q) & = Ax_j \otimes By_q = \left(\sumx_i \alpha_{ij}x_i\right) \otimes \left(\sumx_p \beta_{pq}y_p\right)\\
+    &= \sumx_i \sumx_p \alpha_{ij}\beta_{pq} \left(x_i \otimes y_p\right).
+\end{align*}
+This process indicates exactly how far we can get without ordering the basis elements; if, for example, we agree to index the elements of a matrix not with a pair of integers but with a pair of pairs, say (i, p) and (j, g), then we know now that the element in the (i, p) row and the (j, g) column
+is a;jPpa. the form
+If we use the lexicographical ordering, the matrix of \(A \otimes B\) has
+the form
+
+\begin{equation*}
+    \left[
+    \begin{array}{*{13}c}
+        \alpha_{11}\beta_{11} & \cdot & \cdot & \cdot & \alpha_{11}\beta_{1m} & \cdot & \cdot & \cdot & \alpha_{1n}\beta_{11} & \cdot & \cdot & \cdot & \alpha_{1n}\beta_{1m} \\
+        {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} \\
+        {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} \\
+        {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} \\
+        \alpha_{11}\beta_{m1} & \cdot & \cdot & \cdot & \alpha_{11}\beta_{mm} & \cdot & \cdot & \cdot & \alpha_{1n}\beta_{m1} & \cdot & \cdot & \cdot & \alpha_{1n}\beta_{mm} \\
+        {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} \\
+        {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} \\
+        {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} \\
+        \alpha_{n1}\beta_{11} & \cdot & \cdot & \cdot & \alpha_{m1}\beta_{1m} & \cdot & \cdot & \cdot & \alpha_{mn}\beta_{11} & \cdot & \cdot & \cdot & \alpha_{nn}\beta_{1m} \\
+        {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} \\
+        {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} \\
+        {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} & {} & \cdot & {} & {} \\
+        \alpha_{n1}\beta_{m1} & \cdot & \cdot & \cdot & \alpha_{n1}\beta_{mm} & \cdot & \cdot & \cdot & \alpha_{nn}\beta_{m1} & \cdot & \cdot & \cdot & \alpha_{nn}\beta_{mm}
+    \end{array}
+    \right].
+\end{equation*}
+In a condensed notation whose meaning is clear we may write this matrix as
+\begin{equation*}
+    \begin{bmatrix}
+        \alpha_{11}[B] & \cdot & \cdot & \cdot & \alpha_{1n}[B] \\
+        {} & {} & \cdot & {} & {} \\
+        {} & {} & \cdot & {} & {} \\
+        {} & {} & \cdot & {} & {} \\
+        \alpha_{n1}[B] & \cdot & \cdot & \cdot & \alpha_{nn}[B]
+    \end{bmatrix}.
+\end{equation*}
+This matrix is known as the \emph{Kronecker product} of \([A]\) and \([B]\), in
+that order. The rule for forming it is easy to describe in words: replace each
+element \(\alpha_{ij}\) of the \(n\)-by-\(n\) matrix \([A]\) by the
+\(m\)-by-\(m\) matrix \(\alpha_{ij}[B]\). If in this rule we interchange the
+roles of \(A\) and \(B\) (and consequently interchange \(n\) and \(m\)) we
+obtain the definition of the Kronecker product of \([B]\) and \([A]\).
+
+{\small
+\subsection*{Exercises}
+\begin{enumerate}[wide]
+    \item We know that the tensor product of \(\Polynom_n\) and \(\Polynom_n\)
+    may be identified with the space \(\Polynom_{n,m}\) of polynomials in two
+    variables (see § 25, Ex.2). Prove that if \(A\) and \(B\) are
+    differentiation on \(\Polynom_n\) and \(\Polynom_m\) respectively, and if
+    \(C = A \otimes B\), \(then\) C is mixed partial differentiation, that is,
+    if \(z\) in \(\Polynom_{n,m}\), then \(\displaystyle Cz =
+    \frac{\partial^2z}{\partial s\,\partial t}\).
+    
+    \item With the lexicographic ordering of the product basis \(\{x_i \otimes
+    y_p\}\) it turned out that the matrix of \(A \otimes B\) is the Kronecker
+    product of the matrices of \(A\) and \(B\). Is there an arrangement of the
+    basis vectors such that the matrix of \(A \otimes B\), referred to the
+    coordinate system so arranged, is the Kronecker product of the matrices of
+    \(B\) and \(A\) (in that order)?
+
+    \item If \(A\) and \(B\) are linear transformations, then
+    \begin{equation*}
+        \rho (A \otimes B) = \rho (A) \rho (B).
+    \end{equation*}
+\end{enumerate}
+}
+
+\section{Determinants}\label{sec-determinants}
+
+It is, of course, possible to generalize the considerations of the preceding
+section to multilinear forms and multiple tensor products. Instead of entering
+into that part of multilinear algebra, we proceed in a different direction; we
+go directly after determinants.
+
+Suppose that \(A\) is a linear transformation on an \(n\)-dimensional vector
+space \(\VecSp\) and let \(w\) be an alternating \(n\)-linear form on
+\(\VecSp\). If we write \(\bar{A}w\) for the function defined by
+\begin{equation*}
+    \bar{A}w(x_1, \,\cdot\,\cdot\,\cdot\,, x_n) = w(Ax_1, \,\cdot\,\cdot\,\cdot\,, A x_n),
+\end{equation*}
+then \(\bar{A}w\) is an alternating \(n\)-linear form on \(\VecSp\), and, in
+fact, \(\bar{A}\) is a linear transformation on the space of such forms. Since
+(see \S\,31) that space is one-dimensional, it follows that \(\bar{A}\) is equal
+to multiplication by an appropriate scalar. In other words, there exists a
+scalar \(\delta\) such that \(\bar{A}w = \delta w\) for every alternating
+\(n\)-linear form \(w\). By this somewhat roundabout procedure (from \(A\) to
+\(\bar{A}\) to \(\delta\)) we have associated a uniquely determined scalar
+\(\delta\) with every linear transformation \(A\) on \(\VecSp\); we call
+\(\delta\) the determinant of \(A\), and we write \(\delta = \det A\). Observe
+that \(\det\) is neither a scalar nor a transformation, but a function that
+associates a scalar with each linear transformation.
+
+Our immediate purpose is to study the function \(\det\). We begin by finding the
+determinants of the simplest linear transformations, that is, the
+multiplications by scalars. If \(Ax = \alpha x\) for every \(x\) in \(\VecSp\),
+then
+\begin{equation*}
+    (\bar{A}w)(x_1, \,\cdot\,\cdot\,\cdot\,, x_n) = w(\alpha x_1, \,\cdot\,\cdot\,\cdot\,, \alpha x_n)
+    = \alpha^n w(x_1, \,\cdot\,\cdot\,\cdot\,, x_n),
+\end{equation*}
+for every alternating \(n\)-linear form \(w\); it follows that \(\det A =
+\alpha^n\). We note, in particular, that \(\det 0 = 0\) and \(\det 1 = 1\).
+
+Next we ask about the multiplicative properties of \(\det\). Suppose that \(A\)
+and \(B\) are linear transformations on \(\VecSp\), and write \(C = AB\). If
+\(w\) is an alternating \(n\)-linear form, then
+\begin{align*}
+    (\bar{C}w)(x_1, \,\cdot\,\cdot\,\cdot\,, x_n) & = w (ABx_1, \,\cdot\,\cdot\,\cdot\,, ABx_n) \\
+    & = (\bar{A}w)(Bx_1, \,\cdot\,\cdot\,\cdot\,, Bx_n) = (\bar{B}\bar{A}w)(x_1, \,\cdot\,\cdot\,\cdot\,, x_n)
+\end{align*}
+so that \(\bar{C} = \bar{B}\bar{A}\). Since
+\begin{equation*}
+    \bar{C}w = (\det C)w
+\end{equation*}
+and
+\begin{equation*}
+    \bar{B}\bar{A}w = (\det B)\bar{A}w = (\det B)(\det A)w,
+\end{equation*}
+it follows that
+\begin{equation*}
+    \det C = (\det B)(\det A).
+\end{equation*}
+(The values of \(\det\) are scalars, and therefore commute with each other.)
+
+A linear transformation \(A\) is called \emph{singular} if \(\det A\) and
+\emph{non-singular} otherwise. Our next result is that \(A\) is invertible if
+and only if it is non- singular. Indeed, if \(A\) is invertible, then
+\begin{equation*}
+    1 = \det 1 = \det (AA^{-1}) = (\det A)(\det A^{-1}),
+\end{equation*}
+and therefore \(\det A \neq 0\). Suppose, on the other hand, that det A ‡ 0. If
+\(\{x_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\) is a basis in \(\VecSp\), and if \(w\)
+is a non-zero alternating \(n\)-linear form on \(\VecSp\), then \((\det A)w(x_1,
+\,\cdot\,\cdot\,\cdot\,, x_n) \neq 0\)  by §30, Theorem 3. This implies, by §30,
+Theorem 2, that the set \(\{Ax_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\) is linearly
+independent (and therefore a basis); from this, in turn, we infer that \(A\) is
+invertible.
+
+In the classical literature determinant is defined as a function of matrices
+(not linear transformations); we are now in a position to make contact with that
+approach. We shall derive an expression for \(\det A\) in terms of the elements
+\(\alpha_{ij}\) of the matrix corresponding to \(A\) in some coordinate system
+\(\{x_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\). Let \(w\) be a non-zero alternating
+\(n\)-linear form; we know that
+\begin{equation}
+    (\det A)w(x_1, \,\cdot\,\cdot\,\cdot\,, x_n) =
+    w(Ax_1, \,\cdot\,\cdot\,\cdot\,, Ax_n)
+\end{equation}
+If we replace each \(Ax_j\) in the right side of (1) by \(\sumx_i \alpha_{ij}
+x_i\); and expand the result by multilinearity, we obtain a long linear
+combination of terms such as \(w(z_1, \,\cdot\,\cdot\,\cdot\,, z_n)\), where
+each \(z\) is one of the \(x\)'s. (Compare this part of the argument with the
+proof of §30, Theorem 3.) If, in such a term, two of the \(z\)'s coincide, then,
+since \(w\) is alternating, that term must vanish. If, on the other hand, all
+the \(z\)'s are distinct, then \(w(z_1, \,\cdot\,\cdot\,\cdot\,, z_n) = \pi
+w(x_1, \,\cdot\,\cdot\,\cdot\,, x_n)\) for some permutation \(\pi\), and,
+moreover, every permutation \(\pi\) can occur in this way. The coefficient of
+the term \(\pi w(x_1, \,\cdot\,\cdot\,\cdot\,, x_n)\) is the product
+\(\alpha_{\pi(1),1}, \,\cdot\,\cdot\,\cdot\, \alpha_{\pi(n),n} \). Since (§ 30,
+Theorem 1) \(w\) is skew symmetric, it follows that
+\begin{equation}
+    \det A = \sumx_{\pi} (\sign \pi)\alpha_{\pi(1),1} \,\cdot\,\cdot\,\cdot\, \alpha_{\pi(n),n}
+\end{equation}
+where the summation is extended over all permutations \(\pi\) in \(\frak{S}_n\).
+(Recall that \(w(x_1, \,\cdot\,\cdot\,\cdot\,, x_n) \neq \), by §30, Theorem 3,
+so that division by \(w(x_1, \,\cdot\,\cdot\,\cdot\,, x_n)\) is legitimate.)
+
+From this classical equation (2) we could derive many special properties of
+determinants by straightforward computation. Here is one example. If \(\sigma\)
+and \(\pi\) are permutations (in \(\frak{S}_n\)), then (since \(\pi \sigma\) is
+also a permutation), it follows that the products \(\alpha_{\pi(1),1}
+\,\cdot\,\cdot\,\cdot\, \alpha_{\pi(n),n}\) and \(\alpha_{\pi\sigma(1),
+\sigma(1)} \,\cdot\,\cdot\,\cdot\, \alpha_{\pi\sigma(n), \sigma(n)}\) differ in
+the order of their factors only. If, for each \(\pi\), we take \(\sigma =
+\pi^{-1}\) and then alter each summand in (2) accordingly, we obtain
+\begin{equation*}
+    \det A = \sumx_{\pi} (\sign \pi) \alpha_{1,\pi(1)} \,\cdot\,\cdot\,\cdot\, \alpha_{n,\pi(n)}.
+\end{equation*}
+(Note that \(\sign \pi = \sign \pi^{-1}\) and that the sum over all \(\pi\) is
+the same as the sum over all \(\pi^{-1}\).) Since this last sum is just like the
+sum in (2), except that \(\alpha_{i,\pi(i)}\) appears in place of
+\(\alpha_{\pi(i),i}\), it follows from an application of (2) to \(A'\) in place
+of \(A\) that
+\begin{equation*}
+    \det A = \det A'.
+\end{equation*}
+
+Here is another useful fact about determinants. If \(\frak{M}\) is a subspace
+invariant under \(A\), if \(B\) is the transformation \(A\) considered on \(\frak{M}\) only, and if \(C\) is the quotient transformation \(A/\frak{M}\) , then
+\begin{equation*}
+    \det A = \det B \cdot \det C.
+\end{equation*}
+
+\section{Proper values}
+
+A scalar \(\lambda\) is a \emph{proper value} and a non-zero vector \(x\) is a
+\emph{proper vector} of a linear transformation \(A\) if \(Ax = \lambda x\) .
+Almost every combination of the adjectives proper, latent, characteristic,
+eigen, and secular, with the nouns root, number, and value, has been used in the
+literature for what we call a proper value. It is important to be aware of the
+order of choice in the definition; \(\lambda\) is a proper value of \(A\) if
+there exists a non-zero vector \(x\) for which \(Ax = \lambda x\), and a
+non-zero vector \(x\) is a proper vector of \(A\) if there exists ascalar
+\(\lambda\) for which \(Ax = \lambda x\).
+
+Suppose that \(\lambda\) is a proper value of \(A\); let \(\frak{M}\) be the
+collection of all vectors \(x\) that are proper vectors of \(A\) belonging to
+this proper value, that is, for which \(Ax = \lambda x\). Since, by our
+definition, 0 is not a proper vector, \(\frak{M}\) does not contain O; if,
+however, we enlarge \(\frak{M}\) by adjoining the origin to it, then
+\(\frak{M}\) becomes a subspace. We define the \emph{multiplicity} of the proper
+value \ as the dimension of the subspace \(\frak{M}\); a \emph{simple} proper
+value is one whose multiplicity is equal to \(1\). By an obvious extension of
+this terminology, we may express the fact that a scalar \(\lambda\) is not a
+proper value of \(A\) at all by saying that \(\lambda\) is a proper value of
+multiplicity zero. The set of proper values of \(A\) is sometimes called the
+\emph{spectrum} of \(A\). Note that the spectrum of \(A\) is the same as the set
+of all scalars \(\lambda\) for which \(A - \lambda\)  is not invertible.
+
+If the vector space we are working with has dimension \(n\), then the scalar
+\(0\) is a proper value of multiplicity \(n\) of the linear transformation
+\(0\), and, similarly, the scalar \(1\) is a proper value of multiplicity \(n\)
+of the linear transformation \(1\). Since \(Ax = \lambda x\) if and only if \((A
+- \lambda)x = 0\), that is, if and only if \(x\) is in the null-space of \(A -
+\lambda\), it follows that the multiplicity of \(\lambda\) as a proper value of
+\(A\) is the same as the nullity of the linear transformation \(A - \lambda\).
+From this, in turn, we infer (see \S\,50, Theorem 1) that the proper values of
+\(A\), together with their associated multiplicities, are exactly the same as
+those of \(A'\).
+
+We observe that if B is any invertible transformation, then
+\begin{equation*}
+    BAB^{-1} - \lambda =B(A - \lambda)B^{-1}.
+\end{equation*}
+so that \((A - \lambda)x = 0\) if and only if \((BAB^{-1}- \lambda)Bx = 0\).
+This implies that all spectral concepts (for example, the spectrum and the
+multiplicities of the proper values) are invariant under the replacement of
+\(A\) by \(BAB^{-1}\). We note also that if \(Ax = \lambda x\), then
+\begin{equation*}
+    A^2 x = A(Ax) = A(\lambda x) = \lambda (Ax) = \lambda(\lambda x) = \lambda^2 x
+\end{equation*}
+More generally, if \(p\) is any polynomial, then \(p(A)x = p(\lambda)x\), so
+that every proper vector of \(A\), belonging to the proper value \(\lambda\), is also a proper
+vector of \(p(A)\), belonging tothe proper value \(p(\lambda)\). Hence if \(A\) satisfie any equation of the form \(p(A) = 0\), then \(p(\lambda) = 0\) for every proper value \(\lambda\) of \(A\).
+
+Since a necessary and sufficient condition that \(A - \lambda\) have a
+non-trivial mull-space is that it be singular, that is, that \(\det (A-\lambda)
+= 0\), it follows that \(\lambda\) is a proper value of \(A\) if and only if it
+is a characteristic root of \(A\). This fact is the reason for the importance of
+determinants in linear algebra. The useful geometric concept is that of a proper
+value. From the geometry of the situation, however, it is impossible to prove
+that any proper values exist. By means of determinants we reduce the problem to
+an algebraic one; it turns out that proper values are the same as roots of a
+certain polynomial equation. No wonder now that it is hard to prove that proper
+values always exist: polynomial equations do not always have roots, and,
+correspondingly, there are easy examples of linear transformations with no
+proper values.
+
+\section{Multiplicity}
+
+The discussion in the preceding section indicates one of our reasons for wanting
+to study complex vector spaces. By the so-called fundamental theorem of algebra,
+a polynomial equation over the field of complexc numbers always has at least one
+root; it follows that a linear transformation on a complex vector space always
+has at least one proper value. There are other fields, besides the field of
+complex numbers, over which every polynomial equation is solvable; they are
+called \emph{algebraically closed} fields. The most general result of the kind
+we are after at the moment is that every linear transformation on a
+finite-dimensional vector space over an algebraically closed field has at least
+one proper value. Throughout the rest of this chapter (in the next four
+sections) we shall assume that our field of scalars is algebraically closed. The
+use we shall make of this assumption is the one just mentioned, namely, that
+from it we may conclude that proper values always exist.
+
+The algebraic point of view on proper values suggests another possible
+definition of multiplicity. Suppose that \(A\) is a linear transformation on a
+finite-dimensional vector space, and suppose that \(\lambda\) is a proper value
+of \(A\). We might wish to consider the multiplicity of \(\lambda\) as a root of
+the characteristic equation of \(A\). This is a useful concept, which we shall
+call the \emph{algebraic} multiplicity of \(\lambda\), to distinguish it from
+our earlier, \emph{geometric}, notion of multiplicity.
+
+
+The two concepts of multiplicity do not coincide, as the following example
+shows. If \(D\) is differentiation on the space \(\Polynom_n\) of all
+polynomials of degree \(\leq n - 1\), then a necessary and sufficient condition
+that a vector \(x\) in \(\Polynom_n\) be a proper vector of \(D\) is that
+\(\displaystyle \frac{dx}{dt} \equiv \lambda x(t)\) for some complex number
+\(\lambda\). We borrow from the elementary theory of differential equations the
+fact that every solution of this equation is a constant multiple of \(e^{\lambda
+t}\). Since, unless \(\lambda = 0\), only the zero multiple of \(e^{\lambda t}\)
+is a polynomial (which it must be if it is to belong to \(\Polynom_n\)), we must
+have \(\lambda = 0\) and \(x(t) = 1\). In other words, this
+particulartransformation has only one proper value (which must therefore occur
+with algebraic multiplicity \(n\)), namely, \(\lambda = 0\); but, and this is
+more disturbing, the dimension of the linear manifold of solutions is exactly.
+one. Hence if \(n > 1\), the two definitions of multiplicity give different
+values. (In this argument we used the simple fact that a polynomial equation of
+degree \(n\) over an algebraically closed field has exactly \(n\) roots, if
+multiplicities are suitably counted. It follows that a linear transformation on
+an \(n\)-dimensional vector space over such a field has exactly \(n\) proper
+values, counting algebraic multiplicities.)
+
+It is quite easy to see that the geometric multiplicity of \(\lambda\) is never
+greater than its algebraic multiplicity. Indeed, if \(A\) is any linear
+transformation, if \(\lambda_0\) is any of its proper values, and if
+\(\frak{M}\) is the subspace of solutions of Ax = Nor, then it is clear thaton
+is invariant under A. If Ao is the linear transformation A considered o n 9
+only, then it is clear that det (Ao - X) is a factor of det (4 - 1). If the
+dimension of a (= the geometric multiplicity of Mo) ism, then det (Ao - x) = (No
+- X)'; the desired result follows from the definition of algebraic multiplicity.
+It follows also that if X1, * , Ap are the distinct proper values of A, with
+respective geometric multiplicities m1, ,-Mp, and if it happens that Li-1m; =n,
+then m; is equal to the algebraic multiplicity of \(\lambda_i\) for each  \(i =
+1, \,\cdot\,\cdot\,\cdot\,, p\).
+
+By means of proper values and their algebraic multiplicities we can characterize
+two interesting functions of linear transformations; one of them is the
+determinant and the other is something new. (Warning: these characterizations
+are valid only under our current assumption that the scalar field is
+algebraically closed.)
+
+Let \(A\) be any linear transformation on an \(n\)-dimensional vector space, and
+let \(\lambda_1, \,\cdot\,\cdot\,\cdot\,, \lambda_p\) be its distinct proper
+values. Let us denote by \(m_j\) the algebraic multiplicity of \(\lambda_j\),
+\(j = 1, \,\cdot\,\cdot\,\cdot\,, p\) so that \(m_1 + \,\cdot\,\cdot\,\cdot\, +
+m_p = n\). For any polynomial equation
+\begin{equation*}
+    \alpha_0 + \alpha_1 \lambda + \\,\cdot\,\cdot\,\cdot\, + \alpha_n \lambda^n
+    = 0,
+\end{equation*}
+the product of the roots is \((-1)^n\alpha_0/\alpha_n\) and the sum of the roots
+is \(-\alpha_{n-1}/\alpha_n\). Since the leading coefficient (\(= \alpha_n\)) of
+the characteristic polynomial \(\det (A - \lambda)\) is \((-1)^n\) and since the
+constant term (\(=\alpha_0\)) is \(\det(A-0) = \det A\), we have
+\begin{equation*}
+    \det A = \prodx_{j=1}^p \lambda_j^{m_j}.
+\end{equation*}
+This characterization of the determinant motivates the definition
+\begin{equation*}
+    \trace{A} = \sumx_{j=1}^p m_j \lambda_j;
+\end{equation*}
+the function so defined is called the \emph{trace} of \(A\). We shall have no
+occasion to use trace in the sequel; we leave the derivation of the basic
+properties of the trace to the interested reader.
+
+\section{Triangular form}
+
+It is now quite easy to prove the easiest one of the so-called canonical form
+theorems. Our assumption about the scalar field (namely, that it is
+algebraically closed) is still in force.
+
+\begin{theorem}
+    If \(A\) is any linear transformation on an \(n\)-dimensional vector space
+    \(\VecSp\), then there exist \(n + 1\) subspaces \(\frak{M}_0, \frak{M}_1,
+    \,\cdot\,\cdot\,\cdot\,, \frak{M}_{n-1}, \frak{M}_n\) with the following
+    properties:
+    \begin{enumerate}[wide, nosep, label=(\roman*)]
+        \item each \(\frak{M}_j\) (\(j= 0, 1, \,\cdot\,\cdot\,\cdot\, n-1, n\))
+        is invariant under \(A\),
+        \item the dimension of \(\frak{M}_j\) is \(j\),
+        \item \((\frak{O} = ) \frak{M}_0 \subset \frak{M}_1 \subset
+        \,\cdot\,\cdot\,\cdot\, \subset \frak{M}_{n-1} \subset \frak{M}_n (=
+        \VecSp)\).
+    \end{enumerate}
+\end{theorem}
+
+
+The chief interest of this theorem comes from its matricial interpretation.
+Since \(\Mfold_1\) is one-dimensional, we may find in it a vector \(x_1 \neq
+0\). Since \(\Mfold_1 \subset \Mfold_2\), it follows that \(x_1\) is also in
+\(\Mfold_2\), and since \(\Mfold_2\), is two-dimensional, we may findi n it a
+vector \(x_2\) such that \(x_1\) and \(x_2\) span \(\Mfold_2\). We proceed in
+this way by induction, choosing vectors \(x_j\) so that \(x_1,
+\,\cdot\,\cdot\,\cdot\,, x_j\) lie in \(\Mfold_j\) and span \(\Mfold_j\) for \(j
+= 1, \,\cdot\,\cdot\,\cdot\,, n\). We obtain finally a basis \(\Basisx = \{x_1,
+\,\cdot\,\cdot\,\cdot\,, x_n\}\) in \(\VecSp\); let us compute the matrix of
+\(A\) in this coordinate system. Since \(x_j\) is in \(\Mfold_j\) and since
+\(\Mfold_j\) is invariant under \(A\), it follows that \(Ax_j\) must be a linear
+combination of \(x_1, \,\cdot\,\cdot\,\cdot\,, x_j\). Hence in the expression
+\begin{equation*}
+    Ax_j = \sumx_i \alpha_{ij} x_i
+\end{equation*}
+the coefficient of \(x_i\) must vanish whenever \(i > j\); in other words, \(i > j\) implies \(\alpha_{ij} = 0\). Hence the matrix of \(A\) has the \emph{triangular form}
+\begin{equation*}
+    [A] = \left[
+        \begin{array}{ccccccc}
+            \alpha_{11} & \alpha_{12} & \alpha_{13} & \cdot & \cdot & \cdot & \alpha_{1n} \\
+            0 & \alpha_{22} & \alpha_{23} & \cdot & \cdot & \cdot & \alpha_{2n} \\
+            \cdot & \cdot & \cdot &  & & & \cdot \\
+            \cdot & \cdot & \cdot &  & & & \cdot \\
+            \cdot & \cdot & \cdot &  & & & \cdot \\
+            0 & 0 & 0 & \cdot & \cdot & \cdot & \alpha_{{n-1},n} \\
+            0 & 0 & 0 & \cdot & \cdot & \cdot & \alpha_{nn}
+        \end{array}
+    \right].
+\end{equation*}
+
+It is clear from this representation that \(\det (A - \alpha_{ii}) = 0 \)for \(i
+= 1, \,\cdot\,\cdot\,\cdot\,, n\), so that the \(\alpha_{ii}\) are the proper values of \(A\),
+appearing on the main diagonal of \([A]\) with the proper multiplicities. We sum
+up as follows.
+
+\begin{theorem}
+    If \(A\) is a linear transformation on an \(n\)-dimensional vector space
+    \(\VecSp\), then there exists a basis \(\Basisx\) in \(\VecSp\) such that
+    the matrix \([A; \Basisx]\)is triangular; or, equivalently, if \([A]\) is
+    any matrix, there exists a non-singular matrix \([B]\) such that
+    \([B]^{-1}[A][B]\) is triangular.
+\end{theorem}
+
+The triangular form is useful for proving many results about linear
+transformations. It follows from it, for example, that for any polynomial \(p\),
+the proper values of \(p(A)\), including their algebraic multiplicities, are
+precisely the numbers \(p(\lambda)\), where \(\lambda\) runs through the proper
+values of \(A\).
+
+A large part of the theory of linear transformations is devoted to improving the
+triangularization result just obtained. The best thing a matrix can be is not
+triangular but diagonal (that is, \(\alpha_{ij} = 0\) unless \(i = j\)); if a
+linear transformation is such that its matrix with respect to a suitable
+coordinate system is diagonal we shall call the transformation
+\emph{diagonable}.
+
+
+\section{Nilpotence}
+
+As an aid to getting a representation theorem more informative than the
+triangular one, we proceed to introduce and to study a very special but useful
+class of transformations. A linear transformation \(A\) is called
+\emph{nilpotent} if there exists a strictly positive integer \(q\) such that
+\(A^q = 0\); the least such integer \(q\) is the \emph{index} of nilpotence.
+
+\begin{theorem}
+    If \(A\) is a nilpotent linear transformation of index \(q\) on a
+    finite-dimensional vector space \(\VecSp\), and if \(x_0\) is a vector for
+    which \(A^{q-1}x_0 \neq 0\), then the vectors \(x_0, Ax_0,
+    \,\cdot\,\cdot\,\cdot\,, A^{q-1}x_0\) are linearly independent. If
+    \(\frak{H}\) is the subspace spanned by these vectors, then there exists a
+    subspace \(\frak{K}\) such that \(\VecSp = \frak{H} \oplus \frak{K}\) and
+    such that the pair \((\frak{H}, \frak{K})\) reduces \(A\).
+\end{theorem}
+
+\begin{proof}
+    To prove the asserted linear independence, suppose that
+    \begin{equation*}
+        \sumx_{i=0}^{q-1} \alpha_i A^ix_0 =0,
+    \end{equation*}
+    and let \(j\) be the least index such that \(\alpha_j \neq 0\). (We do not exclude the possibility \(j = 0\).) Dividing through by \(-\alpha_j\) and changing the notation in an obvious way, we obtain a relation of the form
+    \begin{equation*}
+        A^jx_0 = \sumx_{i=j+1}^{q-1} \alpha_i A^ix_0 = A^{j+1} \left( \sumx_{i=j+1}^{q=1} \alpha_i A^{i-j-1}x_0\right) = A^{j+1}y.
+    \end{equation*}
+    It follows form the definition of \(q\) that
+    \begin{equation*}
+        A^{q=1}x_0 = A^{q-j-1}A^j x_0 = A^{q-j-1}A^{j+1}y = A^{q}y = 0;
+    \end{equation*}
+    since this contradicts the choice of \(x+0\), we must have \(\alpha_j = 0\) for each \(j\).
+\end{proof}
+
+\section{Jordan form}
+
+It is sound geometric intuition that makes most of us conjecture that, for
+linear transformations, being invertible and being in some sense zero are
+exactly opposite notions. Our disappointment in finding that the range and the
+null-space need not be disjoint is connected with this conjecture. The situation
+can be straightened out by relaxing the sense in whichwe interpret ``being
+zero''; for most practical purposes a linear transformation some power of which
+iszero (that is, a nilpotent transformation) is as zeroish as we can expect it
+to be. Although we cannot say that a linear transformation is either invertible
+or ``zero;; even in the extended sense of zeroness, we can say how any
+transformation is made up of these two extreme kinds.
+
+\begin{theorem}
+    Every linear transformation \(A\) on a finite-dimensional vector space \(\VecSp\) is the direct sum of a nilpotent transformation and an invertible transformation.
+\end{theorem}
+
+\begin{proof}
+    We consider the null-space of the \(k\)-th power of \(A\); this is a
+    subspace \(\frak{N}_k = \nullspace{A^k}\). Clearly \(\frak{N}_1\subset
+    \frak{N}_2 \subset \,\cdot\,\cdot\,\cdot\,\). We assert first that if \(\frak{N}_k =
+    \frak{N}_{k+1}\), then \(\frak{N}_{k} = \frak{N}_{k+j}\) for all positive
+    integers \(j\). Indeed, if \(A^{k+j}x = 0\), then \(A^{k+1} A^{j-1}x = 0\),
+    whence (by the fact that \(\frak{N}_k = \frak{N}_{k+1}\)) it follows that
+    \(A^k A^{j-1}x = 0\), and therefore that \(A^{k+j-1}x = 0\). In other words,
+    \(\frak{N}_{k+j}\) is contained in (and therefore equal to)
+    \(\frak{N}_{k+j-1}\); induction on \(j\) establishes our assertion.
+
+    Since \(\VecSp\) is finite-dimensional, the subspaces \(\frak{N}_k\) cannot
+    continue to increase indefinitely; let \(q\) be the smallest positive
+    integer for which \(\frak{N}_q = \frak{N}_{q+1}\). It is clear that
+    \(\frak{N}_q\) is invariant under \(A\) (in fact each \(\frak{N}_k\) is
+    such). We write \(\frak{R}_k = \range{A^k}\) for the range of \(A^k\) (so
+    that, again, it is clear that \(\frak{R}_q\) is invariant under \(A\)); we
+    shall prove that \(\VecSp = \frak{N}_q \oplus \frak{R}_q\) and that \(A\) on
+    \(\frak{N}_q\) is nilpotent, whereas on \(\frak{R}_q\) it is invertible.
+    
+    If \(x\) is a vector common to \(\frak{N}_q\) and \(\frak{R}_q\), then \(A^q
+    x = 0\) and \(x = A^q y\) for some \(y\). It follows that \(A^{2q}y = 0\),
+    and hence, from the definition of \(q\), that \(x= A^{q}y = 0\). We have
+    shown thus that the range and the null-space of \(A^q\) are disjoint; a
+    dimensionality argument (see §50, Theorem 1) shows that they span
+    \(\VecSp\), so that \(\VecSp\) is their direct sum. It follows from the
+    definitions of \(q\) and \(\frak{N}_q\), that \(A\) on \(\frak{N}_q\) is
+    nilpotent of index \(q\). If, finally, \(x\) is in \(\frak{R}_q\) (so that
+    \(x = A^qy\) for some \(y\)) and if \(Ax = 0\), then \(A^qy = 0\), whence
+    \(x= A^{-q}y = 0\); this shows that \(A\) is invertible on \(\frak{R}_q\).
+    The proof of Theorem 1 is complete.
+\end{proof}
+
+The decomposition of \(A\) into its nilpotent and invertible parts is unique.
+Suppose, indeed, that \(\VecSp = \frak{H} \oplus \frak{K}\) so that \(A\) on
+\(\frak{H}\) is nilpotent and \(A\) on \(\frak{K}\) is invertible. Since
+\(\frak{H} \subset \nullspace{A^k}\) for some \(k\), it follows that \(\frak{H}
+\subset \frak{N}_q\), and, since \(\frak{K} \subset \range(A_k)\) for all \(k\),
+it follows that \(\frak{K} \subset \frak{R}_q\); these facts together imply that
+\(\frak{H} = \frak{N}_q\) and \(\frak{K} = \frak{R}_q\).
+
+We can now use our results on nilpotent transformations to study the structure
+of arbitrary transformations. The method of getting a nilpotent transformation
+out of an arbitrary one may seem like a conjuring trick, but it is a useful
+trick, which is often employed. What is essential is the guaranteed existence of
+proper values; for that reason we continue to assume that the scalar field is
+algebraically closed (see §55).
+
+\begin{theorem}
+    If \(A\) is a linear transformation on a finite-dimensional vector space
+    \(\VecSp\), and if \(\lambda_1, \,\cdot\,\cdot\,\cdot\,, \lambda_p\) are the
+    distinct proper values of \(A\) with respective algebraic multiplicities
+    \(m_1, \,\cdot\,\cdot\,\cdot\,, m_p\), then \(\VecSp\) is the direct sum of
+    \(p\) subspaces \(\Mfold_1, \,\cdot\,\cdot\,\cdot\,, \Mfold_p\) of
+    respective dimensions \(m_1, \,\cdot\,\cdot\,\cdot\,, m_p\), such that each
+    \(\Mfold_j\) is invariant under \(A\) and such that \(A - \lambda_j\) is
+    nilpotent on \(\Mfold_j\).
+\end{theorem}
+
+\begin{proof}
+    Take any fixed \(j = 1, \,\cdot\,\cdot\,\cdot\,, p\), and consider the
+    linear transformation \(A_j = A - \lambda_j\). To \(A_j\) we may apply the
+    decomposition of Theorem 1 to obtain subspaces \(\Mfold_j\) and
+    \(\frak{N}_j\), such that \(A_j\) is nilpotent on \(\Mfold_j\) and
+    invertible on \(\frak{N}_j\). Since \(\Mfold_j\) is invariant under \(A_j\),
+    it is also invariant under \(A_j + \lambda_j = A\). Hence, for every
+    \(\lambda\), the determinant of \(A - \lambda\) is the product of the two
+    corresponding determinants for the two linear transformations that \(A\)
+    becomes when we consider it on \(\Mfold_j\) and \(\frak{N}_j\) separately.
+    Since the only proper value of \(A\) on \(\Mfold_j\) is \(\lambda_j\), and
+    since \(A\) on \(\frak{N}_j\) does not have the proper value \(\lambda_j\)
+    (that is, \(A - \lambda_j\) is invertible on \(\frak{N}_j\)),it follows that
+    the dimension of \(\Mfold_j\) is exactly \(m_j\) and that each of the
+    subspaces \(\Mfold_j\) is disjoint from the span of all the others. A
+    dimension argument proves that \(\Mfold_1 \oplus \,\cdot\,\cdot\,\cdot\,
+    \oplus \Mfold_p = \VecSp\) and thereby concludes the proof of the theorem.
+\end{proof}
+
+We proceed to describe the principal results of this section and the preceding
+one in matricial language. If \(A\) is a linear transformation on a
+finite-dimensional vector space \(\VecSp\), then with respect to a suitable
+basis of \(\VecSp\), the matrix of \(A\) has the following form. Every element
+not on or immediately below the main diagonal vanishes. On the main diagonal
+there appear the distinct proper values of \(A\), each a number of times equal
+to its algebraic multiplicity. Below any particular proper value there appear
+only \(1\)'s and \(0\)'s, and these in the following way: there are chains of
+\(1\)'s followed by a single \(0\), with the lengths of the chains decreasing as
+we read from top to bottom. This matrix is the \emph{Jordan form} or the
+\emph{classical canonical form} of \(A\); we have \(B = TAT^{-1}\) if and only
+if the classical canonical forms of \(A\) and \(B\) are the same except for the
+order of the proper values. (Thus, in particular, a linear transformation \(A\)
+is diagonable if and only if its classical canonical form is already diagonal,
+that is, if every chain of \(1\)'s has length zero.)
+
+Let us introduce some notation. Let \(A\) have \(p\) distinct proper values
+\(\lambda_1, \,\cdot\,\cdot\,\cdot\,, \lambda_p\), with algebraic multiplicities
+\(m_1, \,\cdot\,\cdot\,\cdot\,, m_p\), as before; let the number of chains of
+\(1\)'s under \(\lambda_j\) be \(r_j\), and let the lengths of these chains be
+\(q_{j,1} - 1, q_{j,2} -1, \,\cdot\,\cdot\,\cdot\,, q_{j, r_j} -1\). The
+polynomial \(e_{ji}\) defined by \(e_{ji}(\lambda) = (\lambda -
+\lambda_j)^{q_{j,i}}\) is called an \emph{elementary divisor} of \(A\) of
+\emph{multiplicity} \(q_{j, 1}\) belonging to the proper value \(\lambda_j\). An
+elementary divisor is called \emph{simple} if its multiplicity is \(1\) (so that
+the correspondingchain length is \(0\)); we see that a linear transformation is
+diagonable if and only if its elementary divisors are simple.
+
+To illustrate the power of Theorem 2 we make one application. We may express the
+fact that the transformation \(A - \lambda_j\) on \(\Mfold_j\) is nilpotent of
+index \(q_{j1}\) by saying that the transformation \(A\) on \(\Mfold_j\) is
+annulled by the polynomial \(e_{j1}\). It follows that \(A\) on \(\VecSp\) is
+annulled by the productof these polynomials (that is, by the product of the
+elementary divisors of the highest multiplicities); this product is called the
+\emph{minimal polynomial} of \(A\). It is quite easy to see (since the index of
+nilpotence of \(A - \lambda_j\) on \(\Mfold_j\), is exactly \(q_{j,1}\)) that
+this polynomial is uniquely determined (up to a multiplicative factor) as the
+polynomial of smallest degree that annuls \(A\). Since the characteristic
+polynomial of \(A\) is the product of all the elementary divisors, and therefore
+a multiple of the minimal polynomial, we obtain the \emph{Hamilton-Cayley
+equation}: every linear transformation is annulled by its characteristic
+polynomial.
+
+{\small
+\subsection*{Exercises}
+\begin{enumerate}[wide]
+    \item Find the Jordan form of \(\begin{pmatrix} 1 & 0 & 1 \\ 0 & 0 & 0 \\ 0 &
+        0 & -1 \end{pmatrix}\).
+
+    \item What is the maximum number of pairwise nonsimilar linear
+    transformations on a three-dimensional vector space, each of which has the
+    characteristic polynomial \((\lambda - 1)^3\)?
+
+    \item Does every invertible linear transformation have a square root? (To
+    say that \(A\) is a square root of \(B\) means, of course, that \(A^2 =
+    B\).)
+
+    \item \begin{enumerate}[label=(\alph*), wide, nosep]
+        \item Prove that if \(\omega\) is a cube root of \(1\) (\(\omega \neq 1\)), then the matrices
+        \begin{equation*}
+            \begin{pmatrix}
+                0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0
+            \end{pmatrix} \quad \text{and} \quad
+            \begin{pmatrix}
+                1 & 0 & 0 \\ 0 & \omega & 0 \\ 0 & 0 & \omega^2
+            \end{pmatrix}
+        \end{equation*}
+        are similar.
+        \item Discover and prove a generalization of (a) to higher dimensions.
+    \end{enumerate}
+
+    \item\begin{enumerate}[label=(\alph*), wide, nosep]
+        \item Show that the matrices
+        \begin{equation*}
+            \begin{pmatrix}
+                1 & 1& 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1
+            \end{pmatrix} \quad \text{and} \quad
+            \begin{pmatrix}
+                3 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0
+            \end{pmatrix}
+        \end{equation*}
+        are similar (over, say, the field of complex numbers).
+        \item Discover and prove a generalization of (a) to higher dimensions.
+    \end{enumerate}
+
+    \item If two real matrices are similar over \(\Complex\), then they are similar over \(\Reals\).
+    
+    \item Prove that every matrix is similar to its transpose.
+
+    \item A linear transformation is invertible if and only if the constant term
+    of its minimal polynomial is different from zero.
+\end{enumerate}
+
+}

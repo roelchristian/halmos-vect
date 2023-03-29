@@ -1,6 +1,6 @@
 \chapter{Spaces}
 
-\section{Fields}
+\section{Fields}\label{sec-fields}
 
 In what follows we shall have occasion to use various classes of numbers (such
 as the class of all real numbers or the class of all complex numbers). Because
@@ -11,11 +11,11 @@ as complex numbers; in the examples that we shall study both classes will occur.
 To be specific (and also in order to operate at the proper level of generality)
 we proceed to list all the general facts about scalars that we shall need to
 assume.
-\begin{enumerate}[label=(\Alph*)]
+\begin{enumerate}[label=(\Alph*),wide]
     \item To every pair, \(\alpha\) and \(\beta\), of scalars there corresponds
         a scalar \(\alpha + \beta\), called the \emph{sum} of \(\alpha\) and
         \(\beta\), in such a way that
-    \begin{enumerate}[label=(\arabic*)]
+    \begin{enumerate}[label=(\arabic*), wide]
         \item addition is commutative, \(\alpha + \beta = \beta + \alpha\),
         \item addition is associative, \(\alpha + (\beta + \gamma) =
             (\alpha + \beta) + \gamma\),
@@ -28,7 +28,7 @@ assume.
     \item To every pair, \(\alpha\) and \(\beta\), of scalars there corresponds
         a scalar,\(\alpha \beta\), called the \emph{product} of \(\alpha\) and
         \(\beta\), in such a way that
-    \begin{enumerate}[label=(\arabic*)]
+    \begin{enumerate}[label=(\arabic*), wide]
         \item multiplication is commutative, \(\alpha \beta = \beta \alpha\),
         \item multiplication is associative, \(\alpha (\beta \gamma) =
             (\alpha \beta) \gamma\),
@@ -51,27 +51,98 @@ the set \(\Complex\) of all complex numbers.
 
 {\small
 \subsection*{Exercises}
-\begin{enumerate}
-    \item Almost all the laws of elementary arithmetic are consequences of the axioms defining a field. Prove, inparticular, that if F is a field, and fi a, B, and y belong to J, then thefollowing relations hold.
-    \item (a) Is the set of all positive integers a field? (In familiar systems, such as the integers, weshall almost always use the ordinary operations of addition and multi- plication. On the rare occasions when we depart from this convention, we shall give ample warning. As for "positive," by thatword we mean, hereand elsewhere in this book, "greater than or equal to zero." If 0 is to be excluded, we shallsay "strictly positive.")
-    (b) What about the set of all integers?
-    (c) Can the answers to these questions be changed by re-defining addition or multiplication (or both)?
+\begin{enumerate}[wide]
+    \item Almost all the laws of elementary arithmetic are consequences of the axioms defining a field. Prove, in particular, that if \(\Field\) is a field, and if \(\alpha\), \(\beta\), and \(\gamma\) belong to \(\Field\), then the following relations hold.
+    \begin{enumerate}[label=(\alph*), wide, nosep]
+        \item \(0 + \alpha = \alpha\).
+        \item If \(\alpha + \beta = \alpha + \gamma\), then \(\beta = \gamma\).
+        \item \(\alpha + (\beta - \alpha) = \beta\). (Here \(\beta - \alpha = \beta + (-\alpha)\).)
+        \item \(\alpha \cdot 0 = 0 \cdot \alpha = 0\). (For clarity or emphasis we sometimes use the dot to indicate multiplication.)
+        \item \((-1)\alpha = -\alpha\).
+        \item \((-\alpha)(-\beta) = \alpha \beta\).
+        \item If \(\alpha\beta = 0\), then either \(\alpha = 0\) or \(\beta =
+        0\) (or both).
+    \end{enumerate}
+    \item \begin{enumerate}[label=(\alph*), wide, nosep]
+        \item Is the set of all positive integers a field? (In familiar systems,
+        such as the integers, we shall almost always use the ordinary operations
+        of addition and multiplication. On the rare occasions when we depart
+        from this convention, we shall give ample warning. As for ``positive,''
+        by that word we mean, here and elsewhere in this book, ``greater than or
+        equal to zero.'' If 0 is to be excluded, we shall say ``strictly
+        positive.'')
+        \item What about the set of all integers?
+        \item Can the answers to these questions be changed by re-defining addition or multiplication (or both)?
+    \end{enumerate}
+    \item Let \(m\) be an integer, \(m \geq 2\), and let \(\Integers_m\) be the
+    set of all positive integers less than \(m\), \(\Integers_m = \{0, 1,
+    \,\cdot\,\cdot\,\cdot\,, m - 1\}\). If \(\alpha\) and \(\beta\) are in \(\Integers_m\), let
+    \(\alpha + \beta\) be the least positive remainder obtained by dividing the
+    (ordinary) sum of \(\alpha\) and \(\beta\) by \(m\), and, similarly, let
+    \(\alpha\beta\) be the least positive remainder obtained by dividing the
+    (ordinary) product of \(\alpha\) and \(\beta\) by \(m\). (Example: if \(m =
+    12\), then \(3 + 11 = 2\) and \(3 \cdot 11 = 9\).)
+    \begin{enumerate}[label=(\alph*), wide, nosep]
+        \item Prove that \(\Integers_m\) is a field if and only if \(m\) is
+        prime.
+        \item What is \(-1\) in \(\Integers_5\)?
+        \item What is \(\frac{1}{3}\) in \(\Integers_7\)?
+    \end{enumerate}
+    \item The example of \(\Integers_p\) (where \(p\) is a prime shows that not
+    quite all the laws of elementary arithmetic hold in fields; in
+    \(\Integers_2\), for instance, \(1 + 1 = 0\). Prove that if \(\Field\) is a
+    field, then either the result of repeatedly adding \(1\) to itself is always
+    different from \(0\), or else the first time that it is equal to \(0\)
+    occurs when thenumber of summands is a prime. (The \emph{characteristic} of
+    the field \(\Field\) is defined to be \(0\) in the first case and the
+    crucial prime in the second.)
+    \item Let \(\Rationals(\sqrt{2})\) be the set of all real numbers of the
+    form \(\alpha + \beta \sqrt{2}\), where \(\alpha\) and \(\beta\) are
+    rational.
+    \begin{enumerate}[label=(\alph*), wide, nosep]
+        \item Is \(\Rationals(\sqrt{2})\) a field?
+        \item What if \(\alpha\) and \(\beta\) are required to be integers?
+    \end{enumerate}
+    \item \begin{enumerate}[label=(\alph*), wide, nosep]
+        \item Does the set of all polynomials with integer coefficients form a field?
+        \item What if the coefficients are allowed to be real numbers?
+    \end{enumerate}
+    \item Let \(\Field\) be the set of all ordered pairs \((\alpha, \beta)\) of real numbers.
+    \begin{enumerate}[label=(\alph*), wide, nosep]
+        \item If addition and multiplication are defined by
+        \begin{equation*}
+            (\alpha, \beta) + (\gamma, \delta) = (\alpha + \gamma, \beta + \delta)
+        \end{equation*}
+        and
+        \begin{equation*}
+            (\alpha, \beta)(\gamma, \delta) = (\alpha\gamma, \beta\delta),
+        \end{equation*}
+        does \(\Field\) become a field?
+        \item If addition adn multiplication are defined by
+        \begin{equation*}
+            (\alpha, \beta) + (\gamma, \delta) = (\alpha + \gamma, \beta + \delta)
+        \end{equation*}
+        and
+        \begin{equation*}
+            (\alpha, \beta)(\gamma, \delta) = (\alpha\gamma - \beta\delta, \alpha\delta + \beta\gamma),
+        \end{equation*}
+        is \(\Field\) a field then?
+        \item What happens (in both preceding cases) if we consider ordered
+        pairs of complex numbers instead?
+    \end{enumerate}
 \end{enumerate}
-
 }
 
-
-\section{Vector spaces}
-
+\section{Vector spaces}\label{sec-vector-spaces}
 
 We come now to the basic concept of this book. For the definition that follows we assume that we are given a particular field \(\Field\); the scalars to be used are to be elements of \(\Field\).
 
 \begin{definition}
     A \emph{vector space} is a set \(  \VecSp\) of elements called \emph{vectors}, satisfying the following axioms.
 
-    \begin{enumerate}[label=(\Alph*)]
+    \begin{enumerate}[label=(\Alph*), wide]
         \item To every pair, \(x\) and \(y\), of vectors in \(  \VecSp\) there corresponds a vector \(x + y\), called the \emph{sum} of \(x\) and \(y\), in such a way that
-        \begin{enumerate}[label=(\arabic*)]
+        \begin{enumerate}[label=(\arabic*), wide]
             \item addition is commutative, \(x + y = y + x\),
             \item addition is associative, \(x + (y + z) = (x + y) + z\),
             \item there exists in \(  \VecSp\) a unique vector 0 (called the \emph{origin}) such that \(x + 0 = x\) for every vector \(x\), and
@@ -79,7 +150,7 @@ We come now to the basic concept of this book. For the definition that follows w
         \end{enumerate}
         \smallskip
         \item To every pair, \(\alpha\) and \(x\), where \(\alpha\) is a scalar and \(x\) is a vector in \(  \VecSp\), there corresponds a vector \(\alpha x\) in \(  \VecSp\), called the \emph{product} of \(\alpha\) and \(x\), in such a way that
-        \begin{enumerate}[label=(\arabic*)]
+        \begin{enumerate}[label=(\arabic*), wide]
             \item multiplication by scalars is associative, \(\alpha(\beta x) = (\alpha \beta)x\), and
             \item \(1x = x\) for every vector \(x\).
         \end{enumerate}
@@ -99,55 +170,177 @@ is called a \emph{real vector space}; similarly if \(\Field\) is \(\Rationals\)
 or if \(\Field\) is \(\Complex\), we speak of \emph{rational vector spaces} or
 \emph{complex vector spaces}.
 
-\section{Examples}
+\section{Examples}\label{sec-examples}
 
 Before discussing the implications of the axioms, we give some examples. We
 shall refer to these examples over and over again, and weshall use the notation
 established here throughout therest of our work.
 
-(1) Let \(\Complex^1 (= \Complex)\) be the set of all complex numbers; if we
-interpret \(x + y\) and \(\alpha x\) as ordinary complex numerical addition and
-multiplication, \(\Complex^1\) becomes a complex vector space.
+\begin{enumerate}[label=(\arabic*), wide, nosep]
+    \item Let \(\Complex^1 (= \Complex)\) be the set of all complex numbers; if we
+    interpret \(x + y\) and \(\alpha x\) as ordinary complex numerical addition and
+    multiplication, \(\Complex^1\) becomes a complex vector space.
+    
+    \item Let \(\Polynom\) be the set of all polynomials, with complex
+    coefficients, in a variable \(t\). To make \(\Polynom\) into a complex
+    vector space, we interpret vector addition and scalar multiplication as the
+    ordinary addition of two polynomials and the multiplication of a polynomial
+    by a complex number; the origin in \(\Polynom\) is the polynomial
+    identically zero.
+    
+    Example (1) is too simple and example (2) is too complicated to be typical
+    of the main contents of this book. We give now another example of complex
+    vector spaces which (as we shall see later) is general enough for all our
+    purposes. 
+    
+    \item Let \(\Complex^n\), \(n = 1, 2, \,\cdot\,\cdot\,\cdot\,,\) be the set
+    of all \(n\)-tuples of complex numbers. If \(x =
+    (\xi_1,\,\cdot\,\cdot\,\cdot\,, \xi_n)\) and \(y = (\eta_1,
+    \,\cdot\,\cdot\,\cdot\,, \eta_n)\) are elements of \(\Complex^n\), we write,
+    by definition,
+    \begin{align*}
+        x + y &= (\xi_1 + \eta_1, \,\cdot\,\cdot\,\cdot\,, \xi_n + \eta_n),\\
+        \alpha x &= (\alpha \xi_1, \,\cdot\,\cdot\,\cdot\,, \alpha \xi_n),\\
+        0 &= (0, \,\cdot\,\cdot\,\cdot\,, 0),\\
+        -x &= (-\xi_1, \,\cdot\,\cdot\,\cdot\,, -\xi_n).
+    \end{align*}
+    It is easy to verify that al parts of our axioms (A), (B),and (C), \S\,2,
+    are satisfied, so that \(\Complex^n\) is a complex vector space; it will be
+    called \(n\)\emph{-dimensional complex coordinate space.}
+    
+    \item For each positive integer \(n\), let \(\Polynom_n\) be the set of all
+    polynomials (with complex coefficients, as in example (2)) of degree \(\leq
+    n-1\), together with the polynomial identically zero. (In the usual
+    discussion of degree, the degree ofthis polynomial is not defined, so that
+    we cannot say that it has degree \(\leq n-1\).) With the same interpretation
+    of the linear operations (addition and scalar multiplication) as in (2),
+    \(\Polynom_n\) is a complex vector space.
+    
+    \item A close relative of \(\Complex^n\) is the set \(\Reals^n\) of all
+    \(n\)-tuples of real numbers. With the same formal definitions of addition
+    and scalar multiplication as for \(\Complex^n\), except that now we consider
+    only real scalars \(\alpha\), the space \(\Reals^n\) is a real vector space;
+    it will be called \(n\)-\emph{dimensional real coordinate space.}
+    
+    \item All the preceding examples can be generalized. Thus, for instance, an
+    obvious generalization of (1) can be described by saying that every field
+    may be regarded as a vector space over itself. A common generalization of
+    (3) and (5) starts with an arbitrary field \(\Field\) and forms the set
+    \(\Field^n\) of \(n\)-tuples of elements of \(\Field\); the formal
+    definitions of the linear operations are the same as for the case \(\Field =
+    \Complex\).
+    
+    \item A field, by definition, has at least two elements; a vector space,
+    however, may have only one. Since every vector space contains an origin,
+    there is essentially (i.e., except for notation) only one vector space
+    having only one vector. This most trivial vector space will be denoted by
+    \(\mathfrak{O}\).
+    
+    \item If, in the set \(\Reals\) of all real numbers, addition is defined
+    asusual and multiplication of a real number by a rational number is defined
+    as usual, then \(\Reals\) becomes a rational vector space.
+    
+    \item It, in the set \(\Complex\) of al complex numbers, addition is defined
+    as usual and multiplication of a complex number by a real number is defined
+    as usual, then \(\Complex\) becomes a real vector space. (Compare this
+    example with (1); they are quite different.)
+\end{enumerate}
 
-(2) Let \(\Polynom\) be the set of all polynomials, with complex coefficients,
-in a variable \(t\). To make \(\Polynom\) into a complex vector space, we
-interpret vector addition and scalar multiplication as the ordinary addition of
-two polynomials and the multiplication of a polynomial by a complex number; the
-origin in \(\Polynom\) is the polynomial identically zero.
+\section{Comments}\label{sec-comments}
 
-Example (1) is too simple and example (2) is too complicated to be typical of
-the main contents of this book. We give now another example of complex vector
-spaces which (as we shall see later) is general enough for all our purposes. 
+A few comments are in order on our axioms and notation. There are striking
+similarities (and equally striking differences) between the axions for a field
+and the axioms for a vector space over a field. In both cases, the axioms (A)
+describe the additive structure of the system, the axioms (B) describe its
+multiplicative structure, and the axioms (C) describe the connection between the
+two structures. Those familiar with algebraic terminology willhave recognized
+the axioms (A) (in both \cref{sec-fields} and \cref{sec-vector-spaces}) as the
+defining conditionsof an abelian (commutative) group; the axioms (B) and (C) (in
+\cref{sec-vector-spaces}) express the fact that the group admits scalars as
+operators. We mention in passing that if the scalars are elements of a ring
+(instead of a field), the generalized concept corresponding to a vector space is
+called a \emph{module}.
 
-(3) Let \(\Complex^n\), \(n = 1, 2, \cdots,\) be the set of all \(n\)-tuples of
-complex numbers. If \(x = (\xi_1,\cdots, \xi_n)\) and \(y = (\eta_1, \cdots,
-\eta_n)\) are elements of \(\Complex^n\), we write, by definition,
-\begin{align*}
-    x + y &= (\xi_1 + \eta_1, \cdots, \xi_n + \eta_n),\\
-    \alpha x &= (\alpha \xi_1, \cdots, \alpha \xi_n),\\
-    0 &= (0, \cdots, 0),\\
-    -x &= (-\xi_1, \cdots, -\xi_n).
-\end{align*}
-It is easy to verify that al parts of our axioms (A), (B),and (C), \S\,2, are
-satisfied, so that \(\Complex^n\) is a complex vector space; it will be called
-\(n\)\emph{-dimensional complex coordinate space.}
+Special real vector spaces (such as \(\Reals^2\) and \(\Reals^3\)) are familiar
+in geometry. There seems at this stage to be no excuse for our apparently
+uninteresting insistence on fields other than \(\Reals\), and, in particular, on
+the field \(\Complex\) of complex numbers. We hope that the reader is willing to
+take it on faith that we shall have to make use of deep properties of complex
+numbers later (conjugation, algebraic closure), and that in both the application
+sof vector spaces to modern (quantum mechanical) physics and the mathematical
+generalization of our results to Hilbert space, complex numbers play an
+important role. Their one great disadvantage is the difficulty of drawing
+pictures; the ordinary picture (Argand diagram) of \(\Complex^1\) is
+indistinguishable from that of \(\Reals^2\), and a graphic representation of
+\(\Complex^2\) seems to be out of human reach. On the occasions when we have to
+use pictorial language we shall therefore use the terminology of \(\Reals^n\) in
+\(\Complex^n\), and speak of \(\Complex^2\), for example, as a plane.
 
-(4) For each positive integer \(n\), let \(\Polynom_n\) be the set of all polynomials (with complex coefficients, as in example (2)) of degree \(\leq n-1\), together with the polynomial identically zero. (In the usual discussion of degree, the degree ofthis polynomial is not defined, so that we cannot say that it has degree \(\leq n-1\).) With the same interpretation of the linear operations (addition and scalar multiplication) as in (2), \(\Polynom_n\) is a complex vector space.
+Finally we comment on notation. We observe that the symbol \(0\) has been used
+in two meanings: once as a scalar and once as a vector. To make the situation
+worse, we shall later, when we introduce linear functionals and linear
+transformations, give it still other meanings. Fortunately the relations among
+the various interpretations of \(0\) are such that, after this word of warning,
+no confusion should arise from this practice.
 
-(5) A close relative of \(\Complex^n\) is the set \(\Reals^n\) of all \(n\)-tuples of real numbers. With the same formal definitions of addition and scalar multiplication as for \(\Complex^n\), except that now we consider only real scalars \(\alpha\), the space \(\Reals^n\) is a real vector space; it will be called \(n\)-\emph{dimensional real coordinate space.}
+{
+\small
+\subsection*{Exercises}
+\begin{enumerate}[wide]
+    \item Prove that if \(x\) and \(y\) are vectors and if \(\alpha\) is a
+    scalar, then the following relations hold.
+    \begin{enumerate}[wide, label=(\alph*), nosep]
+        \item \(0 + x = x\).
+        \item \(-0 = 0\).
+        \item \(\alpha \cdot 0 = 0\).
+        \item \(0 \cdot x = 0\). (Observe that the same symbol is used on both
+        sides of these equation; on the left it denotes a scalar, on the right
+        it denotes a vector.)
+        \item If \(\alpha x = 0\) then either \(\alpha = 0\) or \(x = 0\) (or
+        both).
+        \item \(-x = (-1)x\).
+        \item \(y + (x - y) = x\). (Here \(x - y = x + (-y)\).)
+    \end{enumerate}
+    \item If \(p\) is a prime, then \(\Integers_p{}^n\) is a vector space over
+    \(\Integers_p\) (cf. \cref{sec-fields}, Ex. 3); how many vectors are there
+    in this vector space?
+    \item Let \(\VecSp\) be the set of all (ordered) pairs of real numbers. If
+    \(x = (\xi_1, \xi_2)\) and \(y = (\eta_1, \eta_2)\) are elements of
+    \(\VecSp\), write
+    \begin{align*}
+        x + y & = (\xi_1 + \eta_1, \xi_2 + \eta_2) \\
+        \alpha x & = (\alpha \xi_1, 0) \\
+        0 & = (0, 0)\\
+        -x & = (-\xi_1, -\xi_2).
+    \end{align*}
+    Is \(\VecSp\) a vector space with respect to these definitions of linear
+    operations? Why?
 
-(6) All the preceding examples can be generalized. Thus, for instance, an obvious generalization of (1) can be described by saying that every
-field may be regarded as a vector space over itself. A common generalization of (3) and (5) starts with an arbitrary field \(\Field\) and forms the set \(\Field^n\) of \(n\)-tuples of elements of \(\Field\); the formal definitions of the linear operations are the same as for the case \(\Field = \Complex\).
+    \item Sometimes a subset of a vector space is itself a vector space (with
+    respect to the linear operations already given). Consider, for example, the
+    vectorspace \(\Complex^2\) and the subsets \(\VecSp\) of \(\Complex^2\)
+    consisting of those vectors \((\xi_1, \xi_2, \xi_3)\) for which
+    \begin{enumerate}[wide, label=(\alph*), nosep]
+        \item \(\xi_1\) is real,
+        \item \(\xi_1 = 0\),
+        \item either \(\xi_1 = 0\) or \(\xi_2 = 0\),
+        \item \(\xi_1 + \xi_2 = 0\),
+        \item \(\xi_1 + \xi_2 = 1\).
+    \end{enumerate}
+    In which of these cases is \(\VecSp\) a vector space?
 
-(7) A field, by definition, has at least two elements; a vector space, however, may have only one. Since every vector space contains an origin, there is essentially (i.e., except for notation) only one vector space having only one vector. This most trivial vector space will be denoted by \(\frak{O}\).
+    \item Consider the vector space \(\Polynom\) and the subsets \(\VecSp\) of \(\Polynom\) consisting of those vector (Polynomials) \(x\) for which
+    \begin{enumerate}[wide, label=(\alph*), nosep]
+        \item \(x\) has degree \(3\),
+        \item \(2x(0) = x(1)\),
+        \item \(x(t) \geq 0\) whenever \(0 \leq t \leq 1\).
+        \item \(x(t) = x(1-t)\) for all \(t\).
+    \end{enumerate}
+    In which of these cases is \(\VecSp\) a vector space?
+\end{enumerate}
+}
 
-(8) If, in the set \(\Reals\) of all real numbers, addition is defined asusual and multiplication of a real number by a rational number is defined as usual, then \(\Reals\) becomes a rational vector space.
-
-(9) It, in the set \(\Complex\) of al complex numbers, addition is defined as usual and multiplication of a complex number by a real number is defined as usual, then \(\Complex\) becomes a real vector space. (Compare this example with (1); they are quite different.)
-
-\section{Comments}
-
-\section{Linear dependence}
+\section{Linear dependence}\label{sec-linear-dependence}
 
 Now that we have described the spaces we shall work with, we must specify the
 relations among the elements of those spaces that will be of interest to us.
@@ -202,9 +395,9 @@ customary, however, to apply the adjectives to vectors themselves, and thus we
 shall sometimes say ``a set of linearly independent vectors'' instead of ``a
 linearly independent set of vectors.'' It will be convenient also to speak of
 the linear dependence and independence of a not necessarily finite set
-\(\frak{X}\) of vectors. We shall say that \(\frak{X}\) is linearly
-independent if every finite subset of \(\frak{X}\) is such; otherwise
-\(\frak{X}\) is linearly dependent.
+\(\mathfrak{X}\) of vectors. We shall say that \(\mathfrak{X}\) is linearly
+independent if every finite subset of \(\mathfrak{X}\) is such; otherwise
+\(\mathfrak{X}\) is linearly dependent.
 
 To gain insight into the meaning of linear dependence, let us study the examples
 of vector spaces that we already have.
@@ -216,7 +409,7 @@ clear that every set containing a linearly dependent subset is itself linearly
 dependent, this shows that in \(\Complex^1\) every set containing more than
 one element is a linearly dependent set.
 
-(2) More interesting is the situation in \(\frak{P}\). The vectors \(x\),
+(2) More interesting is the situation in \(\mathfrak{P}\). The vectors \(x\),
 \(y\), and \(z\), defined by
 \begin{align*}
     x(t) &= 1-t,\\
@@ -224,24 +417,24 @@ one element is a linearly dependent set.
     z(t) &= 1-t^2,
 \end{align*}
 are, for example, linearly dependent, since \(x + y - z = 0\). However, the
-infinite set of vectors \(x_0, x_1, x_2, \cdots,\) defined by
+infinite set of vectors \(x_0, x_1, x_2, \,\cdot\,\cdot\,\cdot\,,\) defined by
 \begin{equation*}
-    x_0(t) = 1, \quad x_1(t) = t, \quad x_2(t) = t^2, \quad \cdots,
+    x_0(t) = 1, \quad x_1(t) = t, \quad x_2(t) = t^2, \quad \,\cdot\,\cdot\,\cdot\,,
 \end{equation*}
 is a linearly independent set, for if we had any relation of the form
 \begin{equation*}
-    \alpha_0 x_0 + \alpha_1 x_1 +  \cdots + \alpha_n x_n = 0,
+    \alpha_0 x_0 + \alpha_1 x_1 +  \,\cdot\,\cdot\,\cdot\, + \alpha_n x_n = 0,
 \end{equation*}
 then we would have a polynomial identity
 \begin{equation*}
-    \alpha_0 + \alpha_1 t +  \cdots + \alpha_n t^n = 0,
+    \alpha_0 + \alpha_1 t +  \,\cdot\,\cdot\,\cdot\, + \alpha_n t^n = 0,
 \end{equation*}
-whence \(\alpha_0 = \alpha_1 = \cdots = \alpha_n = 0\).
+whence \(\alpha_0 = \alpha_1 = \,\cdot\,\cdot\,\cdot\, = \alpha_n = 0\).
 
 (3) As we mentioned before, the spaces \(\Complex^n\) are the prototype of what
 we want to study; let us examine, for example, the case \(n = 3\). To those
 familiar with higher-dimensional geometry, the notion of linear dependence in
-this space (or, more properly speaking, in its real analogue ) has a concrete
+this space (or, more properly speaking, in its real analogue) has a concrete
 geometric meaning, which we shall only mention. In geometrical language, two
 vectors are linearly dependent if and only if they are collinear with the
 origin, and three vectors are linearly dependent if and only if they are
@@ -253,7 +446,7 @@ manifolds (or vector subspaces) in a vector space, and, in that connection, we
 shall occasionally use the language suggested by such geometrical
 considerations.
 
-\section{Linear combinations}
+\section{Linear combinations}\label{sec-linear-combinations}
 
 We shall say, whenever \(x = \sumx_i \alpha_i x_i\), that \(x\) is a linear
 combination of \(\{x_i\}\); we shall use without any further explanation all the
@@ -268,24 +461,24 @@ empty set of vectors; it is, moreover, the only vector with this property.
 
 The following theorem is the fundamental result concerning linear dependence.
 
-\begin{theorem}
-    The set of non-zero vectors \(x_1,\cdots,x_n\) is linearly dependent if and only if some \(x_k\), \(2\leq k\leq n\), is a linear combination of the preceding ones.
-\end{theorem}
+\begin{thmx}
+    The set of non-zero vectors \(x_1,\,\cdot\,\cdot\,\cdot\,,x_n\) is linearly dependent if and only if some \(x_k\), \(2\leq k\leq n\), is a linear combination of the preceding ones.
+\end{thmx}
 
 \begin{proof}
-    Let us suppose that the vectors \(x_1, \cdots, x_n\) are linearly dependent,
+    Let us suppose that the vectors \(x_1, \,\cdot\,\cdot\,\cdot\,, x_n\) are linearly dependent,
     and let \(k\) be the first integer between \(2\) and \(n\) for which \(x_1,
-    \cdots, x_k\) are linearly dependent. (If worse comes to worst, our
+    \,\cdot\,\cdot\,\cdot\,, x_k\) are linearly dependent. (If worse comes to worst, our
     assumption assures us that \(k = n\) will do.) then
     \begin{equation*}
-        \alpha_1 x_1 + \cdots + \alpha_k x_k = 0
+        \alpha_1 x_1 + \,\cdot\,\cdot\,\cdot\, + \alpha_k x_k = 0
     \end{equation*}
     for a suitable set of \(\alpha\)'s (not all zero); moreover, whatever the
     \(\alpha\)'s, we cannot have \(\alpha_k = 0\), for then we should have a
-    linear dependence relation among \(x_1, \cdots, x_{k-1}\), contrary to the
+    linear dependence relation among \(x_1, \,\cdot\,\cdot\,\cdot\,, x_{k-1}\), contrary to the
     definition of \(k\). Hence
     \begin{equation*}
-        x_k = \frac{-\alpha_1}{\alpha_k} x_1 + \cdots + \frac{-\alpha_{k-1}}{\alpha_k} x_{k-1},
+        x_k = \frac{-\alpha_1}{\alpha_k} x_1 + \,\cdot\,\cdot\,\cdot\, + \frac{-\alpha_{k-1}}{\alpha_k} x_{k-1},
     \end{equation*}
     and was to be proved. This proves the necessity of ourcondition; sufficiency
     is clear since, as we remarked before, every set containing a linearly
@@ -293,40 +486,40 @@ The following theorem is the fundamental result concerning linear dependence.
 \end{proof}
 
 
-\section{Bases}
+\section{Bases}\label{sec-bases}
 
 \begin{definition}
-    A (linear) basis (or a \emph{coordinate system}) in a vector space
-    \(  \VecSp\) is a set \(\frak{X}\) of linearly independent vectors
-    such that every vector in \(  \VecSp\) is a linear combination of
-    elements of \(\frak{X}\). A vector space \(  \VecSp\) is \emph{finite-
-    dimensional} if it has a finite basis.
+    A (linear) basis (or a \emph{coordinate system}) in a vector space \(
+    \VecSp\) is a set \(\mathfrak{X}\) of linearly independent vectors such that
+    every vector in \(  \VecSp\) is a linear combination of elements of
+    \(\mathfrak{X}\). A vector space \(  \VecSp\) is \emph{finite- dimensional}
+    if it has a finite basis.
 \end{definition}
 
 Except for the occasional consideration of examples we shall restrict our attention, throughout this book, to finite-dimensional vector spaces.
 
 For examples of bases we turn again to the spaces \(\Polynom\) and
 \(\Complex^n\). In \(\Polynom\) the set \(\{x_n\}\), where \(x_n(t) = t^n\), \(n
-= 0, 1, 2, \cdots\), is a basis; every polynomial is, by definition, a linear
-combination of a finite number of \(x_n\). Moreover \(\Polynom\) has no finite
-basis, for, given any finite set of polynomials, we can find a polynomial of
-higher degree than any of them; this latter polynomial is obviously not a linear
-combination of the former ones.
+= 0, 1, 2, \,\cdot\,\cdot\,\cdot\,\), is a basis; every polynomial is, by
+definition, a linear combination of a finite number of \(x_n\). Moreover
+\(\Polynom\) has no finite basis, for, given any finite set of polynomials, we
+can find a polynomial of higher degree than any of them; this latter polynomial
+is obviously not a linear combination of the former ones.
 
 An example of a basis in \(\Complex^n\) is the set of vectors \(x_i\), \(i = 1,
-\cdots, n\), defined by the condition that the \(j\)-th coordinate of \(x_i\) is
-\(\delta_{ij}\). (Here we use for the first time the popular Kronecker
-\(\delta\); it is defined by \(\delta_{ij} = 1\) if \(i = j\) and \(\delta_{ij}
-= 0\) if \(i \neq j\).) Thus we assert that in \(\Complex^3\) the vectors \(x_1
-= (1,0,0)\), \(x_2 = (0,1,0)\), and \(x_3 = (0,0,1)\) form a basis. It is easy
-to see that they are linearly independent; the formula
+\,\cdot\,\cdot\,\cdot\,, n\), defined by the condition that the \(j\)-th
+coordinate of \(x_i\) is \(\delta_{ij}\). (Here we use for the first time the
+popular Kronecker \(\delta\); it is defined by \(\delta_{ij} = 1\) if \(i = j\)
+and \(\delta_{ij} = 0\) if \(i \neq j\).) Thus we assert that in \(\Complex^3\)
+the vectors \(x_1 = (1,0,0)\), \(x_2 = (0,1,0)\), and \(x_3 = (0,0,1)\) form a
+basis. It is easy to see that they are linearly independent; the formula
 \begin{equation*}
     x = (\xi_1, \xi_2, \xi_3) = \xi_1 x_1 + \xi_2 x_2 + \xi_3 x_3
 \end{equation*}
 proves that every \(x\) in \(\Complex^3\) is a linear combination of them.
 
 In a general finite-dimensional vector space \(  \VecSp\), with basis
-\(\{x_1,\cdots,x_n\}\), we know that every \(x\) can be written in the form
+\(\{x_1,\,\cdot\,\cdot\,\cdot\,,x_n\}\), we know that every \(x\) can be written in the form
 \begin{equation*}
     \textstyle x = \sumx_i \xi_i x_i;
 \end{equation*}
@@ -337,105 +530,395 @@ had \(x = \sumx_i \eta_i x_i\), then we should have, by subtraction,
     \textstyle \sumx_i (\xi_i - \eta_i) x_i = 0.
 \end{equation*}
 Since the \(x_i\) are linearly independent, this implies that \(\xi_i - \eta_i =
-0\) for \(i = 1, \cdots , n\); in other words, the \(\xi\)'s are the same as the
-\(\eta\)'s. (Observe that writing \(\{x_1,\cdots,x_n\}\) for a basis with \(n\)
-elements is not the proper thing to do in case \(n = 0\). We shall,
-nevertheless, frequently use this notation. Whenever that is done, it is, in
-principle, necessary to adjoin a separate discussion designed to cover the
-vector space \(\frak{O}\). In fact, however, everything about that space is so
-trivial that the details are not worth writing down, and we shall omit them.)
+0\) for \(i = 1, \,\cdot\,\cdot\,\cdot\, , n\); in other words, the \(\xi\)'s
+are the same as the \(\eta\)'s. (Observe that writing
+\(\{x_1,\,\cdot\,\cdot\,\cdot\,,x_n\}\) for a basis with \(n\) elements is not
+the proper thing to do in case \(n = 0\). We shall, nevertheless, frequently use
+this notation. Whenever that is done, it is, in principle, necessary to adjoin a
+separate discussion designed to cover the vector space \(\mathfrak{O}\). In
+fact, however, everything about that space is so trivial that the details are
+not worth writing down, and we shall omit them.)
+
+\begin{thmx}
+    If \(~\VecSp\) is a finite-dimensional vector space, and if \(\{y_1,
+    \,\cdot\,\cdot\,\cdot\,, y_m\}\) is any set of linearly independent vectors
+    in \(\VecSp\), then, unless the \(y\)'s already form a basis, we can find
+    vectors \(y_{m+1}, \,\cdot\,\cdot\,\cdot\,, y_{m+p}\) so that the totality
+    of the \(y\)'s, that is, \(\{y_1, \,\cdot\,\cdot\,\cdot\,, y_m, y_{m+1},
+    \,\cdot\,\cdot\,\cdot\,, y_{m+p}\}\), is a basis. In other words, every
+    linearly independent set can be extended to a basis.
+\end{thmx}
+
+\begin{proof}
+    Since V is finite-dimensional, it has a finite basis, say \(\{x_1,
+    \,\cdot\,\cdot\,\cdot\,, x_n\}\). We consider the set \(\mathfrak{S}\) of
+    vectors
+    \begin{equation*}
+        y_1, \,\cdot\,\cdot\,\cdot\,, y_m, x_1, \,\cdot\,\cdot\,\cdot\,, x_n,
+    \end{equation*}
+    in this order,and we apply to this set the theorem of \S\,6 several times in
+    succession. In the first place, the set \(\mathfrak{S}\) is linearly
+    dependent, since the \(y\)'s are (as are all vectors) linear combinations of
+    the \(x\)'s. Hence some vector of \(\mathfrak{S}\) is a linear combination
+    of the preceding ones; let \(z\) be the first such vector. Then \(z\) is
+    different from any \(y_i\), \(i = 1, \,\cdot\,\cdot\,\cdot\,, m\) (since the
+    \(y\)'s are linearly independent), so that \(z\) is equal to some \(x\), say
+    \(z = x_i\). We consider the new set \(\mathfrak{S}'\) of vectors
+    \begin{equation*}
+        y_1, \,\cdot\,\cdot\,\cdot\,, y_m, x_1, \,\cdot\,\cdot\,\cdot\,, x_{i-1}, x_{i+1}, \,\cdot\,\cdot\,\cdot\,, x_n.
+    \end{equation*}
+    We observe that every vector in \(\VecSp\) is a linear combination of
+    vectors in \(\mathfrak{S}'\), since by means of \(y_1,
+    \,\cdot\,\cdot\,\cdot\,, y_m, x_1, \,\cdot\,\cdot\,\cdot\,, x_{i-1}\) we may
+    express \(x_i\), and then by means of \(x_1, \,\cdot\,\cdot\,\cdot\,,
+    x_{i-1}, x_i, x_{i+1}, \,\cdot\,\cdot\,\cdot\,, x_n\) we may express any
+    vector. (The \(x\)'s form a basis.) If \(\mathfrak{S}'\) is linearly
+    independent, we are done. If it is not, we apply the theorem of \S\,6 again
+    and again the same way till we reach a linearly independent set containing
+    \(y_1, \,\cdot\,\cdot\,\cdot\,, y_m\), in terms of which we may express
+    every vector in \(\VecSp\). This last set is a basis containing the \(y\)'s.
+\end{proof}
+
+{\small
+\subsection*{Exercises}
+\begin{enumerate}[wide]
+    \item \begin{enumerate}[nosep, wide, label=(\alph*)]
+        \item Prove that the four vectors
+        \begin{align*}
+            x & = (1, 0, 0),\\
+            y & = (0, 1, 0),\\
+            z & = (0, 0, 1),\\
+            u & = (1, 1, 1),
+        \end{align*}
+        in \(\Complex^3\) form a linearly dependent set, but any three of them are linearly independent.
+        (To test the linear dependence of vectors \(x = (\xi_1, \xi_2, \xi_3)\), \(y = (\eta_1, \eta_2, \eta_3)\), and \(z = (\zeta_1, \zeta_2, \zeta_3)\) in \(\Complex^3\), proceed as follows. Assume that \(\alpha\), \(\beta\),and \(\gamma\) can be found so that \(\alpha x + \beta y + \gamma z = 0\). This means that
+        \begin{align*}
+            \alpha\xi_1 + \beta\eta_1 + \gamma\zeta_1 &= 0,\\
+            \alpha\xi_2 + \beta\eta_2 + \gamma\zeta_2 &= 0,\\
+            \alpha\xi_3 + \beta\eta_3 + \gamma\zeta_3 &= 0.
+        \end{align*}
+        The vectors \(x\), \(y\), and \(z\) are linearly dependent if and only if these equations have a solution other than \(\alpha = \beta = \gamma = 0\).)
+        \item If the vectors \(x\), \(y\), \(z\), and \(u\) in \(\Polynom\) are defined by \(x(t) = 1\), \(y(t) = t\), \(z(t) = t^2\), and \(u(t) = 1 + t + t^2\), prove that \(x\), \(y\), \(z\) and \(u\) are linearly dependent, but any three of them are linearly independent.
+    \end{enumerate}
+    \item Prove that if \(\Reals\) is considered as a rational vector space (see
+    \cref{sec-examples}, (8)), then a necessary and sufficient condition that
+    the vectors \(1\) and \(\xi\) in \(\Reals\) be linearly independent is that
+    the real number \(\xi\) be irrational.
+
+    \item Is it true that if \(x\), \(y\), and \(z\) are linearly independent vectors, then so also are \(x+y\), \(y + z\), and \(z + x\)?
+    
+    \item Consider the set of all those vectors in \(\Complex^2\) each of whose
+    coordinates is either \(0\) or \(1\); how many different bases does this set
+    contain?
+    
+    \item If \(\Basisx\) is the set consisting of thesix vectors \((1, 1,
+    0,0)\), \((1, 0, 1, 0)\), \((1, 0, 0, 1)\), \((0, 1,1, 0)\), \((0, 1, 0,
+    1)\), \((0, 0, 1, 1)\) in \(\Complex^4\) find two different maximal linearly
+    independent subsets of \(\Basisx\). (A maximal linearly independent subset
+    of \(\Basisx\) is a linearly independent subset \(\mathfrak{Y}\) of \(\Basisx\)
+    that becomes linearly dependent every time that a vector of \(\Basisx\) that
+    is not already in \(\mathfrak{Y}\) is adjoined to \(\mathfrak{Y}\).) 
+    
+    \item Prove that every vector space has a basis. (The proof of this fact is
+    out of reach for those not acquainted with some transfinite trickery, such
+    as well-ordering or Zorn's lemma.)
+\end{enumerate}
+}
+
+\section{Dimension}\label{sec-dimension}
 
 \begin{theorem}
-    If \(~\VecSp\) is a finite-dimensional vector space, and if \(\{y_1, \cdots,
-    y_m\}\) is any set of linearly independent vectors in \(\VecSp\), then,
-    unless the \(y\)'s already form a basis, we can find vectors \(y_{m+1},
-    \cdots, y_{m+p}\) so that the totality of the \(y\)'s, that is, \(\{y_1,
-    \cdots, y_m, y_{m+1}, \cdots, y_{m+p}\}\), is a basis. In other words, every
-    linearly independent set can be extended to a basis.
+    The number of elements in any basis of a finite-dimensional vector space
+    \(\VecSp\) is the same as in any other basis.
 \end{theorem}
 
 \begin{proof}
-    Since V is finite-dimensional, it has a finite basis, say \(\{x_1, \cdots, x_n\}\). We consider the set \(\frak{S}\) of vectors
+    The proof of this theorem is a slight refinement of the method used in
+    \cref{sec-linear-combinations}, and, incidentally, it proves something more
+    than the theorem states. Let \(\mathfrak{X}= \{x_1, \,\cdot\,\cdot\,\cdot\,,
+    x_n\}\) and \(\mathfrak{Y}= \{y_1, \,\cdot\,\cdot\,\cdot\,, y_m\}\) be two
+    finite sets of vectors, each with one of the two defining properties of a
+    basis; i.e., we assume that every vector in \(\mathfrak{V}\) is a linear
+    combination of the \(x\)'s (but not that the \(x\)'s are linearly
+    independent), and we assume that the \(y\)'s are linearly independent (but
+    not that every vector is a linear combination of them). We may apply the
+    theorem of \cref{sec-linear-combinations}, just as above, to the set
+    \(\mathfrak{S}\) of vectors 
     \begin{equation*}
-        y_1, \cdots, y_m, x_1, \cdots, x_n,
+        y_m, x_1, \,\cdot\,\cdot\,\cdot\,, x_n.
     \end{equation*}
-    in this order,and we apply to this set the theorem of \S\,6 several times in
-    succession. In the first place, the set \(\frak{S}\) is linearly dependent,
-    since the \(y\)'s are (as are all vectors) linear combinations of the
-    \(x\)'s. Hence some vector of \(\frak{S}\) is a linear combination of the
-    preceding ones; let \(z\) be the first such vector. Then \(z\) is different
-    from any \(y_i\), \(i = 1, \cdots, m\) (since the \(y\)'s are linearly
-    independent), so that \(z\) is equal to some \(x\), say \(z = x_i\). We
-    consider the new set \(\frak{S}'\) of vectors
+    Again we know that every vector is a linear combination of vectors of
+    \(\mathfrak{S}\) and that \(\mathfrak{S}\) is linearly dependent. Reasoning just as
+    before, we obtain a set \(\mathfrak{S}'\) of vectors
     \begin{equation*}
-        y_1, \cdots, y_m, x_1, \cdots, x_{i-1}, x_{i+1}, \cdots, x_n.
+        y_m, x_1, \,\cdot\,\cdot\,\cdot\,, x_{i-1}, x_{i+1}, \,\cdot\,\cdot\,\cdot\,, x_n,
     \end{equation*}
-    We observe that every vector in \(\VecSp\) is a linear combination of
-    vectors in \(\frak{S}'\), since by means of \(y_1, \cdots, y_m, x_1, \cdots,
-    x_{i-1}\) we may express \(x_i\), and then by means of \(x_1, \cdots,
-    x_{i-1}, x_i, x_{i+1}, \cdots, x_n\) we may express any vector. (The \(x\)'s
-    form a basis.) If \(\frak{S}'\) is linearly independent, we are done. If it
-    is not, we apply the theorem of \S\,6 again and again the same way till we
-    reach a linearly independent set containing \(y_1, \cdots, y_m\), in terms
-    of which we may express every vector in \(\VecSp\). This last set is a basis
-    containing the \(y\)'s.
+    again with the property that every vector is a linear combination of vectors
+    of \(\mathfrak{S}'\). Now we write \(y_{m-1}\) in front of the vectors of
+    \(\mathfrak{S}'\) and apply the same argument. Continuing in this way, we
+    see that the \(x\)'s will not be exhausted before the \(y\)'s, since
+    otherwise the remaining \(y\)'s would have to be linear combinstions of the
+    ones already incorporated into \(\mathfrak{S}\), whereas we know that the
+    \(y\)'s are linearly independent. In other words, after the argument has
+    been applied \(m\) times, we obtain a set with the same property the \(x\)'s
+    had, and this set differs from the set of \(x\)'s in that \(m\) of them are
+    replaced by y's. This seemingly innocent statement is what we are after; it
+    implies that \(n \geq m\). Consequently if both \(\mathfrak{X}\) and
+    \(\mathfrak{Y}\) are bases (so that they each have both properties), then
+    \(n \geq m\) and \(m \geq n\).
 \end{proof}
 
+\begin{definition}
+    The \emph{dimension} of a finite-dimensional vector space \(\VecSp\) is the number of elements in a basis of \(\VecSp\).
+\end{definition}
 
-\section{Dimension}
+Observe that since the empty set of vectors is a basis of the trivial space
+\(\mathfrak{O}\), the definition implies that that space has dimension \(0\). At
+the same time the definition (together with the fact that we have already
+exhibited, in \cref{sec-bases}, one particular basis of \(\Complex^n\)) at last
+justifies our terminology and enables us to announce the pleasant result:
+\(n\)-dimensional coordinate space is \(n\)-dimensional. (Since the argument is
+the same for \(\Reals^n\) and for \(\Complex^n\), the assertion is true in both
+the real case and the complex case.)
 
-\section{Isomorphism}
+Our next result is a corollary of Theorem 1 (via the theorem of
+\cref{sec-bases}).
 
-As an application of the notion of linear basis, or coordinate system, we shall now fulfill an implicit earlier promise by showing that every finite-dimensional vector space over a field \(\Field\) is essentially the same as (in technical language, is isomorphic to) some \(\Field^n\).
+\begin{theorem}
+    Every set of \(n + 1\) vectors in an \(n\)-dimensional vectorspace
+    \(\VecSp\) is linearly dependent. A set of \(n\) vectors in \(\VecSp\) is a
+    basis if and only if it is linearly independent, or, alternatively, if and
+    only if every vector in \(\VecSp\) is a linear combination of elements of
+    the set.
+\end{theorem}
+
+\section{Isomorphism}\label{sec-isomorphism}
+
+As an application of the notion of linear basis, or coordinate system, we shall
+now fulfill an implicit earlier promise by showing that every finite-dimensional
+vector space over a field \(\Field\) is essentially the same as (in technical
+language, is isomorphic to) some \(\Field^n\).
 
 \begin{definition}
-    Two vector spaces \(\frak{U}\) and \(  \VecSp\) (over the same field)
+    Two vector spaces \(\mathfrak{U}\) and \(  \VecSp\) (over the same field)
     are \emph{isomorphic} if there is a one-to-one correspondence between the
-    vectors \(x\) of \(\frak{U}\) and the vectors \(y\) of \(  \VecSp\),
+    vectors \(x\) of \(\mathfrak{U}\) and the vectors \(y\) of \(  \VecSp\),
     say \(y = T(x)\), such that
     \begin{equation*}
         T(\alpha_1 x_1 + \alpha_2 x_2) = \alpha_1 T(x_1) + \alpha_2 T(x_2).
     \end{equation*}
-    In other words, \(\frak{U}\) and \(  \VecSp\)  are isomorphic if there
+    In other words, \(\mathfrak{U}\) and \(  \VecSp\)  are isomorphic if there
     is an isomorphism (such as \(T\)) between them, where an \emph{isomorphism}
     is a one-to-one correspondence that preserves all linear relations.
 \end{definition}
 
-It is easy to see that isomorphic finite-dimensional vector spaces have the same dimension; to each basis in one space there corresponds a basis in the other space. Thus dimension is an isomorphism invariant;we shall now show that it is the only isomorphism invariant, in the sensethat every two vector spaces with the same finite dimension (over the seme field, of course) are isomorphic. Since the isomorphism of u and o n the one hand, and of  and W on the other hand, impliesthat U and W are isomorphic, it wil be sufficient to prove the following theorem.
+It is easy to see that isomorphic finite-dimensional vector spaces have the same
+dimension; to each basis in one space there corresponds a basis in the other
+space. Thus dimension is an isomorphism invariant;we shall now show that it is
+the only isomorphism invariant, in the sensethat every two vector spaces with
+the same finite dimension (over the seme field, of course) are isomorphic. Since
+the isomorphism of \(\mathfrak{U}\) and \(\VecSp\) on the one hand, and of
+\(\VecSp\) and \(\mathfrak{W}\) on the other hand, implies that \(\mathfrak{U}\)
+and \(\mathfrak{W}\) are isomorphic, it wil be sufficient to prove the following
+theorem.
+
+\begin{thmx}
+    Every \(n\)-dimensional vector space \(\VecSp\) over a field \(\Field\) is
+    isomorphic to \(\Field^n\).
+\end{thmx}
+
+\begin{proof}
+    Let \(\{x_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\) be any basis in \(\VecSp\).
+    Each \(x\) in \(\VecSp\) can be written in the form \(\xi_1 x_1 + \xi_2 x_2
+    + \,\cdot\,\cdot\,\cdot\, + \xi_n x_n\), and we know that the scalars
+    \(\xi_1, \,\cdot\,\cdot\,\cdot\,, \xi_n\) are uniquely determined by \(x\).
+    We consider the one-to-one correspondence
+    \begin{equation*}
+        x \rightleftarrows (\xi_1, \,\cdot\,\cdot\,\cdot\,, \xi_n)
+    \end{equation*}
+    between \(\VecSp\) and \(\Field^n\). If \(y = \eta_1 x_1 +
+    \,\cdot\,\cdot\,\cdot\, + \eta_n x_n\) then
+    \begin{equation*}
+        \alpha x + \beta y = (\alpha \xi_1 + \beta \eta_1) x_1 + \,\cdot\,\cdot\,\cdot\, + (\alpha \xi_n + \beta \eta_n) x_n;
+    \end{equation*}
+    this establishes the desired isomorphism.
+\end{proof}
+
+One might be tempted to say that from now on it would be silly to try to
+preserve an appearance of generality by talking of the general n-di- mensional
+vector space, since we know that, from the point of view of studying linear
+problems, isomorphic vector spaces are indistinguishable, and, consequently, we
+might as well always study \(\Field^n\). There is one catch. The most important
+properties of vectors and vector spaces are the ones that are independent of
+coordinate systems, or, in other words, the ones that are invariant under
+isomorphisms. The correspondence between \(\VecSp\) and \(\Field^n\) was,
+however, established by choosing acoordinate system; were we always to study
+\(\Field^n\), we would always be tied down to that particular coordinate system,
+or else we would always be faced with the chore of showing that our definitions
+and theorems are independent of the coordinate system in which they happen to be
+stated. (This horrible dilemma will become clear later, on the few occasions
+when we shall be forced to use a particular coordinate system to give a
+definition.) Accordingly, in the greater part of this book, we shall ignore the
+theorem just proved, and weshall treat \(n\)-dimensional vector spaces as
+self-respecting entities, independently of any basis. Besides the reasons just
+mentioned, there is another reason for doing this: many special examples of
+vector spaces, such for instance as \(\Polynom_n\), would lose a lot of their
+intuitive content if we were to transform them into \(\Complex^n\) and speak of
+coordinates only. In studying vector spaces, such as \(\Polynom_n\), and their
+relation to other vector spaces, we must be able to handle them with equal ease
+in different coordinate systems, or, and this is essentially the same thing, we
+must be able to handle them without using any coordinate systems at all.
 
 {\small
 \subsection*{Exercises}
 
-\begin{enumerate}
+\begin{enumerate}[wide]
     \item (a)What is the dimension of the set \(\Complex\) of all complex numbers considered as a real vector space? (See \S\,3, (9).)
+    
+    \item How many vectors are there in an \(n\)-dimensional vector space over
+    the field \(\Integers_p\) (where \(p\) is a prime)?
+    
+    \item Discuss the following assertion: if two rational vector spaces have
+    the same cardinal number (i.e.,if there is some one-to-one correspondence
+    between them), then they are isomorphic (i.e., there is a
+    linearity-preserving one-to-one correspondence between them). A knowledge of
+    the basic facts of cardinal arithmetic is needed for an intelligent
+    discussion.
 \end{enumerate}
 
 }
 
-\section{Subspaces}
-
+\section{Subspaces}\label{sec-subspaces}
 
 The objects of interest in geometry are not only the pointsof the space under consideration, but also its lines, planes, etc. We proceed to study the analogues, in general vector spaces, of these higher-dimensional elements.
 
 \begin{definition}
-    A non-empty subset \(\frak{M}\) of a vector space \(  \VecSp\) is a \emph{subspace} or a \emph{linear manifold} if along with every pair, \(x\) and \(y\), of vectors contained in \(\frak{M}\), every linear combination \(\alpha x + \beta y\) is also contained in \(\frak{M}\).
+    A non-empty subset \(\mathfrak{M}\) of a vector space \(  \VecSp\) is a \emph{subspace} or a \emph{linear manifold} if along with every pair, \(x\) and \(y\), of vectors contained in \(\mathfrak{M}\), every linear combination \(\alpha x + \beta y\) is also contained in \(\mathfrak{M}\).
 \end{definition}
 
-A word of warning: along with each vector \(x\), a subspace also contains \(x-x\). Hence if we interpret subspaces as generalized lines and planes, we must be careful to consider only lines and planes that pass through the origin.
+A word of warning: along with each vector \(x\), a subspace also contains
+\(x-x\). Hence if we interpret subspaces as generalized lines and planes, we
+must be careful to consider only lines and planes that pass through the origin.
 
-A subspace \(\frak{M}\) in a vector space \(  \VecSp\) is itself a vector space; the reader
-can easily verify that, with the same definitions of addition and scalar
-multiplication as we had in W, the set satisfies the axioms (A), (B),and (C)
-of §2.
-Two special examples of subspaces are: (i) the set o consisting of the
-origin only, and (i) the whole space U. The following examples are less trivial.
+A subspace \(\mathfrak{M}\) in a vector space \(\VecSp\) is itself a vector
+space; the reader can easily verify that, with the same definitions of addition
+and scalar multiplication as we had in W, the set satisfies the axioms (A),
+(B),and (C) of §2.
 
+Two special examples of subspaces are: (i) the set \(\mathfrak{O}\) consisting of
+the origin only, and (i) the whole space \(\VecSp\). The following examples are
+less trivial.
+
+\begin{enumerate}[wide, label=(\arabic*), nosep]
+    \item Let \(n\) and \(m\) be any two strictly positive integers,\(m \leq
+    n\). Let \(\Mfold\) be the set of all vectors \(x = (\xi_1,
+    \,\cdot\,\cdot\,\cdot\,, \xi_n)\) in \(\Complex^n\) for which \(\xi_1 =
+    \,\cdot\,\cdot\,\cdot\, = \xi_m = 0\).
+    
+    \item With \(m\) and \(n\) as in (1), we consider the space \(\Polynom_n\),
+    and any \(m\) real numbers, \(t_1, \,\cdot\,\cdot\,\cdot\,, t_m\). Let
+    \(\Mfold\) be the set of all vectors (polynomials) \(x\) in \(\Polynom_n\)
+    for which \(x(t_1), \,\cdot\,\cdot\,\cdot\,, x(t_m) = 0\).
+    
+    \item Let \(\Mfold\) be the set of all vectors \(x\) in \(\Polynom\) for
+    which \(x(t) = x(-t)\) holds identically in \(t\).
+\end{enumerate}
+
+We need some notation and some terminology. For any collection \(\{\Mfold_p\}\)
+of subsets of a given set (say, for example, for a collection of subspaces in a
+vector space \(\VecSp\)), we write \(\capx_{\nu} \mathfrak{M}_{\nu}\) for the
+\emph{intersection} of all \(\Mfold_{\nu}\), i.e., for the set of points common
+to them all. Also, if \(\Mfold\) and \(\mathfrak{N}\) are subsets of a set, we write
+\(\Mfold \subset \mathfrak{N}\) if \(\Mfold\) is a subset of \(\mathfrak{N}\), that is,
+if every element of \(\Mfold\) lies in \(\mathfrak{N}\) also. (Observe that we do
+not exclude the possibility \(\Mfold = \mathfrak{N}\); thus we write \(\VecSp
+\subset \VecSp\) as well as \(\mathfrak{O} \subset \VecSp\).) For a finite
+collection \(\{\Mfold_1, \ldots, \Mfold_n\}\), we shall write \(\Mfold_1 \cup
+\ldots \cup \Mfold_n\) in place of \(\capx_{\nu} \mathfrak{M}_{\nu}\); in case
+two subspaces \(\Mfold\) and \(\mathfrak{N}\) are such that \(\Mfold \cap \mathfrak{N} =
+\mathfrak{O}\), we shall say that \(\Mfold\) and \(\mathfrak{N}\) are \emph{disjoint}.
 
 \section{Calculus of subspaces}
 
+\begin{theorem}
+    The intersection of any collection of subspaces is a subspace.
+\end{theorem}
+
+\begin{proof}
+    If we use an index \(\nu\) to tell apart the members of the collection, so that the given subspaces are \(\mathfrak{M}_{\nu}\),, let us write
+    \begin{equation*}
+        \mathfrak{M} = {\textstyle\capx_{\nu}} \mathfrak{M}_{\nu}.
+    \end{equation*}
+    Since every \(\mathfrak{M}_{\nu}\), contains \(0\), so does \(\mathfrak{M}\), and therefore \(\mathfrak{M}\) is not empty. If \(x\) and \(y\) belong to \(\Mfold\) (that is, to all \(\Mfold_{\nu}\)), then \(\alpha x + \beta y\) belongs to all \(\Mfold_{\nu}\), and therefore \(\Mfold\) is a subspace.
+\end{proof}
+
+To see an application of this theorem, suppose that \(\frak{S}\) is an arbitrary
+set of vectors (not necessarily a subspace) in a vector space \(\VecSp\). There
+certainly exist subspaces I containing everyelement of S (thatis, such that § C.
+I ) ; the whole space U is, for example, such asubspace. Let or be the inter-
+section of all the subspaces containing S; it is clear that or itself is a sub-
+space containing S. It is clear, moreover, that a is the smallest such subspace;
+if s is also contained in the subspace ?, § C ?, then M C r . The subspace I so
+defined is called the subspace spanned by S or the span of s. The following
+result establishes the connection between the notion of spanning and the
+concepts studied in § 5-9.
+
+\begin{theorem}
+    If \(\frak{S}\) is any set of vectors in a vector space \(\VecSp\) and
+    \(\Mfold\) is the subspace spanned by \(\frak{S}\), then \(\Mfold\) is the
+    same as the set of all linear combinations of elements of \(\frak{S}\).
+\end{theorem}
+
+\begin{proof}
+    It is clear that a linear combination of linear combinations of elements of
+    \(\frak{S}\) may again be written as a linear combination of elements of
+    \(\frak{S}\). Hence the set of all linear combinations of elements of
+    \(\frak{S}\) is a subspace containing \(\frak{S}\); it follows that this
+    subspace must also contain \(\Mfold\). Now turn the argument around:
+    \(\Mfold\) contains and is a subspace; hence \(\Mfold\) contains all linear
+    combinations of elements of \(\frak{S}\).
+\end{proof}
+
+We see therefore that in our new terminology we may define linear basis as a set of linearly independent vectors that spans the whole space.
+
+Our next result is an easy consequence of Theorem 2; its proof may be
+safely left to the reader.
+
+
+
 \section{Dimension of a subspace}
 
-\section{Dual spaces}
+\begin{theorem}
+    A subspace \(\Mfold\) in an \(n\)-dimensional vector space \(\VecSp\) is a
+    vector space of dimension \(\leq n\).
+\end{theorem}
+
+\begin{proof}
+    It is possible to give a deceptively short proof of this theorem thatruns as
+    ollows. Every set of \(n + 1\) vectors in \(\VecSp\) is linearly dependent,
+    hence the same is true of \(\Mfold\); hence, in particular, the number of
+    elements in each basis of \(\Mfold\) is \(\leq n\) , Q.E.D.
+\end{proof}
+
+The trouble with this argument is that we defined dimension \(n\) by
+requiring in the first place that there exist a finite basis, and then demanding that this basis contain exactly n elements. The proof above shows only that no basis can contain more than n elements; it does not show that any basis exists. Once the difficulty is observed, however, it is easy to fill the gap. If on =o, then or is 0-dimensional, and we are done. If or contains a non-zero vector 21, let M C( m) be the subspace spanned by 21.I f 9 = 31, then art is 1-dimensional, and we are done. If I * 9 , let» be an element of or not contained in M, and let a , be the sub- space spanned by 21 and xz; and so on. Now we may legitimately employ the argument given above; after no more than n steps of this sort, the process reaches an end, since (by §8, Theorem 2) we cannot find \(n + 1\) linearly independent vectors.
+
+The following result is an important consequence of this second and correct proof of Theorem 1.
+
+\begin{theorem}
+    Given any \(m\)-dimensional subspace \(\Mfold\) in an \(n\)-dimensional
+    vector space \(\VecSp\), we can find a basis \(\{x_1,
+    \,\cdot\,\cdot\,\cdot\,, x_m, x_{m+1}, \,\cdot\,\cdot\,\cdot\,, x_n\}\) in
+    \(\VecSp\) so that \(x_1, \,\cdot\,\cdot\,\cdot\,, x_m\) are in \(\Mfold\)
+    and form, therefore, a basis of \(\Mfold\).
+\end{theorem}
+
+We shall denotethe dimension of a vector space \(\VecSp\) by the symbol \(\dim
+\VecSp\). In this notation Theorem 1 asserts that if \(\Mfold\) is a subspace of
+a finite-dimensional vector space \(\VecSp\), then \(\dim \Mfold \leq \dim
+\VecSp\).
+
+\section{Dual spaces}\label{sec-dual-spaces}
 
 \begin{definition}
     A \emph{linear functional} on a vector space \(\VecSp\) is a scalar-valued
@@ -449,28 +932,1070 @@ origin only, and (i) the whole space U. The following examples are less trivial.
 
 Let us look at some examples of linear functionals.
 
-(2) For any polynomial \(x\) in \(\Polynom\), write \(y(x) = x(0)\). More
-generally, let \(\alpha_1, \cdots, \alpha_n\) be any \(n\) scalars, let \(t_1,
-\cdots, t_n\) be any \(n\) real numbers, and write
-\begin{equation*}
-    y(x) = a_1 x(t_1) + \cdots + a_n x(t_n).
-\end{equation*}
-Another example, in a sense a limiting case of the one just given, is obtained
-as follows. Let \((a, b)\) be any finite interval on the real \(t\)-axis, and
-let \(\alpha\) be any complex-valued integrable function defined on \((a, b)\);
-define \(y\) by
-\begin{equation*}
-    y(x) = \int_a^b \alpha(t) x(t) \, dt.
-\end{equation*}
+\begin{enumerate}[wide, label=(\arabic*), nosep]
+    \item  For \(x =(\xi_1, \,\cdot\,\cdot\,\cdot\,, \xi_n)\) in \(\Complex^n\),
+    write \(y(x) = \xi_1\). More generally, let \(\alpha_1,
+    \,\cdot\,\cdot\,\cdot\,, \alpha_n\) be any \(n\) scalars and write
+    \begin{equation*}
+        y(x) = \alpha_1 \xi_1 + \,\cdot\,\cdot\,\cdot\, + \alpha_n \xi_n.
+    \end{equation*}
 
+    We observe that for any linear functional \(y\) on any vector space
+    \begin{equation*}
+        y(0) = y(0 \cdot 0) = 0 \cdot y(0) = 0;
+    \end{equation*}
+    for this reason a linear functional, as we defined it, is sometimes called
+    \emph{homogeneous}. In particular in \(\Complex^n\), if \(y\) is defined by
+    \begin{equation*}
+        y(x) = \alpha_1 \xi_1 + \,\cdot\,\cdot\,\cdot\, + \alpha_n \xi_n + \beta,
+    \end{equation*}
+    then \(y\) is not a linear functional unless \(\beta = 0\).
+    
+    \item For any polynomial \(x\) in \(\Polynom\), write \(y(x) = x(0)\). More
+    generally, let \(\alpha_1, \,\cdot\,\cdot\,\cdot\,, \alpha_n\) be any \(n\)
+    scalars, let \(t_1, \,\cdot\,\cdot\,\cdot\,, t_n\) be any \(n\) real
+    numbers, and write
+    \begin{equation*}
+        y(x) = a_1 x(t_1) + \,\cdot\,\cdot\,\cdot\, + a_n x(t_n).
+    \end{equation*}
+    Another example, in a sense a limiting case of the one just given, is obtained
+    as follows. Let \((a, b)\) be any finite interval on the real \(t\)-axis, and
+    let \(\alpha\) be any complex-valued integrable function defined on \((a, b)\);
+    define \(y\) by
+    \begin{equation*}
+        y(x) = \int_a^b \alpha(t) x(t) \, dt.
+    \end{equation*}
+
+    \item On an arbitrary vector space \(\VecSp\), define \(y\) by writing
+    \begin{equation*}
+        y(x) = 0
+    \end{equation*}
+    for every \(x\) in \(\VecSp\).
+\end{enumerate}
+
+The last example is the first hint of a general situation. Let \(\VecSp\) be any
+vector space and let \(\Dual\) be the collection of all linear functionals on
+\(\VecSp\). Let us denote by \(0\) the linear functional defined in (3) (compare
+the comment at the end of §4). If \(y_1\) and \(y_2\) are linear functionals on
+\(\VecSp\) and if \(\alpha_1\) and \(\alpha_2\) are scalars, let us write \(y\)
+for the function defined by
+\begin{equation*}
+    y(x) = \alpha_1 y_1(x) + \alpha_2 y_2(x).
+\end{equation*}
+It is easy to see that \(y\) is a linear functional; we denote it by \(\alpha_1
+y_1 + \alpha_2 y_2\). With these definitions of the linear concepts
+(zero,addition, scalar multiplication), the set \(\Dual\) forms a vector space,
+the \emph{dual space} of \(\VecSp\).
 
 \section{Brackets}
 
+Before studying linear functionals and dual spaces in more detail, we wish to
+introduce a notation that may appear weird at first sight but that will clarify
+many situations later on. Usually we denote a linear functional by a single
+letter such as \(y\). Sometimes, however, it is necessary to use the function
+notation fully and to indicate somehow that if \(y\) is a linear functional on
+\(\VecSp\) and if \(x\) is a vector in \(\VecSp\), then \(y(x)\) is a particular
+scalar. According to the notation we propose to adopt here, we shall not write
+\(y\) followed by \(x\) in parentheses, but, instead, we shall write \(x\) and
+\(y\) enclosed between square brackets and separated by a comma. Because of the
+unusual nature of this notation, we shall expend on it some further verbiage.
+
+As we have just pointed out \([x,y]\) is a substitute for the ordinary function
+symbol \(y(x)\); both these symbols denote the scalar we obtain if we take the
+value of the linear function \(y\) at the vector \(x\). Let us take an analogous
+situation (concerned with functions that are, however, not linear). Let \(y\) be
+the real function of a real variable defined for each real number \(x\) by
+\(y(x) = x^2\). The notation \([x, y]\) is a symbolic way of writing down the
+recipe for actual operations performed; it corresponds to the sentence [take a
+number, and square it].
+
+Using this notation, we may sum up: to every vector space \(\VecSp\) we make
+correspond the dual space \(\VecSp'\) consisting of all linear functionals on
+\(\VecSp\); to every pair, \(x\) and \(y\), where \(x\) is a vector in
+\(\VecSp\) and \(y\) is a linear functional in \(\VecSp'\), we make correspond
+the scalar \([x,y]\) defined to be the value of \(x\) at \(x\). In terms of the
+symbol \([x, y]\) the defining property of a linear functional is
+\begin{equation}
+    [\alpha_1 x_1 + \alpha_2 x_2, y] = \alpha_1 [x_1, y] + \alpha_2 [x_2, y],
+\end{equation}
+and the definition of the linear operations for linear functionals is
+\begin{equation}
+    [x, \alpha_1 y_1 + \alpha_2 y_2] = \alpha_1 [x, y_1] + \alpha_2 [x, y_2].
+\end{equation}
+The two relations together are expressed by saying that \([x, y]\) is a
+\emph{bilinear functional} of the vectors \(x\) in \(\VecSp\) and \(y\) in
+\(\VecSp'\).
+
 \section{Dual bases}
-One more word before embarking on the proofs of the important theo- rems. The concept of dual space was defined without any reference to coordinate systems; a glance at the following proofs will show a super- abundance of coordinate systems. We wish to point out that this phenome-
-non is inevitable;we shal be establishing results concerning dimension, and dimension is the one concept (so far) whosevery definition is givenin terms of a basis.
+One more word before embarking on the proofs of the important theorems. The
+concept of dual space was defined without any reference to coordinate systems; a
+glance at the following proofs will show a superabundance of coordinate systems.
+We wish to point out that this phenomenon is inevitable;we shal be establishing
+results concerning dimension, and dimension is the one concept (so far)
+whosevery definition is givenin terms of a basis.
+
+\begin{theorem}
+    If \(\VecSp\) is an \(n\)-dimensional vector space, if \(\{x_1,
+    \,\cdot\,\cdot\,\cdot\,, x_n\}\) is a basis in \(\VecSp\), and if
+    \(\{\alpha_1, \,\cdot\,\cdot\,\cdot\,, \alpha_n\}\) is any set of \(n\)
+    scalars, then there is one and only one linear functional \(y\) on
+    \(\VecSp\) such that \([x_i, y] = \alpha_i\) for \(i = 1,
+    \,\cdot\,\cdot\,\cdot\,, n\).
+\end{theorem}
+
+\begin{proof}
+    Every \(x\) in \(\VecSp\) can be written in the form \(x = \xi_1 x_1 +
+    \,\cdot\,\cdot\,\cdot\, + \xi_n x_n\), in one and only one way; if \(y\) is
+    any linear functional, then
+    \begin{equation*}
+        [x, y] = \xi_1 [x_1, y] + \,\cdot\,\cdot\,\cdot\, + \xi_n [x_n, y].
+    \end{equation*}
+    From this relation the uniqueness of \(y\) is clear; if \([x_i, y] =
+    \alpha_i\), then the value of \([x, y]\) is determined, for every \(x\), by
+    \([x,y] = \sumx_i \xi_i \alpha_i\). The argument can also be turned around;
+    if we define \(y\) by
+    \begin{equation*}
+        [x,y] = \xi_1 \alpha_1 + \,\cdot\,\cdot\,\cdot\, + \xi_n \alpha_n,
+    \end{equation*}
+    them \(y\) is indeed a linear functional, and \([x_i, y] = \alpha_i\).
+\end{proof}
+
+\begin{theorem}
+    If \(\VecSp\) is an \(n\)-dimensional vector space and if \(\mathfrak{X} =
+    \{x_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\) is a basis in \(\VecSp\), then there
+    is a uniquely determined basis \(\mathfrak{X}'\) in \(\VecSp'\),
+    \(\mathfrak{X}' = \{y_1, \,\cdot\,\cdot\,\cdot\,, y_n\}\), with the property
+    that \([x_i, y_j] = \delta_{ij}\). Consequently the dual space of an
+    \(n\)-dimensional space is \(n\)-dimensional.
+
+    The basis \(\mathfrak{X}'\) is called the \emph{dual basis} of
+    \(\mathfrak{X}\).
+\end{theorem}
+
+\begin{proof}
+    It follows from Theorem 1 that, for each \(j = 1, \,\cdot\,\cdot\,\cdot\,,
+    n\), a unique \(y_j\); in \(\Dual\) can be found so that \([x_i, y_j] =
+    \delta_{ij}\); we have only to prove that the set \(\Basisx' = \{y_1,
+    \,\cdot\,\cdot\,\cdot\,, y_n\}\) is a bas is in \(\Dual\).
+    
+    In the first place, \(\Basisx'\) is a linearly independent set, for if we
+    had \(\alpha_1 y_1 + \,\cdot\,\cdot\,\cdot\, + \alpha_n y_n = 0\), in other
+    words, if
+    \begin{equation*}
+        [x, \alpha_1 y_1 + \,\cdot\,\cdot\,\cdot\, + \alpha_n y_n] = \alpha_1 [x, y_1] + \,\cdot\,\cdot\,\cdot\, + \alpha_n [x, y_n] = 0
+    \end{equation*}
+    for all \(x\), then we should have, for \(x = x_i\),
+    \begin{equation*}
+        0 = {\textstyle \sumx_j} [x_i, y_j] = {\textstyle \sumx_j} \alpha_j\delta_{ij} = \alpha_i.
+    \end{equation*}
+    In the second place, every \(y\) in \(\Dual\) is a linear combination of
+    Y\(y_1, \,\cdot\,\cdot\,\cdot\,, y_n\). To prove this, write \([x_i, y] =
+    \alpha_i\); then, for \(x = \sumx_i \xi_i x_i\), we have
+    \begin{equation*}
+        [x, y] = \xi_1 \alpha_1 + \,\cdot\,\cdot\,\cdot\, + \xi_n \alpha_n.
+    \end{equation*}
+    On the other hand
+    \begin{equation*}
+        [x, y_j] = \sumx_i \xi_i [x_i , y_j] = \xi_j,
+    \end{equation*}
+    so that, substituting ni the preceding equation, we get
+    \begin{align*}
+        [x, y] & = \alpha_1[x_1, y_1] + \,\cdot\,\cdot\,\cdot\,, + \alpha_n[x_n, y_n] \\
+        & = [x, \alpha_1 y_1 + \,\cdot\,\cdot\,\cdot\, + \alpha_n y_n].
+    \end{align*}
+    Consequently \(y = \alpha_1 y_1 + \,\cdot\,\cdot\,\cdot\, + \alpha_n y_n\),
+    and the proof of the theorem is complete.
+    
+    We shall need also the following easy consequence of Theorem 2.
+\end{proof}
+
+\begin{theorem}
+    If \(u\) and \(v\) are any two diferent vectors of the \(n\)-dimensional
+    vector space \(\VecSp\), then there exists a linear functional \(y\) on
+    \(\VecSp\) such that \([u, y] \neq [v, y]\); or, equivalently, to any
+    non-zero vector \(x\) in \(\VecSp\) there corresponds a \(y\) in \(\Dual\)
+    such that \([x, y] \neq 0\).
+\end{theorem}
+
+\begin{proof}
+    That the two statements in the theorem are indeed equivalent is seen by
+    considering \(x = u - v\). We shall, accordingly, prove the latter statement
+    only.
+
+    Let \(\Basisx = \{x_1, \,\cdot\,\cdot\,\cdot\,, x_m\}\) be any basis in
+    \(\VecSp\), and let \(\Basisx' = \{y_1, \,\cdot\,\cdot\,\cdot\,, y_n\}\) be
+    the dual basis in \(\VecSp'\). If \(x = \sumx_i \xi_i x_i\) then (as above)
+    \([x, y_j] = \xi_j\). Hence if \([x,y]=0\) for all \(y\), and, in
+    particular, if \([x, y_j] = 0\) for \(j = 1, \,\cdot\,\cdot\,\cdot\,, n\),
+    then \(x = 0\).
+\end{proof}
 
 \section{Reflexivity}
 
+It is natural to think that if the dual space \(\Dual\) of a vector space
+\(\VecSp\), and the relations between a space and its dual, are of any interest
+at all for \(\VecSp\), then they are of just as much interest for \(\Dual\). In
+other words, we propose now to form the dual space \((\Dual)'\) of \(\Dual\) for
+simplicity of notation we shall denote it by \(\Dual'\). The verbal description
+of an element of \(\Dual'\) is clumsy: such an element is a linear functional of
+linear functionals. It is, however, at this point that the greatest advantage of
+the notation \([x, y]\) appears; by means of it, it is easy to discuss
+\(\VecSp\) and its relation to \(\Dual'\).
+
+If we consider the symbol \([x,y]\) for some fixed \(y = y_0\), we obtain
+nothing new: \([x, y_0]\) is merely another way of writing the value \(y_0(x)\)
+of the function \(y_0\) at the vector \(x\). If, however, we consider the symbol
+\([x,y]\) for some fixed \(x = x_0\), then we observe that the function of the
+vectors in \(\Dual'\), whose value at \(y\) is \([x_0, y]\), is a scalar-valued
+function that happens to be linear (see \S\,14, (2)); in other words, \([x_0,
+y]\) defines a linear functional on \(\Dual\), and, consequently, an element of
+\(\Dual'\).
+
+By this method we have exhibited \emph{some} linear functionals on \(\Dual\)
+have we exhibitedthem all? For the finite-dimensional case the following theorem
+furnishes the affirmative answer.
+
+\begin{thmx}
+    If \(\VecSp\) is a finite-dimensional vector space, then corresponding to
+    every linear functional \(z_0\) on \(\Dual\) there is a vector \(x_0\) in
+    \(\VecSp\) such that \(z_0(y) = [x_0, y]= y(x_0)\) for every \(y\) in
+    \(\Dual\); the correspondence \(z_0 \rightleftarrows x_0\) between\(\Dual'\)
+    and \(\VecSp\) is an isomorphism.
+\end{thmx}
+
+The correspondence described in this statement is called the \emph{natural
+correspondence} between \(\Dual'\) and \(\VecSp\).
+
+\begin{proof}
+    Let us view the correspondence from the standpoint of going from \(\VecSp\)
+    to \(\Dual'\); in other words, to every \(x_0\) in \(\VecSp\) we make
+    correspond a vector \(z_0\) in \(\Dual'\) defined by \(z_0(y) = y(x_0)\) for
+    every \(y\) in \(\Dual\). Since \([x, y]\) depends linearly on \(x\), the
+    transformation to \(x_0 \to z_0\) is linear.
+\end{proof}
+
+It is important to observe that the theorem shows not only that \(\VecSp\) and
+\(\Dual'\) are isomorphic\,---\,this much is trivial from the fact that they
+have the same dimension\,---\,but that the natural correspondence is an
+isomorphism. This property of vector spaces is called \emph{reflexivity}; every
+finite-dimensional vector space is reflexive.
+
+It is frequently convenient to be mildly sloppy about \(\Dual'\): for finite-
+dimensional vector spaces we shall identify \(\Dual'\) with \(\VecSp\) (by the
+natural isomorphism), and we shall say that the element \(z_0\) of \(\Dual'\) is
+the \emph{same} as the element \(x_0\) of \(\VecSp\) whenever \(z_0(y) = [x_0,
+y]\) for all \(y\) in \(\Dual\). In this language it is very easy to express the
+relation between a basis \(\Basisx\), in \(\VecSp\), and the dual basis of its
+dual basis, in \(\Dual'\); the symmetry of the relation \([x_i, y_j] =
+\delta_{ij}\) shows that \(\Basisx'' = \Basisx\).
+
 \section{Annihilators}
 
+\begin{definition}
+    The \emph{annihilator} \(\mathfrak{S}^0\) of any subset \(\mathfrak{S}\) of
+    a vector space \(\VecSp\) (\(\mathfrak{S}\) need not be a subspace) is the
+    set of all vectors \(y\) in \(\VecSp'\) such that [x,y] is identically zero
+    for all \(x\) in \(\mathfrak{S}\).
+\end{definition}
+
+Thus \(\mathfrak{O}^0 = \Dual\) and \(\VecSp^0 = \mathfrak{O}\) (\(\subset
+\Dual\)). If \(\VecSp\) is finite-dimensional and \(\mathfrak{S}\) contains a
+non-zero vector, so that \(\mathfrak{S} \neq \mathfrak{O}\), then \S,\,15,
+Theorem 3 shows that \(\mathfrak{S}^0 \neq \Dual\).
+
+\begin{theorem}
+    If \(\Mfold\) is an \(m\)-dimensional subspace of an \(n\)-dimensional
+    vector space \(\VecSp\), then \(\anh{M}\) is an \((n - m)\)-dimensional
+    subspace of \(\Dual\).
+\end{theorem}
+
+\begin{proof}
+    We leave it to the reader to verify that \(\anh{M}\) (in fact \(\anh{S}\),
+    for an arbitrary \(\mathfrak{S}\)) is always a subspace; we shall prove only
+    the statement con- cerning the dimension of \(\anh{M}\).
+\end{proof}
+
+
+\section{Direct sums}
+
+We shall study several important general methods of making new vector spaces out
+of old ones; in this section we begin by studying the easiest one.
+
+\begin{definition}
+    If U and U are vector spaces (over the same field), their direct sum is the vector space W (denoted by a © U) whose elemets are all the ordered pairs \(\dpair{x}{y}\) with z in U and y in U, with the linear operations defined by
+    \begin{equation*}
+        \alpha_1 \dpair{x_1}{y_1} + \alpha_2 \dpair{x_2}{y_2} = \dpair{\alpha_1 x_1 + \alpha_2 x_2}{\alpha_1 y_1 + \alpha_2 y_2}.
+    \end{equation*}
+\end{definition}
+
+We observe that the formation of the direct sum is analogous to the way in which
+the plane is constructed from its two coordinate axes.
+
+We proceed to investigate the relation of this notion to some of our earlier ones.
+
+The set of all vectors (in \(\mathfrak{W}\)) of the form (r, 0) is a subspace of W;
+the correspondence (t, 0) t r shows that this subspace is isomorphic to U. It is
+convenient, once more, to indulge in a logical inaccuracy and, identify- ing r
+and (x, 0), to speak of Uasa subspace of w. Similarly,of course, the vectors y
+of U may be identified with the vectors of the form (0, y) in W, and we may
+consider U as a subspace of W. This terminology is, to be sure, not quite exact,
+but the logical difficulty is much easier to get around here than it was in the
+case of the second dual space. We could have defined the direct sum o fu a n d
+(at least in the case in which u and " have no non-zero vectors in common) as
+the set consisting of all
+X'sin U, ally's in U, and all those pairs (2, y) for which x 0 and y 0. This definition yields a theory analogous in every detail to the one we shal develop, but it makes it a nuisance to prove theorems because of the case distinctionsi tnecessitates. It is clear,however, that from the point of view of this definition U is actually a subset of U ©U. In this sense
+then, or in theisomorphism sense of the definition we did adopt,we raise the question: what is the relation between " and U when we consider these
+spaces as subspaces of the big space W?
+
+\begin{thmx}
+    If \(\mathfrak{U}\) and \(\mathfrak{V}\) are subspaces of a vector space \(\mathfrak{W}\), then the following three conditions are equivalent.
+    \begin{enumerate}[wide, nosep, label=(\arabic*)]
+        \item \(\mathfrak{W} = \mathfrak{U} \oplus \mathfrak{V}\).
+        \item \(\mathfrak{U} \cap \mathfrak{V} = \mathfrak{O}\) and \(\mathfrak{U} + \mathfrak{V} = \mathfrak{W}\) (i.e., \(\mathfrak{U}\) and \(\mathfrak{V}\) are complements of each other).
+        \item Every vector \(z\) in \(\mathfrak{W}\) may be written in the form \(z = x+y\), with \(x\) in \(\mathfrak{U}\) and \(y\) in \(\mathfrak{V}\), in one and only one way.
+    \end{enumerate}
+\end{thmx}
+
+\begin{proof}
+    We shall prove the implications (1) \(\implies\) (2) \(\implies\) (3) \(\implies\) (1).
+\end{proof}
+
+\section{Dimension of a direct sum}
+
+\section{Dual of a direct sum}
+
+In most of what follows we shall view the notion of direct sum as defined for
+subspaces of a vector space \(\VecSp\); this avoids the fuss with the
+identification convention of § 18, and it turns out, incidentally, to be the
+more useful concept for our later work. We conclude, for the present, our study
+of direct sums, by observing the simple relation connecting dual spaces,
+annihilators, and direct sums. To emphasize our present view of direct
+summation, we return to the letters of our earlier notation.
+
+\section{Quotient spaces}
+
+We know already that if \(\Mfold\) is a subspace of a vector space U, thenthere
+are, usually, many other subspaces \(\mathfrak{N}\) in \(\VecSp\) such that
+\(\Mfold \oplus \mathfrak{N} = \VecSp\). There is no natural way of choosing one
+from among the wealth of complements of \(\Mfold\). There is, however, a natural
+construction that associates with \(\Mfold\) and \(\VecSp\) a new vector space
+that, for all practical purposes, plays the role of a complement of \(\Mfold\).
+The theoretical advantage that the construction has over the formation of an
+arbitrary complement is precisely its ``natural'' character, i.e., the fact that
+it does not depend on choosing a basis, or, for that matter, on choosing
+anything at all.
+
+In order to understand the construction it is a good idea to keep a picture in
+mind. Suppose, for instance, that \(\VecSp = \Reals^2\) (the real coordinate
+plane) and that \(\Mfold\) consists of all those vectors \((\xi_1, \xi_2)\) for
+which \(\xi_2 = 0\) (the horizontal axis). Each complement of \(\Mfold\) is a
+line (other than the horizontal axis) through the origin. Observe that each such
+complement has the property that it intersects every horizontal line in exactly
+one point. The idea of the construction we shall describe is to make a vector
+space out of the set of all horizontal lines.
+
+We begin by using \(\Mfold\) to single out certain subsets of  \(\VecSp\). (We
+are back in the general case now.) If \(x\) is an arbitrary vector in
+\(\VecSp\), we write \(x + \Mfold\) for theset of all sums \(x+y\) with \(y\) in
+\(\Mfold\); each set of the form \(x + \Mfold\) is called a \emph{coset} of
+\(\Mfold\). (In the case of the plane-line example above, the cosets are the
+horizontal lines.) Note that one and the same coset can arise from two different
+vectors, i.e., that even if \(x \neq y\), it is possible that \(x + \Mfold = y +
+\Mfold\). It makes good sense, just the same, to speak of a coset, say
+\(\mathfrak{H}\), of \(\Mfold\), without specifying which element (or elements)
+\(\mathfrak{H}\) comes from; to say that \(\mathfrak{H}\) is a coset (of \(\Mfold\))
+means simply that there is at leastoner such that \(\mathfrak{H} = x + \Mfold\).
+
+If \(\mathfrak{H}\) and \(\mathfrak{K}\) are cosets (of \(\Mfold\)), we write
+\(\mathfrak{H} + \mathfrak{K}\) for the set of all sums \(u + v\) with \(u\) in
+\(\mathfrak{H}\) and \(v\)in \(\mathfrak{K}\); we assert that \(\mathfrak{H} +
+\mathfrak{K}\) is also a coset of \(\Mfold\). Indeed,if \(\mathfrak{H} = x +
+\Mfold\) and \(\mathfrak{K} = y + \Mfold\), then every element of \(\mathfrak{H}
++ \mathfrak{K}\) belongs to the coset \((x + y) + \Mfold\) (note that \(\Mfold +
+\Mfold = \Mfold\)), and, conversely, every element of \((x + y) + \Mfold\) is in
+\(\mathfrak{H} + \mathfrak{K}\). (If, for instance, \(z\) is in \(\Mfold\), then
+\((x + y) + z = (x + z) + (y + 0)\).) In other words, \(\mathfrak{H} +
+\mathfrak{K} = (x+y) + \Mfold\), so that \(\mathfrak{H} + \mathfrak{K}\) is a
+coset, as asserted. We leave to the reader the verification that coset addition
+is commutative and associative. The coset \(\Mfold\) (i.e., \(0 + \Mfold\)) is
+such that \(\mathfrak{H} + \Mfold = \mathfrak{H}\) for every coset
+\(\mathfrak{H}\), and, moreover, \(\Mfold\) is the only coset with this
+property. (If \((x + \Mfold) + (y + \Mfold) = x + \Mfold\), then \(x + \Mfold\)
+contains \(x + y\)m so that \(x + y = x + u\) for some \(u\) in \(\Mfold\); this
+implies that \(y\) is in \(\Mfold\),and hence that \(y + \Mfold = \Mfold\).) If
+\(\mathfrak{H}\) is a coset, then the set consisting of all the vectors \(-u\) ,
+with \(u\) in \(\mathfrak{J}\), is itself a coset, which we shall denote by
+\(-\mathfrak{H}\). The coset \(-\mathfrak{H}\) is such that \(\mathfrak{H} + (-\mathfrak{H}) =
+\Mfold\), and, moreover, \(-\mathfrak{H}\) is the only coset with this property. To
+sum up: the addition of cosets satisfies the axioms (A) of §2.
+
+If \(\mathfrak{H}\) is a coset and if \(\alpha\) is a scalar, we write \(\alpha
+\mathfrak{H}\) for the set consisting of all the vectors \(\alpha u\) with \(u\) in
+\(\mathfrak{H}\) in case \(\alpha \neq 0\); the coset \(0 \cdot \mathfrak{H}\) is
+defined to be \(\Mfold\). A simple verification shows that this concept of
+multiplication satisfies the axioms (B) and (C) of § 2.
+
+The set of all cosets has thus beenproved to be a vector space with respect to
+the linear operations defined above. This vector space is called the
+\emph{quotient space} of \(\VecSp\) modulo \(\Mfold\); it is denoted by \(\VecSp
+/ \Mfold\).
+
+\section{Dimension of a quotient space}
+
+\begin{theorem}
+    If \(\Mfold\) and \(\mathfrak{N}\) are complementary subspaces of a vector space
+    \(\VecSp\), then the correspondence that assigns to each vector \(y\) in
+    \(\mathfrak{N}\) the coset \(y + \mathfrak{M}\) is an isomorphism between
+    \(\mathfrak{N}\) and \(\VecSp / \Mfold\).
+\end{theorem}
+
+\begin{theorem}
+    If \(\Mfold\) is an \(m\)-dimensional subspace of an \(n\)-dimensional vector space \(\VecSp\), then \(\VecSp / \Mfold\) has dimension \(n - m\).
+\end{theorem}
+
+\begin{proof} 
+    Use §\,19, Theorem 2 to find a subspace \(\mathfrak{N}\) so that \(\Mfold \oplus
+    \mathfrak{N} = \VecSp\) The space \(\mathfrak{N}\) has dimension \(n - m\) (by §\,19,
+    Theorem 1), and it is isomorphic to \(\VecSp / \Mfold\) (by Theorem 1
+    above).
+\end{proof}
+
+There are more topics in the theory of quotient spaces that we could discuss
+(such as their relation to dual spaces and annihilators). Since, however, most
+such topics are hardly more than exercises, involving the use of techniques
+already at our disposal, we turn instead to some new and non-obvious ways of
+manufacturing useful vector spaces.
+
+\section{Bilinear forms}
+
+If \(\mathfrak{U}\) and \(\VecSp\) are vector spaces (over the same field), then
+their direct sum \(\mathfrak{W} = \mathfrak{U} \oplus \VecSp\) is another vector space;
+we propose to study certain functions on \(\mathfrak{W}\). (For present purposes the
+original definition of \(\mathfrak{U} \oplus \VecSp\), via ordered pairs, is the
+convenient one.) The value of such a function, say \(w\), at an element
+\(\dpair{x}{y}\) of \(\mathfrak{W}\) will be denoted by \(w(x, y)\). The study of
+linear functions on W is no longer of much interest to us; the principal facts
+concerning them were discussed in §20. The functions we want to consider now are
+the bilinear ones; they are, by definition, the scalar-valued functions on
+\(\mathfrak{W}\) with the property that for each fixed value of eitherargument they
+depend linearly on the other argument. More precisely, a scalar-valued function
+\(w\) on \(\mathfrak{W}\) is a \emph{bilinear form} (or \emph{bilinear functional})
+if
+\begin{equation*}
+    w(\alpha_1 x_1 + \alpha_2 x_2, y) = \alpha_1 w(x_1, y) + \alpha_2 w(x_2, y)
+\end{equation*}
+and
+\begin{equation*}
+    w(x, \alpha_1 y_1 + \alpha_2 y_2) = \alpha_1 w(x, y_1) + \alpha_2 w(x, y_2).
+\end{equation*}
+identically in the vectors and scalars involved.
+
+In one special situation we have already encountered bilinear functionals. If,
+namely, \(\VecSp\) is the dual space of \(\mathfrak{U}\), \(\VecSp = \mathfrak{U}'\),
+and if we write \(w(x,y) = [x, y]\) (see § 14), then \(w\) is a bilinear
+functional on \(\mathfrak{U} \oplus \mathfrak{U}'\). For an example in a more general
+situation, let \(\mathfrak{U}\) and \(\VecSp\) be arbitrary vector spaces (over the
+same field, as always), let \(u\) and \(v\) be elements of \(\mathfrak{U}'\) and
+\(\Dual\) respectively, and write \(w(x, y) = u(x)v(y)\) for all \(x\) in
+\(\mathfrak{U}\) and \(y\) in \(\VecSp\). An even more general example is obtained
+by selecting a finite number of elements in \(\mathfrak{U}'\), say \(u_1,
+\,\cdot\,\cdot\,\cdot\,, u_k\), selecting the same finite number of elements in
+\(\Dual\), say \(v_1, \,\cdot\,\cdot\,\cdot\,, v_k\), and writing \(w(x,y) =
+u_1(x)v_1(y) + \,\cdot\,\cdot\,\cdot\, + u_k(x)v_k(y)\). Which of the words,
+``functional'' or ``form,'' is used depends somewhat on the context and,
+somewhat more, on the user's whim. In this book we shall generally use
+``functional'' with ``linear'' and ``form'' with ``bilinear'' (and its
+higher-dimensional generalizations).
+
+If \(w_1\) and \(w_2\) are bilinear forms on \(\mathfrak{W}\), and if \(\alpha_1\)
+and \(\alpha_2\) are scalars, we write \(w\) for the function on \(\mathfrak{W}\)
+defined by
+\begin{equation*}
+    w(x,y) = \alpha_1 w_1(x,y) + \alpha_2 w_2(x,y).
+\end{equation*}
+It is easy to see that \(w\) is a bilinear form; we denote it by \(\alpha_1 w_1
++ \alpha_2 w_2\). With this definition of the linear operations, the set of all
+bilinear forms on \(\mathfrak{W}\) is a vector space. The chief purpose of the
+remainder of this section is to determine (in the finite-dimensional case) how
+the dimension of this space depends on the dimensions of \(\mathfrak{U}\) and
+\(\VecSp\).
+
+\begin{theorem}
+    If \(\mathfrak{U}\) is an \(n\)-dimensional vector space with basis \(\{x_1,
+    \,\cdot\,\cdot\,\cdot\,, x_n\}\), if \(\VecSp\) is an \(m\)-dimensional
+    vector space with basis \(\{y_1, \,\cdot\,\cdot\,\cdot\,, y_n\}\), and if
+    \(\{\alpha_{ij}\}\) is any set of \(nm\) scalars (\(i = 1,
+    \,\cdot\,\cdot\,\cdot\,, n\); \(j = 1, \,\cdot\,\cdot\,\cdot\,, m\)), then
+    there is one and only one bilinear form \(w\) on \(\mathfrak{U} \oplus \VecSp\)
+    such that \(w(x_i, y_j) = \alpha_{ij}\) for all \(i\) and \(j\).
+\end{theorem}
+
+\begin{proof}
+    If \(x = \sumx_i \xi_i x_i\), \(y = \sumx_j \eta_j y_i\), and \(w\) is a
+    bilinear form on \(\mathfrak{U} \oplus \mathfrak{V}\) such that \(w(x_i, y_j) =
+    \alpha_{ij}\), then
+    \begin{equation*}
+        w(x, y) = \sumx_i \sumx_j \xi_i \eta_j w(x_i, y_j) = \sumx_i \sumx_j \xi_i \eta_j \alpha_{ij}.
+    \end{equation*}
+    From this equation the uniqueness of \(w\) is clear; the existence of a
+    suitable \(w\) is proved by reading the same equation from right to left,
+    that is, defining \(w\) by it. (Compare this result with § 15, Theorem 1.)
+\end{proof}
+
+\begin{theorem}
+    If \(\mathfrak{U}\) is an \(n\)-dimensional vector space with basis \(\{x_1,
+    \,\cdot\,\cdot\,\cdot\,, x_n\}\), and if \(\VecSp\) is an \(m\)-dimensional
+    vector space with basis \(\{y_1, \,\cdot\,\cdot\,\cdot\,, y_n\}\), then
+    there is a uniquely determined basis \(\{w_{pq}\}\) (\(p = 1,
+    \,\cdot\,\cdot\,\cdot\,, n\); \(q = 1, \,\cdot\,\cdot\,\cdot\,, m\)) in the
+    vector space of all bilinear forms on \(\mathfrak{U} \oplus \VecSp\), with the
+    property that \(w_{pq}(x_i, y_j) = \delta_{ip}\delta_{jq}\). Consequently
+    the dimension of the space of bilinear forms on \(\mathfrak{U} \oplus \VecSp\)
+    is the product of the dimensions of \(\mathfrak{U}\) and \(\VecSp\).
+\end{theorem}
+
+\begin{proof}
+    Using Theorem 1, we determine \(w_{pq}\) (for each fixed \(p\) and \(q\)) by
+    the given condition \(w_{pq}(x_i, y_j) = \delta_{ip}\delta_{jq}\). The
+    bilinear forms so determined are linearly independent, since
+    \begin{equation*}
+        \sumx_p \sumx_q \alpha_{pq} w_{pq} = 0
+    \end{equation*}
+    implies that 
+    \begin{equation*}
+        0 = \sumx_p \sumx_q \alpha_{pq} \delta_{ip}\delta_{jq} = \alpha_{ij}.
+    \end{equation*}
+
+    If, moreover, \(w\) is an arbitrary element of \(\mathfrak{W}\), and if \(w(x_i,
+    y_j) = \alpha_{ij}\), then \(w = \sumx_p \sumx_q \alpha_{pq} w_{pq}\).    
+    Indeed, \(x = \sumx_i \xi_i x_i\) and \(y = \sumx_j \eta_j y_i\), then
+    \begin{equation*}
+        w_{pq}(x, y) = \sumx_i \sumx_j \xi_i \eta_j \delta_{ip}\delta_{jq} = \xi_p \eta_q,
+    \end{equation*}
+    and, consequently,
+    \begin{equation*}
+        w(x, y) = \sumx_i \sumx_j \xi_i \eta_j \alpha_{ij} = \sumx_p \sumx_q \alpha_{pq} w_{pq}(x, y).
+    \end{equation*}
+    It follows that the \(w_{pq}\) form a basis in the space of bilinear
+    forms;this completes the proof of the theorem. (Compare this result with
+    §\,15, Theorem 2.)
+\end{proof}
+
+\section{Tensor products}
+
+In this section we shall describe a new method of putting two vector spaces
+together to make a third, namely, the formation of their tensor product.
+Although we shall have relatively little occasion to make use of tensor products
+in this book, their theory is closely allied to some of the subjects we shall
+treat, and it is useful in other related parts of mathematics, such as the
+theory of group representations and the tensor calculus. The notion is
+essentially more complicated than that of direct sum; we shall therefore begin
+by giving some examples of what a tensor product should be, and the study of
+these examples will guide us in laying down the definition.
+
+Let \(\mathfrak{U}\) be the set of all polynomials in one variable \(s\), with,
+say, complex coefficients; let \(\mathfrak{V}\) be the set of all polynomials in
+another variable \(t\); and, finally, let \(\mathfrak{W}\) be the set of al
+polynomials in the two variables \(s\) and \(t\). With respect to the obvious
+definitions of the linear operations, \(\mathfrak{U}\), \(\mathfrak{V}\), and
+\(\mathfrak{W}\) are all complex vector spaces; in this case we should like to
+call \(\mathfrak{W}\), or something like it, the tensor product of
+\(\mathfrak{U}\) and \(\mathfrak{V}\). One reason for this terminology is that
+if we take any \(x\) in \(\mathfrak{U}\) and any \(y\) in \(\mathfrak{V}\), we
+may form their product, that is, the element \(z\) of \(\mathfrak{W}\) defined
+by \(z(s, t) = x(s) y(t)\). (This is the ordinary product of two polynomials.
+Here, as before, we are doggedly ignoring the irrelevant fact that we may even
+multiply together two elements of \(\mathfrak{U}\), that is, that the product
+oftwo polynomials in the same variable is another polynomial in that variable.
+Vector spaces in which a decent concept of multiplication is defined are called
+\emph{algebras}, and their study, as such, lies outsidethe scope of this book.)
+
+In the preceding example we considered vector spaces whose elements are
+functions. We may, if we wish, consider the simple vector space \(\Complex^n\)
+as a collection of functions also; the domain of definition of the functions is,
+in this case, a set consisting of exactly n points, say the first \(n\)
+(strictly) positive integers. In other words, a vector \((\xi_1,
+\,\cdot\,\cdot\,\cdot\,, \xi_n)\)  may be considered as a function \(\xi\) whose
+value \(\xi(i)\) is defined for \(i = 1, \,\cdot\,\cdot\,\cdot\,, n\); the
+definition of the vector operations in \(\Complex^n\) is such that they
+correspond, in the new notation, to the ordinary operations performed on the
+functions \(\xi\). If, simultaneously, we consider \(\Complex^m\) as the
+collection of functions \(\eta\) whose value \(\eta(j)\) is defined for \(j = 1,
+\,\cdot\,\cdot\,\cdot\,, ,\), then we should like the tensor product of
+\(\Complex^n\) and \(\Complex^m\) to be the set of all functions \(\zeta\) whose
+value \(\zeta(i, j)\) is defined for \(i = 1, \,\cdot\,\cdot\,\cdot\,, n\) and
+\(j = 1, \,\cdot\,\cdot\,\cdot\,, m\). The tensor product, in other words, is
+the collection of all functions defined on a set consisting of exactly \(nm\)
+objects, and therefore naturally isomorphic to \(\Complex^{nm}\). This example
+brings out a property of tensor products\,---\,namely, the multiplicativity of
+dimension\,---\,that we should like to retain in the general case.
+
+Let us now try to abstract the most important properties of these examples. The
+definition of direct sum was one possible rigorization of the crude intuitive
+idea of writing down, formally, the sum of two vectors belonging to different
+vector spaces. Similarly, our examples suggest that the tensor product
+\(\mathfrak{U} \otimes \mathfrak{V}\) of two vector spaces \(frak{U}\) and
+\(\mathfrak{V}\) should be such that to every \(x\) in \(\mathfrak{U}\) and
+\(y\) in \(\mathfrak{V}\) there corresponds a ``product'' \(z = x \otimes y\) in
+\(\mathfrak{U} \otimes \mathfrak{V}\), in such a way that the correspondence
+between \(x\) and \(z\), for each fixed \(y\), as well as the correspondence
+between \(y\) and \(z\), for each fixed \(x\), is linear. (This means, of
+course, that \((\alpha_1 x_1 + \alpha_2 x_2) \otimes y\) should be equal to
+\(\alpha(x_1 \otimes y) + \alpha_2 (x_2 \otimes y)\), and that a similar
+equation should hold for \(x \otimes (\alpha_1 y_1 + \alpha_2 y_2).\))  To put
+it more simply, \(x \otimes y\) should define a bilinear (vector-valued)
+function of \(x\) and \(y\).
+
+The notion of formal multiplication suggests also that if \(u\) and \(v\) are
+linear functionals on \(\mathfrak{U}\) and \(\mathfrak{V}\) respectively, then
+it is their product \(w\) defined by \(w(x, y) = u(x)v(y)\), that should be in
+some sense the general element of the dual space \((\mathfrak{U} \otimes
+\mathfrak{V})'\). Observe that this product is a bilinear (scalar-valued)
+function of \(x\) and \(y\).
+
+\section{Product bases}
+
+After one more word of preliminary explanation we shall be ready to discuss the
+formal definition of tensor products. It turns out to be technically preferable
+to get at \(\mathfrak{U} \otimes \mathfrak{V}\) indirectly, by defining it as
+the dual of another space; we shall make tacit use of reflexivity to obtain
+\(\mathfrak{U} \otimes \mathfrak{V}\) itself. Since we have proved reflexivity
+for finite-dimensional spaces only, we shall restrict the definition to such
+spaces.
+
+\begin{definition}
+    The \emph{tensor product} \(\mathfrak{U} \otimes \mathfrak{V}\) of two
+    finite-dimensional vector spaces \(\mathfrak{U}\) and \(\mathfrak{V}\) (over
+    the same field) is the dual of the vector space of all bilinear forms on
+    \(\mathfrak{U} \oplus \mathfrak{V}\). For each pair of vectors \(x\) and
+    \(y\), with \(x\) in \(\mathfrak{U}\) and \(y\) in \(\mathfrak{V}\), the
+    tensor product \(z = x\otimes y\) of \(x\) and \(y\) is the element of
+    \(\mathfrak{U} \otimes \mathfrak{V}\) defined by \(z(w) = w(x, y)\) for
+    every bilinear form \(w\).
+\end{definition}
+
+This definition is one of the quickest rigorous approaches to the theory, but it
+does lead to some unpleasant technical complications later. What ever its
+disadvantages, however, we observe that it obviously has the two desired
+properties: it is clear, namely, that dimension is multiplicative (see \S\,23,
+Theorem 2, and \S\,15, Theorem 2), and it is clear that \(x \otimes y\) depends
+linearly on each of its factors.
+
+Another possible (and deservedly popular) definition of tensor product is by
+formal products. According to that definition \(\mathfrak{U} \otimes
+\mathfrak{V}\) is obtained by considering all symbols of the form \(\sumx_i
+\alpha_i (x_i \otimes y_i)\), and, within the set of such symbols, making the
+identifications demanded by the linearity of the vector operations and the
+bilinearity of tensor multiplication. (For the purist: in this definition \(x
+\otimes y\) stands merely for the ordered pair of \(x\) and \(y\); the
+multiplication sign is just a reminder of what to expect.) Neither definition is
+simple; we adopted the one we gave because it seemed more in keeping with the
+spirit of the rest of the book. The main disadvantage of our definition is that
+it does not readily extend to the most useful generalizations of
+finite-dimensional vector spaces, that is, to modules and to
+infinite-dimensional spaces.
+
+For the present we prove only one theorem about tensor products. The theorem is a further justification of the product terminology, and, incidentally, it is a sharpening of the assertion that dimension is multiplicative.
+
+\begin{theorem}
+    If \(\mathfrak{X} = \{x_1, \,\cdot\,\cdot\,\cdot\,, x_n\}\) and \(\mathfrak{Y} = \{y_1, \,\cdot\,\cdot\,\cdot\,, y_m\}\) are bases in \(\mathfrak{U}\) and \(\mathfrak{V}\) respectively, then the set \(\mathfrak{Z}\) of vectors \(z_{ij} = x_i \otimes y_j\), (\(i = 1, \,\cdot\,\cdot\,\cdot\,, n\), \(j = 1, \,\cdot\,\cdot\,\cdot\,, m\)), is a basis in \(\mathfrak{U} \otimes \mathfrak{V}\).
+\end{theorem}
+
+\begin{proof}
+    Let \(w_{pq}\) be the bilinear form on \(\mathfrak{U} \oplus \mathfrak{V}\)
+    such that \(w_{pq}(x_i y_j) = \delta_{ip}\delta_{jq}\) (\(i, p = 1,
+    \,\cdot\,\cdot\,\cdot\,, n\), \(j, q = 1, \,\cdot\,\cdot\,\cdot\,, m\)); the
+    existence of such bilinear forms, and the fact that they constitute a basis
+    for all bilinear forms, follow from \S\,23, Theorem 2. Let \(\{w_{pq}'\) be
+    the dual basis in \(\mathfrak{U} \otimes \mathfrak{V}\), so that \([w_{ij},
+    w_{pq}'] = \delta_{ip}\delta_{jq}\). If \(w = \sumx_p \sumx_q \alpha_{pq}
+    w_{pq}\) is an arbitrary bilinear form on \(\mathfrak{U} \oplus
+    \mathfrak{V}\), then
+    \begin{align*}
+        w_{ij}'(w) = [w, w_{ij}'] &= {\textstyle\sumx_p \sumx_q} \alpha_{pq} [w_{pq}, w_{ij}'] \\
+        &= \alpha_{ij} = w(x_i y_j) = z_{ij}(w).
+    \end{align*}
+    The conclusion follows from the fact that the vectors \(w_{ij}'\) do constitute a basis of \(\mathfrak{U} \otimes \mathfrak{V}\).
+\end{proof}
+
+{\small
+\subsection*{Exercises}
+\begin{enumerate}[wide]
+    \item If \(x = (1, 1)\) and \(y = (1, 1, 1)\) are vectors ni \(\Reals^2\)
+    and \(\Reals^2\) respectively, find the coordinates of \(x \otimes y\) in
+    \(\Reals^2 \otimes \Reals^3\) with respect to the product basis \(\{x_i
+    \otimes y_j\}\), where \(x_i = \delta_{i1}, \delta_{i2}\) and \(y_j =
+    \delta_{1j}, \delta_{2j}, \delta_{3j}\).
+    
+
+    \item Let \(\Polynom_{n,m}\) be the space of all polynomials \(z\) with
+    complex coefficients, in two variables \(s\) and \(t\),such that either z=0
+    or else the degree of \(z(s,t)\) is \(\leq m - 1\) for each fixed \(s\) and
+    \(\leq n - 1\) for each fixed \(t\). Prove that there exists an isomorphism
+    between \(\Polynom_n \otimes \Polynom_m\) and \(\Polynom_{n,m}\) such that
+    the element \(z\) of \(\Polynom_{n.m}\) that corresponds to \(x \otimes y\)
+    (\(x\) in \(\Polynom_n\), \(y\) in \(\Polynom_m\)) is given by \(z(s,t) =
+    x(s) y(t)\).
+
+    \item To what extent is the formation of tensor products commutative and
+    associative? What about the distributive a 8 " ) ? .
+    
+    \item If \(\VecSp\) is a finite-dimensional vector space, and if \(x\) and
+    \(y\) are in \(\VecSp\), is it true that \(x \otimes y = y \otimes x\)?
+
+    \item (a) Suppose that ° is a finite-dimensional real vector space, and let U be the set © of all complex numbers regarded as a (two-dimensional) real vector space. Form the tensor product U+ = I © U. Prove that there is a way of defining products of complex numbers with elements of U+ so that a(r y) = ax  ywhenevera and xare in Cand yis in U.
+    (b) Prove t h a t with respect to vector addition, and with respect to complex scalar multiplication as defined in (a), the space U+ is a complexvector space.
+    (c) Find the dimension of the complex vector space W+ in terms of the di-
+    mension of the real vector space U.
+    (d) Prove that the vector space U i sisomorphic to a subspace in + (when the
+    latter is regarded as a real vector space).
+    The moral of this exercise is that not only can every complex vector space be
+    regarded as a real vector space, but, in a certain sense, the converse is true. The vector space + is called the \emph{complexification} of U.
+
+    
+    \item If \(\mathfrak{U}\) and \(\VecSp\) are finite-dimensional vector spaces, what is the dual space of \(\mathfrak{U} \otimes \Dual\)?
+\end{enumerate}
+}
+
+\section{Permutations}
+
+The main subject of this book is usually known as linear algebra. In the last
+three sections, however, the emphasis was on something called multilinear
+algebra. It is hard to say exactly where the dividing line is between the two
+subjects. Since, in any case, both are quite extensive,it would not be practical
+to try to stuff a detailed treatment of both into the same volume. Nor is it
+desirable to discuss linear algebra in its absolutel pure state; the addition of
+even a small part of the multilinear theory (such as is involved in the modern
+view of tensor products and determinants) extends the domain of applicability of
+the linear theory pleasantly out of proportion with the effort involved. We
+propose, accordingly, to continue the study of multilinear algebra; our
+intention is to draw a more or less straight line between what we already know
+and the basic facts about determinants. With that in mind, we shall devote three
+sections to the discussion of some simple facts about combinatorics; the
+connection between those facts and multilinear algebra will appear immediately
+after that discussion.
+
+By a \emph{permutation} of the integers between \(1\) and \(k\) (inclusive) we
+shall mean a one-to-one transformation that assigns to each such integer another
+one (or possibly the same one). To say that the transformation \(\pi\) is one-
+to-one means, of course, that if \(\pi(1), \,\cdot\,\cdot\,\cdot\,, \pi(k)\) are
+the integers that \(\pi\) assigns to \(1, \,\cdot\,\cdot\,\cdot\,, k\),
+respectively, then \(\pi(i) = \pi(j)\) can happen only in case \(i = j\). Since
+this implies that both the sets \(\{1, \,\cdot\,\cdot\,\cdot\,, k\}\) and
+\(\{\pi(1), \,\cdot\,\cdot\,\cdot\,, \pi(k)\}\) consist of exactly \(k\)
+elements, it follows that they consist of exactly the same elements. From this,
+in turn, we infer that a permutation \(\pi\) of the set \(\{1,
+\,\cdot\,\cdot\,\cdot\,, k\}\) maps that set onto itself, that is, that if \(i
+\leq j \leq k\), then there exists at least one \(i\) (and, in fact, exactly
+one) such that \(\pi(i) = j\). The total number of the integers under
+consideration, namely, \(k\), will be held fixed throughout the following
+discussion.
+
+The theory of permutations, like everything else, is best understood by staring
+hard at some non-trivial examples. Before presenting any examples, however, we
+shall first mention some of the general things that can be done with
+permutations; by this means the examples will illustrate not only the basic
+concept but also its basic properties.
+
+If \(\sigma\) and \(\tau\) are arbitrary permutations, a permutation (to be
+denoted by \(\sigma\tau\)) can be defined by writing 
+\begin{equation*}
+    (\sigma\tau)(i) = \sigma(\tau(i))
+\end{equation*}
+for each \(i\). To prove that or is indeed a permutation, observe that if
+\((\sigma\tau)(i) = (\sigma\tau)(j)\), then \(\tau(i) = \tau(j)\) (since
+\(\sigma\) is one-to-one), and therefore \(i = j\) (since \(\tau\) is
+one-to-one). The permutation \(\sigma\tau\) is called the product of the
+permutations \(\sigma\) and \(\tau\). Warning: the order is important. In
+general \(\sigma\tau \neq \tau\sigma\), or, in other words, permutation
+multiplication is not commutative.
+
+Multiplication of permutations is associative; that is, \(\pi\), \(\sigma\), and
+\(\tau\) are permutations, then
+\begin{equation}
+    (\pi\sigma)\tau = \pi(\sigma\tau)
+\end{equation}
+To prove this, we must show that
+\begin{equation*}
+    ((\pi\sigma)\tau)(i) =( \pi(\sigma\tau))(i)
+\end{equation*}
+for every \(i\). The proof consists of several applications of the definition of
+product, as follows:
+\begin{equation*}
+    ((\pi\sigma)\tau)(i) = (\pi\sigma)(\tau(i)) = \pi(\sigma(\tau(i))),
+\end{equation*}
+and
+\begin{equation*}
+    (\pi(\sigma\tau))(i) = \pi((\sigma\tau)(i)) = \pi(\sigma(\tau(i))).
+\end{equation*}
+In view of this result we may and shall omit parentheses in writing the product
+of three or more permutations. The result also enables us to prove the obvious
+laws of exponents. The powers of a permutation\(\pi\) are defined inductively by
+writing \(\pi^1 = \pi\) and \(\pi^{p+1} = \pi\cdot\pi^p\) for all \(p = 1, 2,
+3,\,\cdot\,\cdot\,\cdot\,\); the associative law implies that \(\pi^p \pi^q =
+\pi^{p+q}\) and \((\pi^p)^q = \pi^{pq}\) for all \(p\) and \(q\). Observe that
+any two powers of a permutation commute with each other, that is, that \(\pi^p
+\pi^q = \pi^q \pi^p\).
+
+The simplest permutation is the identity (to be denoted by \(\epsilon\)); it is
+defined by \(\epsilon(i) = i\) for each \(i\). If \(\pi\) is an arbitrary
+permutation, then
+\begin{equation}
+    \epsilon\pi = \pi\epsilon = \pi,
+\end{equation}
+or, in other words, multiplication by \(\epsilon\) leaves every permutation
+unaffected. The proof is straightforward; for every \(i\) we have
+\begin{equation*}
+    (\epsilon\pi)(i) = \epsilon(\pi(i)) = \pi(i)
+\end{equation*}
+and
+\begin{equation*}
+    (\pi\epsilon)(i) = \pi(\epsilon(i)) = \pi(i).
+\end{equation*}
+The permutation \(\epsilon\) behaves, from the point of view of multiplication,
+like the number \(1\). In analogy with the usual numerical convention, the
+zero-th power of every permutation \(\pi\) is defined by writing \(\pi^0 =
+\epsilon\).
+
+If \(\pi\) is an arbitrary permutation, then there exists a permutation (to be
+denoted by \(\pi^{-1}\) such that
+\begin{equation}
+    \pi^{-1}\pi = \pi\pi^{-1} = \epsilon.
+\end{equation}
+To define \(\pi^{-1}(j)\), where, of course, \(1 \leq j \leq k\), find the
+unique \(i\) such that \(\pi(i) = j\), and write \(\pi^{-1}(j) = i\); the
+validity of (3) is an immediate consequence of the definitions. The permutation
+\(\pi^{-1}\) is called the \emph{inverse} of \(\pi\).
+
+Let \(\mathfrak{S}_k\) be the set of all permutations of the integers between
+\(1\) and \(k\). What we have proved so far is that an operation of
+multiplication can be defined for the elements of \(\mathfrak{S}_k\) so that (1)
+multiplication is associative, (2) there exists an identity element, that is, an
+element such that multiplication by it leaves every element of
+\(\mathfrak{S}_k\) fixed, and (3) every element has an inverse, that is, an
+element whose product with the given one is the identity. A set satisfying
+(1)\,--\,(3) is called a \emph{group} with respect to the concept of product
+that those conditions refer to; the set \(\mathfrak{S}_k\), in particular, is
+called the symmetric group of degree \(k\). Observe that the integers \(1,
+\,\cdot\,\cdot\,\cdot\,, k\) could be replaced by any \(k\) distinct objects
+without affecting any of the concepts defined above; the change would be merely
+a notational matter.
+
+\section{Cycles}
+
+A simple example of a permutation is obtained as follows: choose any two distinct integers between \(1\) and \(k\), say, \(p\) and \(q\), and write
+\begin{align*}
+    \tau(p) & = q, \\
+    \tau(q) & = p, \\
+    \tau(i) & = i, \text{ whenever } i \neq p \text{ and } i \neq q.
+\end{align*}
+The permutation \(\tau\) so defined is denoted by \((p, q)\); every permutation of this form is called a \emph{transposition}. If \(\tau\) is a transposition, then \(\tau^2 = \epsilon\).
+
+Another usefulway of constructing examples is to choose p distinct inte- gers between \(1\) and \(k\), say, \(i_1, \,\cdot\,\cdot\,\cdot\,, i_p\), and to write
+\begin{align*}
+    \sigma(i_j) &= i_{j+1}\text{ whenever } 1 \leq j < p, \\
+    \sigma(i_p) &= i_1,\\
+    \sigma(i) &= i, \text{ whenever } i \neq i_1, \,\cdot\,\cdot\,\cdot\,, i \neq i_p.
+\end{align*}
+The permutation so so defined is denoted by \((i_1, \,\cdot\,\cdot\,\cdot\,,
+i_p)\). If \(p = 1\), then \(\sigma = \epsilon\); if \(p = 2\), then \(\sigma\)
+is a transposition. For any \(p\) with \(1 < p \leq k\), every permutation of
+the form \((i_1, \,\cdot\,\cdot\,\cdot\,, i_p)\) is called a \(p\)-\emph{cycle},
+or simply a \emph{cycle}; the \(2\)-cycles are exactly the transpositions.
+Warning: it is not as- sumed that \(i_1 < \,\cdot\,\cdot\,\cdot\, < i_p\). If,
+for instance, \(k = 5\) and \(p = 3\), then there are twenty distinct cycles.
+Observe also that the notation for cycles is not unique; the symbols \((1, 2,
+3)\), \((2, 3, 1)\), and \((3, 1, 2)\) all denote the same permutation. Two
+cycles \((i_1, \,\cdot\,\cdot\,\cdot\,, i_p)\) and \((j_1,
+\,\cdot\,\cdot\,\cdot\,, j_q)\) are \emph{disjoint} if none of the \(i\)'s is
+equal to any of the \(j\)'s. If \(\sigma\) and \(\tau\) are disjoint cycles,
+then \(\sigma\tau = \tau\sigma\), or, in other words \(\sigma\) and \(\tau\)
+commute.
+
+\begin{theorem}
+    Every permutation is the product of pairwise disjoint cycles.
+\end{theorem}
+
+\begin{proof}
+    If \(pi\) is a permutation and if \(i\) is such that\(\pi(i) \neq i\)
+    (assume, for the moment, that \(\pi \neq \epsilon\)), form the sequence
+    \((i, \pi(i), \pi^2(i), \,\cdot\,\cdot\,\cdot\,)\). Since there are only a finite number of
+    distinct integers between \(1\) and \(k\), there must exist exponents \(p\)
+    and \(q\) \((0 \leq p < q)\) such that \(\pi^p(i) = \pi^q(i)\). The
+    one-to-one character of \(\pi\) implies that \(\pi^{q-p} (i) = i\), or, with
+    an obvious change of notation, what we have proved is that there must exist
+    a strictly positive exponent \(p\) such that \(\pi^p(i) = i\). If \(p\) is
+    selected to be the smallest exponent with this property, then the integers
+    \(i, \,\cdot\,\cdot\,\cdot\,, \pi^{p-1}(i)\) are distinct from each other. (Indeed, if \(0
+    \leq q < r <p\) and \(\pi^q(i) = \pi^r(i)\), then \(\pi^{r-q}(i) = i\),
+    contradicting the minimality of \(p\).) It follows that \((i, \pi(i),
+    \pi^2(i), \,\cdot\,\cdot\,\cdot\,, \pi^{p-1}(i))\) is a \(p\)-cycle. If there is a \(j\)
+    between \(1\) and \(k\) different from each of \(i, \pi(i), \,\cdot\,\cdot\,\cdot\,,
+    \pi^{p-1}(i)\) and different from \(\pi(j)\), we repeat the procedure that
+    led us to this cycle, with \(j\) in place of \(i\). We continue forming
+    cycles in this manner as long as after each step we can still find a new
+    integer that \(\pi\) does not send on itself; the product of the disjoint
+    cycles so constructed is \(\pi\). The case \(\pi = \epsilon\) is covered by
+    the rather natural agreement that a product with no factors, an ``empty
+    product,'' is to be interpreted as the identity permutation.
+\end{proof}
+
+\begin{theorem}
+    Every cycle is a product of transpositions.
+\end{theorem}
+
+\begin{proof}
+    Suppose that \(\sigma\) is a \(p\)-cycle; for the sake of notational simplicity, we shall give the proof, which is perfectly general, in the special case \(p = 5\). The proof itself consists of one line:
+    \begin{equation*}
+        (i_1, i_2, i_3, i_4, i_5) = (i_1, i_5) (i_1, i_4) (i_1, i_3) (i_1, i_2).
+    \end{equation*}
+    A few added words of explanation might be helpful. In view of the definition of the product of permutations, the right side of the last equation operates on each integer between \(1\) and \(k\) from the inside out, or, perhaps more suggestively, from right to left. Thus, for example, the result of applying \((i_1, i_5) (i_1, i_4) (i_1, i_3) (i_1, i_2)\) to \(i_3\) is calculated as follows: \((i_1, i_2) (i_3) = i_3\), \((i_1, i_3) (i_3) = i_1\), \((i_1, i_4)(i_1) = i_4\), \((i_1, i_5)(i_4) = i_4\), so that \((i_1, i_5) (i_1, i_4) (i_1, i_3) (i_1, i_2) (i_3) = i_4\).
+\end{proof}
+
+For the sake of reference we put on record the following immediate corollary of the two preceding theorems.
+
+\begin{theorem}
+    Every permutation is a product of transpositions.
+\end{theorem}
+
+Observe that the transpositions in Theorems 2 and 3 were not asserted to be
+disjoint; in general they are not.
+
+\section{Parity}
+
+
+\section{Multilinear forms}
+
+We are now ready to proceed with multilinear algebra. The basic concept is that of multilinear form (or functional), an easy generalization of the concept of bilinear form. Suppose that \(\VecSp_1, \,\cdot\,\cdot\,\cdot\,, \VecSp_k\) are vector spaces (over the same field); a \(k\)-\emph{linear form} \((k = 1, 2, 3, \,\cdot\,\cdot\,\cdot\,)\) is a scalar-valued function on the direct sum \(\VecSp_1 \oplus \,\cdot\,\cdot\,\cdot\, \oplus \VecSp_k\) with the property that for each fixed value of any \(k-1\) arguments it depends linearly on the remaining argument. The \(1\)-linear forms are simply the linear functionals (on \(\VecSp_1\)), and the \(2\)-linear forms are the bilinear forms (on \(\VecSp_1 \oplus \VecSp_2\)). The \(3\)-linear (or trilinear) forms are the scalar-valued functions \(w\) (on \(\VecSp_1 \oplus \VecSp_2 \oplus \VecSp_3\)) such that
+
+Much of the theory of bilinear forms extends easily to the multilinear case. Thus, for instance, if \(w_1\) and \(w_2\) are \(k\)-linear forms, \(\alpha_1\) and \(\alpha)2\) are scalars, and if \(w\) is defined by
+\begin{equation*}
+    w(x_1, \,\cdot\,\cdot\,\cdot\,, x_k) = \alpha_1 w_1(x_1, \,\cdot\,\cdot\,\cdot\,, x_k) + \alpha_2 w_2(x_1, \,\cdot\,\cdot\,\cdot\,, x_k),
+\end{equation*}
+whenever \(x_i\) is in \(\VecSp_i\), \(i = 1, \,\cdot\,\cdot\,\cdot\,, k\), then \(w\) is a
+\(k\)-linear form, denoted by \(\alpha_1 w_1 + \alpha_2 w_2\). The set of all
+\(k\)-linear forms is a vector space with respect to this definition of the
+linear operations; the dimension of that vector space is the product \(n_1
+\,\cdot\,\cdot\,\cdot\, n_k\), where, of course, \(n_i\) is the dimension of \(\VecSp_i\). The
+proofs of all these statements are just like the proofs (in \S\,23) of the
+corresponding statements for the bilinear case. We could go on imitating the
+bilinear theory and, in particular, studying multiple tensor products. In order
+to keep our multilinear digression to a minimum, we shall proceed instead in a
+different, more special, and, for our purposes, more useful direction.
+
+In what follows we shall restrict our attention to the case in which the \(k\) spaces \(\VecSp_i\) are all equal to one and the same vector space, say, \(\VecSp\); we shall assume that \(\VecSp\) is finite-dimensional. In this case we shall call a ``\(k\)-linear form on \(\VecSp_i \oplus \,\cdot\,\cdot\,\cdot\, \oplus \VecSp_k\)'' simply a ``\(k\)-linear form on \(\VecSp\)'' or, even more simply, a ``\(k\)-linear form''; the language is slightly inaccurate but, in context, completely unambiguous. If the dimension of \(\VecSp\) is \(n\), then the dimension of the vector space of all \(k\)-linear forms is \(n^k\). The space \(\VecSp\) and, of course, the dimension \(n\) will be held fixed throughout the following discussion.
+
+The special character of the case we are studying enables us to apply a technique that is not universally available; the technique is to operate on \(k\)-linear forms by permutations in \(\mathfrak{S}_k\). If \(w\) is a \(k\)-linear form, and if \(\pi\) is in \(\mathfrak{S}_k\), we write
+\begin{equation*}
+    \pi w(x_1, \,\cdot\,\cdot\,\cdot\,, x_k) = w(x_{\pi(1)}, \,\cdot\,\cdot\,\cdot\,, x_{\pi(k)}),
+\end{equation*}
+whenever \(x_1, \,\cdot\,\cdot\,\cdot\,, x_k\) are in \(\VecSp\). The function \(\pi w\) so defined is again a \(k\)-linear form. (The value of \(\pi w\) at \((x_1, \,\cdot\,\cdot\,\cdot\,, x_k)\) is more honestly denoted by \((\pi w)(x_1, \,\cdot\,\cdot\,\cdot\,, x_k)\); since, however, the simpler notation does not appear to lead to any confusion, we shall continue to use it.)
+
+Using the way permutations act on \(k\)-linear forms, we can define some interesting sets of such forms. Thus, for instance, a \(k\)-linear form \(w\) is called symmetric if \(\pi w = w\) for every permutation \(\pi\) in \(\mathfrak{S}_k\). (Note that if \(k=1\), then this condition is trivially satisfied.) The set of all symmetric \(k\)-linear forms is a subspace of the space of all \(k\)-linear forms. Hence, in particular, the origin of that space, the \(k\)-linear form \(0\), is symmetric. For a non-trivial example, suppose that \(k=2\), let \(y_1\) and \(y_2\) be linear functionals on \(\VecSp\), and write
+\begin{equation*}
+    w(x_1, x_2) = y_1(x_1) y_2(x_2) + y_1(x_2) y_2(x_1).
+\end{equation*}
+This procedure for constructing \(k\)-linear forms has useful generalizations. Thus, for instance, if \(1 \leq h < k \leq n\), and if \(u\) is an \(h\)-linear form and \(v\) is a \((k-h)\)-linear form, then the equation
+\begin{equation*}
+    w(x_1, \,\cdot\,\cdot\,\cdot\,, x_k) = u(x_1, \,\cdot\,\cdot\,\cdot\,, x_h) v(x_{h+1}, \,\cdot\,\cdot\,\cdot\,, x_k)
+\end{equation*}
+defines a \(k\)-linear form \(w\), which, in general, is not symmetric. A symmetric \(k\)-linear form can be obtained from \(w\) (or, for that matter, from any given \(k\)-linear form) by forming \(\sumx \pi w\), where the summation is extended over all permutations \(\pi\) in \(\mathfrak{S}_k\).
+
+We shall not study symmetric \(k\)-linear forms any more. We introduced them here because they constitute a very natural class of functions definable in terms of permutations. We abandon them now in favor of another class of functions, which play a much greater role in the theory.
+
+\section{Alternating forms}
+
+A \(k\)-linear form \(w\) is \emph{skew-symmetric} if \(\pi w =-w\) for every
+odd permutation \(t\) in \(\mathfrak{S}_k\). Equivalently, \(w\) is
+skew-symmetric if \(\pi w=(\sign \pi)w\) for every permutation \(\pi\) in
+\(\mathfrak{S}_k\). (If \(\pi w=(\sign \pi)w\) for all \(\pi\), then, in
+particular, \(\pi w = -w\) whenever \(\pi\) is odd. If, conversely, \(\pi w=-w\)
+for all odd \(\pi\), then, given an arbitrary \(\pi\), factor it into
+transpositions, say, \(\pi = \tau_1\,\cdot\,\cdot\,\cdot\, \tau_q\), observe
+that \(\sign \pi=(-1)^q\), and, since \(\pi w=(-1)^q w\), conclude that \(\pi w
+= (\sign \pi) w\), as asserted. This proof makes tacit use of the unproved fact
+that if \(\sigma\) and \(\tau\) are permutations in \(\mathfrak{S}_k\), then
+\(\sigma(\tau w) = (\sigma \tau) w\).) The set of all skew-symmetric
+\(k\)-linear forms is a subspace of the space of all \(k\)-linear forms. To get
+a non-trivial example of a skew-symmetric bilinear form \(w\), let \(y_1\) and
+\(y_2\) be linear functionals and write
+\begin{equation*}
+    w(x_1, x_2) = y_1(x_1) y_2(x_2) - y_1(x_2) y_2(x_1).
+\end{equation*}
+More generally, if \(w\) is an arbitrary \(k\)-linear form, a skew-symmetric
+\(k\)-linear form can be obtained from \(w\) by forming \(\sum (\sign \pi)\pi
+w\), wehre the summation is extended over all permutations \(\pi\) in
+\(\mathfrak{S}_k\).
+
+A \(k\)-linear form \(w\) is called \emph{alternating} if \(w(x_1,
+\,\cdot\,\cdot\,\cdot\,,x_k)=0\) whenever two of the \(x\)'s are equal. (Note
+that if \(k=1\), then this condition is vacuously satisfied.) The set of all
+alternating \(k\)-linear forms is a subspace of the space of all \(k\)-linear
+forms. There is an important relation between alternating and skew-symmetric
+forms.
+
+\begin{theorem}
+    Every alternating multilinear form is skew-symmetric.
+\end{theorem}
+
+
+
+
+\section{Alternating forms of maximal degree}
+
+Glancing back at the last section, the reader will observe that we did not give
+any non-trivial examplesof alternating \(k\)-linear forms, and we did not even
+indirectly hint at any existence theorem concerning them. In fact they do not
+always exist; §30, Theorem 2 implies, for instance, that if \(k>n\), then \(0\)
+is the only alternating \(k\)-linear form. (See §8, Theorem 2.) For the
+applications we have in mind, we need only one existence theorem; we proceed to
+prove a rather sharp form of it.
+
+\begin{thmx}
+    If \(n > 0\), the vector space of alternating \(n\)-linear forms on an 
+    \(n\)-dimensional vector space is one-dimensional.
+\end{thmx}
+
+\begin{proof}
+    We show first that if \(1 \leq k \leq n\), then there exists at least one
+    non-zero alternating \(k\)-linear form; the proof goes by induction on
+    \(k\). If \(k = 1\), the desired result follows from the existence of
+    non-trivial linear functionals (see §\,15, Theorem 3). If \(1 \leq k < n\),
+    we assume that \(v\) is a non- zero alternating k-linear form; using v we
+    shall construct a non-zero alternating \((k+1)\)-linear form \(w\). Since
+    \(v \neq 0\), we can find vectors \(x^0_1, \,\cdot\,\cdot\,\cdot\,, x^0_k\)
+    such that \(v(x^0_1, \,\cdot\,\cdot\,\cdot\,, x^0_k) \neq 0\) (the
+    superscripts are just indices here). Since \(k < n\), we can find a vector
+    \(x^0_{k+1}\) that does not belong to the subspace spanned by \(x^0_1,
+    \,\cdot\,\cdot\,\cdot\,, x^0_k\), and (see § 17, Theorem 1) then we can find
+    a linear functional \(u\) such that \(u(x^0_1) = \,\cdot\,\cdot\,\cdot\, =
+    u(x^0_k) = 0\) and \(u(x^0_{k+1}) \neq 0\).
+
+    The promised \((k + 1)\)-linear form \(w\) is obtained from the linear func- tional \(u\) and the \(k\)-linear form \(v\) by writing
+    \begin{align}
+        w(x_1, \,\cdot\,\cdot\,\cdot\,, x_{k+1}) &= \sumx_{i = 1}^k (i, k+1) v(x_1, \,\cdot\,\cdot\,\cdot\,, x_k)u(x_{k+1})\\
+        &\qquad\qquad - v(x_1, \,\cdot\,\cdot\,\cdot\,, x_k)u(x_{k+1}). \nonumber
+    \end{align}
+    Thus, for instance, if \(k=3\), Then
+    \begin{align*}
+        w(x_1, x_2, x_3, x_4) &= v(x_4, x_2, x_3)u(x_1) + v(x_1, x_4, x_3)u(x_2)\\
+         &\qquad \quad + v(x_1, x_2, x_4)u(x_3) - v(x_1, x_2, x_3)u(x_4).\\
+    \end{align*}
+    It follows from the elementary discussion in §29 that \(w\) is indeed a \((k
+    + 1)\)-linear form; we are to prove that it is non-zero and alternating.
+
+    The fact that \(w\) is not identically zero is easy to prove.
+
+\end{proof}
+
+The fact that the dimension of the space of alternating \(n\)-linear forms is
+not more than \(1\) is an immediate consequence of §30, Theorem 4.
+
+This concludes our discussion of multilinear algebra. The reader might well
+charge that the discussion was not very strongly motivated. The complete
+motivation cannot be contained in this book; the justification for studying
+multilinear algebra is the wide applicability of the subject. The only
+application that we shall make is to the theory of determinants (which, to be
+sure, could be treated by more direct but less elegant methods, involving much
+greater dependence on arbitrary choices of bases); that application belongs to
+the next chapter.
